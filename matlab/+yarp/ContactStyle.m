@@ -1,95 +1,100 @@
 classdef ContactStyle < SwigRef
+    %Usage: ContactStyle ()
+    %
   methods
+    function varargout = admin(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(571, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(572, self, varargin{1});
+      end
+    end
+    function varargout = quiet(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(573, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(574, self, varargin{1});
+      end
+    end
+    function varargout = verboseOnSuccess(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(575, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(576, self, varargin{1});
+      end
+    end
+    function varargout = timeout(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(577, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(578, self, varargin{1});
+      end
+    end
+    function varargout = carrier(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(579, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(580, self, varargin{1});
+      end
+    end
+    function varargout = expectReply(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(581, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(582, self, varargin{1});
+      end
+    end
+    function varargout = persistent(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(583, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(584, self, varargin{1});
+      end
+    end
+    function varargout = persistenceType(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(585, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(586, self, varargin{1});
+      end
+    end
     function self = ContactStyle(varargin)
       if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
         % How to get working on C side? Commented out, replaed by hack below
-        %self.swigCPtr = yarpMATLAB_wrap(583,'new_ContactStyle',varargin{:});
-        %self.swigOwn = true;
-        tmp = yarpMATLAB_wrap(583,'new_ContactStyle',varargin{:}); % FIXME
-        self.swigCPtr = tmp.swigCPtr;
-        self.swigOwn = tmp.swigOwn;
-        self.swigType = tmp.swigType;
-        tmp.swigOwn = false;
+        %self.swigInd = yarpMATLAB_wrap(587, varargin{:});
+        tmp = yarpMATLAB_wrap(587, varargin{:}); % FIXME
+        self.swigInd = tmp.swigInd;
+        tmp.swigInd = uint64(0);
       end
     end
     function delete(self)
-      if self.swigOwn
-        yarpMATLAB_wrap(584,'delete_ContactStyle',self);
-        self.swigOwn=false;
-      end
-    end
-    function [v,ok] = swig_fieldsref(self,i)
-      v = [];
-      ok = false;
-      switch i
-        case 'admin'
-          v = yarpMATLAB_wrap(567,'ContactStyle_admin_get',self);
-          ok = true;
-          return
-        case 'quiet'
-          v = yarpMATLAB_wrap(569,'ContactStyle_quiet_get',self);
-          ok = true;
-          return
-        case 'verboseOnSuccess'
-          v = yarpMATLAB_wrap(571,'ContactStyle_verboseOnSuccess_get',self);
-          ok = true;
-          return
-        case 'timeout'
-          v = yarpMATLAB_wrap(573,'ContactStyle_timeout_get',self);
-          ok = true;
-          return
-        case 'carrier'
-          v = yarpMATLAB_wrap(575,'ContactStyle_carrier_get',self);
-          ok = true;
-          return
-        case 'expectReply'
-          v = yarpMATLAB_wrap(577,'ContactStyle_expectReply_get',self);
-          ok = true;
-          return
-        case 'persistent'
-          v = yarpMATLAB_wrap(579,'ContactStyle_persistent_get',self);
-          ok = true;
-          return
-        case 'persistenceType'
-          v = yarpMATLAB_wrap(581,'ContactStyle_persistenceType_get',self);
-          ok = true;
-          return
-      end
-    end
-    function [self,ok] = swig_fieldasgn(self,i,v)
-      switch i
-        case 'admin'
-          yarpMATLAB_wrap(568,'ContactStyle_admin_set',self,v);
-          ok = true;
-          return
-        case 'quiet'
-          yarpMATLAB_wrap(570,'ContactStyle_quiet_set',self,v);
-          ok = true;
-          return
-        case 'verboseOnSuccess'
-          yarpMATLAB_wrap(572,'ContactStyle_verboseOnSuccess_set',self,v);
-          ok = true;
-          return
-        case 'timeout'
-          yarpMATLAB_wrap(574,'ContactStyle_timeout_set',self,v);
-          ok = true;
-          return
-        case 'carrier'
-          yarpMATLAB_wrap(576,'ContactStyle_carrier_set',self,v);
-          ok = true;
-          return
-        case 'expectReply'
-          yarpMATLAB_wrap(578,'ContactStyle_expectReply_set',self,v);
-          ok = true;
-          return
-        case 'persistent'
-          yarpMATLAB_wrap(580,'ContactStyle_persistent_set',self,v);
-          ok = true;
-          return
-        case 'persistenceType'
-          yarpMATLAB_wrap(582,'ContactStyle_persistenceType_set',self,v);
-          ok = true;
-          return
+      if self.swigInd
+        yarpMATLAB_wrap(588, self);
+        self.swigInd=uint64(0);
       end
     end
   end
@@ -97,28 +102,28 @@ classdef ContactStyle < SwigRef
     function v = OPENENDED()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMATLAB_wrap(0,'swigConstant','ContactStyle_OPENENDED');
+        vInitialized = yarpMATLAB_wrap(0, 8);
       end
       v = vInitialized;
     end
     function v = END_WITH_FROM_PORT()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMATLAB_wrap(0,'swigConstant','ContactStyle_END_WITH_FROM_PORT');
+        vInitialized = yarpMATLAB_wrap(0, 9);
       end
       v = vInitialized;
     end
     function v = END_WITH_TO_PORT()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMATLAB_wrap(0,'swigConstant','ContactStyle_END_WITH_TO_PORT');
+        vInitialized = yarpMATLAB_wrap(0, 10);
       end
       v = vInitialized;
     end
     function v = NO_PERSISTENCE()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMATLAB_wrap(0,'swigConstant','ContactStyle_NO_PERSISTENCE');
+        vInitialized = yarpMATLAB_wrap(0, 11);
       end
       v = vInitialized;
     end

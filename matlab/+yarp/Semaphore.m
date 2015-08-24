@@ -1,54 +1,43 @@
 classdef Semaphore < SwigRef
+    %Usage: Semaphore ()
+    %
   methods
     function self = Semaphore(varargin)
       if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
         % How to get working on C side? Commented out, replaed by hack below
-        %self.swigCPtr = yarpMATLAB_wrap(464,'new_Semaphore',varargin{:});
-        %self.swigOwn = true;
-        tmp = yarpMATLAB_wrap(464,'new_Semaphore',varargin{:}); % FIXME
-        self.swigCPtr = tmp.swigCPtr;
-        self.swigOwn = tmp.swigOwn;
-        self.swigType = tmp.swigType;
-        tmp.swigOwn = false;
+        %self.swigInd = yarpMATLAB_wrap(468, varargin{:});
+        tmp = yarpMATLAB_wrap(468, varargin{:}); % FIXME
+        self.swigInd = tmp.swigInd;
+        tmp.swigInd = uint64(0);
       end
     end
     function delete(self)
-      if self.swigOwn
-        yarpMATLAB_wrap(465,'delete_Semaphore',self);
-        self.swigOwn=false;
+      if self.swigInd
+        yarpMATLAB_wrap(469, self);
+        self.swigInd=uint64(0);
       end
     end
     function varargout = wait(self,varargin)
     %Usage: wait ()
     %
-      [varargout{1:nargout}] = yarpMATLAB_wrap(466,'Semaphore_wait',self,varargin{:});
+      [varargout{1:nargout}] = yarpMATLAB_wrap(470, self, varargin{:});
     end
     function varargout = waitWithTimeout(self,varargin)
     %Usage: retval = waitWithTimeout (timeoutInSeconds)
     %
     %timeoutInSeconds is of type double. timeoutInSeconds is of type double. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(467,'Semaphore_waitWithTimeout',self,varargin{:});
+      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(471, self, varargin{:});
     end
     function varargout = check(self,varargin)
     %Usage: retval = check ()
     %
     %retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(468,'Semaphore_check',self,varargin{:});
+      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(472, self, varargin{:});
     end
     function varargout = post(self,varargin)
     %Usage: post ()
     %
-      [varargout{1:nargout}] = yarpMATLAB_wrap(469,'Semaphore_post',self,varargin{:});
-    end
-    function [v,ok] = swig_fieldsref(self,i)
-      v = [];
-      ok = false;
-      switch i
-      end
-    end
-    function [self,ok] = swig_fieldasgn(self,i,v)
-      switch i
-      end
+      [varargout{1:nargout}] = yarpMATLAB_wrap(473, self, varargin{:});
     end
   end
   methods(Static)

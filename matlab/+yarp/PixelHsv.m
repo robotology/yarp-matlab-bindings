@@ -1,55 +1,50 @@
 classdef PixelHsv < SwigRef
+    %Usage: PixelHsv ()
+    %
   methods
+    function varargout = h(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(863, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(864, self, varargin{1});
+      end
+    end
+    function varargout = s(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(865, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(866, self, varargin{1});
+      end
+    end
+    function varargout = v(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(867, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(868, self, varargin{1});
+      end
+    end
     function self = PixelHsv(varargin)
       if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
         % How to get working on C side? Commented out, replaed by hack below
-        %self.swigCPtr = yarpMATLAB_wrap(865,'new_PixelHsv',varargin{:});
-        %self.swigOwn = true;
-        tmp = yarpMATLAB_wrap(865,'new_PixelHsv',varargin{:}); % FIXME
-        self.swigCPtr = tmp.swigCPtr;
-        self.swigOwn = tmp.swigOwn;
-        self.swigType = tmp.swigType;
-        tmp.swigOwn = false;
+        %self.swigInd = yarpMATLAB_wrap(869, varargin{:});
+        tmp = yarpMATLAB_wrap(869, varargin{:}); % FIXME
+        self.swigInd = tmp.swigInd;
+        tmp.swigInd = uint64(0);
       end
     end
     function delete(self)
-      if self.swigOwn
-        yarpMATLAB_wrap(866,'delete_PixelHsv',self);
-        self.swigOwn=false;
-      end
-    end
-    function [v,ok] = swig_fieldsref(self,i)
-      v = [];
-      ok = false;
-      switch i
-        case 'h'
-          v = yarpMATLAB_wrap(859,'PixelHsv_h_get',self);
-          ok = true;
-          return
-        case 's'
-          v = yarpMATLAB_wrap(861,'PixelHsv_s_get',self);
-          ok = true;
-          return
-        case 'v'
-          v = yarpMATLAB_wrap(863,'PixelHsv_v_get',self);
-          ok = true;
-          return
-      end
-    end
-    function [self,ok] = swig_fieldasgn(self,i,v)
-      switch i
-        case 'h'
-          yarpMATLAB_wrap(860,'PixelHsv_h_set',self,v);
-          ok = true;
-          return
-        case 's'
-          yarpMATLAB_wrap(862,'PixelHsv_s_set',self,v);
-          ok = true;
-          return
-        case 'v'
-          yarpMATLAB_wrap(864,'PixelHsv_v_set',self,v);
-          ok = true;
-          return
+      if self.swigInd
+        yarpMATLAB_wrap(870, self);
+        self.swigInd=uint64(0);
       end
     end
   end

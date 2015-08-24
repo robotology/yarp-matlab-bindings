@@ -1,55 +1,50 @@
 classdef GazeEventVariables < SwigRef
+    %Usage: GazeEventVariables ()
+    %
   methods
+    function varargout = type(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(1293, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(1294, self, varargin{1});
+      end
+    end
+    function varargout = time(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(1295, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(1296, self, varargin{1});
+      end
+    end
+    function varargout = motionOngoingCheckPoint(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(1297, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(1298, self, varargin{1});
+      end
+    end
     function self = GazeEventVariables(varargin)
       if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
         % How to get working on C side? Commented out, replaed by hack below
-        %self.swigCPtr = yarpMATLAB_wrap(1295,'new_GazeEventVariables',varargin{:});
-        %self.swigOwn = true;
-        tmp = yarpMATLAB_wrap(1295,'new_GazeEventVariables',varargin{:}); % FIXME
-        self.swigCPtr = tmp.swigCPtr;
-        self.swigOwn = tmp.swigOwn;
-        self.swigType = tmp.swigType;
-        tmp.swigOwn = false;
+        %self.swigInd = yarpMATLAB_wrap(1299, varargin{:});
+        tmp = yarpMATLAB_wrap(1299, varargin{:}); % FIXME
+        self.swigInd = tmp.swigInd;
+        tmp.swigInd = uint64(0);
       end
     end
     function delete(self)
-      if self.swigOwn
-        yarpMATLAB_wrap(1296,'delete_GazeEventVariables',self);
-        self.swigOwn=false;
-      end
-    end
-    function [v,ok] = swig_fieldsref(self,i)
-      v = [];
-      ok = false;
-      switch i
-        case 'type'
-          v = yarpMATLAB_wrap(1289,'GazeEventVariables_type_get',self);
-          ok = true;
-          return
-        case 'time'
-          v = yarpMATLAB_wrap(1291,'GazeEventVariables_time_get',self);
-          ok = true;
-          return
-        case 'motionOngoingCheckPoint'
-          v = yarpMATLAB_wrap(1293,'GazeEventVariables_motionOngoingCheckPoint_get',self);
-          ok = true;
-          return
-      end
-    end
-    function [self,ok] = swig_fieldasgn(self,i,v)
-      switch i
-        case 'type'
-          yarpMATLAB_wrap(1290,'GazeEventVariables_type_set',self,v);
-          ok = true;
-          return
-        case 'time'
-          yarpMATLAB_wrap(1292,'GazeEventVariables_time_set',self,v);
-          ok = true;
-          return
-        case 'motionOngoingCheckPoint'
-          yarpMATLAB_wrap(1294,'GazeEventVariables_motionOngoingCheckPoint_set',self,v);
-          ok = true;
-          return
+      if self.swigInd
+        yarpMATLAB_wrap(1300, self);
+        self.swigInd=uint64(0);
       end
     end
   end

@@ -1,7 +1,7 @@
 function v = BOTTLE_TAG_VOCAB()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = yarpMATLAB_wrap(0,'swigConstant',1,'BOTTLE_TAG_VOCAB');
+    vInitialized = yarpMATLAB_wrap(0, 1);
   end
   v = vInitialized;
 end

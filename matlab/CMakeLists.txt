@@ -55,12 +55,19 @@ if(YARP_GENERATE_MATLAB)
     COMMAND ${CMAKE_COMMAND}
     ARGS -E copy ${CMAKE_CURRENT_BINARY_DIR}/../${modulename}.cxx ${CMAKE_CURRENT_SOURCE_DIR}/${modulename}.cxx
     MAIN_DEPENDENCY "${swig_generated_sources}"
-    COMMENT "Copy swig generated files to source dir")
+    COMMENT "Copy swig generated cxx files to source dir")
   set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/${modulename}.cxx PROPERTIES GENERATED 1)
+  add_custom_command(
+    OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/${modulename}.h
+    COMMAND ${CMAKE_COMMAND}
+    ARGS -E copy ${CMAKE_CURRENT_BINARY_DIR}/../${modulename}.h ${CMAKE_CURRENT_SOURCE_DIR}/${modulename}.h
+    MAIN_DEPENDENCY "${swig_generated_sources}"
+    COMMENT "Copy swig generated header files to source dir")
+  set_source_files_properties(${CMAKE_CURRENT_SOURCE_DIR}/${modulename}.h PROPERTIES GENERATED 1)
 endif()
 
 # use previously generated files
-set(swig_generated_sources ${CMAKE_CURRENT_SOURCE_DIR}/${modulename}.cxx)
+set(swig_generated_sources ${CMAKE_CURRENT_SOURCE_DIR}/${modulename}.cxx ${CMAKE_CURRENT_SOURCE_DIR}/${modulename}.h)
 set(swig_other_sources)
 
 swig_compile_module(${modulename} matlab)

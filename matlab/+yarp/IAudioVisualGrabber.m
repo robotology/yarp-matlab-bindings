@@ -1,30 +1,22 @@
 classdef IAudioVisualGrabber < SwigRef
+    %Usage: IAudioVisualGrabber ()
+    %
   methods
     function delete(self)
-      if self.swigOwn
-        yarpMATLAB_wrap(1096,'delete_IAudioVisualGrabber',self);
-        self.swigOwn=false;
+      if self.swigInd
+        yarpMATLAB_wrap(1100, self);
+        self.swigInd=uint64(0);
       end
     end
     function varargout = getAudioVisual(self,varargin)
     %Usage: retval = getAudioVisual (image, sound)
     %
     %image is of type ImageRgb. sound is of type Sound. image is of type ImageRgb. sound is of type Sound. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1097,'IAudioVisualGrabber_getAudioVisual',self,varargin{:});
+      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1101, self, varargin{:});
     end
     function self = IAudioVisualGrabber(varargin)
       if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
         error('No matching constructor');
-      end
-    end
-    function [v,ok] = swig_fieldsref(self,i)
-      v = [];
-      ok = false;
-      switch i
-      end
-    end
-    function [self,ok] = swig_fieldasgn(self,i,v)
-      switch i
       end
     end
   end

@@ -1,37 +1,26 @@
 classdef PropertyCallback < SwigRef
+    %Usage: PropertyCallback ()
+    %
   methods
     function delete(self)
-      if self.swigOwn
-        yarpMATLAB_wrap(677,'delete_PropertyCallback',self);
-        self.swigOwn=false;
+      if self.swigInd
+        yarpMATLAB_wrap(681, self);
+        self.swigInd=uint64(0);
       end
     end
     function varargout = onRead(self,varargin)
     %Usage: onRead (datum, reader)
     %
     %datum is of type Property. reader is of type TypedReaderProperty. 
-      [varargout{1:nargout}] = yarpMATLAB_wrap(678,'PropertyCallback_onRead',self,varargin{:});
+      [varargout{1:nargout}] = yarpMATLAB_wrap(682, self, varargin{:});
     end
     function self = PropertyCallback(varargin)
       if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
         % How to get working on C side? Commented out, replaed by hack below
-        %self.swigCPtr = yarpMATLAB_wrap(679,'new_PropertyCallback',varargin{:});
-        %self.swigOwn = true;
-        tmp = yarpMATLAB_wrap(679,'new_PropertyCallback',varargin{:}); % FIXME
-        self.swigCPtr = tmp.swigCPtr;
-        self.swigOwn = tmp.swigOwn;
-        self.swigType = tmp.swigType;
-        tmp.swigOwn = false;
-      end
-    end
-    function [v,ok] = swig_fieldsref(self,i)
-      v = [];
-      ok = false;
-      switch i
-      end
-    end
-    function [self,ok] = swig_fieldasgn(self,i,v)
-      switch i
+        %self.swigInd = yarpMATLAB_wrap(683, varargin{:});
+        tmp = yarpMATLAB_wrap(683, varargin{:}); % FIXME
+        self.swigInd = tmp.swigInd;
+        tmp.swigInd = uint64(0);
       end
     end
   end

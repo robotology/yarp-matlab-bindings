@@ -1,79 +1,80 @@
 classdef SearchReport < SwigRef
+    %Usage: SearchReport ()
+    %
   methods
+    function varargout = key(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(120, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(121, self, varargin{1});
+      end
+    end
+    function varargout = value(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(122, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(123, self, varargin{1});
+      end
+    end
+    function varargout = isFound(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(124, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(125, self, varargin{1});
+      end
+    end
+    function varargout = isGroup(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(126, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(127, self, varargin{1});
+      end
+    end
+    function varargout = isComment(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(128, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(129, self, varargin{1});
+      end
+    end
+    function varargout = isDefault(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(130, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(131, self, varargin{1});
+      end
+    end
     function self = SearchReport(varargin)
       if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
         % How to get working on C side? Commented out, replaed by hack below
-        %self.swigCPtr = yarpMATLAB_wrap(130,'new_SearchReport',varargin{:});
-        %self.swigOwn = true;
-        tmp = yarpMATLAB_wrap(130,'new_SearchReport',varargin{:}); % FIXME
-        self.swigCPtr = tmp.swigCPtr;
-        self.swigOwn = tmp.swigOwn;
-        self.swigType = tmp.swigType;
-        tmp.swigOwn = false;
+        %self.swigInd = yarpMATLAB_wrap(132, varargin{:});
+        tmp = yarpMATLAB_wrap(132, varargin{:}); % FIXME
+        self.swigInd = tmp.swigInd;
+        tmp.swigInd = uint64(0);
       end
     end
     function delete(self)
-      if self.swigOwn
-        yarpMATLAB_wrap(131,'delete_SearchReport',self);
-        self.swigOwn=false;
-      end
-    end
-    function [v,ok] = swig_fieldsref(self,i)
-      v = [];
-      ok = false;
-      switch i
-        case 'key'
-          v = yarpMATLAB_wrap(118,'SearchReport_key_get',self);
-          ok = true;
-          return
-        case 'value'
-          v = yarpMATLAB_wrap(120,'SearchReport_value_get',self);
-          ok = true;
-          return
-        case 'isFound'
-          v = yarpMATLAB_wrap(122,'SearchReport_isFound_get',self);
-          ok = true;
-          return
-        case 'isGroup'
-          v = yarpMATLAB_wrap(124,'SearchReport_isGroup_get',self);
-          ok = true;
-          return
-        case 'isComment'
-          v = yarpMATLAB_wrap(126,'SearchReport_isComment_get',self);
-          ok = true;
-          return
-        case 'isDefault'
-          v = yarpMATLAB_wrap(128,'SearchReport_isDefault_get',self);
-          ok = true;
-          return
-      end
-    end
-    function [self,ok] = swig_fieldasgn(self,i,v)
-      switch i
-        case 'key'
-          yarpMATLAB_wrap(119,'SearchReport_key_set',self,v);
-          ok = true;
-          return
-        case 'value'
-          yarpMATLAB_wrap(121,'SearchReport_value_set',self,v);
-          ok = true;
-          return
-        case 'isFound'
-          yarpMATLAB_wrap(123,'SearchReport_isFound_set',self,v);
-          ok = true;
-          return
-        case 'isGroup'
-          yarpMATLAB_wrap(125,'SearchReport_isGroup_set',self,v);
-          ok = true;
-          return
-        case 'isComment'
-          yarpMATLAB_wrap(127,'SearchReport_isComment_set',self,v);
-          ok = true;
-          return
-        case 'isDefault'
-          yarpMATLAB_wrap(129,'SearchReport_isDefault_set',self,v);
-          ok = true;
-          return
+      if self.swigInd
+        yarpMATLAB_wrap(133, self);
+        self.swigInd=uint64(0);
       end
     end
   end

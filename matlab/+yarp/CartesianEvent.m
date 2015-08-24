@@ -1,45 +1,41 @@
 classdef CartesianEvent < SwigRef
+    %Usage: CartesianEvent ()
+    %
   methods
     function delete(self)
-      if self.swigOwn
-        yarpMATLAB_wrap(1232,'delete_CartesianEvent',self);
-        self.swigOwn=false;
+      if self.swigInd
+        yarpMATLAB_wrap(1236, self);
+        self.swigInd=uint64(0);
+      end
+    end
+    function varargout = cartesianEventParameters(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(1237, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(1238, self, varargin{1});
+      end
+    end
+    function varargout = cartesianEventVariables(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMATLAB_wrap(1239, self);
+      else
+        nargoutchk(0, 0)
+        yarpMATLAB_wrap(1240, self, varargin{1});
       end
     end
     function varargout = cartesianEventCallback(self,varargin)
     %Usage: cartesianEventCallback ()
     %
-      [varargout{1:nargout}] = yarpMATLAB_wrap(1237,'CartesianEvent_cartesianEventCallback',self,varargin{:});
+      [varargout{1:nargout}] = yarpMATLAB_wrap(1241, self, varargin{:});
     end
     function self = CartesianEvent(varargin)
       if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
         error('No matching constructor');
-      end
-    end
-    function [v,ok] = swig_fieldsref(self,i)
-      v = [];
-      ok = false;
-      switch i
-        case 'cartesianEventParameters'
-          v = yarpMATLAB_wrap(1233,'CartesianEvent_cartesianEventParameters_get',self);
-          ok = true;
-          return
-        case 'cartesianEventVariables'
-          v = yarpMATLAB_wrap(1235,'CartesianEvent_cartesianEventVariables_get',self);
-          ok = true;
-          return
-      end
-    end
-    function [self,ok] = swig_fieldasgn(self,i,v)
-      switch i
-        case 'cartesianEventParameters'
-          yarpMATLAB_wrap(1234,'CartesianEvent_cartesianEventParameters_set',self,v);
-          ok = true;
-          return
-        case 'cartesianEventVariables'
-          yarpMATLAB_wrap(1236,'CartesianEvent_cartesianEventVariables_set',self,v);
-          ok = true;
-          return
       end
     end
   end
