@@ -212,64 +212,64 @@ classdef ICartesianControl < SwigRef
     %retval is of type bool. 
       [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1276, self, varargin{:});
     end
-    function varargout = storeContext(self,varargin)
-    %Usage: retval = storeContext (id)
-    %
-    %id is of type int *. id is of type int *. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1277, self, varargin{:});
-    end
     function varargout = restoreContext(self,varargin)
     %Usage: retval = restoreContext (id)
     %
     %id is of type int const. id is of type int const. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1278, self, varargin{:});
+      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1277, self, varargin{:});
     end
     function varargout = deleteContext(self,varargin)
     %Usage: retval = deleteContext (id)
     %
     %id is of type int const. id is of type int const. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1279, self, varargin{:});
+      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1278, self, varargin{:});
     end
     function varargout = getInfo(self,varargin)
     %Usage: retval = getInfo (info)
     %
     %info is of type Bottle. info is of type Bottle. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1280, self, varargin{:});
+      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1279, self, varargin{:});
     end
     function varargout = registerEvent(self,varargin)
     %Usage: retval = registerEvent (event)
     %
     %event is of type CartesianEvent. event is of type CartesianEvent. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1281, self, varargin{:});
+      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1280, self, varargin{:});
     end
     function varargout = unregisterEvent(self,varargin)
     %Usage: retval = unregisterEvent (event)
     %
     %event is of type CartesianEvent. event is of type CartesianEvent. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1282, self, varargin{:});
+      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1281, self, varargin{:});
     end
     function varargout = tweakSet(self,varargin)
     %Usage: retval = tweakSet (options)
     %
     %options is of type Bottle. options is of type Bottle. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1283, self, varargin{:});
+      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1282, self, varargin{:});
     end
     function varargout = tweakGet(self,varargin)
     %Usage: retval = tweakGet (options)
     %
     %options is of type Bottle. options is of type Bottle. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1284, self, varargin{:});
+      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1283, self, varargin{:});
     end
     function varargout = checkMotionDone(self,varargin)
     %Usage: retval = checkMotionDone ()
     %
     %retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1285, self, varargin{:});
+      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1284, self, varargin{:});
     end
     function varargout = isMotionDone(self,varargin)
     %Usage: retval = isMotionDone ()
     %
     %retval is of type bool. 
+      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1285, self, varargin{:});
+    end
+    function varargout = storeContext(self,varargin)
+    %Usage: retval = storeContext ()
+    %
+    %retval is of type int. 
       [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1286, self, varargin{:});
     end
     function self = ICartesianControl(varargin)
