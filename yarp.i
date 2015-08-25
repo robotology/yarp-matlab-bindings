@@ -1043,6 +1043,21 @@ typedef yarp::os::BufferedPort<ImageRgbFloat> BufferedPortImageRgbFloat;
 		self->checkMotionDone(&data);
 		return data;
 	}
+
+    int storeContext() {
+        // bad id to return if the real
+        // storeContext returns false
+        int badContextId = -1000;
+        int ret = badContextId;
+        // call the real storeContext
+        bool ok = self->storeContext(&ret);
+        // if not ok, return the badContextId
+        if( !ok ) {
+            ret = badContextId;
+        }
+
+        return ret;
+    }
 }
 
 %extend yarp::dev::IGazeControl {
@@ -1197,7 +1212,6 @@ public static short[] getRawImg(Image img) {
 			   (char**)&tmp[0]);
   }
 }
-
 
 /*
  * Extending yarp::os::Things.h
