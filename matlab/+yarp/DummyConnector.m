@@ -2,49 +2,54 @@ classdef DummyConnector < SwigRef
     %Usage: DummyConnector ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function self = DummyConnector(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
-        % How to get working on C side? Commented out, replaed by hack below
-        %self.swigInd = yarpMATLAB_wrap(641, varargin{:});
-        tmp = yarpMATLAB_wrap(641, varargin{:}); % FIXME
-        self.swigInd = tmp.swigInd;
-        tmp.swigInd = uint64(0);
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
+        tmp = yarpMEX(644, varargin{:});
+        self.swigPtr = tmp.swigPtr;
+        tmp.swigPtr = [];
       end
     end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(642, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(645, self);
+        self.swigPtr=[];
       end
     end
     function varargout = setTextMode(self,varargin)
     %Usage: setTextMode (textmode)
     %
     %textmode is of type bool. 
-      [varargout{1:nargout}] = yarpMATLAB_wrap(643, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(646, self, varargin{:});
     end
     function varargout = getCleanWriter(self,varargin)
     %Usage: retval = getCleanWriter ()
     %
     %retval is of type ConnectionWriter. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(644, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(647, self, varargin{:});
     end
     function varargout = getWriter(self,varargin)
     %Usage: retval = getWriter ()
     %
     %retval is of type ConnectionWriter. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(645, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(648, self, varargin{:});
     end
     function varargout = getReader(self,varargin)
     %Usage: retval = getReader ()
     %
     %retval is of type ConnectionReader. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(646, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(649, self, varargin{:});
     end
     function varargout = reset(self,varargin)
     %Usage: reset ()
     %
-      [varargout{1:nargout}] = yarpMATLAB_wrap(647, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(650, self, varargin{:});
     end
   end
   methods(Static)

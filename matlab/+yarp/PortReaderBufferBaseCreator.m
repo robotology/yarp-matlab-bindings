@@ -2,20 +2,27 @@ classdef PortReaderBufferBaseCreator < SwigRef
     %Usage: PortReaderBufferBaseCreator ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(425, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(426, self);
+        self.swigPtr=[];
       end
     end
     function varargout = create(self,varargin)
     %Usage: retval = create ()
     %
     %retval is of type PortReader. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(426, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(427, self, varargin{:});
     end
     function self = PortReaderBufferBaseCreator(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
         error('No matching constructor');
       end
     end

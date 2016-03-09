@@ -2,32 +2,39 @@ classdef IFrameGrabberRgb < SwigRef
     %Usage: IFrameGrabberRgb ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(1025, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(1029, self);
+        self.swigPtr=[];
       end
     end
     function varargout = getRgbBuffer(self,varargin)
     %Usage: retval = getRgbBuffer (buffer)
     %
     %buffer is of type unsigned char *. buffer is of type unsigned char *. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1026, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1030, self, varargin{:});
     end
     function varargout = height(self,varargin)
     %Usage: retval = height ()
     %
     %retval is of type int. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1027, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1031, self, varargin{:});
     end
     function varargout = width(self,varargin)
     %Usage: retval = width ()
     %
     %retval is of type int. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1028, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1032, self, varargin{:});
     end
     function self = IFrameGrabberRgb(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
         error('No matching constructor');
       end
     end

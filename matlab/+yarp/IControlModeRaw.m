@@ -2,62 +2,69 @@ classdef IControlModeRaw < SwigRef
     %Usage: IControlModeRaw ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(1459, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(1499, self);
+        self.swigPtr=[];
       end
     end
     function varargout = setPositionModeRaw(self,varargin)
     %Usage: retval = setPositionModeRaw (j)
     %
     %j is of type int. j is of type int. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1460, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1500, self, varargin{:});
     end
     function varargout = setVelocityModeRaw(self,varargin)
     %Usage: retval = setVelocityModeRaw (j)
     %
     %j is of type int. j is of type int. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1461, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1501, self, varargin{:});
     end
     function varargout = setTorqueModeRaw(self,varargin)
     %Usage: retval = setTorqueModeRaw (j)
     %
     %j is of type int. j is of type int. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1462, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1502, self, varargin{:});
     end
     function varargout = setImpedancePositionModeRaw(self,varargin)
     %Usage: retval = setImpedancePositionModeRaw (j)
     %
     %j is of type int. j is of type int. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1463, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1503, self, varargin{:});
     end
     function varargout = setImpedanceVelocityModeRaw(self,varargin)
     %Usage: retval = setImpedanceVelocityModeRaw (j)
     %
     %j is of type int. j is of type int. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1464, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1504, self, varargin{:});
     end
     function varargout = setOpenLoopModeRaw(self,varargin)
     %Usage: retval = setOpenLoopModeRaw (j)
     %
     %j is of type int. j is of type int. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1465, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1505, self, varargin{:});
     end
     function varargout = getControlModeRaw(self,varargin)
     %Usage: retval = getControlModeRaw (j, mode)
     %
     %j is of type int. mode is of type int *. j is of type int. mode is of type int *. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1466, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1506, self, varargin{:});
     end
     function varargout = getControlModesRaw(self,varargin)
     %Usage: retval = getControlModesRaw (modes)
     %
     %modes is of type int *. modes is of type int *. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1467, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1507, self, varargin{:});
     end
     function self = IControlModeRaw(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
         error('No matching constructor');
       end
     end

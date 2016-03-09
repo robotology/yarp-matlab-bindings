@@ -3,19 +3,21 @@ classdef Network < yarp.NetworkBase
     %
   methods
     function self = Network(varargin)
-      self@yarp.NetworkBase('_swigCreate');
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
-        % How to get working on C side? Commented out, replaed by hack below
-        %self.swigInd = yarpMATLAB_wrap(358, varargin{:});
-        tmp = yarpMATLAB_wrap(358, varargin{:}); % FIXME
-        self.swigInd = tmp.swigInd;
-        tmp.swigInd = uint64(0);
+      self@yarp.NetworkBase(SwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
+        tmp = yarpMEX(361, varargin{:});
+        self.swigPtr = tmp.swigPtr;
+        tmp.swigPtr = [];
       end
     end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(359, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(362, self);
+        self.swigPtr=[];
       end
     end
   end
@@ -23,12 +25,12 @@ classdef Network < yarp.NetworkBase
     function varargout = init(varargin)
     %Usage: init ()
     %
-      [varargout{1:nargout}] = yarpMATLAB_wrap(360, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(363, varargin{:});
     end
     function varargout = fini(varargin)
     %Usage: fini ()
     %
-      [varargout{1:nargout}] = yarpMATLAB_wrap(361, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(364, varargin{:});
     end
   end
 end

@@ -2,89 +2,96 @@ classdef TypedReaderImageMono16 < SwigRef
     %Usage: TypedReaderImageMono16 ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function varargout = setStrict(self,varargin)
     %Usage: setStrict ()
     %
-      [varargout{1:nargout}] = yarpMATLAB_wrap(1908, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1948, self, varargin{:});
     end
     function varargout = read(self,varargin)
     %Usage: retval = read ()
     %
     %retval is of type ImageMono16. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1909, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1949, self, varargin{:});
     end
     function varargout = interrupt(self,varargin)
     %Usage: interrupt ()
     %
-      [varargout{1:nargout}] = yarpMATLAB_wrap(1910, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1950, self, varargin{:});
     end
     function varargout = lastRead(self,varargin)
     %Usage: retval = lastRead ()
     %
     %retval is of type ImageMono16. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1911, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1951, self, varargin{:});
     end
     function varargout = isClosed(self,varargin)
     %Usage: retval = isClosed ()
     %
     %retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1912, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1952, self, varargin{:});
     end
     function varargout = useCallback(self,varargin)
     %Usage: useCallback (callback)
     %
     %callback is of type TypedReaderCallbackImageMono16. 
-      [varargout{1:nargout}] = yarpMATLAB_wrap(1913, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1953, self, varargin{:});
     end
     function varargout = disableCallback(self,varargin)
     %Usage: disableCallback ()
     %
-      [varargout{1:nargout}] = yarpMATLAB_wrap(1914, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1954, self, varargin{:});
     end
     function varargout = getPendingReads(self,varargin)
     %Usage: retval = getPendingReads ()
     %
     %retval is of type int. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1915, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1955, self, varargin{:});
     end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(1916, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(1956, self);
+        self.swigPtr=[];
       end
     end
     function varargout = getName(self,varargin)
     %Usage: retval = getName ()
     %
     %retval is of type yarp::os::ConstString. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1917, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1957, self, varargin{:});
     end
     function varargout = setReplier(self,varargin)
     %Usage: setReplier (reader)
     %
     %reader is of type PortReader. 
-      [varargout{1:nargout}] = yarpMATLAB_wrap(1918, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1958, self, varargin{:});
     end
     function varargout = acquire(self,varargin)
     %Usage: retval = acquire ()
     %
     %retval is of type void *. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1919, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1959, self, varargin{:});
     end
     function varargout = release(self,varargin)
     %Usage: release (handle)
     %
     %handle is of type void *. 
-      [varargout{1:nargout}] = yarpMATLAB_wrap(1920, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1960, self, varargin{:});
     end
     function varargout = setTargetPeriod(self,varargin)
     %Usage: setTargetPeriod (period)
     %
     %period is of type double. 
-      [varargout{1:nargout}] = yarpMATLAB_wrap(1921, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1961, self, varargin{:});
     end
     function self = TypedReaderImageMono16(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
         error('No matching constructor');
       end
     end

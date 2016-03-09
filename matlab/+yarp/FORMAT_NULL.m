@@ -1,7 +1,7 @@
 function v = FORMAT_NULL()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = yarpMATLAB_wrap(0, 27);
+    vInitialized = yarpMEX(0, 35);
   end
   v = vInitialized;
 end

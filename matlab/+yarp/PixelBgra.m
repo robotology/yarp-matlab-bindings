@@ -2,59 +2,64 @@ classdef PixelBgra < SwigRef
     %Usage: PixelBgra ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function varargout = b(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMATLAB_wrap(845, self);
+        varargout{1} = yarpMEX(848, self);
       else
         nargoutchk(0, 0)
-        yarpMATLAB_wrap(846, self, varargin{1});
+        yarpMEX(849, self, varargin{1});
       end
     end
     function varargout = g(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMATLAB_wrap(847, self);
+        varargout{1} = yarpMEX(850, self);
       else
         nargoutchk(0, 0)
-        yarpMATLAB_wrap(848, self, varargin{1});
+        yarpMEX(851, self, varargin{1});
       end
     end
     function varargout = r(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMATLAB_wrap(849, self);
+        varargout{1} = yarpMEX(852, self);
       else
         nargoutchk(0, 0)
-        yarpMATLAB_wrap(850, self, varargin{1});
+        yarpMEX(853, self, varargin{1});
       end
     end
     function varargout = a(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMATLAB_wrap(851, self);
+        varargout{1} = yarpMEX(854, self);
       else
         nargoutchk(0, 0)
-        yarpMATLAB_wrap(852, self, varargin{1});
+        yarpMEX(855, self, varargin{1});
       end
     end
     function self = PixelBgra(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
-        % How to get working on C side? Commented out, replaed by hack below
-        %self.swigInd = yarpMATLAB_wrap(853, varargin{:});
-        tmp = yarpMATLAB_wrap(853, varargin{:}); % FIXME
-        self.swigInd = tmp.swigInd;
-        tmp.swigInd = uint64(0);
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
+        tmp = yarpMEX(856, varargin{:});
+        self.swigPtr = tmp.swigPtr;
+        tmp.swigPtr = [];
       end
     end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(854, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(857, self);
+        self.swigPtr=[];
       end
     end
   end

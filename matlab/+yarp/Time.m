@@ -2,19 +2,24 @@ classdef Time < SwigRef
     %Usage: Time ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function self = Time(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
-        % How to get working on C side? Commented out, replaed by hack below
-        %self.swigInd = yarpMATLAB_wrap(537, varargin{:});
-        tmp = yarpMATLAB_wrap(537, varargin{:}); % FIXME
-        self.swigInd = tmp.swigInd;
-        tmp.swigInd = uint64(0);
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
+        tmp = yarpMEX(540, varargin{:});
+        self.swigPtr = tmp.swigPtr;
+        tmp.swigPtr = [];
       end
     end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(538, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(541, self);
+        self.swigPtr=[];
       end
     end
   end
@@ -23,52 +28,52 @@ classdef Time < SwigRef
     %Usage: delay (seconds)
     %
     %seconds is of type double. 
-      [varargout{1:nargout}] = yarpMATLAB_wrap(528, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(531, varargin{:});
     end
     function varargout = now(varargin)
     %Usage: retval = now ()
     %
     %retval is of type double. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(529, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(532, varargin{:});
     end
     function varargout = yield(varargin)
     %Usage: yield ()
     %
-      [varargout{1:nargout}] = yarpMATLAB_wrap(530, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(533, varargin{:});
     end
     function varargout = turboBoost(varargin)
     %Usage: turboBoost ()
     %
-      [varargout{1:nargout}] = yarpMATLAB_wrap(531, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(534, varargin{:});
     end
     function varargout = useSystemClock(varargin)
     %Usage: useSystemClock ()
     %
-      [varargout{1:nargout}] = yarpMATLAB_wrap(532, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(535, varargin{:});
     end
     function varargout = useNetworkClock(varargin)
     %Usage: useNetworkClock (clock)
     %
     %clock is of type yarp::os::ConstString const &. 
-      [varargout{1:nargout}] = yarpMATLAB_wrap(533, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(536, varargin{:});
     end
     function varargout = useCustomClock(varargin)
     %Usage: useCustomClock (clock)
     %
     %clock is of type Clock *. 
-      [varargout{1:nargout}] = yarpMATLAB_wrap(534, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(537, varargin{:});
     end
     function varargout = isSystemClock(varargin)
     %Usage: retval = isSystemClock ()
     %
     %retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(535, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(538, varargin{:});
     end
     function varargout = isValid(varargin)
     %Usage: retval = isValid ()
     %
     %retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(536, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(539, varargin{:});
     end
   end
 end

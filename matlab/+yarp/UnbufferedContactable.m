@@ -6,35 +6,39 @@ classdef UnbufferedContactable < yarp.Contactable
     %Usage: retval = write (writer, reader)
     %
     %writer is of type PortWriter. reader is of type PortReader. writer is of type PortWriter. reader is of type PortReader. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(229, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(231, self, varargin{:});
     end
     function varargout = read(self,varargin)
     %Usage: retval = read (reader)
     %
     %reader is of type PortReader. reader is of type PortReader. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(230, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(232, self, varargin{:});
     end
     function varargout = reply(self,varargin)
     %Usage: retval = reply (writer)
     %
     %writer is of type PortWriter. writer is of type PortWriter. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(231, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(233, self, varargin{:});
     end
     function varargout = replyAndDrop(self,varargin)
     %Usage: retval = replyAndDrop (writer)
     %
     %writer is of type PortWriter. writer is of type PortWriter. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(232, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(234, self, varargin{:});
     end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(233, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(235, self);
+        self.swigPtr=[];
       end
     end
     function self = UnbufferedContactable(varargin)
-      self@yarp.Contactable('_swigCreate');
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
+      self@yarp.Contactable(SwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
         error('No matching constructor');
       end
     end

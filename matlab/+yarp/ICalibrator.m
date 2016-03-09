@@ -2,38 +2,45 @@ classdef ICalibrator < SwigRef
     %Usage: ICalibrator ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(1432, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(1472, self);
+        self.swigPtr=[];
       end
     end
     function varargout = calibrate(self,varargin)
     %Usage: retval = calibrate (dd)
     %
     %dd is of type DeviceDriver. dd is of type DeviceDriver. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1433, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1473, self, varargin{:});
     end
     function varargout = park(self,varargin)
     %Usage: retval = park (dd)
     %
     %dd is of type DeviceDriver. dd is of type DeviceDriver. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1434, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1474, self, varargin{:});
     end
     function varargout = quitCalibrate(self,varargin)
     %Usage: retval = quitCalibrate ()
     %
     %retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1435, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1475, self, varargin{:});
     end
     function varargout = quitPark(self,varargin)
     %Usage: retval = quitPark ()
     %
     %retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1436, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1476, self, varargin{:});
     end
     function self = ICalibrator(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
         error('No matching constructor');
       end
     end

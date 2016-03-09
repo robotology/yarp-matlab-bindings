@@ -2,50 +2,57 @@ classdef IImpedanceControlRaw < SwigRef
     %Usage: IImpedanceControlRaw ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(1540, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(1580, self);
+        self.swigPtr=[];
       end
     end
     function varargout = getAxes(self,varargin)
     %Usage: retval = getAxes (ax)
     %
     %ax is of type int *. ax is of type int *. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1541, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1581, self, varargin{:});
     end
     function varargout = getImpedanceRaw(self,varargin)
     %Usage: retval = getImpedanceRaw (j, stiffness, damping)
     %
     %j is of type int. stiffness is of type double *. damping is of type double *. j is of type int. stiffness is of type double *. damping is of type double *. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1542, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1582, self, varargin{:});
     end
     function varargout = setImpedanceRaw(self,varargin)
     %Usage: retval = setImpedanceRaw (j, stiffness, damping)
     %
     %j is of type int. stiffness is of type double. damping is of type double. j is of type int. stiffness is of type double. damping is of type double. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1543, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1583, self, varargin{:});
     end
     function varargout = setImpedanceOffsetRaw(self,varargin)
     %Usage: retval = setImpedanceOffsetRaw (j, offset)
     %
     %j is of type int. offset is of type double. j is of type int. offset is of type double. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1544, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1584, self, varargin{:});
     end
     function varargout = getImpedanceOffsetRaw(self,varargin)
     %Usage: retval = getImpedanceOffsetRaw (j, offset)
     %
     %j is of type int. offset is of type double *. j is of type int. offset is of type double *. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1545, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1585, self, varargin{:});
     end
     function varargout = getCurrentImpedanceLimitRaw(self,varargin)
     %Usage: retval = getCurrentImpedanceLimitRaw (j, min_stiff, max_stiff, min_damp, max_damp)
     %
     %j is of type int. min_stiff is of type double *. max_stiff is of type double *. min_damp is of type double *. max_damp is of type double *. j is of type int. min_stiff is of type double *. max_stiff is of type double *. min_damp is of type double *. max_damp is of type double *. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1546, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1586, self, varargin{:});
     end
     function self = IImpedanceControlRaw(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
         error('No matching constructor');
       end
     end
