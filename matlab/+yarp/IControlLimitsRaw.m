@@ -2,26 +2,33 @@ classdef IControlLimitsRaw < SwigRef
     %Usage: IControlLimitsRaw ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(1192, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(1228, self);
+        self.swigPtr=[];
       end
     end
     function varargout = setLimitsRaw(self,varargin)
     %Usage: retval = setLimitsRaw (axis, min, max)
     %
     %axis is of type int. min is of type double. max is of type double. axis is of type int. min is of type double. max is of type double. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1193, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1229, self, varargin{:});
     end
     function varargout = getLimitsRaw(self,varargin)
     %Usage: retval = getLimitsRaw (axis, min, max)
     %
     %axis is of type int. min is of type double *. max is of type double *. axis is of type int. min is of type double *. max is of type double *. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1194, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1230, self, varargin{:});
     end
     function self = IControlLimitsRaw(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
         error('No matching constructor');
       end
     end

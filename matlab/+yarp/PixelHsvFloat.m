@@ -2,49 +2,54 @@ classdef PixelHsvFloat < SwigRef
     %Usage: PixelHsvFloat ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function varargout = h(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMATLAB_wrap(895, self);
+        varargout{1} = yarpMEX(898, self);
       else
         nargoutchk(0, 0)
-        yarpMATLAB_wrap(896, self, varargin{1});
+        yarpMEX(899, self, varargin{1});
       end
     end
     function varargout = s(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMATLAB_wrap(897, self);
+        varargout{1} = yarpMEX(900, self);
       else
         nargoutchk(0, 0)
-        yarpMATLAB_wrap(898, self, varargin{1});
+        yarpMEX(901, self, varargin{1});
       end
     end
     function varargout = v(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMATLAB_wrap(899, self);
+        varargout{1} = yarpMEX(902, self);
       else
         nargoutchk(0, 0)
-        yarpMATLAB_wrap(900, self, varargin{1});
+        yarpMEX(903, self, varargin{1});
       end
     end
     function self = PixelHsvFloat(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
-        % How to get working on C side? Commented out, replaed by hack below
-        %self.swigInd = yarpMATLAB_wrap(901, varargin{:});
-        tmp = yarpMATLAB_wrap(901, varargin{:}); % FIXME
-        self.swigInd = tmp.swigInd;
-        tmp.swigInd = uint64(0);
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
+        tmp = yarpMEX(904, varargin{:});
+        self.swigPtr = tmp.swigPtr;
+        tmp.swigPtr = [];
       end
     end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(902, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(905, self);
+        self.swigPtr=[];
       end
     end
   end

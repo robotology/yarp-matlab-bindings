@@ -2,39 +2,46 @@ classdef GazeEvent < SwigRef
     %Usage: GazeEvent ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(1301, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(1341, self);
+        self.swigPtr=[];
       end
     end
     function varargout = gazeEventParameters(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMATLAB_wrap(1302, self);
+        varargout{1} = yarpMEX(1342, self);
       else
         nargoutchk(0, 0)
-        yarpMATLAB_wrap(1303, self, varargin{1});
+        yarpMEX(1343, self, varargin{1});
       end
     end
     function varargout = gazeEventVariables(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMATLAB_wrap(1304, self);
+        varargout{1} = yarpMEX(1344, self);
       else
         nargoutchk(0, 0)
-        yarpMATLAB_wrap(1305, self, varargin{1});
+        yarpMEX(1345, self, varargin{1});
       end
     end
     function varargout = gazeEventCallback(self,varargin)
     %Usage: gazeEventCallback ()
     %
-      [varargout{1:nargout}] = yarpMATLAB_wrap(1306, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1346, self, varargin{:});
     end
     function self = GazeEvent(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
         error('No matching constructor');
       end
     end

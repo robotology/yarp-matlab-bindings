@@ -6,34 +6,36 @@ classdef FlexImage < yarp.Image
     %Usage: setPixelCode (imgPixelCode)
     %
     %imgPixelCode is of type int. 
-      [varargout{1:nargout}] = yarpMATLAB_wrap(822, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(825, self, varargin{:});
     end
     function varargout = setPixelSize(self,varargin)
     %Usage: setPixelSize (imgPixelSize)
     %
     %imgPixelSize is of type int. 
-      [varargout{1:nargout}] = yarpMATLAB_wrap(823, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(826, self, varargin{:});
     end
     function varargout = setQuantum(self,varargin)
     %Usage: setQuantum (imgQuantum)
     %
     %imgQuantum is of type int. 
-      [varargout{1:nargout}] = yarpMATLAB_wrap(824, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(827, self, varargin{:});
     end
     function self = FlexImage(varargin)
-      self@yarp.Image('_swigCreate');
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
-        % How to get working on C side? Commented out, replaed by hack below
-        %self.swigInd = yarpMATLAB_wrap(825, varargin{:});
-        tmp = yarpMATLAB_wrap(825, varargin{:}); % FIXME
-        self.swigInd = tmp.swigInd;
-        tmp.swigInd = uint64(0);
+      self@yarp.Image(SwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
+        tmp = yarpMEX(828, varargin{:});
+        self.swigPtr = tmp.swigPtr;
+        tmp.swigPtr = [];
       end
     end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(826, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(829, self);
+        self.swigPtr=[];
       end
     end
   end

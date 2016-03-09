@@ -2,25 +2,30 @@ classdef TypedReaderCallbackImageRgba < SwigRef
     %Usage: TypedReaderCallbackImageRgba ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(1780, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(1820, self);
+        self.swigPtr=[];
       end
     end
     function varargout = onRead(self,varargin)
     %Usage: onRead (datum, reader)
     %
     %datum is of type ImageRgba. reader is of type TypedReaderImageRgba. 
-      [varargout{1:nargout}] = yarpMATLAB_wrap(1781, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1821, self, varargin{:});
     end
     function self = TypedReaderCallbackImageRgba(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
-        % How to get working on C side? Commented out, replaed by hack below
-        %self.swigInd = yarpMATLAB_wrap(1782, varargin{:});
-        tmp = yarpMATLAB_wrap(1782, varargin{:}); % FIXME
-        self.swigInd = tmp.swigInd;
-        tmp.swigInd = uint64(0);
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
+        tmp = yarpMEX(1822, varargin{:});
+        self.swigPtr = tmp.swigPtr;
+        tmp.swigPtr = [];
       end
     end
   end

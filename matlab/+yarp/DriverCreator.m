@@ -2,50 +2,57 @@ classdef DriverCreator < SwigRef
     %Usage: DriverCreator ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(998, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(1002, self);
+        self.swigPtr=[];
       end
     end
     function varargout = toString(self,varargin)
     %Usage: retval = toString ()
     %
     %retval is of type yarp::os::ConstString. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(999, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1003, self, varargin{:});
     end
     function varargout = create(self,varargin)
     %Usage: retval = create ()
     %
     %retval is of type DeviceDriver. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1000, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1004, self, varargin{:});
     end
     function varargout = getName(self,varargin)
     %Usage: retval = getName ()
     %
     %retval is of type yarp::os::ConstString. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1001, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1005, self, varargin{:});
     end
     function varargout = getWrapper(self,varargin)
     %Usage: retval = getWrapper ()
     %
     %retval is of type yarp::os::ConstString. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1002, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1006, self, varargin{:});
     end
     function varargout = getCode(self,varargin)
     %Usage: retval = getCode ()
     %
     %retval is of type yarp::os::ConstString. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1003, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1007, self, varargin{:});
     end
     function varargout = owner(self,varargin)
     %Usage: retval = owner ()
     %
     %retval is of type PolyDriver. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1004, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1008, self, varargin{:});
     end
     function self = DriverCreator(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
         error('No matching constructor');
       end
     end

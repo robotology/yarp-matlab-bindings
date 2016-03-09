@@ -2,20 +2,33 @@ classdef IAxisInfo < SwigRef
     %Usage: IAxisInfo ()
     %
   methods
+    function this = swig_this(self)
+      this = yarpMEX(3, self);
+    end
     function delete(self)
-      if self.swigInd
-        yarpMATLAB_wrap(1195, self);
-        self.swigInd=uint64(0);
+      if self.swigPtr
+        yarpMEX(1231, self);
+        self.swigPtr=[];
       end
     end
     function varargout = getAxisName(self,varargin)
     %Usage: retval = getAxisName (axis, name)
     %
     %axis is of type int. name is of type yarp::os::ConstString &. axis is of type int. name is of type yarp::os::ConstString &. retval is of type bool. 
-      [varargout{1:max(1,nargout)}] = yarpMATLAB_wrap(1196, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1232, self, varargin{:});
+    end
+    function varargout = getJointType(self,varargin)
+    %Usage: retval = getJointType (axis, type)
+    %
+    %axis is of type int. type is of type yarp::dev::JointTypeEnum &. axis is of type int. type is of type yarp::dev::JointTypeEnum &. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1233, self, varargin{:});
     end
     function self = IAxisInfo(varargin)
-      if nargin~=1 || ~ischar(varargin{1}) || ~strcmp(varargin{1},'_swigCreate')
+      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+        if varargin{1}~=SwigRef.Null
+          self.swigPtr = varargin{1}.swigPtr;
+        end
+      else
         error('No matching constructor');
       end
     end
