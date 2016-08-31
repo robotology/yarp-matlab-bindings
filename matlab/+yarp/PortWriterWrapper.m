@@ -6,18 +6,18 @@ classdef PortWriterWrapper < yarp.PortWriter
     %Usage: retval = getInternal ()
     %
     %retval is of type PortWriter. 
-      [varargout{1:nargout}] = yarpMEX(453, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(452, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(454, self);
+        yarpMEX(453, self);
         self.swigPtr=[];
       end
     end
     function self = PortWriterWrapper(varargin)
       self@yarp.PortWriter(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
-        if varargin{1}~=SwigRef.Null
+        if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
       else

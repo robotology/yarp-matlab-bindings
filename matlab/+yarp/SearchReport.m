@@ -9,76 +9,76 @@ classdef SearchReport < SwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(122, self);
+        varargout{1} = yarpMEX(121, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(123, self, varargin{1});
+        yarpMEX(122, self, varargin{1});
       end
     end
     function varargout = value(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(124, self);
+        varargout{1} = yarpMEX(123, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(125, self, varargin{1});
+        yarpMEX(124, self, varargin{1});
       end
     end
     function varargout = isFound(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(126, self);
+        varargout{1} = yarpMEX(125, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(127, self, varargin{1});
+        yarpMEX(126, self, varargin{1});
       end
     end
     function varargout = isGroup(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(128, self);
+        varargout{1} = yarpMEX(127, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(129, self, varargin{1});
+        yarpMEX(128, self, varargin{1});
       end
     end
     function varargout = isComment(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(130, self);
+        varargout{1} = yarpMEX(129, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(131, self, varargin{1});
+        yarpMEX(130, self, varargin{1});
       end
     end
     function varargout = isDefault(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(132, self);
+        varargout{1} = yarpMEX(131, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(133, self, varargin{1});
+        yarpMEX(132, self, varargin{1});
       end
     end
     function self = SearchReport(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
-        if varargin{1}~=SwigRef.Null
+        if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(134, varargin{:});
+        tmp = yarpMEX(133, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(135, self);
+        yarpMEX(134, self);
         self.swigPtr=[];
       end
     end

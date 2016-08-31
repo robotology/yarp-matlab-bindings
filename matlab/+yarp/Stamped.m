@@ -7,7 +7,7 @@ classdef Stamped < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(568, self);
+        yarpMEX(567, self);
         self.swigPtr=[];
       end
     end
@@ -15,11 +15,11 @@ classdef Stamped < SwigRef
     %Usage: retval = getStamp ()
     %
     %retval is of type Stamp. 
-      [varargout{1:nargout}] = yarpMEX(569, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(568, self, varargin{:});
     end
     function self = Stamped(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
-        if varargin{1}~=SwigRef.Null
+        if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
       else

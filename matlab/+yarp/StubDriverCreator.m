@@ -5,11 +5,11 @@ classdef StubDriverCreator < yarp.DriverCreator
     function self = StubDriverCreator(varargin)
       self@yarp.DriverCreator(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
-        if varargin{1}~=SwigRef.Null
+        if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1009, varargin{:});
+        tmp = yarpMEX(1010, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
@@ -18,35 +18,35 @@ classdef StubDriverCreator < yarp.DriverCreator
     %Usage: retval = toString ()
     %
     %retval is of type yarp::os::ConstString. 
-      [varargout{1:nargout}] = yarpMEX(1010, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1011, self, varargin{:});
     end
     function varargout = getName(self,varargin)
     %Usage: retval = getName ()
     %
     %retval is of type yarp::os::ConstString. 
-      [varargout{1:nargout}] = yarpMEX(1011, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1012, self, varargin{:});
     end
     function varargout = getWrapper(self,varargin)
     %Usage: retval = getWrapper ()
     %
     %retval is of type yarp::os::ConstString. 
-      [varargout{1:nargout}] = yarpMEX(1012, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1013, self, varargin{:});
     end
     function varargout = getCode(self,varargin)
     %Usage: retval = getCode ()
     %
     %retval is of type yarp::os::ConstString. 
-      [varargout{1:nargout}] = yarpMEX(1013, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1014, self, varargin{:});
     end
     function varargout = create(self,varargin)
     %Usage: retval = create ()
     %
     %retval is of type DeviceDriver. 
-      [varargout{1:nargout}] = yarpMEX(1014, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1015, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1015, self);
+        yarpMEX(1016, self);
         self.swigPtr=[];
       end
     end

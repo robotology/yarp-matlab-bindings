@@ -97,7 +97,7 @@ classdef Contact < SwigRef
     end
     function self = Contact(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
-        if varargin{1}~=SwigRef.Null
+        if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
@@ -118,35 +118,29 @@ classdef Contact < SwigRef
     %timeout is of type float. 
       [varargout{1:nargout}] = yarpMEX(57, self, varargin{:});
     end
-    function varargout = setNested(self,varargin)
-    %Usage: setNested (flavor)
-    %
-    %flavor is of type yarp::os::NestedContact const &. 
-      [varargout{1:nargout}] = yarpMEX(58, self, varargin{:});
-    end
     function varargout = getTimeout(self,varargin)
     %Usage: retval = getTimeout ()
     %
     %retval is of type float. 
-      [varargout{1:nargout}] = yarpMEX(59, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(58, self, varargin{:});
     end
     function varargout = getRegName(self,varargin)
     %Usage: retval = getRegName ()
     %
     %retval is of type yarp::os::ConstString. 
-      [varargout{1:nargout}] = yarpMEX(60, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(59, self, varargin{:});
     end
     function varargout = setHost(self,varargin)
     %Usage: setHost (host)
     %
     %host is of type yarp::os::ConstString const &. 
-      [varargout{1:nargout}] = yarpMEX(61, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(60, self, varargin{:});
     end
     function varargout = setPort(self,varargin)
     %Usage: setPort (port)
     %
     %port is of type int. 
-      [varargout{1:nargout}] = yarpMEX(62, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(61, self, varargin{:});
     end
   end
   methods(Static)

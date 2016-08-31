@@ -7,7 +7,7 @@ classdef TypedReaderCallbackImageFloat < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(2169, self);
+        yarpMEX(2170, self);
         self.swigPtr=[];
       end
     end
@@ -15,15 +15,15 @@ classdef TypedReaderCallbackImageFloat < SwigRef
     %Usage: onRead (datum, reader)
     %
     %datum is of type ImageFloat. reader is of type TypedReaderImageFloat. 
-      [varargout{1:nargout}] = yarpMEX(2170, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2171, self, varargin{:});
     end
     function self = TypedReaderCallbackImageFloat(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
-        if varargin{1}~=SwigRef.Null
+        if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(2171, varargin{:});
+        tmp = yarpMEX(2172, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end

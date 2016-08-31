@@ -9,97 +9,97 @@ classdef DVector < SwigRef
     %Usage: retval = pop ()
     %
     %retval is of type std::vector< double >::value_type. 
-      [varargout{1:nargout}] = yarpMEX(1628, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1629, self, varargin{:});
     end
     function varargout = brace(self,varargin)
     %Usage: retval = brace (i)
     %
     %i is of type std::vector< double >::difference_type. i is of type std::vector< double >::difference_type. retval is of type std::vector< double >::value_type. 
-      [varargout{1:nargout}] = yarpMEX(1629, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1630, self, varargin{:});
     end
     function varargout = setbrace(self,varargin)
     %Usage: setbrace (x, i)
     %
     %x is of type std::vector< double >::value_type. i is of type std::vector< double >::difference_type. 
-      [varargout{1:nargout}] = yarpMEX(1630, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1631, self, varargin{:});
     end
     function varargout = append(self,varargin)
     %Usage: append (x)
     %
     %x is of type std::vector< double >::value_type. 
-      [varargout{1:nargout}] = yarpMEX(1631, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1632, self, varargin{:});
     end
     function varargout = empty(self,varargin)
     %Usage: retval = empty ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1632, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1633, self, varargin{:});
     end
     function varargout = size(self,varargin)
     %Usage: retval = size ()
     %
     %retval is of type std::vector< double >::size_type. 
-      [varargout{1:nargout}] = yarpMEX(1633, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1634, self, varargin{:});
     end
     function varargout = swap(self,varargin)
     %Usage: swap (v)
     %
     %v is of type DVector. 
-      [varargout{1:nargout}] = yarpMEX(1634, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1635, self, varargin{:});
     end
     function varargout = begin(self,varargin)
     %Usage: retval = begin ()
     %
     %retval is of type std::vector< double >::iterator. 
-      [varargout{1:nargout}] = yarpMEX(1635, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1636, self, varargin{:});
     end
     function varargout = end(self,varargin)
     %Usage: retval = end ()
     %
     %retval is of type std::vector< double >::iterator. 
-      [varargout{1:nargout}] = yarpMEX(1636, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1637, self, varargin{:});
     end
     function varargout = rbegin(self,varargin)
     %Usage: retval = rbegin ()
     %
     %retval is of type std::vector< double >::reverse_iterator. 
-      [varargout{1:nargout}] = yarpMEX(1637, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1638, self, varargin{:});
     end
     function varargout = rend(self,varargin)
     %Usage: retval = rend ()
     %
     %retval is of type std::vector< double >::reverse_iterator. 
-      [varargout{1:nargout}] = yarpMEX(1638, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1639, self, varargin{:});
     end
     function varargout = clear(self,varargin)
     %Usage: clear ()
     %
-      [varargout{1:nargout}] = yarpMEX(1639, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1640, self, varargin{:});
     end
     function varargout = get_allocator(self,varargin)
     %Usage: retval = get_allocator ()
     %
     %retval is of type std::vector< double >::allocator_type. 
-      [varargout{1:nargout}] = yarpMEX(1640, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1641, self, varargin{:});
     end
     function varargout = pop_back(self,varargin)
     %Usage: pop_back ()
     %
-      [varargout{1:nargout}] = yarpMEX(1641, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1642, self, varargin{:});
     end
     function varargout = erase(self,varargin)
     %Usage: retval = erase (first, last)
     %
     %first is of type std::vector< double >::iterator. last is of type std::vector< double >::iterator. first is of type std::vector< double >::iterator. last is of type std::vector< double >::iterator. retval is of type std::vector< double >::iterator. 
-      [varargout{1:nargout}] = yarpMEX(1642, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1643, self, varargin{:});
     end
     function self = DVector(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
-        if varargin{1}~=SwigRef.Null
+        if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1643, varargin{:});
+        tmp = yarpMEX(1644, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
@@ -108,53 +108,53 @@ classdef DVector < SwigRef
     %Usage: push_back (x)
     %
     %x is of type std::vector< double >::value_type const &. 
-      [varargout{1:nargout}] = yarpMEX(1644, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1645, self, varargin{:});
     end
     function varargout = front(self,varargin)
     %Usage: retval = front ()
     %
     %retval is of type std::vector< double >::value_type const &. 
-      [varargout{1:nargout}] = yarpMEX(1645, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1646, self, varargin{:});
     end
     function varargout = back(self,varargin)
     %Usage: retval = back ()
     %
     %retval is of type std::vector< double >::value_type const &. 
-      [varargout{1:nargout}] = yarpMEX(1646, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1647, self, varargin{:});
     end
     function varargout = assign(self,varargin)
     %Usage: assign (n, x)
     %
     %n is of type std::vector< double >::size_type. x is of type std::vector< double >::value_type const &. 
-      [varargout{1:nargout}] = yarpMEX(1647, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1648, self, varargin{:});
     end
     function varargout = resize(self,varargin)
     %Usage: resize (new_size, x)
     %
     %new_size is of type std::vector< double >::size_type. x is of type std::vector< double >::value_type const &. 
-      [varargout{1:nargout}] = yarpMEX(1648, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1649, self, varargin{:});
     end
     function varargout = insert(self,varargin)
     %Usage: insert (pos, n, x)
     %
     %pos is of type std::vector< double >::iterator. n is of type std::vector< double >::size_type. x is of type std::vector< double >::value_type const &. 
-      [varargout{1:nargout}] = yarpMEX(1649, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1650, self, varargin{:});
     end
     function varargout = reserve(self,varargin)
     %Usage: reserve (n)
     %
     %n is of type std::vector< double >::size_type. 
-      [varargout{1:nargout}] = yarpMEX(1650, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1651, self, varargin{:});
     end
     function varargout = capacity(self,varargin)
     %Usage: retval = capacity ()
     %
     %retval is of type std::vector< double >::size_type. 
-      [varargout{1:nargout}] = yarpMEX(1651, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1652, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1652, self);
+        yarpMEX(1653, self);
         self.swigPtr=[];
       end
     end
