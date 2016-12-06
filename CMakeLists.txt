@@ -13,7 +13,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 set(YARP_USES_MATLAB TRUE CACHE BOOL "Do you want to create the MATLAB Interface")
 set(YARP_GENERATE_MATLAB FALSE CACHE BOOL "Enable if you have the experimental version of SWIG necessary for generating the Matlab wrapper")
 
-find_package(YARP REQUIRED)
+find_package(YARP 2.3.68 REQUIRED)
 find_package(SWIG)
 if(SWIG_FOUND)
     include(UseSWIG)
