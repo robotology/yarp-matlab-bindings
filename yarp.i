@@ -341,11 +341,6 @@ namespace yarp {
   %include "compat.h"
 #endif
 
-#if defined( SWIGMATLAB )
-  %include "matlab_removed_methods.i"
-#endif
-
-
 %include <yarp/os/ConstString.h>
 %include <yarp/os/PortReport.h>
 %include <yarp/os/Contact.h>
