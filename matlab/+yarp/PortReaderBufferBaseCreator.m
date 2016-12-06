@@ -7,7 +7,7 @@ classdef PortReaderBufferBaseCreator < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(425, self);
+        yarpMEX(434, self);
         self.swigPtr=[];
       end
     end
@@ -15,7 +15,7 @@ classdef PortReaderBufferBaseCreator < SwigRef
     %Usage: retval = create ()
     %
     %retval is of type PortReader. 
-      [varargout{1:nargout}] = yarpMEX(426, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(435, self, varargin{:});
     end
     function self = PortReaderBufferBaseCreator(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

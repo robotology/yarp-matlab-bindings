@@ -7,7 +7,7 @@ classdef IAudioVisualGrabber < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1105, self);
+        yarpMEX(1118, self);
         self.swigPtr=[];
       end
     end
@@ -15,7 +15,7 @@ classdef IAudioVisualGrabber < SwigRef
     %Usage: retval = getAudioVisual (image, sound)
     %
     %image is of type ImageRgb. sound is of type Sound. image is of type ImageRgb. sound is of type Sound. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1106, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1119, self, varargin{:});
     end
     function self = IAudioVisualGrabber(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

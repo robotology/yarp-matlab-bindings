@@ -9,14 +9,14 @@ classdef Network < yarp.NetworkBase
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(360, varargin{:});
+        tmp = yarpMEX(369, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(361, self);
+        yarpMEX(370, self);
         self.swigPtr=[];
       end
     end
@@ -25,12 +25,12 @@ classdef Network < yarp.NetworkBase
     function varargout = init(varargin)
     %Usage: init ()
     %
-     [varargout{1:nargout}] = yarpMEX(362, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(371, varargin{:});
     end
     function varargout = fini(varargin)
     %Usage: fini ()
     %
-     [varargout{1:nargout}] = yarpMEX(363, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(372, varargin{:});
     end
   end
 end

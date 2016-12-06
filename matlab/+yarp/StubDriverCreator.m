@@ -9,7 +9,7 @@ classdef StubDriverCreator < yarp.DriverCreator
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1010, varargin{:});
+        tmp = yarpMEX(1023, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
@@ -18,35 +18,35 @@ classdef StubDriverCreator < yarp.DriverCreator
     %Usage: retval = toString ()
     %
     %retval is of type yarp::os::ConstString. 
-      [varargout{1:nargout}] = yarpMEX(1011, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1024, self, varargin{:});
     end
     function varargout = getName(self,varargin)
     %Usage: retval = getName ()
     %
     %retval is of type yarp::os::ConstString. 
-      [varargout{1:nargout}] = yarpMEX(1012, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1025, self, varargin{:});
     end
     function varargout = getWrapper(self,varargin)
     %Usage: retval = getWrapper ()
     %
     %retval is of type yarp::os::ConstString. 
-      [varargout{1:nargout}] = yarpMEX(1013, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1026, self, varargin{:});
     end
     function varargout = getCode(self,varargin)
     %Usage: retval = getCode ()
     %
     %retval is of type yarp::os::ConstString. 
-      [varargout{1:nargout}] = yarpMEX(1014, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1027, self, varargin{:});
     end
     function varargout = create(self,varargin)
     %Usage: retval = create ()
     %
     %retval is of type DeviceDriver. 
-      [varargout{1:nargout}] = yarpMEX(1015, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1028, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1016, self);
+        yarpMEX(1029, self);
         self.swigPtr=[];
       end
     end
