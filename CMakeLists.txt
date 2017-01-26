@@ -14,18 +14,16 @@ set(YARP_USES_MATLAB TRUE CACHE BOOL "Do you want to create the MATLAB Interface
 set(YARP_GENERATE_MATLAB FALSE CACHE BOOL "Enable if you have the experimental version of SWIG necessary for generating the Matlab wrapper")
 
 find_package(YARP 2.3.68 REQUIRED)
-find_package(SWIG)
-if(SWIG_FOUND)
-    include(UseSWIG)
 
-    set_source_files_properties(yarp.i PROPERTIES CPLUSPLUS ON)
+include(UseSWIG)
 
-    include_directories(${YARP_INCLUDE_DIRS})
-    link_libraries(${YARP_LIBRARIES})
+set_source_files_properties(yarp.i PROPERTIES CPLUSPLUS ON)
+
+include_directories(${YARP_INCLUDE_DIRS})
+link_libraries(${YARP_LIBRARIES})
 
 
-    if(YARP_USES_MATLAB OR YARP_GENERATE_MATLAB)
-       add_subdirectory(matlab)
-    endif(YARP_USES_MATLAB OR YARP_GENERATE_MATLAB)
-endif(SWIG_FOUND)
+if(YARP_USES_MATLAB OR YARP_GENERATE_MATLAB)
+    add_subdirectory(matlab)
+endif(YARP_USES_MATLAB OR YARP_GENERATE_MATLAB)
 
