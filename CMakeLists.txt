@@ -16,6 +16,13 @@ set(YARP_GENERATE_MATLAB FALSE CACHE BOOL "Enable if you have the experimental v
 find_package(YARP 2.3.68 REQUIRED)
 
 include(UseSWIG)
+find_package(YCM)
+if(YCM_FOUND)
+  include(AddInstallRPATHSupport)
+  add_install_rpath_support(BIN_DIRS "${CMAKE_INSTALL_PREFIX}/bin"
+                            LIB_DIRS "${CMAKE_INSTALL_PREFIX}/lib"
+                            USE_LINK_PATH)
+endif()
 
 set_source_files_properties(yarp.i PROPERTIES CPLUSPLUS ON)
 
