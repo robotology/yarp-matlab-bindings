@@ -1,7 +1,7 @@
 function v = YARP_FEATURE_TEMPERATURE()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 51);
+    vInitialized = yarpMEX(0, 55);
   end
   v = vInitialized;
 end

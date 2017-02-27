@@ -1,7 +1,7 @@
 function v = YARP_FEATURE_SHARPNESS()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 42);
+    vInitialized = yarpMEX(0, 46);
   end
   v = vInitialized;
 end

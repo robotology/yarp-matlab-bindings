@@ -1,7 +1,7 @@
 function v = YARP_FEATURE_SATURATION()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 45);
+    vInitialized = yarpMEX(0, 49);
   end
   v = vInitialized;
 end

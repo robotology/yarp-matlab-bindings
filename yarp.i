@@ -511,6 +511,12 @@ typedef yarp::os::TypedReaderCallback<Sound> TypedReaderCallbackSound;
 typedef yarp::os::BufferedPort<Sound> BufferedPortSound;
 %}
 
+%{
+typedef yarp::os::TypedReader<yarp::sig::Vector> TypedReaderVector;
+typedef yarp::os::TypedReaderCallback<yarp::sig::Vector> TypedReaderCallbackVector;
+typedef yarp::os::BufferedPort<yarp::sig::Vector> BufferedPortVector;
+%}
+
 %feature("notabstract") ImageRgb;
 %feature("notabstract") yarp::os::BufferedPort<ImageRgb>;
 %feature("notabstract") BufferedPortImageRgb;
@@ -534,6 +540,10 @@ typedef yarp::os::BufferedPort<Sound> BufferedPortSound;
 %feature("notabstract") Sound;
 %feature("notabstract") yarp::os::BufferedPort<Sound>;
 %feature("notabstract") BufferedPortSound;
+
+%feature("notabstract") Vector;
+%feature("notabstract") yarp::os::BufferedPort<Vector>;
+%feature("notabstract") BufferedPortVector;
 
 %template(ImageRgb) yarp::sig::ImageOf<yarp::sig::PixelRgb>;
 %template(TypedReaderImageRgb) yarp::os::TypedReader<yarp::sig::ImageOf<yarp::sig::PixelRgb> >;
@@ -561,8 +571,12 @@ typedef yarp::os::BufferedPort<Sound> BufferedPortSound;
 %template(BufferedPortImageInt) yarp::os::BufferedPort<yarp::sig::ImageOf<yarp::sig::PixelInt> >;
 
 %template(TypedReaderSound) yarp::os::TypedReader<yarp::sig::Sound >;
-%template(TypedReaderCallbackImageMono) yarp::os::TypedReaderCallback<yarp::sig::Sound>;
+%template(TypedReaderCallbackSound) yarp::os::TypedReaderCallback<yarp::sig::Sound>;
 %template(BufferedPortSound) yarp::os::BufferedPort<yarp::sig::Sound >;
+
+%template(TypedReaderVector) yarp::os::TypedReader<yarp::sig::Vector >;
+%template(TypedReaderCallbackVector) yarp::os::TypedReaderCallback<yarp::sig::Vector>;
+%template(BufferedPortVector) yarp::os::BufferedPort<yarp::sig::Vector >;
 
 // Add getPixel and setPixel methods to access float values
 %extend yarp::sig::ImageOf<yarp::sig::PixelFloat> {

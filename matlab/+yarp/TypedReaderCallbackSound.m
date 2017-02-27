@@ -1,5 +1,5 @@
-classdef TypedReaderCallbackImageRgba < SwigRef
-    %Usage: TypedReaderCallbackImageRgba ()
+classdef TypedReaderCallbackSound < SwigRef
+    %Usage: TypedReaderCallbackSound ()
     %
   methods
     function this = swig_this(self)
@@ -7,23 +7,23 @@ classdef TypedReaderCallbackImageRgba < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1842, self);
+        yarpMEX(2125, self);
         self.swigPtr=[];
       end
     end
     function varargout = onRead(self,varargin)
     %Usage: onRead (datum, reader)
     %
-    %datum is of type ImageRgba. reader is of type TypedReaderImageRgba. 
-      [varargout{1:nargout}] = yarpMEX(1843, self, varargin{:});
+    %datum is of type Sound. reader is of type TypedReaderSound. 
+      [varargout{1:nargout}] = yarpMEX(2126, self, varargin{:});
     end
-    function self = TypedReaderCallbackImageRgba(varargin)
+    function self = TypedReaderCallbackSound(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1844, varargin{:});
+        tmp = yarpMEX(2127, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
