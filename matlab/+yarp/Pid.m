@@ -140,12 +140,6 @@ classdef Pid < SwigRef
     %up_value is of type double. down_value is of type double. 
       [varargout{1:nargout}] = yarpMEX(1275, self, varargin{:});
     end
-    function varargout = isEqual(self,varargin)
-    %Usage: retval = isEqual (p)
-    %
-    %p is of type Pid. p is of type Pid. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1276, self, varargin{:});
-    end
   end
   methods(Static)
   end

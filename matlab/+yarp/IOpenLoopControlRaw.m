@@ -7,7 +7,7 @@ classdef IOpenLoopControlRaw < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1633, self);
+        yarpMEX(1626, self);
         self.swigPtr=[];
       end
     end
@@ -15,43 +15,43 @@ classdef IOpenLoopControlRaw < SwigRef
     %Usage: retval = setRefOutputRaw (j, v)
     %
     %j is of type int. v is of type double. j is of type int. v is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1634, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1627, self, varargin{:});
     end
     function varargout = setRefOutputsRaw(self,varargin)
     %Usage: retval = setRefOutputsRaw (v)
     %
     %v is of type double const *. v is of type double const *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1635, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1628, self, varargin{:});
     end
     function varargout = getRefOutputRaw(self,varargin)
     %Usage: retval = getRefOutputRaw (j, v)
     %
     %j is of type int. v is of type double *. j is of type int. v is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1636, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1629, self, varargin{:});
     end
     function varargout = getRefOutputsRaw(self,varargin)
     %Usage: retval = getRefOutputsRaw (v)
     %
     %v is of type double *. v is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1637, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1630, self, varargin{:});
     end
     function varargout = getOutputRaw(self,varargin)
     %Usage: retval = getOutputRaw (j, v)
     %
     %j is of type int. v is of type double *. j is of type int. v is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1638, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1631, self, varargin{:});
     end
     function varargout = getOutputsRaw(self,varargin)
     %Usage: retval = getOutputsRaw (v)
     %
     %v is of type double *. v is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1639, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1632, self, varargin{:});
     end
     function varargout = setOpenLoopModeRaw(self,varargin)
     %Usage: retval = setOpenLoopModeRaw ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1640, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1633, self, varargin{:});
     end
     function self = IOpenLoopControlRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

@@ -9,89 +9,89 @@ classdef PidVector < SwigRef
     %Usage: retval = pop ()
     %
     %retval is of type Pid. 
-      [varargout{1:nargout}] = yarpMEX(1724, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1717, self, varargin{:});
     end
     function varargout = brace(self,varargin)
     %Usage: retval = brace (i)
     %
     %i is of type std::vector< yarp::dev::Pid >::difference_type. i is of type std::vector< yarp::dev::Pid >::difference_type. retval is of type Pid. 
-      [varargout{1:nargout}] = yarpMEX(1725, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1718, self, varargin{:});
     end
     function varargout = setbrace(self,varargin)
     %Usage: setbrace (x, i)
     %
     %x is of type Pid. i is of type std::vector< yarp::dev::Pid >::difference_type. 
-      [varargout{1:nargout}] = yarpMEX(1726, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1719, self, varargin{:});
     end
     function varargout = append(self,varargin)
     %Usage: append (x)
     %
     %x is of type Pid. 
-      [varargout{1:nargout}] = yarpMEX(1727, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1720, self, varargin{:});
     end
     function varargout = empty(self,varargin)
     %Usage: retval = empty ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1728, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1721, self, varargin{:});
     end
     function varargout = size(self,varargin)
     %Usage: retval = size ()
     %
     %retval is of type std::vector< yarp::dev::Pid >::size_type. 
-      [varargout{1:nargout}] = yarpMEX(1729, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1722, self, varargin{:});
     end
     function varargout = swap(self,varargin)
     %Usage: swap (v)
     %
     %v is of type PidVector. 
-      [varargout{1:nargout}] = yarpMEX(1730, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1723, self, varargin{:});
     end
     function varargout = begin(self,varargin)
     %Usage: retval = begin ()
     %
     %retval is of type std::vector< yarp::dev::Pid >::iterator. 
-      [varargout{1:nargout}] = yarpMEX(1731, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1724, self, varargin{:});
     end
     function varargout = end(self,varargin)
     %Usage: retval = end ()
     %
     %retval is of type std::vector< yarp::dev::Pid >::iterator. 
-      [varargout{1:nargout}] = yarpMEX(1732, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1725, self, varargin{:});
     end
     function varargout = rbegin(self,varargin)
     %Usage: retval = rbegin ()
     %
     %retval is of type std::vector< yarp::dev::Pid >::reverse_iterator. 
-      [varargout{1:nargout}] = yarpMEX(1733, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1726, self, varargin{:});
     end
     function varargout = rend(self,varargin)
     %Usage: retval = rend ()
     %
     %retval is of type std::vector< yarp::dev::Pid >::reverse_iterator. 
-      [varargout{1:nargout}] = yarpMEX(1734, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1727, self, varargin{:});
     end
     function varargout = clear(self,varargin)
     %Usage: clear ()
     %
-      [varargout{1:nargout}] = yarpMEX(1735, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1728, self, varargin{:});
     end
     function varargout = get_allocator(self,varargin)
     %Usage: retval = get_allocator ()
     %
     %retval is of type std::vector< yarp::dev::Pid >::allocator_type. 
-      [varargout{1:nargout}] = yarpMEX(1736, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1729, self, varargin{:});
     end
     function varargout = pop_back(self,varargin)
     %Usage: pop_back ()
     %
-      [varargout{1:nargout}] = yarpMEX(1737, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1730, self, varargin{:});
     end
     function varargout = erase(self,varargin)
     %Usage: retval = erase (first, last)
     %
     %first is of type std::vector< yarp::dev::Pid >::iterator. last is of type std::vector< yarp::dev::Pid >::iterator. first is of type std::vector< yarp::dev::Pid >::iterator. last is of type std::vector< yarp::dev::Pid >::iterator. retval is of type std::vector< yarp::dev::Pid >::iterator. 
-      [varargout{1:nargout}] = yarpMEX(1738, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1731, self, varargin{:});
     end
     function self = PidVector(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
@@ -99,7 +99,7 @@ classdef PidVector < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1739, varargin{:});
+        tmp = yarpMEX(1732, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
@@ -108,53 +108,53 @@ classdef PidVector < SwigRef
     %Usage: push_back (x)
     %
     %x is of type Pid. 
-      [varargout{1:nargout}] = yarpMEX(1740, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1733, self, varargin{:});
     end
     function varargout = front(self,varargin)
     %Usage: retval = front ()
     %
     %retval is of type Pid. 
-      [varargout{1:nargout}] = yarpMEX(1741, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1734, self, varargin{:});
     end
     function varargout = back(self,varargin)
     %Usage: retval = back ()
     %
     %retval is of type Pid. 
-      [varargout{1:nargout}] = yarpMEX(1742, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1735, self, varargin{:});
     end
     function varargout = assign(self,varargin)
     %Usage: assign (n, x)
     %
     %n is of type std::vector< yarp::dev::Pid >::size_type. x is of type Pid. 
-      [varargout{1:nargout}] = yarpMEX(1743, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1736, self, varargin{:});
     end
     function varargout = resize(self,varargin)
     %Usage: resize (new_size, x)
     %
     %new_size is of type std::vector< yarp::dev::Pid >::size_type. x is of type Pid. 
-      [varargout{1:nargout}] = yarpMEX(1744, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1737, self, varargin{:});
     end
     function varargout = insert(self,varargin)
     %Usage: insert (pos, n, x)
     %
     %pos is of type std::vector< yarp::dev::Pid >::iterator. n is of type std::vector< yarp::dev::Pid >::size_type. x is of type Pid. 
-      [varargout{1:nargout}] = yarpMEX(1745, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1738, self, varargin{:});
     end
     function varargout = reserve(self,varargin)
     %Usage: reserve (n)
     %
     %n is of type std::vector< yarp::dev::Pid >::size_type. 
-      [varargout{1:nargout}] = yarpMEX(1746, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1739, self, varargin{:});
     end
     function varargout = capacity(self,varargin)
     %Usage: retval = capacity ()
     %
     %retval is of type std::vector< yarp::dev::Pid >::size_type. 
-      [varargout{1:nargout}] = yarpMEX(1747, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1740, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1748, self);
+        yarpMEX(1741, self);
         self.swigPtr=[];
       end
     end

@@ -7,7 +7,7 @@ classdef TypedReaderCallbackImageRgba < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1842, self);
+        yarpMEX(1835, self);
         self.swigPtr=[];
       end
     end
@@ -15,7 +15,7 @@ classdef TypedReaderCallbackImageRgba < SwigRef
     %Usage: onRead (datum, reader)
     %
     %datum is of type ImageRgba. reader is of type TypedReaderImageRgba. 
-      [varargout{1:nargout}] = yarpMEX(1843, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1836, self, varargin{:});
     end
     function self = TypedReaderCallbackImageRgba(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
@@ -23,7 +23,7 @@ classdef TypedReaderCallbackImageRgba < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1844, varargin{:});
+        tmp = yarpMEX(1837, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end

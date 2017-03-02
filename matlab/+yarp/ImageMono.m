@@ -6,31 +6,31 @@ classdef ImageMono < yarp.Image
     %Usage: retval = getPixelSize ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1893, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1886, self, varargin{:});
     end
     function varargout = getPixelCode(self,varargin)
     %Usage: retval = getPixelCode ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1894, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1887, self, varargin{:});
     end
     function varargout = pixel(self,varargin)
     %Usage: retval = pixel (x, y)
     %
     %x is of type int. y is of type int. x is of type int. y is of type int. retval is of type yarp::sig::PixelMono &. 
-      [varargout{1:nargout}] = yarpMEX(1895, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1888, self, varargin{:});
     end
     function varargout = access(self,varargin)
     %Usage: retval = access (x, y)
     %
     %x is of type int. y is of type int. x is of type int. y is of type int. retval is of type yarp::sig::PixelMono &. 
-      [varargout{1:nargout}] = yarpMEX(1896, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1889, self, varargin{:});
     end
     function varargout = safePixel(self,varargin)
     %Usage: retval = safePixel (x, y)
     %
     %x is of type int. y is of type int. x is of type int. y is of type int. retval is of type yarp::sig::PixelMono const &. 
-      [varargout{1:nargout}] = yarpMEX(1897, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1890, self, varargin{:});
     end
     function self = ImageMono(varargin)
       self@yarp.Image(SwigRef.Null);
@@ -39,14 +39,14 @@ classdef ImageMono < yarp.Image
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1898, varargin{:});
+        tmp = yarpMEX(1891, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1899, self);
+        yarpMEX(1892, self);
         self.swigPtr=[];
       end
     end
