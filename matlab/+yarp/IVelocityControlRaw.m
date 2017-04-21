@@ -7,7 +7,7 @@ classdef IVelocityControlRaw < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1608, self);
+        yarpMEX(1611, self);
         self.swigPtr=[];
       end
     end
@@ -15,49 +15,43 @@ classdef IVelocityControlRaw < SwigRef
     %Usage: retval = getAxes (axis)
     %
     %axis is of type int *. axis is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1609, self, varargin{:});
-    end
-    function varargout = setVelocityModeRaw(self,varargin)
-    %Usage: retval = setVelocityModeRaw ()
-    %
-    %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1610, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1612, self, varargin{:});
     end
     function varargout = velocityMoveRaw(self,varargin)
     %Usage: retval = velocityMoveRaw (sp)
     %
     %sp is of type double const *. sp is of type double const *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1611, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1613, self, varargin{:});
     end
     function varargout = setRefAccelerationRaw(self,varargin)
     %Usage: retval = setRefAccelerationRaw (j, acc)
     %
     %j is of type int. acc is of type double. j is of type int. acc is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1612, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1614, self, varargin{:});
     end
     function varargout = setRefAccelerationsRaw(self,varargin)
     %Usage: retval = setRefAccelerationsRaw (accs)
     %
     %accs is of type double const *. accs is of type double const *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1613, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1615, self, varargin{:});
     end
     function varargout = getRefAccelerationRaw(self,varargin)
     %Usage: retval = getRefAccelerationRaw (j, acc)
     %
     %j is of type int. acc is of type double *. j is of type int. acc is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1614, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1616, self, varargin{:});
     end
     function varargout = getRefAccelerationsRaw(self,varargin)
     %Usage: retval = getRefAccelerationsRaw (accs)
     %
     %accs is of type double *. accs is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1615, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1617, self, varargin{:});
     end
     function varargout = stopRaw(self,varargin)
     %Usage: retval = stopRaw ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1616, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1618, self, varargin{:});
     end
     function self = IVelocityControlRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

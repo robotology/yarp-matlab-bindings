@@ -164,11 +164,17 @@ classdef PolyDriver < yarp.DeviceDriver
     %retval is of type IControlMode. 
       [varargout{1:nargout}] = yarpMEX(1014, self, varargin{:});
     end
-    function varargout = viewIOpenLoopControl(self,varargin)
-    %Usage: retval = viewIOpenLoopControl ()
+    function varargout = viewIPWMControl(self,varargin)
+    %Usage: retval = viewIPWMControl ()
     %
-    %retval is of type IOpenLoopControl. 
+    %retval is of type IPWMControl. 
       [varargout{1:nargout}] = yarpMEX(1015, self, varargin{:});
+    end
+    function varargout = viewICurrentControl(self,varargin)
+    %Usage: retval = viewICurrentControl ()
+    %
+    %retval is of type ICurrentControl. 
+      [varargout{1:nargout}] = yarpMEX(1016, self, varargin{:});
     end
   end
   methods(Static)

@@ -35,7 +35,7 @@ classdef ResourceFinder < yarp.Searchable
     function varargout = setDefaultContext(self,varargin)
     %Usage: retval = setDefaultContext (contextName)
     %
-    %contextName is of type char const *. contextName is of type char const *. retval is of type bool. 
+    %contextName is of type yarp::os::ConstString const &. contextName is of type yarp::os::ConstString const &. retval is of type bool. 
       [varargout{1:nargout}] = yarpMEX(607, self, varargin{:});
     end
     function varargout = setContext(self,varargin)
