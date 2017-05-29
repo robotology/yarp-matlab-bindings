@@ -43,6 +43,9 @@ set(sourcename yarpMATLAB_wrap)
 set(mexname    yarpMEX)
 # Generate SWIG wrapper
 if(YARP_GENERATE_MATLAB)
+  if (NOT SWIG_FOUND)
+    message(FATAL_ERROR "Swig not found. Cannot generated bindings")
+  endif()
   # generate the wrapper
   set(swig_generated_sources)
   set_source_files_properties(../yarp.i PROPERTIES CPLUSPLUS ON)
