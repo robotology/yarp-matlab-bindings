@@ -7,7 +7,7 @@ classdef GazeEvent < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1358, self);
+        yarpMEX(1316, self);
         self.swigPtr=[];
       end
     end
@@ -15,26 +15,26 @@ classdef GazeEvent < SwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1359, self);
+        varargout{1} = yarpMEX(1317, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1360, self, varargin{1});
+        yarpMEX(1318, self, varargin{1});
       end
     end
     function varargout = gazeEventVariables(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1361, self);
+        varargout{1} = yarpMEX(1319, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1362, self, varargin{1});
+        yarpMEX(1320, self, varargin{1});
       end
     end
     function varargout = gazeEventCallback(self,varargin)
     %Usage: gazeEventCallback ()
     %
-      [varargout{1:nargout}] = yarpMEX(1363, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1321, self, varargin{:});
     end
     function self = GazeEvent(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

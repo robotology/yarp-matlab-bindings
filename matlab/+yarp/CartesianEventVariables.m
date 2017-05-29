@@ -9,30 +9,30 @@ classdef CartesianEventVariables < SwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1285, self);
+        varargout{1} = yarpMEX(1243, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1286, self, varargin{1});
+        yarpMEX(1244, self, varargin{1});
       end
     end
     function varargout = time(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1287, self);
+        varargout{1} = yarpMEX(1245, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1288, self, varargin{1});
+        yarpMEX(1246, self, varargin{1});
       end
     end
     function varargout = motionOngoingCheckPoint(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1289, self);
+        varargout{1} = yarpMEX(1247, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1290, self, varargin{1});
+        yarpMEX(1248, self, varargin{1});
       end
     end
     function self = CartesianEventVariables(varargin)
@@ -41,14 +41,14 @@ classdef CartesianEventVariables < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1291, varargin{:});
+        tmp = yarpMEX(1249, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1292, self);
+        yarpMEX(1250, self);
         self.swigPtr=[];
       end
     end
