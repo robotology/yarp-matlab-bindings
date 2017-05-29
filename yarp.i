@@ -45,7 +45,7 @@
   // Try to translate std::string and std::vector to native equivalents
   %include "std_string.i"
   %typemaps_std_string(yarp::os::ConstString, char, SWIG_AsCharPtrAndSize,
-		       SWIG_FromCharPtrAndSize, %checkcode(STDSTRING));
+               SWIG_FromCharPtrAndSize, %checkcode(STDSTRING));
   %define YARP_WRAP_STL_STRING %enddef
   %ignore yarp::os::ConstString;
 #else
@@ -153,49 +153,49 @@
 %rename(open_str) yarp::dev::PolyDriver::open(const yarp::os::ConstString& txt);
 
 #if defined(SWIGCSHARP)
-	// there's a big CSHARP virtual/override muddle
-	// we just bypass the issue for now
-	%csmethodmodifiers write "public new";
-	%csmethodmodifiers check "public new";
-	%csmethodmodifiers check "public new";
-	%csmethodmodifiers find "public new";
-	%csmethodmodifiers findGroup "public new";
-	%csmethodmodifiers toString "public new";
-	%csmethodmodifiers lastRead "public new";
-	%csmethodmodifiers isClosed "public new";
-	%csmethodmodifiers read "public new";
-	%csmethodmodifiers setReplier "public new";
-	%csmethodmodifiers onRead "public new";
-	%csmethodmodifiers getPendingReads "public new";
-	%csmethodmodifiers setStrict "public new";
-	%csmethodmodifiers useCallback "public new";
+    // there's a big CSHARP virtual/override muddle
+    // we just bypass the issue for now
+    %csmethodmodifiers write "public new";
+    %csmethodmodifiers check "public new";
+    %csmethodmodifiers check "public new";
+    %csmethodmodifiers find "public new";
+    %csmethodmodifiers findGroup "public new";
+    %csmethodmodifiers toString "public new";
+    %csmethodmodifiers lastRead "public new";
+    %csmethodmodifiers isClosed "public new";
+    %csmethodmodifiers read "public new";
+    %csmethodmodifiers setReplier "public new";
+    %csmethodmodifiers onRead "public new";
+    %csmethodmodifiers getPendingReads "public new";
+    %csmethodmodifiers setStrict "public new";
+    %csmethodmodifiers useCallback "public new";
 #endif
 
 // Deal with method name conflicts
 #ifndef SWIGJAVA
-	%rename(toString_c) *::toString() const;
+    %rename(toString_c) *::toString() const;
 #endif
 
 // python conflict
 #ifdef SWIGPYTHON
-	%rename(yield_c) *::yield();
+    %rename(yield_c) *::yield();
 #endif
 
 // java conflict
 #ifdef SWIGJAVA
-	%rename(wait_c) *::wait();
-	%rename(clone_c) *::clone() const;
-	%rename(toString_c) *::toString();
+    %rename(wait_c) *::wait();
+    %rename(clone_c) *::clone() const;
+    %rename(toString_c) *::toString();
 #endif
 
 #ifdef SWIGCHICKEN
-	// small warning on chicken
-	%rename(delay_c) *::delay();
+    // small warning on chicken
+    %rename(delay_c) *::delay();
 #endif
 
 #ifdef SWIGTCL
-	// small warning on chicken
-	%rename(configure_c) *::configure();
+    // small warning on chicken
+    %rename(configure_c) *::configure();
 #endif
 
 //////////////////////////////////////////////////////////////////////////
@@ -321,16 +321,16 @@ namespace yarp {
     %define _YARP2_VOCAB_ 1
     %enddef
     %define VOCAB(a,b,c,d) 0
-	%enddef
-	%define VOCAB4(a,b,c,d) VOCAB((a),(b),(c),(d))
-	%enddef
-	%define VOCAB3(a,b,c) VOCAB((a),(b),(c),(0))
-	%enddef
-	%define VOCAB2(a,b) VOCAB((a),(b),(0),(0))
-	%enddef
-	%define VOCAB1(a) VOCAB((a),(0),(0),(0))
-	%enddef
-	#endif
+    %enddef
+    %define VOCAB4(a,b,c,d) VOCAB((a),(b),(c),(d))
+    %enddef
+    %define VOCAB3(a,b,c) VOCAB((a),(b),(c),(0))
+    %enddef
+    %define VOCAB2(a,b) VOCAB((a),(b),(0),(0))
+    %enddef
+    %define VOCAB1(a) VOCAB((a),(0),(0),(0))
+    %enddef
+    #endif
 
 %define YARP_BEGIN_PACK
 %enddef
@@ -435,7 +435,7 @@ MAKE_COMMS(Bottle)
   %template(BVector) std::vector<bool>;
   %template(SVector) std::vector<std::string>;
   #if defined(SWIGCSHARP)
-  	SWIG_STD_VECTOR_SPECIALIZE_MINIMUM(Pid,yarp::dev::Pid)
+    SWIG_STD_VECTOR_SPECIALIZE_MINIMUM(Pid,yarp::dev::Pid)
   #endif
   %template(PidVector) std::vector<yarp::dev::Pid>;
 #endif
@@ -444,20 +444,20 @@ MAKE_COMMS(Bottle)
 // Match Java toString behaviour
 
 %extend yarp::os::Bottle {
-	std::string toString() {
-		return self->toString().c_str();
+    std::string toString() {
+        return self->toString().c_str();
         }
 }
 
 %extend yarp::os::Value {
-	std::string toString() {
-		return self->toString().c_str();
+    std::string toString() {
+        return self->toString().c_str();
         }
 }
 
 %extend yarp::os::Property {
-	std::string toString() {
-		return self->toString().c_str();
+    std::string toString() {
+        return self->toString().c_str();
         }
 }
 
@@ -649,39 +649,39 @@ typedef yarp::os::BufferedPort<ImageRgbFloat> BufferedPortImageRgbFloat;
 // Deal with poor translation of interface inheritance in current SWIG
 
 %extend yarp::os::Port {
-	bool write(Bottle& data) {
-		return self->write(*((PortWriter*)(&data)));
-	}
+    bool write(Bottle& data) {
+        return self->write(*((PortWriter*)(&data)));
+    }
 
-	bool write(Property& data) {
-		return self->write(*((PortWriter*)(&data)));
-	}
+    bool write(Property& data) {
+        return self->write(*((PortWriter*)(&data)));
+    }
 
-	bool write(yarp::sig::ImageOf<yarp::sig::PixelRgb>& data) {
-		return self->write(*((PortWriter*)(&data)));
-	}
+    bool write(yarp::sig::ImageOf<yarp::sig::PixelRgb>& data) {
+        return self->write(*((PortWriter*)(&data)));
+    }
 
-	bool write(yarp::sig::ImageOf<yarp::sig::PixelFloat>& data) {
-		return self->write(*((PortWriter*)(&data)));
-	}
+    bool write(yarp::sig::ImageOf<yarp::sig::PixelFloat>& data) {
+        return self->write(*((PortWriter*)(&data)));
+    }
 
-	bool write(Bottle& data1, Bottle& data2) {
-	    return self->write(*((PortWriter*)(&data1)), *((PortReader*)(&data2)));
-	}
+    bool write(Bottle& data1, Bottle& data2) {
+        return self->write(*((PortWriter*)(&data1)), *((PortReader*)(&data2)));
+    }
 
-	bool write(Bottle& data1, yarp::sig::ImageOf<yarp::sig::PixelFloat>& data2){
-		return self->write(*((PortWriter*)(&data1)), *((PortReader*)(&data2)));
-	}
+    bool write(Bottle& data1, yarp::sig::ImageOf<yarp::sig::PixelFloat>& data2){
+        return self->write(*((PortWriter*)(&data1)), *((PortReader*)(&data2)));
+    }
 
-	bool reply(Bottle& data) {
-	    return self->reply(*((PortWriter*)(&data)));
-	}
+    bool reply(Bottle& data) {
+        return self->reply(*((PortWriter*)(&data)));
+    }
 }
 
 %extend yarp::os::RpcClient {
     bool write(Bottle& data1, Bottle& data2) {
-	    return self->write(*((PortWriter*)(&data1)), *((PortReader*)(&data2)));
-	}
+        return self->write(*((PortWriter*)(&data1)), *((PortReader*)(&data2)));
+    }
 }
 
 %extend yarp::os::Contactable {
@@ -694,91 +694,91 @@ typedef yarp::os::BufferedPort<ImageRgbFloat> BufferedPortImageRgbFloat;
 // Deal with PolyDriver idiom that doesn't translate too well
 
 %extend yarp::dev::PolyDriver {
-	yarp::dev::IFrameGrabberImage *viewFrameGrabberImage() {
-		yarp::dev::IFrameGrabberImage *result;
-		self->view(result);
-		return result;
-	}
+    yarp::dev::IFrameGrabberImage *viewFrameGrabberImage() {
+        yarp::dev::IFrameGrabberImage *result;
+        self->view(result);
+        return result;
+    }
 
-	yarp::dev::IPositionControl *viewIPositionControl() {
-		yarp::dev::IPositionControl *result;
-		self->view(result);
-		return result;
-	}
+    yarp::dev::IPositionControl *viewIPositionControl() {
+        yarp::dev::IPositionControl *result;
+        self->view(result);
+        return result;
+    }
 
-	yarp::dev::IVelocityControl *viewIVelocityControl() {
-		yarp::dev::IVelocityControl *result;
-		self->view(result);
-		return result;
-	}
+    yarp::dev::IVelocityControl *viewIVelocityControl() {
+        yarp::dev::IVelocityControl *result;
+        self->view(result);
+        return result;
+    }
 
-	yarp::dev::IEncoders *viewIEncoders() {
-		yarp::dev::IEncoders *result;
-		self->view(result);
-		return result;
-	}
+    yarp::dev::IEncoders *viewIEncoders() {
+        yarp::dev::IEncoders *result;
+        self->view(result);
+        return result;
+    }
 
-	yarp::dev::IPidControl *viewIPidControl() {
-		yarp::dev::IPidControl *result;
-		self->view(result);
-		return result;
-	}
+    yarp::dev::IPidControl *viewIPidControl() {
+        yarp::dev::IPidControl *result;
+        self->view(result);
+        return result;
+    }
 
-	yarp::dev::IAmplifierControl *viewIAmplifierControl() {
-		yarp::dev::IAmplifierControl *result;
-		self->view(result);
-		return result;
-	}
+    yarp::dev::IAmplifierControl *viewIAmplifierControl() {
+        yarp::dev::IAmplifierControl *result;
+        self->view(result);
+        return result;
+    }
 
-	yarp::dev::IControlLimits *viewIControlLimits() {
-		yarp::dev::IControlLimits *result;
-		self->view(result);
-		return result;
-	}
+    yarp::dev::IControlLimits *viewIControlLimits() {
+        yarp::dev::IControlLimits *result;
+        self->view(result);
+        return result;
+    }
 
-	yarp::dev::ICartesianControl *viewICartesianControl() {
-		yarp::dev::ICartesianControl *result;
-		self->view(result);
-		return result;
-	}
+    yarp::dev::ICartesianControl *viewICartesianControl() {
+        yarp::dev::ICartesianControl *result;
+        self->view(result);
+        return result;
+    }
 
-	yarp::dev::IGazeControl *viewIGazeControl() {
-	  yarp::dev::IGazeControl *result;
-	  self->view(result);
-	  return result;
-	}
+    yarp::dev::IGazeControl *viewIGazeControl() {
+      yarp::dev::IGazeControl *result;
+      self->view(result);
+      return result;
+    }
 
-	yarp::dev::IImpedanceControl *viewIImpedanceControl() {
-		yarp::dev::IImpedanceControl *result;
-		self->view(result);
-		return result;
-	}
+    yarp::dev::IImpedanceControl *viewIImpedanceControl() {
+        yarp::dev::IImpedanceControl *result;
+        self->view(result);
+        return result;
+    }
 
-	yarp::dev::ITorqueControl *viewITorqueControl() {
-		yarp::dev::ITorqueControl *result;
-		self->view(result);
-		return result;
-	}
+    yarp::dev::ITorqueControl *viewITorqueControl() {
+        yarp::dev::ITorqueControl *result;
+        self->view(result);
+        return result;
+    }
 
-	yarp::dev::IControlMode *viewIControlMode() {
-		yarp::dev::IControlMode *result;
-		self->view(result);
-		return result;
-	}
+    yarp::dev::IControlMode *viewIControlMode() {
+        yarp::dev::IControlMode *result;
+        self->view(result);
+        return result;
+    }
 
-	yarp::dev::IPWMControl *viewIPWMControl() {
-	    yarp::dev::IPWMControl *result;
-		self->view(result);
-		return result;
-	}
+    yarp::dev::IPWMControl *viewIPWMControl() {
+        yarp::dev::IPWMControl *result;
+        self->view(result);
+        return result;
+    }
     
-	yarp::dev::ICurrentControl *viewICurrentControl() {
-	    yarp::dev::ICurrentControl *result;
-		self->view(result);
-		return result;
-	}
-	// you'll need to add an entry for every interface you wish
-	// to use
+    yarp::dev::ICurrentControl *viewICurrentControl() {
+        yarp::dev::ICurrentControl *result;
+        self->view(result);
+        return result;
+    }
+    // you'll need to add an entry for every interface you wish
+    // to use
 }
 
 
@@ -786,286 +786,286 @@ typedef yarp::os::BufferedPort<ImageRgbFloat> BufferedPortImageRgbFloat;
 // Deal with ControlBoardInterfaces pointer arguments that don't translate
 
 %extend yarp::dev::IPositionControl {
-	int getAxes() {
-		int buffer;
-		bool ok = self->getAxes(&buffer);
-		if (!ok) return 0;
-		return buffer;
-	}
+    int getAxes() {
+        int buffer;
+        bool ok = self->getAxes(&buffer);
+        if (!ok) return 0;
+        return buffer;
+    }
 
-	bool positionMove(std::vector<double>& data) {
-		return self->positionMove(&data[0]);
-	}
+    bool positionMove(std::vector<double>& data) {
+        return self->positionMove(&data[0]);
+    }
 
-	bool relativeMove(std::vector<double>& data) {
-		return self->relativeMove(&data[0]);
-	}
+    bool relativeMove(std::vector<double>& data) {
+        return self->relativeMove(&data[0]);
+    }
 
-	bool setRefSpeeds(std::vector<double>& data) {
-		return self->setRefSpeeds(&data[0]);
-	}
+    bool setRefSpeeds(std::vector<double>& data) {
+        return self->setRefSpeeds(&data[0]);
+    }
 
-	bool getRefSpeed(int j, std::vector<double>& data) {
-		return self->getRefSpeed(j, &data[0]);
-	}
+    bool getRefSpeed(int j, std::vector<double>& data) {
+        return self->getRefSpeed(j, &data[0]);
+    }
 
-	bool getRefSpeeds(std::vector<double>& data) {
-		return self->getRefSpeeds(&data[0]);
-	}
+    bool getRefSpeeds(std::vector<double>& data) {
+        return self->getRefSpeeds(&data[0]);
+    }
 
-	bool getRefAcceleration(int j, std::vector<double>& data) {
-		return self->getRefAcceleration(j, &data[0]);
-	}
+    bool getRefAcceleration(int j, std::vector<double>& data) {
+        return self->getRefAcceleration(j, &data[0]);
+    }
 
-	bool getRefAccelerations(std::vector<double>& data) {
-		return self->getRefAccelerations(&data[0]);
-	}
+    bool getRefAccelerations(std::vector<double>& data) {
+        return self->getRefAccelerations(&data[0]);
+    }
 
 
-	bool checkMotionDone() {
-		bool result;
-		bool ok = self->checkMotionDone(&result);
-		if(!ok) { return 1; } //In case of error tell the motion has been completed
-		return result;
-	}
+    bool checkMotionDone() {
+        bool result;
+        bool ok = self->checkMotionDone(&result);
+        if(!ok) { return 1; } //In case of error tell the motion has been completed
+        return result;
+    }
 
-	bool checkMotionDone(std::vector<bool>& flag) {
-	  // complication: vector<bool> is packed in C++
-	  // and isn't a regular container.
-	  std::vector<char> data(flag.size());
-	  bool result = self->checkMotionDone((bool*)(&data[0]));
-	  for (size_t i=0; i<data.size(); i++) {
-	    flag[i] = data[i]!=0;
-	  }
-	  return result;
-	}
+    bool checkMotionDone(std::vector<bool>& flag) {
+      // complication: vector<bool> is packed in C++
+      // and isn't a regular container.
+      std::vector<char> data(flag.size());
+      bool result = self->checkMotionDone((bool*)(&data[0]));
+      for (size_t i=0; i<data.size(); i++) {
+        flag[i] = data[i]!=0;
+      }
+      return result;
+    }
 
-	bool checkMotionDone(int i, std::vector<bool>& flag) {
-	  std::vector<char> data(flag.size());
-	  bool result = self->checkMotionDone(i,(bool*)(&data[0]));
-	  for (size_t i=0; i<data.size(); i++) {
-	    flag[i] = data[i]!=0;
-	  }
-	  return result;
-	}
+    bool checkMotionDone(int i, std::vector<bool>& flag) {
+      std::vector<char> data(flag.size());
+      bool result = self->checkMotionDone(i,(bool*)(&data[0]));
+      for (size_t i=0; i<data.size(); i++) {
+        flag[i] = data[i]!=0;
+      }
+      return result;
+    }
 
-	bool isMotionDone(int i) {
-		bool buffer;
-		self->checkMotionDone(i,&buffer);
-		return buffer;
-	}
+    bool isMotionDone(int i) {
+        bool buffer;
+        self->checkMotionDone(i,&buffer);
+        return buffer;
+    }
 
-	bool isMotionDone() {
-		int buffer;
-		self->getAxes(&buffer);
-		bool data = true;
-		for (int i=0; i<buffer; i++) {
-			bool buffer2;
-			self->checkMotionDone(i,&buffer2);
-			data = data && buffer2;
-			}
-		return data;
-	}
+    bool isMotionDone() {
+        int buffer;
+        self->getAxes(&buffer);
+        bool data = true;
+        for (int i=0; i<buffer; i++) {
+            bool buffer2;
+            self->checkMotionDone(i,&buffer2);
+            data = data && buffer2;
+            }
+        return data;
+    }
 
 }
 
 %extend yarp::dev::IVelocityControl {
-	int getAxes() {
-		int buffer;
-		bool ok = self->getAxes(&buffer);
-		if (!ok) return 0;
-		return buffer;
-	}
+    int getAxes() {
+        int buffer;
+        bool ok = self->getAxes(&buffer);
+        if (!ok) return 0;
+        return buffer;
+    }
 
-	bool velocityMove(std::vector<double>& data) {
-		return self->velocityMove(&data[0]);
-	}
+    bool velocityMove(std::vector<double>& data) {
+        return self->velocityMove(&data[0]);
+    }
 
-	bool setRefAccelerations(std::vector<double>& data) {
-		return self->setRefAccelerations(&data[0]);
-	}
+    bool setRefAccelerations(std::vector<double>& data) {
+        return self->setRefAccelerations(&data[0]);
+    }
 
-	bool getRefAcceleration(int j, std::vector<double>& data) {
-		return self->getRefAcceleration(j, &data[0]);
-	}
+    bool getRefAcceleration(int j, std::vector<double>& data) {
+        return self->getRefAcceleration(j, &data[0]);
+    }
 
-	bool getRefAccelerations(std::vector<double>& data) {
-		return self->getRefAccelerations(&data[0]);
-	}
+    bool getRefAccelerations(std::vector<double>& data) {
+        return self->getRefAccelerations(&data[0]);
+    }
 }
 
 %extend yarp::dev::IEncoders {
-	int getAxes() {
-		int buffer;
-		bool ok = self->getAxes(&buffer);
-		if (!ok) return 0;
-		return buffer;
-	}
+    int getAxes() {
+        int buffer;
+        bool ok = self->getAxes(&buffer);
+        if (!ok) return 0;
+        return buffer;
+    }
 
-	bool setEncoders(std::vector<double>& data) {
-		return self->setEncoders(&data[0]);
-	}
+    bool setEncoders(std::vector<double>& data) {
+        return self->setEncoders(&data[0]);
+    }
 
-	double getEncoder(int j) {
-		double data;
-		bool ok = self->getEncoder(j, &data);
-		if (!ok) return 0;
-		return data;
-	}
+    double getEncoder(int j) {
+        double data;
+        bool ok = self->getEncoder(j, &data);
+        if (!ok) return 0;
+        return data;
+    }
 
-	bool getEncoders(std::vector<double>& data) {
-		return self->getEncoders(&data[0]);
-	}
+    bool getEncoders(std::vector<double>& data) {
+        return self->getEncoders(&data[0]);
+    }
 
-	double getEncoderSpeed(int j) {
-		double data;
-		bool ok = self->getEncoderSpeed(j, &data);
-		if (!ok) return 0;
-		return data;
-	}
+    double getEncoderSpeed(int j) {
+        double data;
+        bool ok = self->getEncoderSpeed(j, &data);
+        if (!ok) return 0;
+        return data;
+    }
 
-	bool getEncoderSpeeds(std::vector<double>& data) {
-		return self->getEncoderSpeeds(&data[0]);
-	}
+    bool getEncoderSpeeds(std::vector<double>& data) {
+        return self->getEncoderSpeeds(&data[0]);
+    }
 
-	double getEncoderAcceleration(int j) {
-		double data;
-		bool ok = self->getEncoderAcceleration(j, &data);
-		if (!ok) return 0;
-		return data;
-	}
+    double getEncoderAcceleration(int j) {
+        double data;
+        bool ok = self->getEncoderAcceleration(j, &data);
+        if (!ok) return 0;
+        return data;
+    }
 
-	bool getEncoderAccelerations(std::vector<double>& data) {
-		return self->getEncoderAccelerations(&data[0]);
-	}
+    bool getEncoderAccelerations(std::vector<double>& data) {
+        return self->getEncoderAccelerations(&data[0]);
+    }
 }
 
 %extend yarp::dev::IPidControl {
-	bool setReferences(std::vector<double>& data) {
-		return self->setReferences(&data[0]);
-	}
+    bool setReferences(std::vector<double>& data) {
+        return self->setReferences(&data[0]);
+    }
 
-	bool getReference(int j, std::vector<double>& data) {
-		return self->getReference(j, &data[0]);
-	}
+    bool getReference(int j, std::vector<double>& data) {
+        return self->getReference(j, &data[0]);
+    }
 
-	bool getReferences(std::vector<double>& data) {
-		return self->getReferences(&data[0]);
-	}
+    bool getReferences(std::vector<double>& data) {
+        return self->getReferences(&data[0]);
+    }
 
-	bool setErrorLimits(std::vector<double>& data) {
-		return self->setErrorLimits(&data[0]);
-	}
+    bool setErrorLimits(std::vector<double>& data) {
+        return self->setErrorLimits(&data[0]);
+    }
 
-	bool getErrorLimit(int j, std::vector<double>& data) {
-		return self->getErrorLimit(j, &data[0]);
-	}
+    bool getErrorLimit(int j, std::vector<double>& data) {
+        return self->getErrorLimit(j, &data[0]);
+    }
 
-	bool getErrorLimits(std::vector<double>& data) {
-		return self->getErrorLimits(&data[0]);
-	}
+    bool getErrorLimits(std::vector<double>& data) {
+        return self->getErrorLimits(&data[0]);
+    }
 
-	bool getError(int j, std::vector<double>& data) {
-		return self->getError(j, &data[0]);
-	}
+    bool getError(int j, std::vector<double>& data) {
+        return self->getError(j, &data[0]);
+    }
 
-	bool getErrors(std::vector<double>& data) {
-		return self->getErrors(&data[0]);
-	}
+    bool getErrors(std::vector<double>& data) {
+        return self->getErrors(&data[0]);
+    }
 
-	bool getOutput(int j, std::vector<double>& data) {
-		return self->getOutput(j, &data[0]);
-	}
+    bool getOutput(int j, std::vector<double>& data) {
+        return self->getOutput(j, &data[0]);
+    }
 
-	bool getOutputs(std::vector<double>& data) {
-		return self->getOutputs(&data[0]);
-	}
+    bool getOutputs(std::vector<double>& data) {
+        return self->getOutputs(&data[0]);
+    }
 
-	bool setPid(int j, yarp::dev::Pid pid) {
-		return self->setPid(j,pid);
-	}
+    bool setPid(int j, yarp::dev::Pid pid) {
+        return self->setPid(j,pid);
+    }
 
-	bool setPids(std::vector<yarp::dev::Pid> pids) {
-		return self->setPids(&pids[0]);
-	}
+    bool setPids(std::vector<yarp::dev::Pid> pids) {
+        return self->setPids(&pids[0]);
+    }
 
-	bool getPid(int j, std::vector<yarp::dev::Pid> pid) {
-		return self->getPid(j,&pid[0]);
-	}
+    bool getPid(int j, std::vector<yarp::dev::Pid> pid) {
+        return self->getPid(j,&pid[0]);
+    }
 
-	bool getPids(std::vector<yarp::dev::Pid> pids) {
-		return self->getPids(&pids[0]);
-	}
+    bool getPids(std::vector<yarp::dev::Pid> pids) {
+        return self->getPids(&pids[0]);
+    }
 }
 
 %extend yarp::dev::IAmplifierControl {
-	bool getCurrents(std::vector<double>& data) {
-		return self->getCurrents(&data[0]);
-	}
+    bool getCurrents(std::vector<double>& data) {
+        return self->getCurrents(&data[0]);
+    }
 
-	bool getCurrent(int j, std::vector<double>& data) {
-		return self->getCurrent(j, &data[0]);
-	}
+    bool getCurrent(int j, std::vector<double>& data) {
+        return self->getCurrent(j, &data[0]);
+    }
 }
 
 %extend yarp::dev::IControlLimits {
-	bool getLimits(int axis, std::vector<double>& min, std::vector<double>& max) {
-		return self->getLimits(axis, &min[0], &max[0]);
-	}
+    bool getLimits(int axis, std::vector<double>& min, std::vector<double>& max) {
+        return self->getLimits(axis, &min[0], &max[0]);
+    }
 }
 
 %extend yarp::sig::Vector {
 
-	double get(int j)
-	{
-		return self->operator [](j);
-	}
+    double get(int j)
+    {
+        return self->operator [](j);
+    }
 
-	void set(int j, double v)
-	{
-		self->operator [](j) = v;
-	}
+    void set(int j, double v)
+    {
+        self->operator [](j) = v;
+    }
 
 
 #ifdef SWIGPYTHON
-	void __setitem__(int key, double value) {
-		self->operator[](key) = value;
-	}
+    void __setitem__(int key, double value) {
+        self->operator[](key) = value;
+    }
 
-	double __getitem__(int key) {
-		return self->operator[](key);
-	}
+    double __getitem__(int key) {
+        return self->operator[](key);
+    }
 
-	double __len__() {
-		return self->length();
-	}
+    double __len__() {
+        return self->length();
+    }
 #endif
 }
 
 %extend yarp::dev::ICartesianControl {
-	bool checkMotionDone(std::vector<bool>& flag) {
-	  std::vector<char> data(flag.size());
-	  bool result = self->checkMotionDone((bool*)(&data[0]));
-	  for (size_t i=0; i<data.size(); i++) {
-	    flag[i] = data[i]!=0;
-	  }
-	  return result;
-	}
+    bool checkMotionDone(std::vector<bool>& flag) {
+      std::vector<char> data(flag.size());
+      bool result = self->checkMotionDone((bool*)(&data[0]));
+      for (size_t i=0; i<data.size(); i++) {
+        flag[i] = data[i]!=0;
+      }
+      return result;
+    }
 
-	bool checkMotionDone() {
-		bool flag;
-		if(self->checkMotionDone(&flag)) {
-			return flag;
-		} else {
-			return false;
-		}
-	}
+    bool checkMotionDone() {
+        bool flag;
+        if(self->checkMotionDone(&flag)) {
+            return flag;
+        } else {
+            return false;
+        }
+    }
 
-	bool isMotionDone() {
-		bool data = true;
-		self->checkMotionDone(&data);
-		return data;
-	}
+    bool isMotionDone() {
+        bool data = true;
+        self->checkMotionDone(&data);
+        return data;
+    }
 
     int storeContext() {
         // bad id to return if the real
@@ -1085,44 +1085,44 @@ typedef yarp::os::BufferedPort<ImageRgbFloat> BufferedPortImageRgbFloat;
 
 %extend yarp::dev::IGazeControl {
 
-	bool getTrackingMode() {
-		bool flag;
+    bool getTrackingMode() {
+        bool flag;
 
-		if(self->getTrackingMode(&flag)) {
-			return flag;
-		} else {
-			return false; //Not sure what is best to assume here...
-		}
-	}
+        if(self->getTrackingMode(&flag)) {
+            return flag;
+        } else {
+            return false; //Not sure what is best to assume here...
+        }
+    }
 
-	double getNeckTrajTime() {
-      		double result;
+    double getNeckTrajTime() {
+            double result;
 
-      		if(self->getNeckTrajTime(&result)) {
-			return result;
-		} else {
-			return -1.0; //On error return -1.0
-      	}
-	}
+            if(self->getNeckTrajTime(&result)) {
+            return result;
+        } else {
+            return -1.0; //On error return -1.0
+        }
+    }
 
-	double getEyesTrajTime() {
-		double result;
+    double getEyesTrajTime() {
+        double result;
 
-		if(self->getEyesTrajTime(&result)) {
-			return result;
-		} else {
-			return -1.0; //On error return -1.0
-		}
-	}
+        if(self->getEyesTrajTime(&result)) {
+            return result;
+        } else {
+            return -1.0; //On error return -1.0
+        }
+    }
 
-	bool checkMotionDone() {
-      	bool flag;
-		if(self->checkMotionDone(&flag)) {
-			return flag;
-		} else {
-			return false;
-		}
-	}
+    bool checkMotionDone() {
+        bool flag;
+        if(self->checkMotionDone(&flag)) {
+            return flag;
+        } else {
+            return false;
+        }
+    }
 }
 
 
@@ -1142,7 +1142,7 @@ typedef yarp::os::BufferedPort<ImageRgbFloat> BufferedPortImageRgbFloat;
 %extend yarp::sig::Image {
   std::string tostring() const {
     return std::string((const char *)self->getRawImage(),
-		       (size_t)self->getRawImageSize());
+               (size_t)self->getRawImageSize());
   }
 
   // no copy, make sure to keep string alive
@@ -1198,7 +1198,7 @@ public static short[] getRawImg(Image img) {
   for(int r=0; r<height; r++)
     for(int c=0; c<width; c++)
       for(int p=0; p<pixelsize; p++)
-	vec1ds[(c * height) + r + (p * width * height)] = (short) car.getitem((r * width * pixelsize) + (c * pixelsize) + p);
+    vec1ds[(c * height) + r + (p * width * height)] = (short) car.getitem((r * width * pixelsize) + (c * pixelsize) + p);
   return vec1ds;
 }
 */
@@ -1207,17 +1207,17 @@ public static short[] getRawImg(Image img) {
 // From Leo Pape
 
 %extend yarp::os::NetworkBase {
-	static bool write(const char* port_name, Bottle& cmd, Bottle& reply) {
-		return yarp::os::NetworkBase::write(port_name, *((PortWriter*)(&cmd)), *((PortReader*)(&reply)));
-	}
+    static bool write(const char* port_name, Bottle& cmd, Bottle& reply) {
+        return yarp::os::NetworkBase::write(port_name, *((PortWriter*)(&cmd)), *((PortReader*)(&reply)));
+    }
 
-	static bool write(const Contact& contact, Bottle& cmd, Bottle& reply, const ContactStyle& style) {
-		return yarp::os::NetworkBase::write(contact, *((PortWriter*)(&cmd)), *((PortReader*)(&reply)), style);
-	}
+    static bool write(const Contact& contact, Bottle& cmd, Bottle& reply, const ContactStyle& style) {
+        return yarp::os::NetworkBase::write(contact, *((PortWriter*)(&cmd)), *((PortReader*)(&reply)), style);
+    }
 
-	static bool write(const Contact& contact, Bottle& cmd, Bottle& reply, bool admin, bool quiet, double timeout) {
-		return yarp::os::NetworkBase::write(contact, *((PortWriter*)(&cmd)), *((PortReader*)(&reply)), admin, quiet, timeout);
-	}
+    static bool write(const Contact& contact, Bottle& cmd, Bottle& reply, bool admin, bool quiet, double timeout) {
+        return yarp::os::NetworkBase::write(contact, *((PortWriter*)(&cmd)), *((PortReader*)(&reply)), admin, quiet, timeout);
+    }
 }
 
 
@@ -1226,13 +1226,13 @@ public static short[] getRawImg(Image img) {
 
 %extend yarp::os::ResourceFinder {
   bool configure(const std::string& policyName,
-		 std::vector<std::string>& argv,
-		 bool skipFirstArgument = true) {
+         std::vector<std::string>& argv,
+         bool skipFirstArgument = true) {
     std::vector<const char *> tmp(argv.size());
     for (size_t i=0; i<argv.size(); i++) { tmp[i] = argv[i].c_str(); }
     return self->configure(policyName.c_str(),
-			   argv.size(),
-			   (char**)&tmp[0]);
+               argv.size(),
+               (char**)&tmp[0]);
   }
 }
 
