@@ -119,7 +119,7 @@ classdef PolyDriver < yarp.DeviceDriver
     function varargout = viewIPidControl(self,varargin)
     %Usage: retval = viewIPidControl ()
     %
-    %retval is of type IPidControl. 
+    %retval is of type yarp::dev::IPidControl *. 
       [varargout{1:nargout}] = yarpMEX(1007, self, varargin{:});
     end
     function varargout = viewIAmplifierControl(self,varargin)
