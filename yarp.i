@@ -941,60 +941,60 @@ typedef yarp::os::BufferedPort<ImageRgbFloat> BufferedPortImageRgbFloat;
 }
 
 %extend yarp::dev::IPidControl {
-    bool setReferences(std::vector<double>& data) {
-        return self->setReferences(&data[0]);
+    bool setPidReferences(const PidControlTypeEnum& pidtype, std::vector<double>& data) {
+        return self->setReferences(pidtype, &data[0]);
     }
 
-    bool getReference(int j, std::vector<double>& data) {
-        return self->getReference(j, &data[0]);
+    bool getPidReference(const PidControlTypeEnum& pidtype, int j, std::vector<double>& data) {
+        return self->getReference(pidtype, j, &data[0]);
     }
 
-    bool getReferences(std::vector<double>& data) {
-        return self->getReferences(&data[0]);
+    bool getPidReferences(const PidControlTypeEnum& pidtype, std::vector<double>& data) {
+        return self->getReferences(pidtype, &data[0]);
     }
 
-    bool setErrorLimits(std::vector<double>& data) {
-        return self->setErrorLimits(&data[0]);
+    bool setPidErrorLimits(const PidControlTypeEnum& pidtype, std::vector<double>& data) {
+        return self->setErrorLimits(pidtype, &data[0]);
     }
 
-    bool getErrorLimit(int j, std::vector<double>& data) {
-        return self->getErrorLimit(j, &data[0]);
+    bool getPidErrorLimit(const PidControlTypeEnum& pidtype, int j, std::vector<double>& data) {
+        return self->getErrorLimit(pidtype, j, &data[0]);
     }
 
-    bool getErrorLimits(std::vector<double>& data) {
-        return self->getErrorLimits(&data[0]);
+    bool getPidErrorLimits(const PidControlTypeEnum& pidtype, std::vector<double>& data) {
+        return self->getErrorLimits(pidtype, &data[0]);
     }
 
-    bool getError(int j, std::vector<double>& data) {
-        return self->getError(j, &data[0]);
+    bool getPidError(const PidControlTypeEnum& pidtype, int j, std::vector<double>& data) {
+        return self->getError(pidtype, j, &data[0]);
     }
 
-    bool getErrors(std::vector<double>& data) {
-        return self->getErrors(&data[0]);
+    bool getPidErrors(const PidControlTypeEnum& pidtype, std::vector<double>& data) {
+        return self->getErrors(pidtype, &data[0]);
     }
 
-    bool getOutput(int j, std::vector<double>& data) {
-        return self->getOutput(j, &data[0]);
+    bool getPidOutput(const PidControlTypeEnum& pidtype, int j, std::vector<double>& data) {
+        return self->getOutput(pidtype, j, &data[0]);
     }
 
-    bool getOutputs(std::vector<double>& data) {
-        return self->getOutputs(&data[0]);
+    bool getPidOutputs(const PidControlTypeEnum& pidtype, std::vector<double>& data) {
+        return self->getOutputs(pidtype, &data[0]);
     }
 
-    bool setPid(int j, yarp::dev::Pid pid) {
-        return self->setPid(j,pid);
+    bool setPid(const PidControlTypeEnum& pidtype, int j, yarp::dev::Pid pid) {
+        return self->setPid(pidtype, j,pid);
     }
 
-    bool setPids(std::vector<yarp::dev::Pid> pids) {
-        return self->setPids(&pids[0]);
+    bool setPids(const PidControlTypeEnum& pidtype, std::vector<yarp::dev::Pid> pids) {
+        return self->setPids(pidtype, &pids[0]);
     }
 
-    bool getPid(int j, std::vector<yarp::dev::Pid> pid) {
-        return self->getPid(j,&pid[0]);
+    bool getPid(const PidControlTypeEnum& pidtype, int j, std::vector<yarp::dev::Pid> pid) {
+        return self->getPid(pidtype, j,&pid[0]);
     }
 
-    bool getPids(std::vector<yarp::dev::Pid> pids) {
-        return self->getPids(&pids[0]);
+    bool getPids(const PidControlTypeEnum& pidtype, std::vector<yarp::dev::Pid> pids) {
+        return self->getPids(pidtype, &pids[0]);
     }
 }
 
