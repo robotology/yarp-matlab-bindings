@@ -29,6 +29,7 @@ set_source_files_properties(yarp.i PROPERTIES CPLUSPLUS ON)
 include_directories(${YARP_INCLUDE_DIRS})
 link_libraries(${YARP_LIBRARIES})
 
+find_package(SWIG)
 
 if(YARP_USES_MATLAB OR YARP_GENERATE_MATLAB)
     add_subdirectory(matlab)
