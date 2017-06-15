@@ -10,8 +10,9 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 ## about this list, any SWIG-supported language should work - take a
 ## look at e.g. ruby code below for how to do it.
 
-set(YARP_USES_MATLAB TRUE CACHE BOOL "Do you want to create the MATLAB Interface")
-set(YARP_GENERATE_MATLAB FALSE CACHE BOOL "Enable if you have the experimental version of SWIG necessary for generating the Matlab wrapper")
+option(YARP_USES_MATLAB "Do you want to create the MATLAB bindings" FALSE)
+option(YARP_USES_OCTAVE "Do you want to create the OCTAVE bindings" FALSE)
+option(YARP_GENERATE_MATLAB "Enable if you have the experimental version of SWIG necessary for generating the Matlab wrapper" FALSE)
 
 find_package(YARP 2.3.68 REQUIRED)
 
@@ -24,14 +25,9 @@ if(YCM_FOUND)
                             USE_LINK_PATH)
 endif()
 
-set_source_files_properties(yarp.i PROPERTIES CPLUSPLUS ON)
-
 include_directories(${YARP_INCLUDE_DIRS})
-link_libraries(${YARP_LIBRARIES})
 
-find_package(SWIG)
-
-if(YARP_USES_MATLAB OR YARP_GENERATE_MATLAB)
+if(YARP_USES_MATLAB OR YARP_GENERATE_MATLAB OR YARP_USES_OCTAVE)
     add_subdirectory(matlab)
-endif(YARP_USES_MATLAB OR YARP_GENERATE_MATLAB)
+endif()
 
