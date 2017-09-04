@@ -6,31 +6,31 @@ classdef ImageRgb < yarp.Image
     %Usage: retval = getPixelSize ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1823, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1793, self, varargin{:});
     end
     function varargout = getPixelCode(self,varargin)
     %Usage: retval = getPixelCode ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1824, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1794, self, varargin{:});
     end
     function varargout = pixel(self,varargin)
     %Usage: retval = pixel (x, y)
     %
     %x is of type int. y is of type int. x is of type int. y is of type int. retval is of type PixelRgb. 
-      [varargout{1:nargout}] = yarpMEX(1825, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1795, self, varargin{:});
     end
     function varargout = access(self,varargin)
     %Usage: retval = access (x, y)
     %
     %x is of type int. y is of type int. x is of type int. y is of type int. retval is of type PixelRgb. 
-      [varargout{1:nargout}] = yarpMEX(1826, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1796, self, varargin{:});
     end
     function varargout = safePixel(self,varargin)
     %Usage: retval = safePixel (x, y)
     %
     %x is of type int. y is of type int. x is of type int. y is of type int. retval is of type PixelRgb. 
-      [varargout{1:nargout}] = yarpMEX(1827, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1797, self, varargin{:});
     end
     function self = ImageRgb(varargin)
       self@yarp.Image(SwigRef.Null);
@@ -39,14 +39,14 @@ classdef ImageRgb < yarp.Image
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1828, varargin{:});
+        tmp = yarpMEX(1798, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1829, self);
+        yarpMEX(1799, self);
         self.swigPtr=[];
       end
     end

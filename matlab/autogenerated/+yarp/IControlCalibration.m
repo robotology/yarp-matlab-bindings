@@ -7,7 +7,7 @@ classdef IControlCalibration < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1251, self);
+        yarpMEX(1221, self);
         self.swigPtr=[];
       end
     end
@@ -15,25 +15,25 @@ classdef IControlCalibration < SwigRef
     %Usage: retval = done (j)
     %
     %j is of type int. j is of type int. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1252, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1222, self, varargin{:});
     end
     function varargout = setCalibrator(self,varargin)
     %Usage: retval = setCalibrator (c)
     %
     %c is of type ICalibrator *. c is of type ICalibrator *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1253, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1223, self, varargin{:});
     end
     function varargout = calibrate(self,varargin)
     %Usage: retval = calibrate ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1254, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1224, self, varargin{:});
     end
     function varargout = park(self,varargin)
     %Usage: retval = park ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1255, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1225, self, varargin{:});
     end
     function self = IControlCalibration(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

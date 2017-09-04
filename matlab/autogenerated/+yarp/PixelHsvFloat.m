@@ -9,30 +9,30 @@ classdef PixelHsvFloat < SwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(947, self);
+        varargout{1} = yarpMEX(917, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(948, self, varargin{1});
+        yarpMEX(918, self, varargin{1});
       end
     end
     function varargout = s(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(949, self);
+        varargout{1} = yarpMEX(919, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(950, self, varargin{1});
+        yarpMEX(920, self, varargin{1});
       end
     end
     function varargout = v(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(951, self);
+        varargout{1} = yarpMEX(921, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(952, self, varargin{1});
+        yarpMEX(922, self, varargin{1});
       end
     end
     function self = PixelHsvFloat(varargin)
@@ -41,14 +41,14 @@ classdef PixelHsvFloat < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(953, varargin{:});
+        tmp = yarpMEX(923, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(954, self);
+        yarpMEX(924, self);
         self.swigPtr=[];
       end
     end

@@ -7,7 +7,7 @@ classdef NameStore < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(581, self);
+        yarpMEX(561, self);
         self.swigPtr=[];
       end
     end
@@ -15,19 +15,19 @@ classdef NameStore < SwigRef
     %Usage: retval = query (name)
     %
     %name is of type yarp::os::ConstString const &. name is of type yarp::os::ConstString const &. retval is of type Contact. 
-      [varargout{1:nargout}] = yarpMEX(582, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(562, self, varargin{:});
     end
     function varargout = announce(self,varargin)
     %Usage: retval = announce (name, activity)
     %
     %name is of type yarp::os::ConstString const &. activity is of type int. name is of type yarp::os::ConstString const &. activity is of type int. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(583, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(563, self, varargin{:});
     end
     function varargout = process(self,varargin)
     %Usage: retval = process (in, out, source)
     %
     %in is of type PortWriter. out is of type PortReader. source is of type Contact. in is of type PortWriter. out is of type PortReader. source is of type Contact. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(584, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(564, self, varargin{:});
     end
     function self = NameStore(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

@@ -6,31 +6,31 @@ classdef ImageRgbFloat < yarp.Image
     %Usage: retval = getPixelSize ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(2389, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2359, self, varargin{:});
     end
     function varargout = getPixelCode(self,varargin)
     %Usage: retval = getPixelCode ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(2390, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2360, self, varargin{:});
     end
     function varargout = pixel(self,varargin)
     %Usage: retval = pixel (x, y)
     %
     %x is of type int. y is of type int. x is of type int. y is of type int. retval is of type PixelRgbFloat. 
-      [varargout{1:nargout}] = yarpMEX(2391, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2361, self, varargin{:});
     end
     function varargout = access(self,varargin)
     %Usage: retval = access (x, y)
     %
     %x is of type int. y is of type int. x is of type int. y is of type int. retval is of type PixelRgbFloat. 
-      [varargout{1:nargout}] = yarpMEX(2392, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2362, self, varargin{:});
     end
     function varargout = safePixel(self,varargin)
     %Usage: retval = safePixel (x, y)
     %
     %x is of type int. y is of type int. x is of type int. y is of type int. retval is of type PixelRgbFloat. 
-      [varargout{1:nargout}] = yarpMEX(2393, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2363, self, varargin{:});
     end
     function self = ImageRgbFloat(varargin)
       self@yarp.Image(SwigRef.Null);
@@ -39,14 +39,14 @@ classdef ImageRgbFloat < yarp.Image
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(2394, varargin{:});
+        tmp = yarpMEX(2364, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(2395, self);
+        yarpMEX(2365, self);
         self.swigPtr=[];
       end
     end
