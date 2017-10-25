@@ -9,14 +9,14 @@ classdef Network < yarp.NetworkBase
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(368, varargin{:});
+        tmp = yarpMEX(359, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(369, self);
+        yarpMEX(360, self);
         self.swigPtr=[];
       end
     end
@@ -26,18 +26,18 @@ classdef Network < yarp.NetworkBase
     %Usage: init (clockType)
     %
     %clockType is of type yarp::os::yarpClockType. 
-     [varargout{1:nargout}] = yarpMEX(370, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(361, varargin{:});
     end
     function varargout = fini(varargin)
     %Usage: fini ()
     %
-     [varargout{1:nargout}] = yarpMEX(371, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(362, varargin{:});
     end
     function varargout = yarpClockInit(varargin)
     %Usage: yarpClockInit (clockType)
     %
     %clockType is of type yarp::os::yarpClockType. 
-     [varargout{1:nargout}] = yarpMEX(372, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(363, varargin{:});
     end
   end
 end

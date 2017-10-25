@@ -4,7 +4,7 @@ classdef SystemRateThread < yarp.RateThread
   methods
     function delete(self)
       if self.swigPtr
-        yarpMEX(501, self);
+        yarpMEX(492, self);
         self.swigPtr=[];
       end
     end
@@ -12,7 +12,7 @@ classdef SystemRateThread < yarp.RateThread
     %Usage: retval = stepSystem ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(502, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(493, self, varargin{:});
     end
     function self = SystemRateThread(varargin)
       self@yarp.RateThread(SwigRef.Null);

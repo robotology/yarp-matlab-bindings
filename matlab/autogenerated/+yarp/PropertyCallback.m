@@ -7,7 +7,7 @@ classdef PropertyCallback < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(701, self);
+        yarpMEX(692, self);
         self.swigPtr=[];
       end
     end
@@ -15,7 +15,7 @@ classdef PropertyCallback < SwigRef
     %Usage: onRead (datum, reader)
     %
     %datum is of type Property. reader is of type TypedReaderProperty. 
-      [varargout{1:nargout}] = yarpMEX(702, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(693, self, varargin{:});
     end
     function self = PropertyCallback(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
@@ -23,7 +23,7 @@ classdef PropertyCallback < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(703, varargin{:});
+        tmp = yarpMEX(694, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end

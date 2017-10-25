@@ -6,31 +6,31 @@ classdef ImageRgba < yarp.Image
     %Usage: retval = getPixelSize ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1865, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1856, self, varargin{:});
     end
     function varargout = getPixelCode(self,varargin)
     %Usage: retval = getPixelCode ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1866, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1857, self, varargin{:});
     end
     function varargout = pixel(self,varargin)
     %Usage: retval = pixel (x, y)
     %
     %x is of type int. y is of type int. x is of type int. y is of type int. retval is of type PixelRgba. 
-      [varargout{1:nargout}] = yarpMEX(1867, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1858, self, varargin{:});
     end
     function varargout = access(self,varargin)
     %Usage: retval = access (x, y)
     %
     %x is of type int. y is of type int. x is of type int. y is of type int. retval is of type PixelRgba. 
-      [varargout{1:nargout}] = yarpMEX(1868, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1859, self, varargin{:});
     end
     function varargout = safePixel(self,varargin)
     %Usage: retval = safePixel (x, y)
     %
     %x is of type int. y is of type int. x is of type int. y is of type int. retval is of type PixelRgba. 
-      [varargout{1:nargout}] = yarpMEX(1869, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1860, self, varargin{:});
     end
     function self = ImageRgba(varargin)
       self@yarp.Image(SwigRef.Null);
@@ -39,14 +39,14 @@ classdef ImageRgba < yarp.Image
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1870, varargin{:});
+        tmp = yarpMEX(1861, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1871, self);
+        yarpMEX(1862, self);
         self.swigPtr=[];
       end
     end

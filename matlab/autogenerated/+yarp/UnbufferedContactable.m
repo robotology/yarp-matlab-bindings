@@ -6,29 +6,29 @@ classdef UnbufferedContactable < yarp.Contactable
     %Usage: retval = write (writer, reader)
     %
     %writer is of type PortWriter. reader is of type PortReader. writer is of type PortWriter. reader is of type PortReader. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(237, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(228, self, varargin{:});
     end
     function varargout = read(self,varargin)
     %Usage: retval = read (reader)
     %
     %reader is of type PortReader. reader is of type PortReader. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(238, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(229, self, varargin{:});
     end
     function varargout = reply(self,varargin)
     %Usage: retval = reply (writer)
     %
     %writer is of type PortWriter. writer is of type PortWriter. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(239, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(230, self, varargin{:});
     end
     function varargout = replyAndDrop(self,varargin)
     %Usage: retval = replyAndDrop (writer)
     %
     %writer is of type PortWriter. writer is of type PortWriter. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(240, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(231, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(241, self);
+        yarpMEX(232, self);
         self.swigPtr=[];
       end
     end

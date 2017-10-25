@@ -9,30 +9,30 @@ classdef PixelHsv < SwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(885, self);
+        varargout{1} = yarpMEX(876, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(886, self, varargin{1});
+        yarpMEX(877, self, varargin{1});
       end
     end
     function varargout = s(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(887, self);
+        varargout{1} = yarpMEX(878, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(888, self, varargin{1});
+        yarpMEX(879, self, varargin{1});
       end
     end
     function varargout = v(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(889, self);
+        varargout{1} = yarpMEX(880, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(890, self, varargin{1});
+        yarpMEX(881, self, varargin{1});
       end
     end
     function self = PixelHsv(varargin)
@@ -41,14 +41,14 @@ classdef PixelHsv < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(891, varargin{:});
+        tmp = yarpMEX(882, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(892, self);
+        yarpMEX(883, self);
         self.swigPtr=[];
       end
     end
