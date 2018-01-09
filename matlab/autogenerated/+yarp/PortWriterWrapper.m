@@ -6,11 +6,11 @@ classdef PortWriterWrapper < yarp.PortWriter
     %Usage: retval = getInternal ()
     %
     %retval is of type PortWriter. 
-      [varargout{1:nargout}] = yarpMEX(426, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(427, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(427, self);
+        yarpMEX(428, self);
         self.swigPtr=[];
       end
     end

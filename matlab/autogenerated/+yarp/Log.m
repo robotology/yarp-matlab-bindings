@@ -11,14 +11,14 @@ classdef Log < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(666, varargin{:});
+        tmp = yarpMEX(662, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(667, self);
+        yarpMEX(663, self);
         self.swigPtr=[];
       end
     end
@@ -26,37 +26,37 @@ classdef Log < SwigRef
     %Usage: retval = trace ()
     %
     %retval is of type LogStream. 
-      [varargout{1:nargout}] = yarpMEX(668, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(664, self, varargin{:});
     end
     function varargout = debug(self,varargin)
     %Usage: retval = debug ()
     %
     %retval is of type LogStream. 
-      [varargout{1:nargout}] = yarpMEX(669, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(665, self, varargin{:});
     end
     function varargout = info(self,varargin)
     %Usage: retval = info ()
     %
     %retval is of type LogStream. 
-      [varargout{1:nargout}] = yarpMEX(670, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(666, self, varargin{:});
     end
     function varargout = warning(self,varargin)
     %Usage: retval = warning ()
     %
     %retval is of type LogStream. 
-      [varargout{1:nargout}] = yarpMEX(671, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(667, self, varargin{:});
     end
     function varargout = error(self,varargin)
     %Usage: retval = error ()
     %
     %retval is of type LogStream. 
-      [varargout{1:nargout}] = yarpMEX(672, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(668, self, varargin{:});
     end
     function varargout = fatal(self,varargin)
     %Usage: retval = fatal ()
     %
     %retval is of type LogStream. 
-      [varargout{1:nargout}] = yarpMEX(673, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(669, self, varargin{:});
     end
   end
   methods(Static)
@@ -106,7 +106,7 @@ classdef Log < SwigRef
     %Usage: setLogCallback (arg1)
     %
     %arg1 is of type yarp::os::Log::LogCallback. 
-     [varargout{1:nargout}] = yarpMEX(674, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(670, varargin{:});
     end
   end
 end

@@ -6,7 +6,7 @@ classdef RpcServer < yarp.AbstractContactable
     %Usage: retval = open (contact)
     %
     %contact is of type Contact. contact is of type Contact. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(606, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(602, self, varargin{:});
     end
     function self = RpcServer(varargin)
       self@yarp.AbstractContactable(SwigRef.Null);
@@ -15,14 +15,14 @@ classdef RpcServer < yarp.AbstractContactable
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(607, varargin{:});
+        tmp = yarpMEX(603, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(608, self);
+        yarpMEX(604, self);
         self.swigPtr=[];
       end
     end
@@ -30,37 +30,37 @@ classdef RpcServer < yarp.AbstractContactable
     %Usage: retval = write (writer, reader)
     %
     %writer is of type PortWriter. reader is of type PortReader. writer is of type PortWriter. reader is of type PortReader. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(609, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(605, self, varargin{:});
     end
     function varargout = read(self,varargin)
     %Usage: retval = read (reader)
     %
     %reader is of type PortReader. reader is of type PortReader. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(610, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(606, self, varargin{:});
     end
     function varargout = setInputMode(self,varargin)
     %Usage: setInputMode (expectInput)
     %
     %expectInput is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(611, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(607, self, varargin{:});
     end
     function varargout = setOutputMode(self,varargin)
     %Usage: setOutputMode (expectOutput)
     %
     %expectOutput is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(612, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(608, self, varargin{:});
     end
     function varargout = setRpcMode(self,varargin)
     %Usage: setRpcMode (expectRpc)
     %
     %expectRpc is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(613, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(609, self, varargin{:});
     end
     function varargout = asPort(self,varargin)
     %Usage: retval = asPort ()
     %
     %retval is of type Port. 
-      [varargout{1:nargout}] = yarpMEX(614, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(610, self, varargin{:});
     end
   end
   methods(Static)

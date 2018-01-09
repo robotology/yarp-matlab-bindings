@@ -11,14 +11,14 @@ classdef NetworkBase < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(357, varargin{:});
+        tmp = yarpMEX(358, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(358, self);
+        yarpMEX(359, self);
         self.swigPtr=[];
       end
     end
@@ -290,6 +290,12 @@ classdef NetworkBase < SwigRef
     %
     %src is of type yarp::os::ConstString const &. dest is of type yarp::os::ConstString const &. srcStyle is of type QosStyle. destStyle is of type QosStyle. src is of type yarp::os::ConstString const &. dest is of type yarp::os::ConstString const &. srcStyle is of type QosStyle. destStyle is of type QosStyle. retval is of type bool. 
      [varargout{1:nargout}] = yarpMEX(356, varargin{:});
+    end
+    function varargout = isValidPortName(varargin)
+    %Usage: retval = isValidPortName (portName)
+    %
+    %portName is of type yarp::os::ConstString const &. portName is of type yarp::os::ConstString const &. retval is of type bool. 
+     [varargout{1:nargout}] = yarpMEX(357, varargin{:});
     end
   end
 end

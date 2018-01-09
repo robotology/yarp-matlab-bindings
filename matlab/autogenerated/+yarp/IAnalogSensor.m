@@ -7,7 +7,7 @@ classdef IAnalogSensor < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1653, self);
+        yarpMEX(1672, self);
         self.swigPtr=[];
       end
     end
@@ -15,31 +15,31 @@ classdef IAnalogSensor < SwigRef
     %Usage: retval = read (out)
     %
     %out is of type Vector. out is of type Vector. retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1654, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1673, self, varargin{:});
     end
     function varargout = getState(self,varargin)
     %Usage: retval = getState (ch)
     %
     %ch is of type int. ch is of type int. retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1655, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1674, self, varargin{:});
     end
     function varargout = getChannels(self,varargin)
     %Usage: retval = getChannels ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1656, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1675, self, varargin{:});
     end
     function varargout = calibrateSensor(self,varargin)
     %Usage: retval = calibrateSensor (value)
     %
     %value is of type Vector. value is of type Vector. retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1657, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1676, self, varargin{:});
     end
     function varargout = calibrateChannel(self,varargin)
     %Usage: retval = calibrateChannel (ch, value)
     %
     %ch is of type int. value is of type double. ch is of type int. value is of type double. retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1658, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1677, self, varargin{:});
     end
     function self = IAnalogSensor(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

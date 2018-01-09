@@ -11,14 +11,14 @@ classdef LogStream < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(676, varargin{:});
+        tmp = yarpMEX(672, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(677, self);
+        yarpMEX(673, self);
         self.swigPtr=[];
       end
     end
