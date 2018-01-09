@@ -9,13 +9,33 @@ classdef PixelBgra < SwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
+        varargout{1} = yarpMEX(854, self);
+      else
+        nargoutchk(0, 0)
+        yarpMEX(855, self, varargin{1});
+      end
+    end
+    function varargout = g(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMEX(856, self);
+      else
+        nargoutchk(0, 0)
+        yarpMEX(857, self, varargin{1});
+      end
+    end
+    function varargout = r(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
         varargout{1} = yarpMEX(858, self);
       else
         nargoutchk(0, 0)
         yarpMEX(859, self, varargin{1});
       end
     end
-    function varargout = g(self, varargin)
+    function varargout = a(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
@@ -25,40 +45,20 @@ classdef PixelBgra < SwigRef
         yarpMEX(861, self, varargin{1});
       end
     end
-    function varargout = r(self, varargin)
-      narginchk(1, 2)
-      if nargin==1
-        nargoutchk(0, 1)
-        varargout{1} = yarpMEX(862, self);
-      else
-        nargoutchk(0, 0)
-        yarpMEX(863, self, varargin{1});
-      end
-    end
-    function varargout = a(self, varargin)
-      narginchk(1, 2)
-      if nargin==1
-        nargoutchk(0, 1)
-        varargout{1} = yarpMEX(864, self);
-      else
-        nargoutchk(0, 0)
-        yarpMEX(865, self, varargin{1});
-      end
-    end
     function self = PixelBgra(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(866, varargin{:});
+        tmp = yarpMEX(862, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(867, self);
+        yarpMEX(863, self);
         self.swigPtr=[];
       end
     end
