@@ -9,23 +9,13 @@ classdef CalibrationParameters < SwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1158, self);
-      else
-        nargoutchk(0, 0)
-        yarpMEX(1159, self, varargin{1});
-      end
-    end
-    function varargout = param1(self, varargin)
-      narginchk(1, 2)
-      if nargin==1
-        nargoutchk(0, 1)
         varargout{1} = yarpMEX(1160, self);
       else
         nargoutchk(0, 0)
         yarpMEX(1161, self, varargin{1});
       end
     end
-    function varargout = param2(self, varargin)
+    function varargout = param1(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
@@ -35,7 +25,7 @@ classdef CalibrationParameters < SwigRef
         yarpMEX(1163, self, varargin{1});
       end
     end
-    function varargout = param3(self, varargin)
+    function varargout = param2(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
@@ -45,7 +35,7 @@ classdef CalibrationParameters < SwigRef
         yarpMEX(1165, self, varargin{1});
       end
     end
-    function varargout = param4(self, varargin)
+    function varargout = param3(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
@@ -55,7 +45,7 @@ classdef CalibrationParameters < SwigRef
         yarpMEX(1167, self, varargin{1});
       end
     end
-    function varargout = param5(self, varargin)
+    function varargout = param4(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
@@ -65,7 +55,7 @@ classdef CalibrationParameters < SwigRef
         yarpMEX(1169, self, varargin{1});
       end
     end
-    function varargout = paramZero(self, varargin)
+    function varargout = param5(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
@@ -75,20 +65,30 @@ classdef CalibrationParameters < SwigRef
         yarpMEX(1171, self, varargin{1});
       end
     end
+    function varargout = paramZero(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMEX(1172, self);
+      else
+        nargoutchk(0, 0)
+        yarpMEX(1173, self, varargin{1});
+      end
+    end
     function self = CalibrationParameters(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1172, varargin{:});
+        tmp = yarpMEX(1174, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1173, self);
+        yarpMEX(1175, self);
         self.swigPtr=[];
       end
     end

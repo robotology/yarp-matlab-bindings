@@ -200,6 +200,18 @@ classdef PolyDriver < yarp.DeviceDriver
     %retval is of type IPositionDirect. 
       [varargout{1:nargout}] = yarpMEX(1047, self, varargin{:});
     end
+    function varargout = viewIRemoteVariables(self,varargin)
+    %Usage: retval = viewIRemoteVariables ()
+    %
+    %retval is of type IRemoteVariables. 
+      [varargout{1:nargout}] = yarpMEX(1048, self, varargin{:});
+    end
+    function varargout = viewIAxisInfo(self,varargin)
+    %Usage: retval = viewIAxisInfo ()
+    %
+    %retval is of type IAxisInfo. 
+      [varargout{1:nargout}] = yarpMEX(1049, self, varargin{:});
+    end
   end
   methods(Static)
   end

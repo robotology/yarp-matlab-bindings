@@ -9,20 +9,20 @@ classdef CameraDescriptor < SwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1678, self);
+        varargout{1} = yarpMEX(1688, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1679, self, varargin{1});
+        yarpMEX(1689, self, varargin{1});
       end
     end
     function varargout = deviceDescription(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1680, self);
+        varargout{1} = yarpMEX(1690, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1681, self, varargin{1});
+        yarpMEX(1691, self, varargin{1});
       end
     end
     function self = CameraDescriptor(varargin)
@@ -31,14 +31,14 @@ classdef CameraDescriptor < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1682, varargin{:});
+        tmp = yarpMEX(1692, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1683, self);
+        yarpMEX(1693, self);
         self.swigPtr=[];
       end
     end
