@@ -9,80 +9,80 @@ classdef ContactStyle < SwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(585, self);
+        varargout{1} = yarpMEX(552, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(586, self, varargin{1});
+        yarpMEX(553, self, varargin{1});
       end
     end
     function varargout = quiet(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(587, self);
+        varargout{1} = yarpMEX(554, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(588, self, varargin{1});
+        yarpMEX(555, self, varargin{1});
       end
     end
     function varargout = verboseOnSuccess(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(589, self);
+        varargout{1} = yarpMEX(556, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(590, self, varargin{1});
+        yarpMEX(557, self, varargin{1});
       end
     end
     function varargout = timeout(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(591, self);
+        varargout{1} = yarpMEX(558, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(592, self, varargin{1});
+        yarpMEX(559, self, varargin{1});
       end
     end
     function varargout = carrier(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(593, self);
+        varargout{1} = yarpMEX(560, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(594, self, varargin{1});
+        yarpMEX(561, self, varargin{1});
       end
     end
     function varargout = expectReply(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(595, self);
+        varargout{1} = yarpMEX(562, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(596, self, varargin{1});
+        yarpMEX(563, self, varargin{1});
       end
     end
     function varargout = persistent1(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(597, self);
+        varargout{1} = yarpMEX(564, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(598, self, varargin{1});
+        yarpMEX(565, self, varargin{1});
       end
     end
     function varargout = persistenceType(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(599, self);
+        varargout{1} = yarpMEX(566, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(600, self, varargin{1});
+        yarpMEX(567, self, varargin{1});
       end
     end
     function self = ContactStyle(varargin)
@@ -91,14 +91,14 @@ classdef ContactStyle < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(601, varargin{:});
+        tmp = yarpMEX(568, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(602, self);
+        yarpMEX(569, self);
         self.swigPtr=[];
       end
     end
@@ -107,28 +107,28 @@ classdef ContactStyle < SwigRef
     function v = OPENENDED()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 8);
+        vInitialized = yarpMEX(0, 14);
       end
       v = vInitialized;
     end
     function v = END_WITH_FROM_PORT()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 9);
+        vInitialized = yarpMEX(0, 15);
       end
       v = vInitialized;
     end
     function v = END_WITH_TO_PORT()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 10);
+        vInitialized = yarpMEX(0, 16);
       end
       v = vInitialized;
     end
     function v = NO_PERSISTENCE()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 11);
+        vInitialized = yarpMEX(0, 17);
       end
       v = vInitialized;
     end

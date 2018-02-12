@@ -7,7 +7,7 @@ classdef IFrameGrabberImage < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1119, self);
+        yarpMEX(1079, self);
         self.swigPtr=[];
       end
     end
@@ -15,19 +15,19 @@ classdef IFrameGrabberImage < SwigRef
     %Usage: retval = getImage (image)
     %
     %image is of type ImageRgb. image is of type ImageRgb. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1120, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1080, self, varargin{:});
     end
     function varargout = height(self,varargin)
     %Usage: retval = height ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1121, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1081, self, varargin{:});
     end
     function varargout = width(self,varargin)
     %Usage: retval = width ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1122, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1082, self, varargin{:});
     end
     function self = IFrameGrabberImage(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

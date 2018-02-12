@@ -4,7 +4,7 @@ classdef DeviceDriver < yarp.IConfig
   methods
     function delete(self)
       if self.swigPtr
-        yarpMEX(1044, self);
+        yarpMEX(1001, self);
         self.swigPtr=[];
       end
     end
@@ -12,19 +12,19 @@ classdef DeviceDriver < yarp.IConfig
     %Usage: retval = open (config)
     %
     %config is of type Searchable. config is of type Searchable. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1045, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1002, self, varargin{:});
     end
     function varargout = close(self,varargin)
     %Usage: retval = close ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1046, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1003, self, varargin{:});
     end
     function varargout = getImplementation(self,varargin)
     %Usage: retval = getImplementation ()
     %
     %retval is of type DeviceDriver. 
-      [varargout{1:nargout}] = yarpMEX(1047, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1004, self, varargin{:});
     end
     function self = DeviceDriver(varargin)
       self@yarp.IConfig(SwigRef.Null);
@@ -33,7 +33,7 @@ classdef DeviceDriver < yarp.IConfig
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1048, varargin{:});
+        tmp = yarpMEX(1005, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.swigPtr = [];
       end
