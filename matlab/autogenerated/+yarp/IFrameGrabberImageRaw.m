@@ -7,7 +7,7 @@ classdef IFrameGrabberImageRaw < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1085, self);
+        yarpMEX(1087, self);
         self.swigPtr=[];
       end
     end
@@ -15,19 +15,25 @@ classdef IFrameGrabberImageRaw < SwigRef
     %Usage: retval = getImage (image)
     %
     %image is of type ImageMono. image is of type ImageMono. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1086, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1088, self, varargin{:});
+    end
+    function varargout = getImageCrop(self,varargin)
+    %Usage: retval = getImageCrop (cropType, vertices, image)
+    %
+    %cropType is of type cropType_id_t. vertices is of type yarp::sig::VectorOf< std::pair< int,int > >. image is of type ImageMono. cropType is of type cropType_id_t. vertices is of type yarp::sig::VectorOf< std::pair< int,int > >. image is of type ImageMono. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1089, self, varargin{:});
     end
     function varargout = height(self,varargin)
     %Usage: retval = height ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1087, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1090, self, varargin{:});
     end
     function varargout = width(self,varargin)
     %Usage: retval = width ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1088, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1091, self, varargin{:});
     end
     function self = IFrameGrabberImageRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
