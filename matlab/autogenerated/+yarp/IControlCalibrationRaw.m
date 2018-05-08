@@ -7,7 +7,7 @@ classdef IControlCalibrationRaw < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1206, self);
+        yarpMEX(1211, self);
         self.swigPtr=[];
       end
     end
@@ -15,13 +15,13 @@ classdef IControlCalibrationRaw < SwigRef
     %Usage: retval = calibrateRaw (j, p)
     %
     %j is of type int. p is of type double. j is of type int. p is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1207, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1212, self, varargin{:});
     end
     function varargout = doneRaw(self,varargin)
     %Usage: retval = doneRaw (j)
     %
     %j is of type int. j is of type int. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1208, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1213, self, varargin{:});
     end
     function self = IControlCalibrationRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

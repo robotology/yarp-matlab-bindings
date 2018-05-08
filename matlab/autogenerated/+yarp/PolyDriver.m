@@ -116,101 +116,107 @@ classdef PolyDriver < yarp.DeviceDriver
     %retval is of type IEncoders. 
       [varargout{1:nargout}] = yarpMEX(1033, self, varargin{:});
     end
+    function varargout = viewIMotorEncoders(self,varargin)
+    %Usage: retval = viewIMotorEncoders ()
+    %
+    %retval is of type IMotorEncoders. 
+      [varargout{1:nargout}] = yarpMEX(1034, self, varargin{:});
+    end
     function varargout = viewIPidControl(self,varargin)
     %Usage: retval = viewIPidControl ()
     %
     %retval is of type IPidControl. 
-      [varargout{1:nargout}] = yarpMEX(1034, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1035, self, varargin{:});
     end
     function varargout = viewIAmplifierControl(self,varargin)
     %Usage: retval = viewIAmplifierControl ()
     %
     %retval is of type IAmplifierControl. 
-      [varargout{1:nargout}] = yarpMEX(1035, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1036, self, varargin{:});
     end
     function varargout = viewIControlLimits(self,varargin)
     %Usage: retval = viewIControlLimits ()
     %
     %retval is of type IControlLimits. 
-      [varargout{1:nargout}] = yarpMEX(1036, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1037, self, varargin{:});
     end
     function varargout = viewICartesianControl(self,varargin)
     %Usage: retval = viewICartesianControl ()
     %
     %retval is of type ICartesianControl. 
-      [varargout{1:nargout}] = yarpMEX(1037, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1038, self, varargin{:});
     end
     function varargout = viewIGazeControl(self,varargin)
     %Usage: retval = viewIGazeControl ()
     %
     %retval is of type IGazeControl. 
-      [varargout{1:nargout}] = yarpMEX(1038, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1039, self, varargin{:});
     end
     function varargout = viewIImpedanceControl(self,varargin)
     %Usage: retval = viewIImpedanceControl ()
     %
     %retval is of type IImpedanceControl. 
-      [varargout{1:nargout}] = yarpMEX(1039, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1040, self, varargin{:});
     end
     function varargout = viewITorqueControl(self,varargin)
     %Usage: retval = viewITorqueControl ()
     %
     %retval is of type ITorqueControl. 
-      [varargout{1:nargout}] = yarpMEX(1040, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1041, self, varargin{:});
     end
     function varargout = viewIControlMode(self,varargin)
     %Usage: retval = viewIControlMode ()
     %
     %retval is of type IControlMode. 
-      [varargout{1:nargout}] = yarpMEX(1041, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1042, self, varargin{:});
     end
     function varargout = viewIControlMode2(self,varargin)
     %Usage: retval = viewIControlMode2 ()
     %
     %retval is of type IControlMode2. 
-      [varargout{1:nargout}] = yarpMEX(1042, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1043, self, varargin{:});
     end
     function varargout = viewIPWMControl(self,varargin)
     %Usage: retval = viewIPWMControl ()
     %
     %retval is of type IPWMControl. 
-      [varargout{1:nargout}] = yarpMEX(1043, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1044, self, varargin{:});
     end
     function varargout = viewICurrentControl(self,varargin)
     %Usage: retval = viewICurrentControl ()
     %
     %retval is of type ICurrentControl. 
-      [varargout{1:nargout}] = yarpMEX(1044, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1045, self, varargin{:});
     end
     function varargout = viewIAnalogSensor(self,varargin)
     %Usage: retval = viewIAnalogSensor ()
     %
     %retval is of type IAnalogSensor. 
-      [varargout{1:nargout}] = yarpMEX(1045, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1046, self, varargin{:});
     end
     function varargout = viewIFrameGrabberControls2(self,varargin)
     %Usage: retval = viewIFrameGrabberControls2 ()
     %
     %retval is of type IFrameGrabberControls2. 
-      [varargout{1:nargout}] = yarpMEX(1046, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1047, self, varargin{:});
     end
     function varargout = viewIPositionDirect(self,varargin)
     %Usage: retval = viewIPositionDirect ()
     %
     %retval is of type IPositionDirect. 
-      [varargout{1:nargout}] = yarpMEX(1047, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1048, self, varargin{:});
     end
     function varargout = viewIRemoteVariables(self,varargin)
     %Usage: retval = viewIRemoteVariables ()
     %
     %retval is of type IRemoteVariables. 
-      [varargout{1:nargout}] = yarpMEX(1048, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1049, self, varargin{:});
     end
     function varargout = viewIAxisInfo(self,varargin)
     %Usage: retval = viewIAxisInfo ()
     %
     %retval is of type IAxisInfo. 
-      [varargout{1:nargout}] = yarpMEX(1049, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1050, self, varargin{:});
     end
   end
   methods(Static)
