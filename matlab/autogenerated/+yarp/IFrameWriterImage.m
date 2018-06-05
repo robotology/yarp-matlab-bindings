@@ -7,15 +7,15 @@ classdef IFrameWriterImage < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1089, self);
-        self.swigPtr=[];
+        yarpMEX(1152, self);
+        self.SwigClear();
       end
     end
     function varargout = putImage(self,varargin)
     %Usage: retval = putImage (image)
     %
     %image is of type ImageRgb. image is of type ImageRgb. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1090, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1153, self, varargin{:});
     end
     function self = IFrameWriterImage(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

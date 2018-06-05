@@ -7,21 +7,21 @@ classdef IAxisInfoRaw < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1240, self);
-        self.swigPtr=[];
+        yarpMEX(1305, self);
+        self.SwigClear();
       end
     end
     function varargout = getAxisNameRaw(self,varargin)
     %Usage: retval = getAxisNameRaw (axis, name)
     %
-    %axis is of type int. name is of type yarp::os::ConstString &. axis is of type int. name is of type yarp::os::ConstString &. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1241, self, varargin{:});
+    %axis is of type int. name is of type std::string &. axis is of type int. name is of type std::string &. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1306, self, varargin{:});
     end
     function varargout = getJointTypeRaw(self,varargin)
     %Usage: retval = getJointTypeRaw (axis, type)
     %
     %axis is of type int. type is of type yarp::dev::JointTypeEnum &. axis is of type int. type is of type yarp::dev::JointTypeEnum &. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1242, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1307, self, varargin{:});
     end
     function self = IAxisInfoRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
