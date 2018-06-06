@@ -7,27 +7,27 @@ classdef IAudioVisualStream < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1156, self);
-        self.swigPtr=[];
+        yarpMEX(1222, self);
+        self.SwigClear();
       end
     end
     function varargout = hasAudio(self,varargin)
     %Usage: retval = hasAudio ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1157, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1223, self, varargin{:});
     end
     function varargout = hasVideo(self,varargin)
     %Usage: retval = hasVideo ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1158, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1224, self, varargin{:});
     end
     function varargout = hasRawVideo(self,varargin)
     %Usage: retval = hasRawVideo ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1159, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1225, self, varargin{:});
     end
     function self = IAudioVisualStream(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

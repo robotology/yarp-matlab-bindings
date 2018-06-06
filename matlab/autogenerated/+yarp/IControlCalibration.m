@@ -7,33 +7,57 @@ classdef IControlCalibration < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1213, self);
-        self.swigPtr=[];
+        yarpMEX(1279, self);
+        self.SwigClear();
       end
+    end
+    function varargout = calibrate2(self,varargin)
+    %Usage: retval = calibrate2 (axis, type, p1, p2, p3)
+    %
+    %axis is of type int. type is of type unsigned int. p1 is of type double. p2 is of type double. p3 is of type double. axis is of type int. type is of type unsigned int. p1 is of type double. p2 is of type double. p3 is of type double. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1280, self, varargin{:});
+    end
+    function varargout = setCalibrationParameters(self,varargin)
+    %Usage: retval = setCalibrationParameters (axis, params)
+    %
+    %axis is of type int. params is of type CalibrationParameters. axis is of type int. params is of type CalibrationParameters. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1281, self, varargin{:});
     end
     function varargout = done(self,varargin)
     %Usage: retval = done (j)
     %
     %j is of type int. j is of type int. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1214, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1282, self, varargin{:});
     end
     function varargout = setCalibrator(self,varargin)
     %Usage: retval = setCalibrator (c)
     %
     %c is of type ICalibrator *. c is of type ICalibrator *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1215, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1283, self, varargin{:});
     end
     function varargout = calibrate(self,varargin)
     %Usage: retval = calibrate ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1216, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1284, self, varargin{:});
     end
     function varargout = park(self,varargin)
     %Usage: retval = park ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1217, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1285, self, varargin{:});
+    end
+    function varargout = abortCalibration(self,varargin)
+    %Usage: retval = abortCalibration ()
+    %
+    %retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1286, self, varargin{:});
+    end
+    function varargout = abortPark(self,varargin)
+    %Usage: retval = abortPark ()
+    %
+    %retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1287, self, varargin{:});
     end
     function self = IControlCalibration(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

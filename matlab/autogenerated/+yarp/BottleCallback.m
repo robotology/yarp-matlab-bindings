@@ -7,15 +7,15 @@ classdef BottleCallback < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(753, self);
-        self.swigPtr=[];
+        yarpMEX(806, self);
+        self.SwigClear();
       end
     end
     function varargout = onRead(self,varargin)
     %Usage: onRead (datum, reader)
     %
     %datum is of type Bottle. reader is of type TypedReaderBottle. 
-      [varargout{1:nargout}] = yarpMEX(754, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(807, self, varargin{:});
     end
     function self = BottleCallback(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
@@ -23,9 +23,9 @@ classdef BottleCallback < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(755, varargin{:});
+        tmp = yarpMEX(808, varargin{:});
         self.swigPtr = tmp.swigPtr;
-        tmp.swigPtr = [];
+        tmp.SwigClear();
       end
     end
   end

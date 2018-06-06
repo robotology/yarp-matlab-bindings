@@ -7,15 +7,15 @@ classdef TypedReaderCallbackImageRgb < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1941, self);
-        self.swigPtr=[];
+        yarpMEX(1936, self);
+        self.SwigClear();
       end
     end
     function varargout = onRead(self,varargin)
     %Usage: onRead (datum, reader)
     %
     %datum is of type ImageRgb. reader is of type TypedReaderImageRgb. 
-      [varargout{1:nargout}] = yarpMEX(1942, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1937, self, varargin{:});
     end
     function self = TypedReaderCallbackImageRgb(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
@@ -23,9 +23,9 @@ classdef TypedReaderCallbackImageRgb < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1943, varargin{:});
+        tmp = yarpMEX(1938, varargin{:});
         self.swigPtr = tmp.swigPtr;
-        tmp.swigPtr = [];
+        tmp.SwigClear();
       end
     end
   end

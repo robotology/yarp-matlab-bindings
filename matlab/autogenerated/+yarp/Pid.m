@@ -9,106 +9,106 @@ classdef Pid < SwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1243, self);
+        varargout{1} = yarpMEX(1308, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1244, self, varargin{1});
+        yarpMEX(1309, self, varargin{1});
       end
     end
     function varargout = kd(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1245, self);
+        varargout{1} = yarpMEX(1310, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1246, self, varargin{1});
+        yarpMEX(1311, self, varargin{1});
       end
     end
     function varargout = ki(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1247, self);
+        varargout{1} = yarpMEX(1312, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1248, self, varargin{1});
+        yarpMEX(1313, self, varargin{1});
       end
     end
     function varargout = max_int(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1249, self);
+        varargout{1} = yarpMEX(1314, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1250, self, varargin{1});
+        yarpMEX(1315, self, varargin{1});
       end
     end
     function varargout = scale(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1251, self);
+        varargout{1} = yarpMEX(1316, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1252, self, varargin{1});
+        yarpMEX(1317, self, varargin{1});
       end
     end
     function varargout = max_output(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1253, self);
+        varargout{1} = yarpMEX(1318, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1254, self, varargin{1});
+        yarpMEX(1319, self, varargin{1});
       end
     end
     function varargout = offset(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1255, self);
+        varargout{1} = yarpMEX(1320, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1256, self, varargin{1});
+        yarpMEX(1321, self, varargin{1});
       end
     end
     function varargout = stiction_up_val(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1257, self);
+        varargout{1} = yarpMEX(1322, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1258, self, varargin{1});
+        yarpMEX(1323, self, varargin{1});
       end
     end
     function varargout = stiction_down_val(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1259, self);
+        varargout{1} = yarpMEX(1324, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1260, self, varargin{1});
+        yarpMEX(1325, self, varargin{1});
       end
     end
     function varargout = kff(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1261, self);
+        varargout{1} = yarpMEX(1326, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1262, self, varargin{1});
+        yarpMEX(1327, self, varargin{1});
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1263, self);
-        self.swigPtr=[];
+        yarpMEX(1328, self);
+        self.SwigClear();
       end
     end
     function self = Pid(varargin)
@@ -117,39 +117,39 @@ classdef Pid < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1264, varargin{:});
+        tmp = yarpMEX(1329, varargin{:});
         self.swigPtr = tmp.swigPtr;
-        tmp.swigPtr = [];
+        tmp.SwigClear();
       end
     end
     function varargout = setMaxInt(self,varargin)
     %Usage: setMaxInt (m)
     %
     %m is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1265, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1330, self, varargin{:});
     end
     function varargout = setMaxOut(self,varargin)
     %Usage: setMaxOut (m)
     %
     %m is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1266, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1331, self, varargin{:});
     end
     function varargout = setStictionValues(self,varargin)
     %Usage: setStictionValues (up_value, down_value)
     %
     %up_value is of type double. down_value is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1267, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1332, self, varargin{:});
     end
     function varargout = isEqual(self,varargin)
     %Usage: retval = isEqual (p)
     %
     %p is of type Pid. p is of type Pid. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1268, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1333, self, varargin{:});
     end
     function varargout = clear(self,varargin)
     %Usage: clear ()
     %
-      [varargout{1:nargout}] = yarpMEX(1269, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1334, self, varargin{:});
     end
   end
   methods(Static)
