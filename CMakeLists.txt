@@ -27,6 +27,12 @@ if(YARP_SYSTEM_H MATCHES "#define YARP_WRAP_STL_STRING" AND NOT YARP_GENERATE_MA
                          https://github.com/robotology-playground/yarp-matlab-bindings/issues/17 for more info.")
 endif()
 
+# Extract the include directories from the libraries interface
+# (YARP_INCLUDE_DIRS had been deprecated and is no more defined in YARPConfig.cmake).
+# The include path is required by SWIG, so the alternative of having linked libraries
+# wouldn't be enough.
+get_target_property(YARP_INCLUDE_DIRS YARP::YARP_conf INTERFACE_INCLUDE_DIRECTORIES)
+
 include(UseSWIG)
 find_package(YCM)
 if(YCM_FOUND)
@@ -36,9 +42,9 @@ if(YCM_FOUND)
                             USE_LINK_PATH)
 endif()
 
+# Setup the include directories
 include_directories(${YARP_INCLUDE_DIRS})
 
 if(YARP_USES_MATLAB OR YARP_GENERATE_MATLAB OR YARP_USES_OCTAVE)
     add_subdirectory(matlab)
 endif()
-
