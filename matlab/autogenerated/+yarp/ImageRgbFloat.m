@@ -1,11 +1,9 @@
-classdef ImageRgbFloat < SwigRef
+classdef ImageRgbFloat < yarp.Image
     %Usage: ImageRgbFloat ()
     %
   methods
-    function this = swig_this(self)
-      this = yarpMEX(3, self);
-    end
     function self = ImageRgbFloat(varargin)
+      self@yarp.Image(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;

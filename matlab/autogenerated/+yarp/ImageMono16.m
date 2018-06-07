@@ -1,11 +1,9 @@
-classdef ImageMono16 < SwigRef
+classdef ImageMono16 < yarp.Image
     %Usage: ImageMono16 ()
     %
   methods
-    function this = swig_this(self)
-      this = yarpMEX(3, self);
-    end
     function self = ImageMono16(varargin)
+      self@yarp.Image(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;

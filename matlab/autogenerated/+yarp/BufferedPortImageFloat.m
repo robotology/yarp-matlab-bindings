@@ -1,4 +1,4 @@
-classdef BufferedPortImageFloat < SwigRef
+classdef BufferedPortImageFloat < yarp.Contactable & yarp.TypedReaderImageFloat & yarp.TypedReaderCallbackImageFloat
     %Usage: BufferedPortImageFloat ()
     %
   methods
@@ -6,6 +6,9 @@ classdef BufferedPortImageFloat < SwigRef
       this = yarpMEX(3, self);
     end
     function self = BufferedPortImageFloat(varargin)
+      self@yarp.Contactable(SwigRef.Null);
+      self@yarp.TypedReaderImageFloat(SwigRef.Null);
+      self@yarp.TypedReaderCallbackImageFloat(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;

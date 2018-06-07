@@ -1,4 +1,4 @@
-classdef Portable < SwigRef
+classdef Portable < yarp.PortReader & yarp.PortWriter
     %Usage: Portable ()
     %
   methods
@@ -30,6 +30,8 @@ classdef Portable < SwigRef
       end
     end
     function self = Portable(varargin)
+      self@yarp.PortReader(SwigRef.Null);
+      self@yarp.PortWriter(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;

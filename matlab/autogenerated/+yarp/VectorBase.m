@@ -1,10 +1,7 @@
-classdef VectorBase < SwigRef
+classdef VectorBase < yarp.Portable
     %Usage: VectorBase ()
     %
   methods
-    function this = swig_this(self)
-      this = yarpMEX(3, self);
-    end
     function varargout = getElementSize(self,varargin)
     %Usage: retval = getElementSize ()
     %
@@ -54,6 +51,7 @@ classdef VectorBase < SwigRef
       end
     end
     function self = VectorBase(varargin)
+      self@yarp.Portable(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;

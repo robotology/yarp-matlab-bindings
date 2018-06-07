@@ -1,4 +1,4 @@
-classdef BufferedPortBottle < SwigRef
+classdef BufferedPortBottle < yarp.Contactable & yarp.TypedReaderBottle & yarp.BottleCallback
     %Usage: BufferedPortBottle ()
     %
   methods
@@ -6,6 +6,9 @@ classdef BufferedPortBottle < SwigRef
       this = yarpMEX(3, self);
     end
     function self = BufferedPortBottle(varargin)
+      self@yarp.Contactable(SwigRef.Null);
+      self@yarp.TypedReaderBottle(SwigRef.Null);
+      self@yarp.BottleCallback(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;

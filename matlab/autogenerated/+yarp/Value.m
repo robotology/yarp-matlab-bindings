@@ -1,4 +1,4 @@
-classdef Value < SwigRef
+classdef Value < yarp.Portable & yarp.Searchable
     %Usage: Value ()
     %
   methods
@@ -6,6 +6,8 @@ classdef Value < SwigRef
       this = yarpMEX(3, self);
     end
     function self = Value(varargin)
+      self@yarp.Portable(SwigRef.Null);
+      self@yarp.Searchable(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;

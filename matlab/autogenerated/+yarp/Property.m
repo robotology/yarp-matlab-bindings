@@ -1,4 +1,4 @@
-classdef Property < SwigRef
+classdef Property < yarp.Searchable & yarp.Portable
     %Usage: Property ()
     %
   methods
@@ -6,6 +6,8 @@ classdef Property < SwigRef
       this = yarpMEX(3, self);
     end
     function self = Property(varargin)
+      self@yarp.Searchable(SwigRef.Null);
+      self@yarp.Portable(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;

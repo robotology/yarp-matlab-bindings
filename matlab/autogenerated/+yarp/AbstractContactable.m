@@ -1,10 +1,7 @@
-classdef AbstractContactable < SwigRef
+classdef AbstractContactable < yarp.UnbufferedContactable
     %Usage: AbstractContactable ()
     %
   methods
-    function this = swig_this(self)
-      this = yarpMEX(3, self);
-    end
     function varargout = asPort(self,varargin)
     %Usage: retval = asPort ()
     %
@@ -217,6 +214,7 @@ classdef AbstractContactable < SwigRef
       end
     end
     function self = AbstractContactable(varargin)
+      self@yarp.UnbufferedContactable(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;

@@ -1,4 +1,4 @@
-classdef BufferedPortProperty < SwigRef
+classdef BufferedPortProperty < yarp.Contactable & yarp.TypedReaderProperty & yarp.PropertyCallback
     %Usage: BufferedPortProperty ()
     %
   methods
@@ -6,6 +6,9 @@ classdef BufferedPortProperty < SwigRef
       this = yarpMEX(3, self);
     end
     function self = BufferedPortProperty(varargin)
+      self@yarp.Contactable(SwigRef.Null);
+      self@yarp.TypedReaderProperty(SwigRef.Null);
+      self@yarp.PropertyCallback(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;

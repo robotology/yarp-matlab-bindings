@@ -1,10 +1,7 @@
-classdef PortablePairBase < SwigRef
+classdef PortablePairBase < yarp.Portable
     %Usage: PortablePairBase ()
     %
   methods
-    function this = swig_this(self)
-      this = yarpMEX(3, self);
-    end
     function delete(self)
       if self.swigPtr
         yarpMEX(397, self);
@@ -12,6 +9,7 @@ classdef PortablePairBase < SwigRef
       end
     end
     function self = PortablePairBase(varargin)
+      self@yarp.Portable(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;

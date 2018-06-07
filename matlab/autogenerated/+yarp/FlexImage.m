@@ -1,10 +1,7 @@
-classdef FlexImage < SwigRef
+classdef FlexImage < yarp.Image
     %Usage: FlexImage ()
     %
   methods
-    function this = swig_this(self)
-      this = yarpMEX(3, self);
-    end
     function varargout = setPixelCode(self,varargin)
     %Usage: setPixelCode (imgPixelCode)
     %
@@ -24,6 +21,7 @@ classdef FlexImage < SwigRef
       [varargout{1:nargout}] = yarpMEX(886, self, varargin{:});
     end
     function self = FlexImage(varargin)
+      self@yarp.Image(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;

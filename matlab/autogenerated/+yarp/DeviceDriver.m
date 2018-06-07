@@ -1,10 +1,7 @@
-classdef DeviceDriver < SwigRef
+classdef DeviceDriver < yarp.IConfig
     %Usage: DeviceDriver ()
     %
   methods
-    function this = swig_this(self)
-      this = yarpMEX(3, self);
-    end
     function delete(self)
       if self.swigPtr
         yarpMEX(1054, self);
@@ -30,6 +27,7 @@ classdef DeviceDriver < SwigRef
       [varargout{1:nargout}] = yarpMEX(1057, self, varargin{:});
     end
     function self = DeviceDriver(varargin)
+      self@yarp.IConfig(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;

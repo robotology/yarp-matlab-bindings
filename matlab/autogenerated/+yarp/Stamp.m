@@ -1,11 +1,9 @@
-classdef Stamp < SwigRef
+classdef Stamp < yarp.Portable
     %Usage: Stamp ()
     %
   methods
-    function this = swig_this(self)
-      this = yarpMEX(3, self);
-    end
     function self = Stamp(varargin)
+      self@yarp.Portable(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
