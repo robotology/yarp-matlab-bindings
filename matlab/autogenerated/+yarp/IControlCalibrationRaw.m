@@ -7,7 +7,7 @@ classdef IControlCalibrationRaw < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1274, self);
+        yarpMEX(1260, self);
         self.SwigClear();
       end
     end
@@ -15,25 +15,25 @@ classdef IControlCalibrationRaw < SwigRef
     %Usage: retval = calibrate2Raw (axis, type, p1, p2, p3)
     %
     %axis is of type int. type is of type unsigned int. p1 is of type double. p2 is of type double. p3 is of type double. axis is of type int. type is of type unsigned int. p1 is of type double. p2 is of type double. p3 is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1275, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1261, self, varargin{:});
     end
     function varargout = doneRaw(self,varargin)
     %Usage: retval = doneRaw (j)
     %
     %j is of type int. j is of type int. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1276, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1262, self, varargin{:});
     end
     function varargout = calibrateRaw(self,varargin)
     %Usage: retval = calibrateRaw (axis, type, p1, p2, p3)
     %
     %axis is of type int. type is of type unsigned int. p1 is of type double. p2 is of type double. p3 is of type double. axis is of type int. type is of type unsigned int. p1 is of type double. p2 is of type double. p3 is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1277, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1263, self, varargin{:});
     end
     function varargout = setCalibrationParametersRaw(self,varargin)
     %Usage: retval = setCalibrationParametersRaw (axis, params)
     %
     %axis is of type int. params is of type CalibrationParameters. axis is of type int. params is of type CalibrationParameters. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1278, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1264, self, varargin{:});
     end
     function self = IControlCalibrationRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

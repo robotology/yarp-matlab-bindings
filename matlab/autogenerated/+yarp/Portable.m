@@ -9,23 +9,23 @@ classdef Portable < yarp.PortReader & yarp.PortWriter
     %Usage: retval = read (reader)
     %
     %reader is of type ConnectionReader. reader is of type ConnectionReader. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(123, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(111, self, varargin{:});
     end
     function varargout = write(self,varargin)
     %Usage: retval = write (writer)
     %
     %writer is of type ConnectionWriter. writer is of type ConnectionWriter. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(124, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(112, self, varargin{:});
     end
     function varargout = getType(self,varargin)
     %Usage: retval = getType ()
     %
-    %retval is of type Type. 
-      [varargout{1:nargout}] = yarpMEX(125, self, varargin{:});
+    %retval is of type yarp::os::Type. 
+      [varargout{1:nargout}] = yarpMEX(113, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(127, self);
+        yarpMEX(115, self);
         self.SwigClear();
       end
     end
@@ -46,7 +46,7 @@ classdef Portable < yarp.PortReader & yarp.PortWriter
     %Usage: retval = copyPortable (writer, reader)
     %
     %writer is of type PortWriter. reader is of type PortReader. writer is of type PortWriter. reader is of type PortReader. retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(126, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(114, varargin{:});
     end
   end
 end

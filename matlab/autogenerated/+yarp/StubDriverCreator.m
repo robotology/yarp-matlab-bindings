@@ -9,44 +9,44 @@ classdef StubDriverCreator < yarp.DriverCreator
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1112, varargin{:});
+        tmp = yarpMEX(1098, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
-    function varargout = toString(self,varargin)
-    %Usage: retval = toString ()
+    function varargout = toString_c(self,varargin)
+    %Usage: retval = toString_c ()
     %
     %retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1113, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1099, self, varargin{:});
     end
     function varargout = getName(self,varargin)
     %Usage: retval = getName ()
     %
     %retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1114, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1100, self, varargin{:});
     end
     function varargout = getWrapper(self,varargin)
     %Usage: retval = getWrapper ()
     %
     %retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1115, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1101, self, varargin{:});
     end
     function varargout = getCode(self,varargin)
     %Usage: retval = getCode ()
     %
     %retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1116, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1102, self, varargin{:});
     end
     function varargout = create(self,varargin)
     %Usage: retval = create ()
     %
     %retval is of type DeviceDriver. 
-      [varargout{1:nargout}] = yarpMEX(1117, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1103, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1118, self);
+        yarpMEX(1104, self);
         self.SwigClear();
       end
     end

@@ -11,14 +11,14 @@ classdef Vocab < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(217, varargin{:});
+        tmp = yarpMEX(205, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(218, self);
+        yarpMEX(206, self);
         self.SwigClear();
       end
     end
@@ -28,13 +28,13 @@ classdef Vocab < SwigRef
     %Usage: retval = encode (str)
     %
     %str is of type std::string const &. str is of type std::string const &. retval is of type yarp::os::NetInt32. 
-     [varargout{1:nargout}] = yarpMEX(215, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(203, varargin{:});
     end
     function varargout = decode(varargin)
     %Usage: retval = decode (code)
     %
     %code is of type yarp::os::NetInt32. code is of type yarp::os::NetInt32. retval is of type std::string. 
-     [varargout{1:nargout}] = yarpMEX(216, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(204, varargin{:});
     end
   end
 end

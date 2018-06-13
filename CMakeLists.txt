@@ -14,7 +14,11 @@ option(YARP_USES_MATLAB "Do you want to create the MATLAB bindings" FALSE)
 option(YARP_USES_OCTAVE "Do you want to create the OCTAVE bindings" FALSE)
 option(YARP_GENERATE_MATLAB "Enable if you have the experimental version of SWIG necessary for generating the Matlab wrapper" FALSE)
 
-find_package(YARP 2.3.71 REQUIRED)
+find_package(YARP REQUIRED)
+set(YARP_REQUIRED_VERSION 3.0.0)
+if(${YARP_VERSION} VERSION_LESS ${YARP_REQUIRED_VERSION})
+  message(FATAL_ERROR "YARP version ${YARP_VERSION} not sufficient, at least version ${YARP_REQUIRED_VERSION} is required.")
+endif()
 
 # Check if YARP_WRAP_STL_STRING is defined in YARP
 get_target_property(YARP_SYSTEM_H_LOCATION YARP::YARP_conf INTERFACE_INCLUDE_DIRECTORIES)
