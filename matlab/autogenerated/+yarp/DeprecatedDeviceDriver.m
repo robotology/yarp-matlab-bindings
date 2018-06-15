@@ -1,24 +1,22 @@
-classdef DeprecatedDeviceDriver < SwigRef
+classdef DeprecatedDeviceDriver < yarp.DeviceDriver
     %Usage: DeprecatedDeviceDriver ()
     %
   methods
-    function this = swig_this(self)
-      this = yarpMEX(3, self);
-    end
     function self = DeprecatedDeviceDriver(varargin)
+      self@yarp.DeviceDriver(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1059, varargin{:});
+        tmp = yarpMEX(1045, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1060, self);
+        yarpMEX(1046, self);
         self.SwigClear();
       end
     end

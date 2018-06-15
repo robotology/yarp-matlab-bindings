@@ -130,42 +130,6 @@ classdef Contact < SwigRef
     %retval is of type std::string. 
       [varargout{1:nargout}] = yarpMEX(44, self, varargin{:});
     end
-    function varargout = addName(self,varargin)
-    %Usage: retval = addName (name)
-    %
-    %name is of type std::string const &. name is of type std::string const &. retval is of type Contact. 
-      [varargout{1:nargout}] = yarpMEX(46, self, varargin{:});
-    end
-    function varargout = addCarrier(self,varargin)
-    %Usage: retval = addCarrier (carrier)
-    %
-    %carrier is of type std::string const &. carrier is of type std::string const &. retval is of type Contact. 
-      [varargout{1:nargout}] = yarpMEX(47, self, varargin{:});
-    end
-    function varargout = addHost(self,varargin)
-    %Usage: retval = addHost (hostname)
-    %
-    %hostname is of type std::string const &. hostname is of type std::string const &. retval is of type Contact. 
-      [varargout{1:nargout}] = yarpMEX(48, self, varargin{:});
-    end
-    function varargout = addPort(self,varargin)
-    %Usage: retval = addPort (port)
-    %
-    %port is of type int. port is of type int. retval is of type Contact. 
-      [varargout{1:nargout}] = yarpMEX(49, self, varargin{:});
-    end
-    function varargout = addNested(self,varargin)
-    %Usage: retval = addNested (nestedContact)
-    %
-    %nestedContact is of type NestedContact const &. nestedContact is of type NestedContact const &. retval is of type Contact. 
-      [varargout{1:nargout}] = yarpMEX(50, self, varargin{:});
-    end
-    function varargout = addSocket(self,varargin)
-    %Usage: retval = addSocket (carrier, hostname, port)
-    %
-    %carrier is of type std::string const &. hostname is of type std::string const &. port is of type int. carrier is of type std::string const &. hostname is of type std::string const &. port is of type int. retval is of type Contact. 
-      [varargout{1:nargout}] = yarpMEX(51, self, varargin{:});
-    end
   end
   methods(Static)
     function varargout = fromConfig(varargin)
@@ -185,42 +149,6 @@ classdef Contact < SwigRef
     %
     %name is of type char const *. name is of type char const *. retval is of type std::string. 
      [varargout{1:nargout}] = yarpMEX(45, varargin{:});
-    end
-    function varargout = empty(varargin)
-    %Usage: retval = empty ()
-    %
-    %retval is of type Contact. 
-     [varargout{1:nargout}] = yarpMEX(52, varargin{:});
-    end
-    function varargout = invalid(varargin)
-    %Usage: retval = invalid ()
-    %
-    %retval is of type Contact. 
-     [varargout{1:nargout}] = yarpMEX(53, varargin{:});
-    end
-    function varargout = byName(varargin)
-    %Usage: retval = byName (name)
-    %
-    %name is of type std::string const &. name is of type std::string const &. retval is of type Contact. 
-     [varargout{1:nargout}] = yarpMEX(54, varargin{:});
-    end
-    function varargout = byCarrier(varargin)
-    %Usage: retval = byCarrier (carrier)
-    %
-    %carrier is of type std::string const &. carrier is of type std::string const &. retval is of type Contact. 
-     [varargout{1:nargout}] = yarpMEX(55, varargin{:});
-    end
-    function varargout = bySocket(varargin)
-    %Usage: retval = bySocket (carrier, hostname, port)
-    %
-    %carrier is of type std::string const &. hostname is of type std::string const &. port is of type int. carrier is of type std::string const &. hostname is of type std::string const &. port is of type int. retval is of type Contact. 
-     [varargout{1:nargout}] = yarpMEX(56, varargin{:});
-    end
-    function varargout = byConfig(varargin)
-    %Usage: retval = byConfig (config)
-    %
-    %config is of type Searchable. config is of type Searchable. retval is of type Contact. 
-     [varargout{1:nargout}] = yarpMEX(57, varargin{:});
     end
   end
 end

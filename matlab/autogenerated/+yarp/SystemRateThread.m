@@ -1,13 +1,10 @@
-classdef SystemRateThread < SwigRef
+classdef SystemRateThread < yarp.PeriodicThread
     %Usage: SystemRateThread ()
     %
   methods
-    function this = swig_this(self)
-      this = yarpMEX(3, self);
-    end
     function delete(self)
       if self.swigPtr
-        yarpMEX(543, self);
+        yarpMEX(531, self);
         self.SwigClear();
       end
     end
@@ -15,9 +12,10 @@ classdef SystemRateThread < SwigRef
     %Usage: retval = stepSystem ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(544, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(532, self, varargin{:});
     end
     function self = SystemRateThread(varargin)
+      self@yarp.PeriodicThread(SwigRef.Null);
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
