@@ -1,7 +1,3 @@
 function v = VOCAB_CALIBRATE_JOINT()
-  persistent vInitialized;
-  if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 196);
-  end
-  v = vInitialized;
+  v = yarpMEX(1374);
 end
