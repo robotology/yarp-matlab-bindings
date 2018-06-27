@@ -11,45 +11,45 @@ classdef DummyConnector < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(621, varargin{:});
+        tmp = yarpMEX(664, varargin{:});
         self.swigPtr = tmp.swigPtr;
-        tmp.swigPtr = [];
+        tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(622, self);
-        self.swigPtr=[];
+        yarpMEX(665, self);
+        self.SwigClear();
       end
     end
     function varargout = setTextMode(self,varargin)
     %Usage: setTextMode (textmode)
     %
     %textmode is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(623, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(666, self, varargin{:});
     end
     function varargout = getCleanWriter(self,varargin)
     %Usage: retval = getCleanWriter ()
     %
     %retval is of type ConnectionWriter. 
-      [varargout{1:nargout}] = yarpMEX(624, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(667, self, varargin{:});
     end
     function varargout = getWriter(self,varargin)
     %Usage: retval = getWriter ()
     %
     %retval is of type ConnectionWriter. 
-      [varargout{1:nargout}] = yarpMEX(625, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(668, self, varargin{:});
     end
     function varargout = getReader(self,varargin)
     %Usage: retval = getReader ()
     %
     %retval is of type ConnectionReader. 
-      [varargout{1:nargout}] = yarpMEX(626, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(669, self, varargin{:});
     end
     function varargout = reset(self,varargin)
     %Usage: reset ()
     %
-      [varargout{1:nargout}] = yarpMEX(627, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(670, self, varargin{:});
     end
   end
   methods(Static)

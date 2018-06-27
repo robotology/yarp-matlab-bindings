@@ -8,7 +8,7 @@ classdef PortReport < SwigRef
     function delete(self)
       if self.swigPtr
         yarpMEX(21, self);
-        self.swigPtr=[];
+        self.SwigClear();
       end
     end
     function varargout = report(self,varargin)

@@ -11,15 +11,15 @@ classdef Vocab < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(191, varargin{:});
+        tmp = yarpMEX(205, varargin{:});
         self.swigPtr = tmp.swigPtr;
-        tmp.swigPtr = [];
+        tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(192, self);
-        self.swigPtr=[];
+        yarpMEX(206, self);
+        self.SwigClear();
       end
     end
   end
@@ -27,14 +27,14 @@ classdef Vocab < SwigRef
     function varargout = encode(varargin)
     %Usage: retval = encode (str)
     %
-    %str is of type yarp::os::ConstString const &. str is of type yarp::os::ConstString const &. retval is of type yarp::os::NetInt32. 
-     [varargout{1:nargout}] = yarpMEX(189, varargin{:});
+    %str is of type std::string const &. str is of type std::string const &. retval is of type yarp::os::NetInt32. 
+     [varargout{1:nargout}] = yarpMEX(203, varargin{:});
     end
     function varargout = decode(varargin)
     %Usage: retval = decode (code)
     %
-    %code is of type yarp::os::NetInt32. code is of type yarp::os::NetInt32. retval is of type yarp::os::ConstString. 
-     [varargout{1:nargout}] = yarpMEX(190, varargin{:});
+    %code is of type yarp::os::NetInt32. code is of type yarp::os::NetInt32. retval is of type std::string. 
+     [varargout{1:nargout}] = yarpMEX(204, varargin{:});
     end
   end
 end

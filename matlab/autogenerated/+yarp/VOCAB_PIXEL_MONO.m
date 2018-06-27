@@ -1,7 +1,7 @@
 function v = VOCAB_PIXEL_MONO()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 55);
+    vInitialized = yarpMEX(0, 59);
   end
   v = vInitialized;
 end

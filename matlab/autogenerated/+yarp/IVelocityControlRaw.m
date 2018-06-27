@@ -7,51 +7,63 @@ classdef IVelocityControlRaw < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1620, self);
-        self.swigPtr=[];
+        yarpMEX(1854, self);
+        self.SwigClear();
       end
     end
     function varargout = getAxes(self,varargin)
     %Usage: retval = getAxes (axis)
     %
     %axis is of type int *. axis is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1621, self, varargin{:});
-    end
-    function varargout = velocityMoveRaw(self,varargin)
-    %Usage: retval = velocityMoveRaw (sp)
-    %
-    %sp is of type double const *. sp is of type double const *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1622, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1855, self, varargin{:});
     end
     function varargout = setRefAccelerationRaw(self,varargin)
     %Usage: retval = setRefAccelerationRaw (j, acc)
     %
     %j is of type int. acc is of type double. j is of type int. acc is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1623, self, varargin{:});
-    end
-    function varargout = setRefAccelerationsRaw(self,varargin)
-    %Usage: retval = setRefAccelerationsRaw (accs)
-    %
-    %accs is of type double const *. accs is of type double const *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1624, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1856, self, varargin{:});
     end
     function varargout = getRefAccelerationRaw(self,varargin)
     %Usage: retval = getRefAccelerationRaw (j, acc)
     %
     %j is of type int. acc is of type double *. j is of type int. acc is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1625, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1857, self, varargin{:});
+    end
+    function varargout = velocityMoveRaw(self,varargin)
+    %Usage: retval = velocityMoveRaw (n_joint, joints, spds)
+    %
+    %n_joint is of type int const. joints is of type int const *. spds is of type double const *. n_joint is of type int const. joints is of type int const *. spds is of type double const *. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1858, self, varargin{:});
+    end
+    function varargout = getRefVelocityRaw(self,varargin)
+    %Usage: retval = getRefVelocityRaw (joint, vel)
+    %
+    %joint is of type int const. vel is of type double *. joint is of type int const. vel is of type double *. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1859, self, varargin{:});
+    end
+    function varargout = getRefVelocitiesRaw(self,varargin)
+    %Usage: retval = getRefVelocitiesRaw (n_joint, joints, vels)
+    %
+    %n_joint is of type int const. joints is of type int const *. vels is of type double *. n_joint is of type int const. joints is of type int const *. vels is of type double *. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1860, self, varargin{:});
+    end
+    function varargout = setRefAccelerationsRaw(self,varargin)
+    %Usage: retval = setRefAccelerationsRaw (n_joint, joints, accs)
+    %
+    %n_joint is of type int const. joints is of type int const *. accs is of type double const *. n_joint is of type int const. joints is of type int const *. accs is of type double const *. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1861, self, varargin{:});
     end
     function varargout = getRefAccelerationsRaw(self,varargin)
-    %Usage: retval = getRefAccelerationsRaw (accs)
+    %Usage: retval = getRefAccelerationsRaw (n_joint, joints, accs)
     %
-    %accs is of type double *. accs is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1626, self, varargin{:});
+    %n_joint is of type int const. joints is of type int const *. accs is of type double *. n_joint is of type int const. joints is of type int const *. accs is of type double *. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1862, self, varargin{:});
     end
     function varargout = stopRaw(self,varargin)
-    %Usage: retval = stopRaw ()
+    %Usage: retval = stopRaw (n_joint, joints)
     %
-    %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1627, self, varargin{:});
+    %n_joint is of type int const. joints is of type int const *. n_joint is of type int const. joints is of type int const *. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1863, self, varargin{:});
     end
     function self = IVelocityControlRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
