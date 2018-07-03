@@ -7,7 +7,7 @@ classdef IControlModeRaw < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1721, self);
+        yarpMEX(1660, self);
         self.SwigClear();
       end
     end
@@ -15,25 +15,25 @@ classdef IControlModeRaw < SwigRef
     %Usage: retval = getControlModeRaw (j, mode)
     %
     %j is of type int. mode is of type int *. j is of type int. mode is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1722, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1661, self, varargin{:});
     end
     function varargout = getControlModesRaw(self,varargin)
     %Usage: retval = getControlModesRaw (n_joint, joints, modes)
     %
     %n_joint is of type int const. joints is of type int const *. modes is of type int *. n_joint is of type int const. joints is of type int const *. modes is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1723, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1662, self, varargin{:});
     end
     function varargout = setControlModeRaw(self,varargin)
     %Usage: retval = setControlModeRaw (j, mode)
     %
     %j is of type int const. mode is of type int const. j is of type int const. mode is of type int const. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1724, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1663, self, varargin{:});
     end
     function varargout = setControlModesRaw(self,varargin)
     %Usage: retval = setControlModesRaw (modes)
     %
     %modes is of type int *. modes is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1725, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1664, self, varargin{:});
     end
     function self = IControlModeRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

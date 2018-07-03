@@ -1,3 +1,3 @@
 function v = VOCAB_FEATURE()
-  v = yarpMEX(1152);
+  v = yarpMEX(1129);
 end

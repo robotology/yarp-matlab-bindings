@@ -1,3 +1,3 @@
 function v = VOCAB_IRIS()
-  v = yarpMEX(1146);
+  v = yarpMEX(1123);
 end

@@ -1,7 +1,7 @@
-function v = VOCAB_LIM()
+function v = YARP_VERSION_MINOR()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 211);
+    vInitialized = yarpMEX(0, 1);
   end
   v = vInitialized;
 end

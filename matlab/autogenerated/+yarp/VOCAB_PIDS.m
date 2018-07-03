@@ -1,3 +1,3 @@
 function v = VOCAB_PIDS()
-  v = yarpMEX(1987);
+  v = yarpMEX(1926);
 end

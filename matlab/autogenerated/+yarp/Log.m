@@ -63,42 +63,42 @@ classdef Log < SwigRef
     function v = TraceType()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 52);
+        vInitialized = yarpMEX(0, 57);
       end
       v = vInitialized;
     end
     function v = DebugType()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 53);
+        vInitialized = yarpMEX(0, 58);
       end
       v = vInitialized;
     end
     function v = InfoType()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 54);
+        vInitialized = yarpMEX(0, 59);
       end
       v = vInitialized;
     end
     function v = WarningType()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 55);
+        vInitialized = yarpMEX(0, 60);
       end
       v = vInitialized;
     end
     function v = ErrorType()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 56);
+        vInitialized = yarpMEX(0, 61);
       end
       v = vInitialized;
     end
     function v = FatalType()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 57);
+        vInitialized = yarpMEX(0, 62);
       end
       v = vInitialized;
     end
