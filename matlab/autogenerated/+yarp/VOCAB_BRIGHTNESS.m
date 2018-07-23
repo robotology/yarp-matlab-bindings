@@ -1,3 +1,3 @@
 function v = VOCAB_BRIGHTNESS()
-  v = yarpMEX(1137);
+  v = yarpMEX(1114);
 end

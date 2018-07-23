@@ -107,28 +107,28 @@ classdef ContactStyle < SwigRef
     function v = OPENENDED()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 18);
+        vInitialized = yarpMEX(0, 23);
       end
       v = vInitialized;
     end
     function v = END_WITH_FROM_PORT()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 19);
+        vInitialized = yarpMEX(0, 24);
       end
       v = vInitialized;
     end
     function v = END_WITH_TO_PORT()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 20);
+        vInitialized = yarpMEX(0, 25);
       end
       v = vInitialized;
     end
     function v = NO_PERSISTENCE()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 21);
+        vInitialized = yarpMEX(0, 26);
       end
       v = vInitialized;
     end

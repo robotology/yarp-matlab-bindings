@@ -9,23 +9,23 @@ classdef ISkinPatches < SwigRef
     %Usage: retval = getNrOfSkinPatches ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(2051, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1990, self, varargin{:});
     end
     function varargout = getSkinPatchStatus(self,varargin)
     %Usage: retval = getSkinPatchStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(2052, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1991, self, varargin{:});
     end
     function varargout = getSkinPatchSize(self,varargin)
     %Usage: retval = getSkinPatchSize (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(2053, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1992, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(2054, self);
+        yarpMEX(1993, self);
         self.SwigClear();
       end
     end
@@ -33,13 +33,13 @@ classdef ISkinPatches < SwigRef
     %Usage: retval = getSkinPatchName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(2055, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1994, self, varargin{:});
     end
     function varargout = getSkinPatchMeasure(self,varargin)
     %Usage: retval = getSkinPatchMeasure (sens_index, out)
     %
-    %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(2056, self, varargin{:});
+    %sens_index is of type int. out is of type yarp::sig::Vector &. sens_index is of type int. out is of type yarp::sig::Vector &. retval is of type double. 
+      [varargout{1:nargout}] = yarpMEX(1995, self, varargin{:});
     end
     function self = ISkinPatches(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

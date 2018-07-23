@@ -1,3 +1,3 @@
 function v = VOCAB_TIMESTAMP()
-  v = yarpMEX(1414);
+  v = yarpMEX(1353);
 end

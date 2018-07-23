@@ -7,7 +7,7 @@ classdef IAxisInfo < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1368, self);
+        yarpMEX(1315, self);
         self.SwigClear();
       end
     end
@@ -15,13 +15,13 @@ classdef IAxisInfo < SwigRef
     %Usage: retval = getJointType (axis, type)
     %
     %axis is of type int. type is of type yarp::dev::JointTypeEnum &. axis is of type int. type is of type yarp::dev::JointTypeEnum &. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1369, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1316, self, varargin{:});
     end
     function varargout = getAxisName(self,varargin)
     %Usage: retval = getAxisName (axis)
     %
     %axis is of type int. axis is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1370, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1317, self, varargin{:});
     end
     function self = IAxisInfo(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

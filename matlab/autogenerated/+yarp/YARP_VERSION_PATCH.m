@@ -1,7 +1,7 @@
-function v = VOCAB_ERRS()
+function v = YARP_VERSION_PATCH()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 217);
+    vInitialized = yarpMEX(0, 2);
   end
   v = vInitialized;
 end

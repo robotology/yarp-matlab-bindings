@@ -1,3 +1,3 @@
 function v = VOCAB_DRHASONP()
-  v = yarpMEX(1168);
+  v = yarpMEX(1145);
 end

@@ -93,210 +93,210 @@ classdef QosStyle < SwigRef
     function v = PacketPriorityInvalid()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 22);
+        vInitialized = yarpMEX(0, 27);
       end
       v = vInitialized;
     end
     function v = PacketPriorityNormal()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 23);
+        vInitialized = yarpMEX(0, 28);
       end
       v = vInitialized;
     end
     function v = PacketPriorityLow()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 24);
+        vInitialized = yarpMEX(0, 29);
       end
       v = vInitialized;
     end
     function v = PacketPriorityHigh()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 25);
+        vInitialized = yarpMEX(0, 30);
       end
       v = vInitialized;
     end
     function v = PacketPriorityCritical()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 26);
+        vInitialized = yarpMEX(0, 31);
       end
       v = vInitialized;
     end
     function v = PacketPriorityUndefined()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 27);
+        vInitialized = yarpMEX(0, 32);
       end
       v = vInitialized;
     end
     function v = DSCP_Invalid()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 28);
+        vInitialized = yarpMEX(0, 33);
       end
       v = vInitialized;
     end
     function v = DSCP_CS0()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 29);
+        vInitialized = yarpMEX(0, 34);
       end
       v = vInitialized;
     end
     function v = DSCP_CS1()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 30);
+        vInitialized = yarpMEX(0, 35);
       end
       v = vInitialized;
     end
     function v = DSCP_CS2()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 31);
+        vInitialized = yarpMEX(0, 36);
       end
       v = vInitialized;
     end
     function v = DSCP_CS3()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 32);
+        vInitialized = yarpMEX(0, 37);
       end
       v = vInitialized;
     end
     function v = DSCP_CS4()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 33);
+        vInitialized = yarpMEX(0, 38);
       end
       v = vInitialized;
     end
     function v = DSCP_CS5()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 34);
+        vInitialized = yarpMEX(0, 39);
       end
       v = vInitialized;
     end
     function v = DSCP_CS6()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 35);
+        vInitialized = yarpMEX(0, 40);
       end
       v = vInitialized;
     end
     function v = DSCP_CS7()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 36);
+        vInitialized = yarpMEX(0, 41);
       end
       v = vInitialized;
     end
     function v = DSCP_AF11()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 37);
+        vInitialized = yarpMEX(0, 42);
       end
       v = vInitialized;
     end
     function v = DSCP_AF12()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 38);
+        vInitialized = yarpMEX(0, 43);
       end
       v = vInitialized;
     end
     function v = DSCP_AF13()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 39);
+        vInitialized = yarpMEX(0, 44);
       end
       v = vInitialized;
     end
     function v = DSCP_AF21()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 40);
+        vInitialized = yarpMEX(0, 45);
       end
       v = vInitialized;
     end
     function v = DSCP_AF22()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 41);
+        vInitialized = yarpMEX(0, 46);
       end
       v = vInitialized;
     end
     function v = DSCP_AF23()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 42);
+        vInitialized = yarpMEX(0, 47);
       end
       v = vInitialized;
     end
     function v = DSCP_AF31()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 43);
+        vInitialized = yarpMEX(0, 48);
       end
       v = vInitialized;
     end
     function v = DSCP_AF32()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 44);
+        vInitialized = yarpMEX(0, 49);
       end
       v = vInitialized;
     end
     function v = DSCP_AF33()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 45);
+        vInitialized = yarpMEX(0, 50);
       end
       v = vInitialized;
     end
     function v = DSCP_AF41()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 46);
+        vInitialized = yarpMEX(0, 51);
       end
       v = vInitialized;
     end
     function v = DSCP_AF42()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 47);
+        vInitialized = yarpMEX(0, 52);
       end
       v = vInitialized;
     end
     function v = DSCP_AF43()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 48);
+        vInitialized = yarpMEX(0, 53);
       end
       v = vInitialized;
     end
     function v = DSCP_VA()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 49);
+        vInitialized = yarpMEX(0, 54);
       end
       v = vInitialized;
     end
     function v = DSCP_EF()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 50);
+        vInitialized = yarpMEX(0, 55);
       end
       v = vInitialized;
     end
     function v = DSCP_Undefined()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 51);
+        vInitialized = yarpMEX(0, 56);
       end
       v = vInitialized;
     end

@@ -1,3 +1,3 @@
 function v = VOCAB_GAMMA()
-  v = yarpMEX(1143);
+  v = yarpMEX(1120);
 end

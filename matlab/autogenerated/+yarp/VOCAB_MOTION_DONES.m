@@ -1,3 +1,3 @@
 function v = VOCAB_MOTION_DONES()
-  v = yarpMEX(1383);
+  v = yarpMEX(1322);
 end

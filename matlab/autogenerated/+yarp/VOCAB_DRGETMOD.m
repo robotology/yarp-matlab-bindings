@@ -1,3 +1,3 @@
 function v = VOCAB_DRGETMOD()
-  v = yarpMEX(1170);
+  v = yarpMEX(1147);
 end
