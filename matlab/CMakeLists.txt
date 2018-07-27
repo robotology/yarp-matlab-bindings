@@ -24,7 +24,7 @@ endmacro()
 
 macro(SWIG_COMPILE_MODULE name language)
   SWIG_MODULE_INITIALIZE(${name} ${language})
-  add_library(${SWIG_MODULE_${name}_REAL_NAME}
+  add_library(${name}
           MODULE
           ${swig_generated_sources}
           ${swig_other_sources})
@@ -99,7 +99,7 @@ if(YARP_USES_MATLAB)
           MAIN_PROGRAM)
 
   swig_compile_module(${mexname} matlab)
-  swig_link_libraries(${mexname} ${Matlab_LIBRARIES} ${YARP_LIBRARIES})
+  target_link_libraries(${mexname} ${Matlab_LIBRARIES} ${YARP_LIBRARIES})
   target_include_directories(${mexname} PUBLIC ${Matlab_INCLUDE_DIRS})
 
   set_target_properties(${mexname} PROPERTIES PREFIX "" SUFFIX .${Matlab_MEX_EXTENSION})
