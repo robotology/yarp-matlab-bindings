@@ -1,3 +1,7 @@
 function v = VOCAB_DRSETACT()
-  v = yarpMEX(1141);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 163);
+  end
+  v = vInitialized;
 end

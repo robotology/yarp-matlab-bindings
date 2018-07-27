@@ -1,3 +1,7 @@
 function v = VOCAB_INFO_TYPE()
-  v = yarpMEX(1352);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 259);
+  end
+  v = vInitialized;
 end

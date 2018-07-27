@@ -1,3 +1,7 @@
 function v = VOCAB_CM_MIXED()
-  v = yarpMEX(1678);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 312);
+  end
+  v = vInitialized;
 end

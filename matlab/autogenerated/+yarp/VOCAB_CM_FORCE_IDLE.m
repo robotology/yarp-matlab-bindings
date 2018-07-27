@@ -1,3 +1,7 @@
 function v = VOCAB_CM_FORCE_IDLE()
-  v = yarpMEX(1679);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 313);
+  end
+  v = vInitialized;
 end

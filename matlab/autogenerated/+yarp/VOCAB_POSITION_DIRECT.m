@@ -1,3 +1,7 @@
 function v = VOCAB_POSITION_DIRECT()
-  v = yarpMEX(1939);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 356);
+  end
+  v = vInitialized;
 end

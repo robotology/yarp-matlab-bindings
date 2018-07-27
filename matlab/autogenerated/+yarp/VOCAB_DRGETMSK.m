@@ -1,3 +1,7 @@
 function v = VOCAB_DRGETMSK()
-  v = yarpMEX(1149);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 171);
+  end
+  v = vInitialized;
 end

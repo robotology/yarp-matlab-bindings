@@ -1,3 +1,7 @@
 function v = VOCAB_INFO_NAME()
-  v = yarpMEX(1351);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 258);
+  end
+  v = vInitialized;
 end

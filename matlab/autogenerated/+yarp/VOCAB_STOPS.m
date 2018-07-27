@@ -1,3 +1,7 @@
 function v = VOCAB_STOPS()
-  v = yarpMEX(1333);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 240);
+  end
+  v = vInitialized;
 end

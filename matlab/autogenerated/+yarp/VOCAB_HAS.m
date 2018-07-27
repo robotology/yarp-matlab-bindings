@@ -1,3 +1,7 @@
 function v = VOCAB_HAS()
-  v = yarpMEX(1128);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 123);
+  end
+  v = vInitialized;
 end

@@ -1,3 +1,7 @@
 function v = VOCAB_FRAMEGRABBER_CONTROL()
-  v = yarpMEX(1125);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 120);
+  end
+  v = vInitialized;
 end

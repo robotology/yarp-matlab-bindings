@@ -1,3 +1,7 @@
 function v = VOCAB_DRSETWHB()
-  v = yarpMEX(1160);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 182);
+  end
+  v = vInitialized;
 end

@@ -1,3 +1,7 @@
 function v = VOCAB_CM_HW_FAULT()
-  v = yarpMEX(1680);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 314);
+  end
+  v = vInitialized;
 end

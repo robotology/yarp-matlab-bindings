@@ -1,3 +1,7 @@
 function v = VOCAB_TORQUES_DIRECT()
-  v = yarpMEX(1365);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 272);
+  end
+  v = vInitialized;
 end

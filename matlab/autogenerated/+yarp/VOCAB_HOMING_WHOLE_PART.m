@@ -1,3 +1,7 @@
 function v = VOCAB_HOMING_WHOLE_PART()
-  v = yarpMEX(1650);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 294);
+  end
+  v = vInitialized;
 end

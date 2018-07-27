@@ -1,3 +1,7 @@
 function v = VOCAB_ENCODER()
-  v = yarpMEX(1621);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 283);
+  end
+  v = vInitialized;
 end

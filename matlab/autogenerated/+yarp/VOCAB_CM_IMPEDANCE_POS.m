@@ -1,3 +1,7 @@
 function v = VOCAB_CM_IMPEDANCE_POS()
-  v = yarpMEX(1676);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 310);
+  end
+  v = vInitialized;
 end

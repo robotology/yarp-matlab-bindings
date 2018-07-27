@@ -1,3 +1,7 @@
 function v = VOCAB_CM_CONTROL_MODES()
-  v = yarpMEX(1668);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 302);
+  end
+  v = vInitialized;
 end

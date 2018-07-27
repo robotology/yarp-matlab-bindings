@@ -1,3 +1,7 @@
 function v = VOCAB_GAMMA()
-  v = yarpMEX(1120);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 110);
+  end
+  v = vInitialized;
 end

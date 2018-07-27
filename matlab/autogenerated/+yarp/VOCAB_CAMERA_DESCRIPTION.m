@@ -1,3 +1,7 @@
 function v = VOCAB_CAMERA_DESCRIPTION()
-  v = yarpMEX(1127);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 122);
+  end
+  v = vInitialized;
 end

@@ -1,3 +1,7 @@
 function v = VOCAB_EXPOSURE()
-  v = yarpMEX(1115);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 105);
+  end
+  v = vInitialized;
 end

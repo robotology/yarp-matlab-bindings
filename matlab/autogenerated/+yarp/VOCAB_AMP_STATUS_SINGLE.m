@@ -1,3 +1,7 @@
 function v = VOCAB_AMP_STATUS_SINGLE()
-  v = yarpMEX(1340);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 247);
+  end
+  v = vInitialized;
 end

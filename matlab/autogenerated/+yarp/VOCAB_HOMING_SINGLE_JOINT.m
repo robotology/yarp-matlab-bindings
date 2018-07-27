@@ -1,3 +1,7 @@
 function v = VOCAB_HOMING_SINGLE_JOINT()
-  v = yarpMEX(1649);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 293);
+  end
+  v = vInitialized;
 end

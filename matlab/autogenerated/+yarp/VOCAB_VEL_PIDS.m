@@ -1,3 +1,7 @@
 function v = VOCAB_VEL_PIDS()
-  v = yarpMEX(1815);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 335);
+  end
+  v = vInitialized;
 end

@@ -1,3 +1,7 @@
 function v = VOCAB_CALIBRATE_WHOLE_PART()
-  v = yarpMEX(1648);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 292);
+  end
+  v = vInitialized;
 end

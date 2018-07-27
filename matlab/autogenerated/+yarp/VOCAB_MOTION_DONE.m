@@ -1,3 +1,7 @@
 function v = VOCAB_MOTION_DONE()
-  v = yarpMEX(1321);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 228);
+  end
+  v = vInitialized;
 end

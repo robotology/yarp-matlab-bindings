@@ -1,3 +1,7 @@
 function v = VOCAB_DRSETCAP()
-  v = yarpMEX(1173);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 195);
+  end
+  v = vInitialized;
 end

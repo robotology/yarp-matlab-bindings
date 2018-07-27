@@ -1,3 +1,7 @@
 function v = VOCAB_POSITION_MODE()
-  v = yarpMEX(1323);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 230);
+  end
+  v = vInitialized;
 end

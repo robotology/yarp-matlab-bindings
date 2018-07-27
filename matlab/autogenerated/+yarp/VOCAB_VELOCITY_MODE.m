@@ -1,3 +1,7 @@
 function v = VOCAB_VELOCITY_MODE()
-  v = yarpMEX(1334);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 241);
+  end
+  v = vInitialized;
 end
