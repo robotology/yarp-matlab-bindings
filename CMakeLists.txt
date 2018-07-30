@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(yarp-matlab-bindings)
+project(yarp-matlab-bindings VERSION 3.0.1)
 
 # for FindMatlab.cmake
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
@@ -47,6 +47,7 @@ if(YCM_FOUND)
 endif()
 
 # Setup the include directories
+include(GNUInstallDirs)
 include_directories(${YARP_INCLUDE_DIRS})
 
 if(YARP_USES_MATLAB OR YARP_GENERATE_MATLAB OR YARP_USES_OCTAVE)
