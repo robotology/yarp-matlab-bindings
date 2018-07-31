@@ -1,3 +1,7 @@
 function v = VOCAB_CURRENT_RANGE()
-  v = yarpMEX(1861);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 345);
+  end
+  v = vInitialized;
 end

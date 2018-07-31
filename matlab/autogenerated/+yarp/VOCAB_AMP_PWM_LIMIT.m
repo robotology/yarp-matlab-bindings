@@ -1,3 +1,7 @@
 function v = VOCAB_AMP_PWM_LIMIT()
-  v = yarpMEX(1347);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 254);
+  end
+  v = vInitialized;
 end

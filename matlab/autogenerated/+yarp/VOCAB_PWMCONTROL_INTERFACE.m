@@ -1,3 +1,7 @@
 function v = VOCAB_PWMCONTROL_INTERFACE()
-  v = yarpMEX(1832);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 336);
+  end
+  v = vInitialized;
 end

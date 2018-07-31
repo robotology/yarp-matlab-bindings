@@ -24,7 +24,7 @@ endmacro()
 
 macro(SWIG_COMPILE_MODULE name language)
   SWIG_MODULE_INITIALIZE(${name} ${language})
-  add_library(${SWIG_MODULE_${name}_REAL_NAME}
+  add_library(${name}
           MODULE
           ${swig_generated_sources}
           ${swig_other_sources})
@@ -99,7 +99,7 @@ if(YARP_USES_MATLAB)
           MAIN_PROGRAM)
 
   swig_compile_module(${mexname} matlab)
-  swig_link_libraries(${mexname} ${Matlab_LIBRARIES} ${YARP_LIBRARIES})
+  target_link_libraries(${mexname} ${Matlab_LIBRARIES} ${YARP_LIBRARIES})
   target_include_directories(${mexname} PUBLIC ${Matlab_INCLUDE_DIRS})
 
   set_target_properties(${mexname} PROPERTIES PREFIX "" SUFFIX .${Matlab_MEX_EXTENSION})
@@ -111,6 +111,15 @@ if(YARP_USES_MATLAB)
   endif()
 
   # Install the generated front-end to ${CMAKE_INSTALL_PREFIX}/mex
+  install(
+      TARGETS ${mexname}
+      EXPORT YarpMatlabBindings
+      LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+      ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+      RUNTIME DESTINATION ${CMAKE_INSTALL_LIBDIR}
+      DESTINATION ${YARP_INSTALL_OCTAVE_LIBDIR})
+  list(APPEND EXPORTED_TARGETS ${mexname})
+
   install(DIRECTORY ${MEX_BINDINGS_SOURCE_DIR}/+yarp DESTINATION ${CMAKE_INSTALL_PREFIX}/${YARP_INSTALL_MATLAB_MFILESDIR})
   install(FILES ${MEX_BINDINGS_SOURCE_DIR}/SwigRef.m DESTINATION ${CMAKE_INSTALL_PREFIX}/${YARP_INSTALL_MATLAB_MFILESDIR})
   install(FILES ${MEX_BINDINGS_SOURCE_DIR}/SwigMem.m DESTINATION ${CMAKE_INSTALL_PREFIX}/${YARP_INSTALL_MATLAB_MFILESDIR})
@@ -150,7 +159,14 @@ if(YARP_USES_OCTAVE)
           PROPERTIES OUTPUT_NAME "yarpMEX"
           PREFIX ""
           SUFFIX .mex)
-  install(TARGETS yarpOctaveMex DESTINATION ${CMAKE_INSTALL_PREFIX}/${YARP_INSTALL_OCTAVE_LIBDIR})
+  install(
+      TARGETS yarpOctaveMex
+      EXPORT yarp-matlab-bindings
+      LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+      ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+      RUNTIME DESTINATION ${CMAKE_INSTALL_LIBDIR}
+      DESTINATION ${YARP_INSTALL_OCTAVE_LIBDIR})
+  list(APPEND EXPORTED_TARGETS yarpOctaveMex)
 
   # Install the generated front-end to ${CMAKE_INSTALL_PREFIX}/mex
   install(DIRECTORY ${MEX_BINDINGS_SOURCE_DIR}/+yarp DESTINATION ${CMAKE_INSTALL_PREFIX}/${YARP_INSTALL_OCTAVE_MFILESDIR})
@@ -158,4 +174,13 @@ if(YARP_USES_OCTAVE)
   install(FILES ${MEX_BINDINGS_SOURCE_DIR}/SwigMem.m DESTINATION ${CMAKE_INSTALL_PREFIX}/${YARP_INSTALL_OCTAVE_MFILESDIR})
   install(FILES ${MEX_BINDINGS_SOURCE_DIR}/SwigGet.m DESTINATION ${CMAKE_INSTALL_PREFIX}/${YARP_INSTALL_OCTAVE_MFILESDIR})
   install(FILES ${MEX_BINDINGS_SOURCE_DIR}/SwigStorage.m DESTINATION ${CMAKE_INSTALL_PREFIX}/${YARP_INSTALL_OCTAVE_MFILESDIR})
+endif()
+
+if(YCM_FOUND)
+  include(InstallBasicPackageFiles)
+  install_basic_package_files(yarp-matlab-bindings
+    VERSION ${PROJECT_VERSION}
+    COMPATIBILITY AnyNewerVersion
+    TARGETS ${EXPORTED_TARGETS}
+    NO_CHECK_REQUIRED_COMPONENTS_MACRO)
 endif()

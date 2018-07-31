@@ -1,3 +1,7 @@
 function v = VOCAB_BEMF()
-  v = yarpMEX(1358);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 265);
+  end
+  v = vInitialized;
 end

@@ -1,3 +1,7 @@
 function v = VOCAB_IANALOG()
-  v = yarpMEX(1863);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 347);
+  end
+  v = vInitialized;
 end

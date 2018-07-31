@@ -1,3 +1,7 @@
 function v = VOCAB_TIMESTAMP()
-  v = yarpMEX(1353);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 260);
+  end
+  v = vInitialized;
 end

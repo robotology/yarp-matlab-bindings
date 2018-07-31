@@ -1,3 +1,7 @@
 function v = VOCAB_SATURATION()
-  v = yarpMEX(1119);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 109);
+  end
+  v = vInitialized;
 end

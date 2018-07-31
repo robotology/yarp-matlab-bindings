@@ -1,3 +1,7 @@
 function v = VOCAB_MOTOR_CPR()
-  v = yarpMEX(1736);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 324);
+  end
+  v = vInitialized;
 end

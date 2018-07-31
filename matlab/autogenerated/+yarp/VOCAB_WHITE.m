@@ -1,3 +1,7 @@
 function v = VOCAB_WHITE()
-  v = yarpMEX(1117);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 107);
+  end
+  v = vInitialized;
 end

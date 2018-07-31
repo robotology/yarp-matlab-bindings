@@ -1,3 +1,7 @@
 function v = VOCAB_AMP_PWM()
-  v = yarpMEX(1346);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 253);
+  end
+  v = vInitialized;
 end

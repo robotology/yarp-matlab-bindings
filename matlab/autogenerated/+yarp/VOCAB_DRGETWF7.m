@@ -1,3 +1,7 @@
 function v = VOCAB_DRGETWF7()
-  v = yarpMEX(1163);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 185);
+  end
+  v = vInitialized;
 end

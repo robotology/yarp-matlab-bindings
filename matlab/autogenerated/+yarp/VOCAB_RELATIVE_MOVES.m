@@ -1,3 +1,7 @@
 function v = VOCAB_RELATIVE_MOVES()
-  v = yarpMEX(1327);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 234);
+  end
+  v = vInitialized;
 end

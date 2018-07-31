@@ -1,3 +1,7 @@
 function v = VOCAB_FRAMEGRABBER_IMAGERAW()
-  v = yarpMEX(1113);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 103);
+  end
+  v = vInitialized;
 end

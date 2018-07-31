@@ -1,3 +1,7 @@
 function v = VOCAB_AMP_DISABLE()
-  v = yarpMEX(1338);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 245);
+  end
+  v = vInitialized;
 end

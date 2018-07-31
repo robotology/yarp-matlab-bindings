@@ -1,3 +1,7 @@
 function v = VOCAB_TRQS()
-  v = yarpMEX(1356);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 263);
+  end
+  v = vInitialized;
 end

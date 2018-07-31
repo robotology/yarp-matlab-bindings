@@ -1,3 +1,7 @@
 function v = VOCAB_MOTION_DONE_GROUP()
-  v = yarpMEX(1591);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 277);
+  end
+  v = vInitialized;
 end

@@ -1,3 +1,7 @@
 function v = VOCAB_IMP_OFFSET()
-  v = yarpMEX(1363);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 270);
+  end
+  v = vInitialized;
 end

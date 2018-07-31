@@ -1,3 +1,7 @@
 function v = VOCAB_DRGETVMD()
-  v = yarpMEX(1150);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 172);
+  end
+  v = vInitialized;
 end

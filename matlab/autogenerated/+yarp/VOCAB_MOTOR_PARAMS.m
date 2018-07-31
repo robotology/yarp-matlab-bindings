@@ -1,3 +1,7 @@
 function v = VOCAB_MOTOR_PARAMS()
-  v = yarpMEX(1359);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 266);
+  end
+  v = vInitialized;
 end

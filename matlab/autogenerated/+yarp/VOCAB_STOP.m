@@ -1,3 +1,7 @@
 function v = VOCAB_STOP()
-  v = yarpMEX(1332);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 239);
+  end
+  v = vInitialized;
 end

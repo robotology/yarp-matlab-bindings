@@ -1,3 +1,7 @@
 function v = VOCAB_CM_CURRENT()
-  v = yarpMEX(1674);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 308);
+  end
+  v = vInitialized;
 end

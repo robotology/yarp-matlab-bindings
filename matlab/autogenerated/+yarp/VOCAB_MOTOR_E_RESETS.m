@@ -1,3 +1,7 @@
 function v = VOCAB_MOTOR_E_RESETS()
-  v = yarpMEX(1733);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 321);
+  end
+  v = vInitialized;
 end

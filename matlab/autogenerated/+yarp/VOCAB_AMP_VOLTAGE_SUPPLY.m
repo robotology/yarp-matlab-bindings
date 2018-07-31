@@ -1,3 +1,7 @@
 function v = VOCAB_AMP_VOLTAGE_SUPPLY()
-  v = yarpMEX(1348);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 255);
+  end
+  v = vInitialized;
 end

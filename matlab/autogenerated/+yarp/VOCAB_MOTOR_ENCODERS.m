@@ -1,3 +1,7 @@
 function v = VOCAB_MOTOR_ENCODERS()
-  v = yarpMEX(1735);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 323);
+  end
+  v = vInitialized;
 end

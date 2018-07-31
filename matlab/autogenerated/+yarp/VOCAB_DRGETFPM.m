@@ -1,3 +1,7 @@
 function v = VOCAB_DRGETFPM()
-  v = yarpMEX(1152);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 174);
+  end
+  v = vInitialized;
 end

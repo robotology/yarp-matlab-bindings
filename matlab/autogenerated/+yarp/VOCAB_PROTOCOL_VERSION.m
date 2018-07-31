@@ -1,3 +1,7 @@
 function v = VOCAB_PROTOCOL_VERSION()
-  v = yarpMEX(1367);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 274);
+  end
+  v = vInitialized;
 end

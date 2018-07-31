@@ -1,3 +1,7 @@
 function v = VOCAB_REF_ACCELERATIONS()
-  v = yarpMEX(1331);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 238);
+  end
+  v = vInitialized;
 end

@@ -1,3 +1,7 @@
 function v = VOCAB_LIST_VARIABLES()
-  v = yarpMEX(1880);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 355);
+  end
+  v = vInitialized;
 end

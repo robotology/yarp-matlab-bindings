@@ -1,3 +1,7 @@
 function v = VOCAB_FEATURE()
-  v = yarpMEX(1129);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 124);
+  end
+  v = vInitialized;
 end

@@ -1,3 +1,7 @@
 function v = VOCAB_CM_TORQUE()
-  v = yarpMEX(1670);
+  persistent vInitialized;
+  if isempty(vInitialized)
+    vInitialized = yarpMEX(0, 304);
+  end
+  v = vInitialized;
 end
