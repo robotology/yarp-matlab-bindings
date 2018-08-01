@@ -1,7 +1,3 @@
 function v = VOCAB_VEL_LIMITS()
-  persistent vInitialized;
-  if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 257);
-  end
-  v = vInitialized;
+  v = yarpMEX(1354);
 end

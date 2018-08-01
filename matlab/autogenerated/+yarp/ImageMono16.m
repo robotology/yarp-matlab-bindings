@@ -9,7 +9,7 @@ classdef ImageMono16 < yarp.Image
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(2117, varargin{:});
+        tmp = yarpMEX(2372, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
@@ -18,35 +18,35 @@ classdef ImageMono16 < yarp.Image
     %Usage: retval = getPixelSize ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(2118, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2373, self, varargin{:});
     end
     function varargout = getPixelCode(self,varargin)
     %Usage: retval = getPixelCode ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(2119, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2374, self, varargin{:});
     end
     function varargout = pixel(self,varargin)
     %Usage: retval = pixel (x, y)
     %
     %x is of type size_t. y is of type size_t. x is of type size_t. y is of type size_t. retval is of type yarp::os::NetUint16 &. 
-      [varargout{1:nargout}] = yarpMEX(2120, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2375, self, varargin{:});
     end
     function varargout = access(self,varargin)
     %Usage: retval = access (x, y)
     %
     %x is of type size_t. y is of type size_t. x is of type size_t. y is of type size_t. retval is of type yarp::os::NetUint16 &. 
-      [varargout{1:nargout}] = yarpMEX(2121, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2376, self, varargin{:});
     end
     function varargout = safePixel(self,varargin)
     %Usage: retval = safePixel (x, y)
     %
     %x is of type size_t. y is of type size_t. x is of type size_t. y is of type size_t. retval is of type yarp::os::NetUint16 const &. 
-      [varargout{1:nargout}] = yarpMEX(2122, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2377, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(2123, self);
+        yarpMEX(2378, self);
         self.SwigClear();
       end
     end
