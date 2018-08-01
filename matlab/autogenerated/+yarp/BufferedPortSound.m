@@ -14,14 +14,14 @@ classdef BufferedPortSound < yarp.Contactable & yarp.TypedReaderSound & yarp.Typ
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(2280, varargin{:});
+        tmp = yarpMEX(2535, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(2281, self);
+        yarpMEX(2536, self);
         self.SwigClear();
       end
     end
@@ -29,266 +29,266 @@ classdef BufferedPortSound < yarp.Contactable & yarp.TypedReaderSound & yarp.Typ
     %Usage: retval = addOutput (contact)
     %
     %contact is of type Contact. contact is of type Contact. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2282, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2537, self, varargin{:});
     end
     function varargout = close(self,varargin)
     %Usage: close ()
     %
-      [varargout{1:nargout}] = yarpMEX(2283, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2538, self, varargin{:});
     end
     function varargout = interrupt(self,varargin)
     %Usage: interrupt ()
     %
-      [varargout{1:nargout}] = yarpMEX(2284, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2539, self, varargin{:});
     end
     function varargout = resume(self,varargin)
     %Usage: resume ()
     %
-      [varargout{1:nargout}] = yarpMEX(2285, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2540, self, varargin{:});
     end
     function varargout = getPendingReads(self,varargin)
     %Usage: retval = getPendingReads ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(2286, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2541, self, varargin{:});
     end
     function varargout = where(self,varargin)
     %Usage: retval = where ()
     %
     %retval is of type Contact. 
-      [varargout{1:nargout}] = yarpMEX(2287, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2542, self, varargin{:});
     end
     function varargout = getName(self,varargin)
     %Usage: retval = getName ()
     %
     %retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(2288, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2543, self, varargin{:});
     end
     function varargout = prepare(self,varargin)
     %Usage: retval = prepare ()
     %
     %retval is of type Sound. 
-      [varargout{1:nargout}] = yarpMEX(2289, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2544, self, varargin{:});
     end
     function varargout = unprepare(self,varargin)
     %Usage: retval = unprepare ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2290, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2545, self, varargin{:});
     end
     function varargout = write(self,varargin)
     %Usage: write ()
     %
-      [varargout{1:nargout}] = yarpMEX(2291, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2546, self, varargin{:});
     end
     function varargout = writeStrict(self,varargin)
     %Usage: writeStrict ()
     %
-      [varargout{1:nargout}] = yarpMEX(2292, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2547, self, varargin{:});
     end
     function varargout = waitForWrite(self,varargin)
     %Usage: waitForWrite ()
     %
-      [varargout{1:nargout}] = yarpMEX(2293, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2548, self, varargin{:});
     end
     function varargout = setStrict(self,varargin)
     %Usage: setStrict ()
     %
-      [varargout{1:nargout}] = yarpMEX(2294, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2549, self, varargin{:});
     end
     function varargout = read(self,varargin)
     %Usage: retval = read ()
     %
     %retval is of type Sound. 
-      [varargout{1:nargout}] = yarpMEX(2295, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2550, self, varargin{:});
     end
     function varargout = lastRead(self,varargin)
     %Usage: retval = lastRead ()
     %
     %retval is of type Sound. 
-      [varargout{1:nargout}] = yarpMEX(2296, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2551, self, varargin{:});
     end
     function varargout = isClosed(self,varargin)
     %Usage: retval = isClosed ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2297, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2552, self, varargin{:});
     end
     function varargout = setReplier(self,varargin)
     %Usage: setReplier (reader)
     %
     %reader is of type PortReader. 
-      [varargout{1:nargout}] = yarpMEX(2298, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2553, self, varargin{:});
     end
     function varargout = setReader(self,varargin)
     %Usage: setReader (reader)
     %
     %reader is of type PortReader. 
-      [varargout{1:nargout}] = yarpMEX(2299, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2554, self, varargin{:});
     end
     function varargout = setAdminReader(self,varargin)
     %Usage: setAdminReader (reader)
     %
     %reader is of type PortReader. 
-      [varargout{1:nargout}] = yarpMEX(2300, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2555, self, varargin{:});
     end
     function varargout = onRead(self,varargin)
     %Usage: onRead (datum)
     %
     %datum is of type Sound. 
-      [varargout{1:nargout}] = yarpMEX(2301, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2556, self, varargin{:});
     end
     function varargout = useCallback(self,varargin)
     %Usage: useCallback ()
     %
-      [varargout{1:nargout}] = yarpMEX(2302, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2557, self, varargin{:});
     end
     function varargout = disableCallback(self,varargin)
     %Usage: disableCallback ()
     %
-      [varargout{1:nargout}] = yarpMEX(2303, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2558, self, varargin{:});
     end
     function varargout = setEnvelope(self,varargin)
     %Usage: retval = setEnvelope (envelope)
     %
     %envelope is of type PortWriter. envelope is of type PortWriter. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2304, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2559, self, varargin{:});
     end
     function varargout = getEnvelope(self,varargin)
     %Usage: retval = getEnvelope (envelope)
     %
     %envelope is of type PortReader. envelope is of type PortReader. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2305, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2560, self, varargin{:});
     end
     function varargout = getInputCount(self,varargin)
     %Usage: retval = getInputCount ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(2306, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2561, self, varargin{:});
     end
     function varargout = getOutputCount(self,varargin)
     %Usage: retval = getOutputCount ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(2307, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2562, self, varargin{:});
     end
     function varargout = isWriting(self,varargin)
     %Usage: retval = isWriting ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2308, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2563, self, varargin{:});
     end
     function varargout = getReport(self,varargin)
     %Usage: getReport (reporter)
     %
     %reporter is of type PortReport. 
-      [varargout{1:nargout}] = yarpMEX(2309, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2564, self, varargin{:});
     end
     function varargout = setReporter(self,varargin)
     %Usage: setReporter (reporter)
     %
     %reporter is of type PortReport. 
-      [varargout{1:nargout}] = yarpMEX(2310, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2565, self, varargin{:});
     end
     function varargout = resetReporter(self,varargin)
     %Usage: resetReporter ()
     %
-      [varargout{1:nargout}] = yarpMEX(2311, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2566, self, varargin{:});
     end
     function varargout = acquire(self,varargin)
     %Usage: retval = acquire ()
     %
     %retval is of type void *. 
-      [varargout{1:nargout}] = yarpMEX(2312, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2567, self, varargin{:});
     end
     function varargout = release(self,varargin)
     %Usage: release (handle)
     %
     %handle is of type void *. 
-      [varargout{1:nargout}] = yarpMEX(2313, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2568, self, varargin{:});
     end
     function varargout = setTargetPeriod(self,varargin)
     %Usage: setTargetPeriod (period)
     %
     %period is of type double. 
-      [varargout{1:nargout}] = yarpMEX(2314, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2569, self, varargin{:});
     end
     function varargout = getType(self,varargin)
     %Usage: retval = getType ()
     %
     %retval is of type yarp::os::Type. 
-      [varargout{1:nargout}] = yarpMEX(2315, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2570, self, varargin{:});
     end
     function varargout = promiseType(self,varargin)
     %Usage: promiseType (typ)
     %
     %typ is of type yarp::os::Type const &. 
-      [varargout{1:nargout}] = yarpMEX(2316, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2571, self, varargin{:});
     end
     function varargout = setInputMode(self,varargin)
     %Usage: setInputMode (expectInput)
     %
     %expectInput is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2317, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2572, self, varargin{:});
     end
     function varargout = setOutputMode(self,varargin)
     %Usage: setOutputMode (expectOutput)
     %
     %expectOutput is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2318, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2573, self, varargin{:});
     end
     function varargout = setRpcMode(self,varargin)
     %Usage: setRpcMode (expectRpc)
     %
     %expectRpc is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2319, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2574, self, varargin{:});
     end
     function varargout = acquireProperties(self,varargin)
     %Usage: retval = acquireProperties (readOnly)
     %
     %readOnly is of type bool. readOnly is of type bool. retval is of type Property. 
-      [varargout{1:nargout}] = yarpMEX(2320, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2575, self, varargin{:});
     end
     function varargout = releaseProperties(self,varargin)
     %Usage: releaseProperties (prop)
     %
     %prop is of type Property. 
-      [varargout{1:nargout}] = yarpMEX(2321, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2576, self, varargin{:});
     end
     function varargout = includeNodeInName(self,varargin)
     %Usage: includeNodeInName (flag)
     %
     %flag is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2322, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2577, self, varargin{:});
     end
     function varargout = setCallbackLock(self,varargin)
     %Usage: retval = setCallbackLock (mutex)
     %
     %mutex is of type yarp::os::Mutex *. mutex is of type yarp::os::Mutex *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2323, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2578, self, varargin{:});
     end
     function varargout = removeCallbackLock(self,varargin)
     %Usage: retval = removeCallbackLock ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2324, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2579, self, varargin{:});
     end
     function varargout = lockCallback(self,varargin)
     %Usage: retval = lockCallback ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2325, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2580, self, varargin{:});
     end
     function varargout = tryLockCallback(self,varargin)
     %Usage: retval = tryLockCallback ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2326, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2581, self, varargin{:});
     end
     function varargout = unlockCallback(self,varargin)
     %Usage: unlockCallback ()
     %
-      [varargout{1:nargout}] = yarpMEX(2327, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2582, self, varargin{:});
     end
   end
   methods(Static)

@@ -1,7 +1,3 @@
 function v = VOCAB_DRSETBPP()
-  persistent vInitialized;
-  if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 196);
-  end
-  v = vInitialized;
+  v = yarpMEX(1174);
 end

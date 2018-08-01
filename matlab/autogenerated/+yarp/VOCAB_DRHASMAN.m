@@ -1,7 +1,3 @@
 function v = VOCAB_DRHASMAN()
-  persistent vInitialized;
-  if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 165);
-  end
-  v = vInitialized;
+  v = yarpMEX(1143);
 end

@@ -1,7 +1,3 @@
 function v = VOCAB_RANGES()
-  persistent vInitialized;
-  if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 267);
-  end
-  v = vInitialized;
+  v = yarpMEX(1769);
 end
