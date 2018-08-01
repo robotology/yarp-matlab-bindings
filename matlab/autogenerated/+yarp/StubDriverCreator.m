@@ -9,45 +9,45 @@ classdef StubDriverCreator < yarp.DriverCreator
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1055, varargin{:});
+        tmp = yarpMEX(1091, varargin{:});
         self.swigPtr = tmp.swigPtr;
-        tmp.swigPtr = [];
+        tmp.SwigClear();
       end
     end
-    function varargout = toString(self,varargin)
-    %Usage: retval = toString ()
+    function varargout = toString_c(self,varargin)
+    %Usage: retval = toString_c ()
     %
-    %retval is of type yarp::os::ConstString. 
-      [varargout{1:nargout}] = yarpMEX(1056, self, varargin{:});
+    %retval is of type std::string. 
+      [varargout{1:nargout}] = yarpMEX(1092, self, varargin{:});
     end
     function varargout = getName(self,varargin)
     %Usage: retval = getName ()
     %
-    %retval is of type yarp::os::ConstString. 
-      [varargout{1:nargout}] = yarpMEX(1057, self, varargin{:});
+    %retval is of type std::string. 
+      [varargout{1:nargout}] = yarpMEX(1093, self, varargin{:});
     end
     function varargout = getWrapper(self,varargin)
     %Usage: retval = getWrapper ()
     %
-    %retval is of type yarp::os::ConstString. 
-      [varargout{1:nargout}] = yarpMEX(1058, self, varargin{:});
+    %retval is of type std::string. 
+      [varargout{1:nargout}] = yarpMEX(1094, self, varargin{:});
     end
     function varargout = getCode(self,varargin)
     %Usage: retval = getCode ()
     %
-    %retval is of type yarp::os::ConstString. 
-      [varargout{1:nargout}] = yarpMEX(1059, self, varargin{:});
+    %retval is of type std::string. 
+      [varargout{1:nargout}] = yarpMEX(1095, self, varargin{:});
     end
     function varargout = create(self,varargin)
     %Usage: retval = create ()
     %
     %retval is of type DeviceDriver. 
-      [varargout{1:nargout}] = yarpMEX(1060, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1096, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1061, self);
-        self.swigPtr=[];
+        yarpMEX(1097, self);
+        self.SwigClear();
       end
     end
   end

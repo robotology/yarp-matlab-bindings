@@ -7,27 +7,27 @@ classdef IControlDebug < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1225, self);
-        self.swigPtr=[];
+        yarpMEX(1339, self);
+        self.SwigClear();
       end
     end
     function varargout = setPrintFunction(self,varargin)
     %Usage: retval = setPrintFunction (f)
     %
     %f is of type int (*)(char const *,...). f is of type int (*)(char const *,...). retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1226, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1340, self, varargin{:});
     end
     function varargout = loadBootMemory(self,varargin)
     %Usage: retval = loadBootMemory ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1227, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1341, self, varargin{:});
     end
     function varargout = saveBootMemory(self,varargin)
     %Usage: retval = saveBootMemory ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1228, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1342, self, varargin{:});
     end
     function self = IControlDebug(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

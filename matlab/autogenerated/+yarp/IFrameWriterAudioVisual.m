@@ -7,15 +7,15 @@ classdef IFrameWriterAudioVisual < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1152, self);
-        self.swigPtr=[];
+        yarpMEX(1263, self);
+        self.SwigClear();
       end
     end
     function varargout = putAudioVisual(self,varargin)
     %Usage: retval = putAudioVisual (image, sound)
     %
     %image is of type ImageRgb. sound is of type Sound. image is of type ImageRgb. sound is of type Sound. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1153, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1264, self, varargin{:});
     end
     function self = IFrameWriterAudioVisual(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

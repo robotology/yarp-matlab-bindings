@@ -7,15 +7,15 @@ classdef PortWriterBufferManager < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(425, self);
-        self.swigPtr=[];
+        yarpMEX(454, self);
+        self.SwigClear();
       end
     end
     function varargout = onCompletion(self,varargin)
     %Usage: onCompletion (tracker)
     %
     %tracker is of type void *. 
-      [varargout{1:nargout}] = yarpMEX(426, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(455, self, varargin{:});
     end
     function self = PortWriterBufferManager(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
