@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(yarp-matlab-bindings VERSION 3.0.1)
+project(yarp-matlab-bindings VERSION 3.1.0)
 
 # for FindMatlab.cmake
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
