@@ -113,7 +113,7 @@ if(YARP_USES_MATLAB)
   # Install the generated front-end to ${CMAKE_INSTALL_PREFIX}/mex
   install(
       TARGETS ${mexname}
-      EXPORT YarpMatlabBindings
+      EXPORT ${PROJECT_NAME}
       LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
       ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
       RUNTIME DESTINATION ${CMAKE_INSTALL_LIBDIR}
@@ -161,7 +161,7 @@ if(YARP_USES_OCTAVE)
           SUFFIX .mex)
   install(
       TARGETS yarpOctaveMex
-      EXPORT yarp-matlab-bindings
+      EXPORT ${PROJECT_NAME}
       LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
       ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
       RUNTIME DESTINATION ${CMAKE_INSTALL_LIBDIR}
@@ -178,7 +178,7 @@ endif()
 
 if(YCM_FOUND)
   include(InstallBasicPackageFiles)
-  install_basic_package_files(yarp-matlab-bindings
+  install_basic_package_files(${PROJECT_NAME}
     VERSION ${PROJECT_VERSION}
     COMPATIBILITY AnyNewerVersion
     TARGETS ${EXPORTED_TARGETS}
