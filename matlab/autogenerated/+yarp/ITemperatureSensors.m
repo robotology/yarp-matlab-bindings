@@ -38,7 +38,7 @@ classdef ITemperatureSensors < SwigRef
     function varargout = getTemperatureSensorMeasure(self,varargin)
     %Usage: retval = getTemperatureSensorMeasure (sens_index, out)
     %
-    %sens_index is of type int. out is of type yarp::sig::Vector &. sens_index is of type int. out is of type yarp::sig::Vector &. retval is of type double. 
+    %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
       [varargout{1:nargout}] = yarpMEX(1971, self, varargin{:});
     end
     function self = ITemperatureSensors(varargin)

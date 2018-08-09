@@ -38,7 +38,7 @@ classdef IThreeAxisLinearAccelerometers < SwigRef
     function varargout = getThreeAxisLinearAccelerometerMeasure(self,varargin)
     %Usage: retval = getThreeAxisLinearAccelerometerMeasure (sens_index, out)
     %
-    %sens_index is of type int. out is of type yarp::sig::Vector &. sens_index is of type int. out is of type yarp::sig::Vector &. retval is of type double. 
+    %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
       [varargout{1:nargout}] = yarpMEX(1953, self, varargin{:});
     end
     function self = IThreeAxisLinearAccelerometers(varargin)
