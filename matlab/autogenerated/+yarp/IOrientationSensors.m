@@ -38,7 +38,7 @@ classdef IOrientationSensors < SwigRef
     function varargout = getOrientationSensorMeasureAsRollPitchYaw(self,varargin)
     %Usage: retval = getOrientationSensorMeasureAsRollPitchYaw (sens_index, rpy)
     %
-    %sens_index is of type int. rpy is of type yarp::sig::Vector &. sens_index is of type int. rpy is of type yarp::sig::Vector &. retval is of type double. 
+    %sens_index is of type int. rpy is of type Vector. sens_index is of type int. rpy is of type Vector. retval is of type double. 
       [varargout{1:nargout}] = yarpMEX(1965, self, varargin{:});
     end
     function self = IOrientationSensors(varargin)

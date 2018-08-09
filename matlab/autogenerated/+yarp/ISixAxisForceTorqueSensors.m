@@ -38,7 +38,7 @@ classdef ISixAxisForceTorqueSensors < SwigRef
     function varargout = getSixAxisForceTorqueSensorMeasure(self,varargin)
     %Usage: retval = getSixAxisForceTorqueSensorMeasure (sens_index, out)
     %
-    %sens_index is of type int. out is of type yarp::sig::Vector &. sens_index is of type int. out is of type yarp::sig::Vector &. retval is of type double. 
+    %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
       [varargout{1:nargout}] = yarpMEX(1977, self, varargin{:});
     end
     function self = ISixAxisForceTorqueSensors(varargin)
