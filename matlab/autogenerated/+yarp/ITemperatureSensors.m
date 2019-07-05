@@ -9,17 +9,17 @@ classdef ITemperatureSensors < SwigRef
     %Usage: retval = getNrOfTemperatureSensors ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1966, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1977, self, varargin{:});
     end
     function varargout = getTemperatureSensorStatus(self,varargin)
     %Usage: retval = getTemperatureSensorStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1967, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1978, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1968, self);
+        yarpMEX(1979, self);
         self.SwigClear();
       end
     end
@@ -27,19 +27,19 @@ classdef ITemperatureSensors < SwigRef
     %Usage: retval = getTemperatureSensorName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1969, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1980, self, varargin{:});
     end
     function varargout = getTemperatureSensorFrameName(self,varargin)
     %Usage: retval = getTemperatureSensorFrameName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1970, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1981, self, varargin{:});
     end
     function varargout = getTemperatureSensorMeasure(self,varargin)
     %Usage: retval = getTemperatureSensorMeasure (sens_index, out)
     %
     %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1971, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1982, self, varargin{:});
     end
     function self = ITemperatureSensors(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

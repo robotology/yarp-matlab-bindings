@@ -1,3 +1,3 @@
 function v = VOCAB_DRGETWHB()
-  v = yarpMEX(1161);
+  v = yarpMEX(1172);
 end

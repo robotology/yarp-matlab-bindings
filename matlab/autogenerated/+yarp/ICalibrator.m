@@ -7,7 +7,7 @@ classdef ICalibrator < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1614, self);
+        yarpMEX(1625, self);
         self.SwigClear();
       end
     end
@@ -15,25 +15,25 @@ classdef ICalibrator < SwigRef
     %Usage: retval = calibrate (dd)
     %
     %dd is of type DeviceDriver. dd is of type DeviceDriver. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1615, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1626, self, varargin{:});
     end
     function varargout = park(self,varargin)
     %Usage: retval = park (dd)
     %
     %dd is of type DeviceDriver. dd is of type DeviceDriver. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1616, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1627, self, varargin{:});
     end
     function varargout = quitCalibrate(self,varargin)
     %Usage: retval = quitCalibrate ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1617, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1628, self, varargin{:});
     end
     function varargout = quitPark(self,varargin)
     %Usage: retval = quitPark ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1618, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1629, self, varargin{:});
     end
     function self = ICalibrator(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

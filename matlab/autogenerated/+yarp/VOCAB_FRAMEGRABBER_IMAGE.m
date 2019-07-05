@@ -1,3 +1,3 @@
 function v = VOCAB_FRAMEGRABBER_IMAGE()
-  v = yarpMEX(1112);
+  v = yarpMEX(1123);
 end

@@ -1,3 +1,3 @@
 function v = VOCAB_PROTOCOL_VERSION()
-  v = yarpMEX(1286);
+  v = yarpMEX(1297);
 end
