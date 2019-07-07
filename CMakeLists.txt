@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(yarp-matlab-bindings VERSION 3.1.0)
+project(yarp-matlab-bindings VERSION 3.2.0)
 
 # for FindMatlab.cmake
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
@@ -15,7 +15,7 @@ option(YARP_USES_OCTAVE "Do you want to create the OCTAVE bindings" FALSE)
 option(YARP_GENERATE_MATLAB "Enable if you have the experimental version of SWIG necessary for generating the Matlab wrapper" FALSE)
 
 find_package(YARP REQUIRED)
-set(YARP_REQUIRED_VERSION 3.0.0)
+set(YARP_REQUIRED_VERSION 3.2.0)
 if(${YARP_VERSION} VERSION_LESS ${YARP_REQUIRED_VERSION})
   message(FATAL_ERROR "YARP version ${YARP_VERSION} not sufficient, at least version ${YARP_REQUIRED_VERSION} is required.")
 endif()

@@ -1,3 +1,3 @@
 function v = VOCAB_VARIABLE()
-  v = yarpMEX(1879);
+  v = yarpMEX(1890);
 end

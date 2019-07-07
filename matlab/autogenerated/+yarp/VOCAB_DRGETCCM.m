@@ -1,3 +1,3 @@
 function v = VOCAB_DRGETCCM()
-  v = yarpMEX(1157);
+  v = yarpMEX(1168);
 end

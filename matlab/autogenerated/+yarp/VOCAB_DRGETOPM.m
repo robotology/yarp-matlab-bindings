@@ -1,3 +1,3 @@
 function v = VOCAB_DRGETOPM()
-  v = yarpMEX(1166);
+  v = yarpMEX(1177);
 end

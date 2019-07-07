@@ -1,3 +1,3 @@
 function v = VOCAB_SHARPNESS()
-  v = yarpMEX(1116);
+  v = yarpMEX(1127);
 end

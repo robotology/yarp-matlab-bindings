@@ -1,3 +1,3 @@
 function v = VOCAB_CM_CURRENT()
-  v = yarpMEX(1661);
+  v = yarpMEX(1672);
 end

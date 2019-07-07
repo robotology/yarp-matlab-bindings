@@ -1,3 +1,3 @@
 function v = VOCAB_DRGETMSK()
-  v = yarpMEX(1149);
+  v = yarpMEX(1160);
 end
