@@ -1,8 +1,10 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.10)
 
-project(yarp-matlab-bindings VERSION 3.2.0)
+project(yarp-matlab-bindings VERSION 3.3.100)
 
-# for FindMatlab.cmake
+# for FindMatlab.cmake and UseSwig
+# UseSwig version: https://gitlab.kitware.com/cmake/cmake/raw/v3.10.2/Modules/UseSWIG.cmake
+# The use of an old UseSwig is a workaround for https://github.com/robotology/yarp-matlab-bindings/issues/45
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 #############################################################################
@@ -15,20 +17,9 @@ option(YARP_USES_OCTAVE "Do you want to create the OCTAVE bindings" FALSE)
 option(YARP_GENERATE_MATLAB "Enable if you have the experimental version of SWIG necessary for generating the Matlab wrapper" FALSE)
 
 find_package(YARP REQUIRED)
-set(YARP_REQUIRED_VERSION 3.2.0)
+set(YARP_REQUIRED_VERSION 3.3.102)
 if(${YARP_VERSION} VERSION_LESS ${YARP_REQUIRED_VERSION})
   message(FATAL_ERROR "YARP version ${YARP_VERSION} not sufficient, at least version ${YARP_REQUIRED_VERSION} is required.")
-endif()
-
-# Check if YARP_WRAP_STL_STRING is defined in YARP
-get_target_property(YARP_SYSTEM_H_LOCATION YARP::YARP_conf INTERFACE_INCLUDE_DIRECTORIES)
-set(YARP_SYSTEM_H_LOCATION ${YARP_SYSTEM_H_LOCATION}/yarp/conf/system.h)
-file(READ ${YARP_SYSTEM_H_LOCATION} YARP_SYSTEM_H)
-if(YARP_SYSTEM_H MATCHES "#define YARP_WRAP_STL_STRING" AND NOT YARP_GENERATE_MATLAB)
-    message(FATAL_ERROR "The YARP installation found in ${YARP_DIR} has the YARP_WRAP_STL_STRING option set to ON, \
-                         while yarp-matlab-bindings since YARP 2.3.72 requires this option to be set to OFF.\
-                         Please recompile YARP with YARP_WRAP_STL_STRING set to OFF, or check \
-                         https://github.com/robotology-playground/yarp-matlab-bindings/issues/17 for more info.")
 endif()
 
 # Extract the include directories from the libraries interface
