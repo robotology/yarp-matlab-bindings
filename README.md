@@ -17,4 +17,4 @@ As the bindings are generated using the `yarp.i` from the YARP source repository
 
 
 This will generate the bindings in the source directory of the repo, so you can commit the generated sources to the repo.
-We try to make sure that the `master` branch of this repo stays in sync with YARP **master branch**, while the `devel` branch should remain in sync with the YARP **devel branch**. However, this autogeneration happens manually, so it is possible that this repo and YARP go out of sync.  
+We try to make sure that the `master` branch of this repo stays in sync with YARP **master branch**, while the  stable versioned branch starting from `yarp-3.3` branch should remain in sync with the corresponding YARP **stable branch**, for example `yarp-3.3`. However, this autogeneration happens manually, so it is possible that this repo and YARP go out of sync.  
