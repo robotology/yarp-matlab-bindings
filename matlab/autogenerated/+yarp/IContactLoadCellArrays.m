@@ -9,23 +9,23 @@ classdef IContactLoadCellArrays < SwigRef
     %Usage: retval = getNrOfContactLoadCellArrays ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1989, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1941, self, varargin{:});
     end
     function varargout = getContactLoadCellArrayStatus(self,varargin)
     %Usage: retval = getContactLoadCellArrayStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1990, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1942, self, varargin{:});
     end
     function varargout = getContactLoadCellArraySize(self,varargin)
     %Usage: retval = getContactLoadCellArraySize (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1991, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1943, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1992, self);
+        yarpMEX(1944, self);
         self.SwigClear();
       end
     end
@@ -33,13 +33,13 @@ classdef IContactLoadCellArrays < SwigRef
     %Usage: retval = getContactLoadCellArrayName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1993, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1945, self, varargin{:});
     end
     function varargout = getContactLoadCellArrayMeasure(self,varargin)
     %Usage: retval = getContactLoadCellArrayMeasure (sens_index, out)
     %
     %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1994, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1946, self, varargin{:});
     end
     function self = IContactLoadCellArrays(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
