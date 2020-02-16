@@ -264,7 +264,7 @@ classdef BufferedPortBottle < yarp.Contactable & yarp.TypedReaderBottle & yarp.B
     function varargout = setCallbackLock(self,varargin)
     %Usage: retval = setCallbackLock (mutex)
     %
-    %mutex is of type yarp::os::Mutex *. mutex is of type yarp::os::Mutex *. retval is of type bool. 
+    %mutex is of type std::mutex *. mutex is of type std::mutex *. retval is of type bool. 
       [varargout{1:nargout}] = yarpMEX(846, self, varargin{:});
     end
     function varargout = removeCallbackLock(self,varargin)

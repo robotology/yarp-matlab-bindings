@@ -1,3 +1,3 @@
 function v = VOCAB_CM_MIXED()
-  v = yarpMEX(1676);
+  v = yarpMEX(1622);
 end

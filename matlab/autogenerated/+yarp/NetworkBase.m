@@ -54,15 +54,15 @@ classdef NetworkBase < SwigRef
      [varargout{1:nargout}] = yarpMEX(336, varargin{:});
     end
     function varargout = disconnect(varargin)
-    %Usage: retval = disconnect (src, dest, style)
+    %Usage: retval = disconnect (src, dest, carrier)
     %
-    %src is of type std::string const &. dest is of type std::string const &. style is of type ContactStyle. src is of type std::string const &. dest is of type std::string const &. style is of type ContactStyle. retval is of type bool. 
+    %src is of type char const *. dest is of type char const *. carrier is of type char const *. src is of type char const *. dest is of type char const *. carrier is of type char const *. retval is of type bool. 
      [varargout{1:nargout}] = yarpMEX(337, varargin{:});
     end
     function varargout = isConnected(varargin)
-    %Usage: retval = isConnected (src, dest, style)
+    %Usage: retval = isConnected (src, dest, carrier)
     %
-    %src is of type std::string const &. dest is of type std::string const &. style is of type ContactStyle. src is of type std::string const &. dest is of type std::string const &. style is of type ContactStyle. retval is of type bool. 
+    %src is of type char const *. dest is of type char const *. carrier is of type char const *. src is of type char const *. dest is of type char const *. carrier is of type char const *. retval is of type bool. 
      [varargout{1:nargout}] = yarpMEX(338, varargin{:});
     end
     function varargout = exists(varargin)
