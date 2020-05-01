@@ -1,3 +1,3 @@
 function v = VOCAB_DRGETFPS()
-  v = yarpMEX(1164);
+  v = yarpMEX(1172);
 end

@@ -1,3 +1,3 @@
 function v = VOCAB_CM_CONTROL_MODE_GROUP()
-  v = yarpMEX(1611);
+  v = yarpMEX(1619);
 end

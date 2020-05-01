@@ -7,7 +7,7 @@ classdef IImpedanceControlRaw < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1733, self);
+        yarpMEX(1741, self);
         self.SwigClear();
       end
     end
@@ -15,37 +15,37 @@ classdef IImpedanceControlRaw < SwigRef
     %Usage: retval = getAxes (ax)
     %
     %ax is of type int *. ax is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1734, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1742, self, varargin{:});
     end
     function varargout = getImpedanceRaw(self,varargin)
     %Usage: retval = getImpedanceRaw (j, stiffness, damping)
     %
     %j is of type int. stiffness is of type double *. damping is of type double *. j is of type int. stiffness is of type double *. damping is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1735, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1743, self, varargin{:});
     end
     function varargout = setImpedanceRaw(self,varargin)
     %Usage: retval = setImpedanceRaw (j, stiffness, damping)
     %
     %j is of type int. stiffness is of type double. damping is of type double. j is of type int. stiffness is of type double. damping is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1736, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1744, self, varargin{:});
     end
     function varargout = setImpedanceOffsetRaw(self,varargin)
     %Usage: retval = setImpedanceOffsetRaw (j, offset)
     %
     %j is of type int. offset is of type double. j is of type int. offset is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1737, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1745, self, varargin{:});
     end
     function varargout = getImpedanceOffsetRaw(self,varargin)
     %Usage: retval = getImpedanceOffsetRaw (j, offset)
     %
     %j is of type int. offset is of type double *. j is of type int. offset is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1738, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1746, self, varargin{:});
     end
     function varargout = getCurrentImpedanceLimitRaw(self,varargin)
     %Usage: retval = getCurrentImpedanceLimitRaw (j, min_stiff, max_stiff, min_damp, max_damp)
     %
     %j is of type int. min_stiff is of type double *. max_stiff is of type double *. min_damp is of type double *. max_damp is of type double *. j is of type int. min_stiff is of type double *. max_stiff is of type double *. min_damp is of type double *. max_damp is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1739, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1747, self, varargin{:});
     end
     function self = IImpedanceControlRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

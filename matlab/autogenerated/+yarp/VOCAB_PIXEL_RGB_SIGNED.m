@@ -1,7 +1,7 @@
 function v = VOCAB_PIXEL_RGB_SIGNED()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 73);
+    vInitialized = yarpMEX(0, 75);
   end
   v = vInitialized;
 end

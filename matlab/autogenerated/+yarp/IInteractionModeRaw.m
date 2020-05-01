@@ -7,7 +7,7 @@ classdef IInteractionModeRaw < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1639, self);
+        yarpMEX(1647, self);
         self.SwigClear();
       end
     end
@@ -15,25 +15,25 @@ classdef IInteractionModeRaw < SwigRef
     %Usage: retval = getInteractionModeRaw (axis, mode)
     %
     %axis is of type int. mode is of type yarp::dev::InteractionModeEnum *. axis is of type int. mode is of type yarp::dev::InteractionModeEnum *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1640, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1648, self, varargin{:});
     end
     function varargout = getInteractionModesRaw(self,varargin)
     %Usage: retval = getInteractionModesRaw (modes)
     %
     %modes is of type yarp::dev::InteractionModeEnum *. modes is of type yarp::dev::InteractionModeEnum *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1641, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1649, self, varargin{:});
     end
     function varargout = setInteractionModeRaw(self,varargin)
     %Usage: retval = setInteractionModeRaw (axis, mode)
     %
     %axis is of type int. mode is of type yarp::dev::InteractionModeEnum. axis is of type int. mode is of type yarp::dev::InteractionModeEnum. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1642, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1650, self, varargin{:});
     end
     function varargout = setInteractionModesRaw(self,varargin)
     %Usage: retval = setInteractionModesRaw (modes)
     %
     %modes is of type yarp::dev::InteractionModeEnum *. modes is of type yarp::dev::InteractionModeEnum *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1643, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1651, self, varargin{:});
     end
     function self = IInteractionModeRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

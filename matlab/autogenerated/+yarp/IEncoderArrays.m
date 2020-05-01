@@ -9,23 +9,23 @@ classdef IEncoderArrays < SwigRef
     %Usage: retval = getNrOfEncoderArrays ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1947, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1955, self, varargin{:});
     end
     function varargout = getEncoderArrayStatus(self,varargin)
     %Usage: retval = getEncoderArrayStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1948, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1956, self, varargin{:});
     end
     function varargout = getEncoderArraySize(self,varargin)
     %Usage: retval = getEncoderArraySize (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1949, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1957, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1950, self);
+        yarpMEX(1958, self);
         self.SwigClear();
       end
     end
@@ -33,13 +33,13 @@ classdef IEncoderArrays < SwigRef
     %Usage: retval = getEncoderArrayName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1951, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1959, self, varargin{:});
     end
     function varargout = getEncoderArrayMeasure(self,varargin)
     %Usage: retval = getEncoderArrayMeasure (sens_index, out)
     %
     %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1952, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1960, self, varargin{:});
     end
     function self = IEncoderArrays(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
