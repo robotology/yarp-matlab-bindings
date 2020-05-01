@@ -12,7 +12,7 @@ Then run the usual cmake + compile + install for this repo. Then add the install
 Depending on the latest time in which this bindings have been regenerated, the latest YARP version could be compatible with them or not. If you have problem in compilation, you can try to compile the bindings yourself following the instruction in the next section. 
 
 # Regenerate the matlab bindings (not necessary to use the bindings!!)
-If you want to regenerate the bindings (for example because yarp has been updated and you want to generate bindings for the new version of yarp) you have to install the fork of swig that supports matlab, following the instructions at https://github.com/casadi/casadi/wiki/matlab (just follow the first 4 points in the guide, you don't need to actually install casadi) . After that, you have to compile this project enabling the `YARP_GENERATE_MATLAB` CMake option. 
+If you want to regenerate the bindings (for example because yarp has been updated and you want to generate bindings for the new version of yarp) you have to install the fork of swig that supports matlab support from https://github.com/robotology-dependencies/swig/ (branch matlab). After that, you have to compile this project enabling the `YARP_GENERATE_MATLAB` CMake option. 
 As the bindings are generated using the `yarp.i` from the YARP source repository, you also need to specify the YARP source directory setting the `YARP_SOURCE_DIR` CMake variable.
 
 
