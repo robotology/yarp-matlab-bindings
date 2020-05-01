@@ -7,7 +7,7 @@ classdef IAnalogSensor < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1821, self);
+        yarpMEX(1829, self);
         self.SwigClear();
       end
     end
@@ -15,31 +15,31 @@ classdef IAnalogSensor < SwigRef
     %Usage: retval = read (out)
     %
     %out is of type Vector. out is of type Vector. retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1822, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1830, self, varargin{:});
     end
     function varargout = getState(self,varargin)
     %Usage: retval = getState (ch)
     %
     %ch is of type int. ch is of type int. retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1823, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1831, self, varargin{:});
     end
     function varargout = getChannels(self,varargin)
     %Usage: retval = getChannels ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1824, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1832, self, varargin{:});
     end
     function varargout = calibrateSensor(self,varargin)
     %Usage: retval = calibrateSensor (value)
     %
     %value is of type Vector. value is of type Vector. retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1825, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1833, self, varargin{:});
     end
     function varargout = calibrateChannel(self,varargin)
     %Usage: retval = calibrateChannel (ch, value)
     %
     %ch is of type int. value is of type double. ch is of type int. value is of type double. retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1826, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1834, self, varargin{:});
     end
     function self = IAnalogSensor(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
@@ -55,28 +55,28 @@ classdef IAnalogSensor < SwigRef
     function v = AS_OK()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 136);
+        vInitialized = yarpMEX(0, 138);
       end
       v = vInitialized;
     end
     function v = AS_ERROR()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 137);
+        vInitialized = yarpMEX(0, 139);
       end
       v = vInitialized;
     end
     function v = AS_OVF()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 138);
+        vInitialized = yarpMEX(0, 140);
       end
       v = vInitialized;
     end
     function v = AS_TIMEOUT()
       persistent vInitialized;
       if isempty(vInitialized)
-        vInitialized = yarpMEX(0, 139);
+        vInitialized = yarpMEX(0, 141);
       end
       v = vInitialized;
     end

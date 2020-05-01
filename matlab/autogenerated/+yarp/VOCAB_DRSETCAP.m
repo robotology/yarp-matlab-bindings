@@ -1,3 +1,3 @@
 function v = VOCAB_DRSETCAP()
-  v = yarpMEX(1184);
+  v = yarpMEX(1192);
 end

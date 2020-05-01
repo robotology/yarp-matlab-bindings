@@ -1,7 +1,7 @@
 function v = YARP_FEATURE_EXPOSURE()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 107);
+    vInitialized = yarpMEX(0, 109);
   end
   v = vInitialized;
 end

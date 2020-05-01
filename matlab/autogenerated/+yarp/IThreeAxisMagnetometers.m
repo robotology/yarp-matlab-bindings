@@ -9,17 +9,17 @@ classdef IThreeAxisMagnetometers < SwigRef
     %Usage: retval = getNrOfThreeAxisMagnetometers ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1911, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1919, self, varargin{:});
     end
     function varargout = getThreeAxisMagnetometerStatus(self,varargin)
     %Usage: retval = getThreeAxisMagnetometerStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1912, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1920, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1913, self);
+        yarpMEX(1921, self);
         self.SwigClear();
       end
     end
@@ -27,19 +27,19 @@ classdef IThreeAxisMagnetometers < SwigRef
     %Usage: retval = getThreeAxisMagnetometerName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1914, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1922, self, varargin{:});
     end
     function varargout = getThreeAxisMagnetometerFrameName(self,varargin)
     %Usage: retval = getThreeAxisMagnetometerFrameName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1915, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1923, self, varargin{:});
     end
     function varargout = getThreeAxisMagnetometerMeasure(self,varargin)
     %Usage: retval = getThreeAxisMagnetometerMeasure (sens_index, out)
     %
     %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1916, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1924, self, varargin{:});
     end
     function self = IThreeAxisMagnetometers(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

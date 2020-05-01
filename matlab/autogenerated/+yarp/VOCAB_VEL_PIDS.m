@@ -1,3 +1,3 @@
 function v = VOCAB_VEL_PIDS()
-  v = yarpMEX(1772);
+  v = yarpMEX(1780);
 end
