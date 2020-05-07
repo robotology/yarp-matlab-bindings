@@ -7,7 +7,7 @@ classdef ICurrentControl < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1802, self);
+        yarpMEX(1809, self);
         self.SwigClear();
       end
     end
@@ -15,55 +15,55 @@ classdef ICurrentControl < SwigRef
     %Usage: retval = getNumberOfMotors (ax)
     %
     %ax is of type int *. ax is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1803, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1810, self, varargin{:});
     end
     function varargout = getCurrent(self,varargin)
     %Usage: retval = getCurrent (m, curr)
     %
     %m is of type int. curr is of type double *. m is of type int. curr is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1804, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1811, self, varargin{:});
     end
     function varargout = getCurrents(self,varargin)
     %Usage: retval = getCurrents (currs)
     %
     %currs is of type double *. currs is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1805, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1812, self, varargin{:});
     end
     function varargout = getCurrentRange(self,varargin)
     %Usage: retval = getCurrentRange (m, min, max)
     %
     %m is of type int. min is of type double *. max is of type double *. m is of type int. min is of type double *. max is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1806, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1813, self, varargin{:});
     end
     function varargout = getCurrentRanges(self,varargin)
     %Usage: retval = getCurrentRanges (min, max)
     %
     %min is of type double *. max is of type double *. min is of type double *. max is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1807, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1814, self, varargin{:});
     end
     function varargout = setRefCurrent(self,varargin)
     %Usage: retval = setRefCurrent (m, curr)
     %
     %m is of type int. curr is of type double. m is of type int. curr is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1808, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1815, self, varargin{:});
     end
     function varargout = setRefCurrents(self,varargin)
     %Usage: retval = setRefCurrents (n_motor, motors, currs)
     %
     %n_motor is of type int const. motors is of type int const *. currs is of type double const *. n_motor is of type int const. motors is of type int const *. currs is of type double const *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1809, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1816, self, varargin{:});
     end
     function varargout = getRefCurrents(self,varargin)
     %Usage: retval = getRefCurrents (currs)
     %
     %currs is of type double *. currs is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1810, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1817, self, varargin{:});
     end
     function varargout = getRefCurrent(self,varargin)
     %Usage: retval = getRefCurrent (m, curr)
     %
     %m is of type int. curr is of type double *. m is of type int. curr is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1811, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1818, self, varargin{:});
     end
     function self = ICurrentControl(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

@@ -1,3 +1,3 @@
 function v = VOCAB_HAS()
-  v = yarpMEX(1147);
+  v = yarpMEX(1154);
 end

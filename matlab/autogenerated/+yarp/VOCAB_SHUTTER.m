@@ -1,3 +1,3 @@
 function v = VOCAB_SHUTTER()
-  v = yarpMEX(1140);
+  v = yarpMEX(1147);
 end

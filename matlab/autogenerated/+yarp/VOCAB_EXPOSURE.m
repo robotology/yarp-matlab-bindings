@@ -1,3 +1,3 @@
 function v = VOCAB_EXPOSURE()
-  v = yarpMEX(1134);
+  v = yarpMEX(1141);
 end

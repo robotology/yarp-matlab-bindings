@@ -1,3 +1,3 @@
 function v = VOCAB_DRSETPWR()
-  v = yarpMEX(1191);
+  v = yarpMEX(1198);
 end

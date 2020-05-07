@@ -7,7 +7,7 @@ classdef IRemoteVariables < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1839, self);
+        yarpMEX(1846, self);
         self.SwigClear();
       end
     end
@@ -15,19 +15,19 @@ classdef IRemoteVariables < SwigRef
     %Usage: retval = getRemoteVariable (key, val)
     %
     %key is of type std::string. val is of type Bottle. key is of type std::string. val is of type Bottle. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1840, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1847, self, varargin{:});
     end
     function varargout = setRemoteVariable(self,varargin)
     %Usage: retval = setRemoteVariable (key, val)
     %
     %key is of type std::string. val is of type Bottle. key is of type std::string. val is of type Bottle. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1841, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1848, self, varargin{:});
     end
     function varargout = getRemoteVariablesList(self,varargin)
     %Usage: retval = getRemoteVariablesList (listOfKeys)
     %
     %listOfKeys is of type Bottle. listOfKeys is of type Bottle. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1842, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1849, self, varargin{:});
     end
     function self = IRemoteVariables(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
