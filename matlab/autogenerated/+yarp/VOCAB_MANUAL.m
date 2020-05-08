@@ -1,3 +1,3 @@
 function v = VOCAB_MANUAL()
-  v = yarpMEX(1152);
+  v = yarpMEX(1159);
 end

@@ -1,3 +1,3 @@
 function v = VOCAB_CM_NOT_CONFIGURED()
-  v = yarpMEX(1635);
+  v = yarpMEX(1642);
 end

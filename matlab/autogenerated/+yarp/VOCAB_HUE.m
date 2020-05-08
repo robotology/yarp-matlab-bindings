@@ -1,3 +1,3 @@
 function v = VOCAB_HUE()
-  v = yarpMEX(1137);
+  v = yarpMEX(1144);
 end

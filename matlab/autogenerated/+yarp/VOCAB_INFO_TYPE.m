@@ -1,3 +1,3 @@
 function v = VOCAB_INFO_TYPE()
-  v = yarpMEX(1287);
+  v = yarpMEX(1294);
 end

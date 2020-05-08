@@ -1,3 +1,3 @@
 function v = VOCAB_CROP()
-  v = yarpMEX(1143);
+  v = yarpMEX(1150);
 end
