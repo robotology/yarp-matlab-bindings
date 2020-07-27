@@ -1,3 +1,3 @@
 function v = VOCAB_MOTOR_E_RESETS()
-  v = yarpMEX(1692);
+  v = yarpMEX(1721);
 end

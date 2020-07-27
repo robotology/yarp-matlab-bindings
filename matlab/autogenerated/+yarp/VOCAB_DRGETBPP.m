@@ -1,3 +1,3 @@
 function v = VOCAB_DRGETBPP()
-  v = yarpMEX(1201);
+  v = yarpMEX(1203);
 end

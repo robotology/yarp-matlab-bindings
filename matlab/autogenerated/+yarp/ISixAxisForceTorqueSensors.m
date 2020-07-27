@@ -9,17 +9,17 @@ classdef ISixAxisForceTorqueSensors < SwigRef
     %Usage: retval = getNrOfSixAxisForceTorqueSensors ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1950, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1979, self, varargin{:});
     end
     function varargout = getSixAxisForceTorqueSensorStatus(self,varargin)
     %Usage: retval = getSixAxisForceTorqueSensorStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1951, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1980, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1952, self);
+        yarpMEX(1981, self);
         self.SwigClear();
       end
     end
@@ -27,19 +27,19 @@ classdef ISixAxisForceTorqueSensors < SwigRef
     %Usage: retval = getSixAxisForceTorqueSensorName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1953, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1982, self, varargin{:});
     end
     function varargout = getSixAxisForceTorqueSensorFrameName(self,varargin)
     %Usage: retval = getSixAxisForceTorqueSensorFrameName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1954, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1983, self, varargin{:});
     end
     function varargout = getSixAxisForceTorqueSensorMeasure(self,varargin)
     %Usage: retval = getSixAxisForceTorqueSensorMeasure (sens_index, out)
     %
     %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1955, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1984, self, varargin{:});
     end
     function self = ISixAxisForceTorqueSensors(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

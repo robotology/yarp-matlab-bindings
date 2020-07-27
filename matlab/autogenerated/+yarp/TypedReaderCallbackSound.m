@@ -7,7 +7,7 @@ classdef TypedReaderCallbackSound < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(2484, self);
+        yarpMEX(2513, self);
         self.SwigClear();
       end
     end
@@ -15,7 +15,7 @@ classdef TypedReaderCallbackSound < SwigRef
     %Usage: onRead (datum, reader)
     %
     %datum is of type Sound. reader is of type TypedReaderSound. 
-      [varargout{1:nargout}] = yarpMEX(2485, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2514, self, varargin{:});
     end
     function self = TypedReaderCallbackSound(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
@@ -23,7 +23,7 @@ classdef TypedReaderCallbackSound < SwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(2486, varargin{:});
+        tmp = yarpMEX(2515, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
