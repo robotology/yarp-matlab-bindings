@@ -1,3 +1,3 @@
 function v = VOCAB_SATURATION()
-  v = yarpMEX(1145);
+  v = yarpMEX(1147);
 end

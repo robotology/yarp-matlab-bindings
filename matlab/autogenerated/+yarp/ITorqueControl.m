@@ -7,75 +7,75 @@ classdef ITorqueControl < SwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1711, self);
+        yarpMEX(1740, self);
         self.SwigClear();
       end
-    end
-    function varargout = getAxes(self,varargin)
-    %Usage: retval = getAxes (ax)
-    %
-    %ax is of type int *. ax is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1712, self, varargin{:});
-    end
-    function varargout = getRefTorques(self,varargin)
-    %Usage: retval = getRefTorques (t)
-    %
-    %t is of type double *. t is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1713, self, varargin{:});
-    end
-    function varargout = getRefTorque(self,varargin)
-    %Usage: retval = getRefTorque (j, t)
-    %
-    %j is of type int. t is of type double *. j is of type int. t is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1714, self, varargin{:});
     end
     function varargout = setRefTorque(self,varargin)
     %Usage: retval = setRefTorque (j, t)
     %
     %j is of type int. t is of type double. j is of type int. t is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1715, self, varargin{:});
-    end
-    function varargout = setRefTorques(self,varargin)
-    %Usage: retval = setRefTorques (n_joint, joints, t)
-    %
-    %n_joint is of type int const. joints is of type int const *. t is of type double const *. n_joint is of type int const. joints is of type int const *. t is of type double const *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1716, self, varargin{:});
-    end
-    function varargout = getMotorTorqueParams(self,varargin)
-    %Usage: retval = getMotorTorqueParams (j, params)
-    %
-    %j is of type int. params is of type MotorTorqueParameters. j is of type int. params is of type MotorTorqueParameters. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1717, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1741, self, varargin{:});
     end
     function varargout = setMotorTorqueParams(self,varargin)
     %Usage: retval = setMotorTorqueParams (j, params)
     %
     %j is of type int. params is of type MotorTorqueParameters. j is of type int. params is of type MotorTorqueParameters. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1718, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1742, self, varargin{:});
+    end
+    function varargout = getAxes(self,varargin)
+    %Usage: retval = getAxes ()
+    %
+    %retval is of type int. 
+      [varargout{1:nargout}] = yarpMEX(1743, self, varargin{:});
+    end
+    function varargout = getRefTorques(self,varargin)
+    %Usage: retval = getRefTorques (data)
+    %
+    %data is of type DVector. data is of type DVector. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1744, self, varargin{:});
+    end
+    function varargout = getRefTorque(self,varargin)
+    %Usage: retval = getRefTorque (j, data)
+    %
+    %j is of type int. data is of type DVector. j is of type int. data is of type DVector. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1745, self, varargin{:});
+    end
+    function varargout = setRefTorques(self,varargin)
+    %Usage: retval = setRefTorques (n_joint, joints, data)
+    %
+    %n_joint is of type int. joints is of type IVector. data is of type DVector. n_joint is of type int. joints is of type IVector. data is of type DVector. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1746, self, varargin{:});
+    end
+    function varargout = getMotorTorqueParams(self,varargin)
+    %Usage: retval = getMotorTorqueParams (j, params)
+    %
+    %j is of type int. params is of type MotorTorqueParameters. j is of type int. params is of type MotorTorqueParameters. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1747, self, varargin{:});
     end
     function varargout = getTorque(self,varargin)
-    %Usage: retval = getTorque (j, t)
+    %Usage: retval = getTorque (j, data)
     %
-    %j is of type int. t is of type double *. j is of type int. t is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1719, self, varargin{:});
+    %j is of type int. data is of type DVector. j is of type int. data is of type DVector. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1748, self, varargin{:});
     end
     function varargout = getTorques(self,varargin)
-    %Usage: retval = getTorques (t)
+    %Usage: retval = getTorques (data)
     %
-    %t is of type double *. t is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1720, self, varargin{:});
+    %data is of type DVector. data is of type DVector. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1749, self, varargin{:});
     end
     function varargout = getTorqueRange(self,varargin)
     %Usage: retval = getTorqueRange (j, min, max)
     %
-    %j is of type int. min is of type double *. max is of type double *. j is of type int. min is of type double *. max is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1721, self, varargin{:});
+    %j is of type int. min is of type DVector. max is of type DVector. j is of type int. min is of type DVector. max is of type DVector. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1750, self, varargin{:});
     end
     function varargout = getTorqueRanges(self,varargin)
-    %Usage: retval = getTorqueRanges (min, max)
+    %Usage: retval = getTorqueRanges (mins, maxs)
     %
-    %min is of type double *. max is of type double *. min is of type double *. max is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1722, self, varargin{:});
+    %mins is of type DVector. maxs is of type DVector. mins is of type DVector. maxs is of type DVector. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1751, self, varargin{:});
     end
     function self = ITorqueControl(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'SwigRef')

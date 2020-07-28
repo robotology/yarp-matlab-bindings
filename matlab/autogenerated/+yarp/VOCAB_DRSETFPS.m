@@ -1,3 +1,3 @@
 function v = VOCAB_DRSETFPS()
-  v = yarpMEX(1180);
+  v = yarpMEX(1182);
 end

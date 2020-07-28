@@ -1,3 +1,3 @@
 function v = VOCAB_AMP_STATUS()
-  v = yarpMEX(1329);
+  v = yarpMEX(1331);
 end
