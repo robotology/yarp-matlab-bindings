@@ -93,7 +93,8 @@ set(swig_other_sources)
 
 # Set the generated mex name to be yarpMEX, as it the defaul one used by SWIG while generating bindings
 if(YARP_USES_MATLAB)
-  find_package(Matlab REQUIRED)
+  find_package(Matlab REQUIRED
+                      COMPONENTS MX_LIBRARY)
 
   swig_compile_module(${mexname} matlab)
   target_link_libraries(${mexname} ${Matlab_LIBRARIES} ${YARP_LIBRARIES})
