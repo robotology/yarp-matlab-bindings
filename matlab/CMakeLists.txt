@@ -106,6 +106,7 @@ if(YARP_USES_MATLAB)
     set_target_properties(${mexname}
             PROPERTIES
             DEFINE_SYMBOL "DLL_EXPORT_SYM=__declspec(dllexport)")
+    target_link_options(${mexname} PRIVATE "/EXPORT:mexFunction")
   endif()
 
   # Install the generated front-end to ${CMAKE_INSTALL_PREFIX}/mex
