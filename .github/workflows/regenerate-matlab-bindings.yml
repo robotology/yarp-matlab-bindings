@@ -47,7 +47,13 @@ jobs:
             gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad \
             gstreamer1.0-libav liboctave-dev
             # Clone YARP
-            git clone https://github.com/robotology/yarp -b ${GITHUB_REF}
+            # GITHUB_BASE_REF is defined on Pull Requests
+            if [[ -z "${GITHUB_BASE_REF}" ]]; then
+                YARP_BRANCH="${GITHUB_BASE_REF}"
+            else
+                YARP_BRANCH="${GITHUB_REF}"
+            fi
+            git clone https://github.com/robotology/yarp -b ${YARP_BRANCH}
             # Configure, build and install YARP
             cd yarp
             mkdir build
