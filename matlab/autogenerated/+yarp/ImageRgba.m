@@ -9,7 +9,7 @@ classdef ImageRgba < yarp.Image
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(2209, varargin{:});
+        tmp = yarpMEX(2243, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
@@ -18,35 +18,35 @@ classdef ImageRgba < yarp.Image
     %Usage: retval = getPixelSize ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(2210, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2244, self, varargin{:});
     end
     function varargout = getPixelCode(self,varargin)
     %Usage: retval = getPixelCode ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(2211, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2245, self, varargin{:});
     end
     function varargout = pixel(self,varargin)
     %Usage: retval = pixel (x, y)
     %
     %x is of type size_t. y is of type size_t. x is of type size_t. y is of type size_t. retval is of type PixelRgba. 
-      [varargout{1:nargout}] = yarpMEX(2212, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2246, self, varargin{:});
     end
     function varargout = access(self,varargin)
     %Usage: retval = access (x, y)
     %
     %x is of type size_t. y is of type size_t. x is of type size_t. y is of type size_t. retval is of type PixelRgba. 
-      [varargout{1:nargout}] = yarpMEX(2213, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2247, self, varargin{:});
     end
     function varargout = safePixel(self,varargin)
     %Usage: retval = safePixel (x, y)
     %
     %x is of type size_t. y is of type size_t. x is of type size_t. y is of type size_t. retval is of type PixelRgba. 
-      [varargout{1:nargout}] = yarpMEX(2214, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2248, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(2215, self);
+        yarpMEX(2249, self);
         self.SwigClear();
       end
     end

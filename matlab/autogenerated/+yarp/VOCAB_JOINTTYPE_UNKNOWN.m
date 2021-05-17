@@ -1,7 +1,7 @@
 function v = VOCAB_JOINTTYPE_UNKNOWN()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 134);
+    vInitialized = yarpMEX(0, 137);
   end
   v = vInitialized;
 end

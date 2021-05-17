@@ -9,14 +9,14 @@ classdef Image < yarp.Portable
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(867, varargin{:});
+        tmp = yarpMEX(935, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(868, self);
+        yarpMEX(936, self);
         self.SwigClear();
       end
     end
@@ -24,144 +24,144 @@ classdef Image < yarp.Portable
     %Usage: retval = copy (alt, w, h)
     %
     %alt is of type Image. w is of type size_t. h is of type size_t. alt is of type Image. w is of type size_t. h is of type size_t. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(869, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(937, self, varargin{:});
     end
     function varargout = width(self,varargin)
     %Usage: retval = width ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(870, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(938, self, varargin{:});
     end
     function varargout = height(self,varargin)
     %Usage: retval = height ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(871, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(939, self, varargin{:});
     end
     function varargout = getPixelSize(self,varargin)
     %Usage: retval = getPixelSize ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(872, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(940, self, varargin{:});
     end
     function varargout = getPixelCode(self,varargin)
     %Usage: retval = getPixelCode ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(873, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(941, self, varargin{:});
     end
     function varargout = getRowSize(self,varargin)
     %Usage: retval = getRowSize ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(874, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(942, self, varargin{:});
     end
     function varargout = getQuantum(self,varargin)
     %Usage: retval = getQuantum ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(875, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(943, self, varargin{:});
     end
     function varargout = getPadding(self,varargin)
     %Usage: retval = getPadding ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(876, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(944, self, varargin{:});
     end
     function varargout = getRow(self,varargin)
     %Usage: retval = getRow (r)
     %
     %r is of type size_t. r is of type size_t. retval is of type unsigned char const *. 
-      [varargout{1:nargout}] = yarpMEX(877, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(945, self, varargin{:});
     end
     function varargout = getPixelAddress(self,varargin)
     %Usage: retval = getPixelAddress (x, y)
     %
     %x is of type size_t. y is of type size_t. x is of type size_t. y is of type size_t. retval is of type unsigned char *. 
-      [varargout{1:nargout}] = yarpMEX(878, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(946, self, varargin{:});
     end
     function varargout = isPixel(self,varargin)
     %Usage: retval = isPixel (x, y)
     %
     %x is of type size_t. y is of type size_t. x is of type size_t. y is of type size_t. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(879, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(947, self, varargin{:});
     end
     function varargout = zero(self,varargin)
     %Usage: zero ()
     %
-      [varargout{1:nargout}] = yarpMEX(880, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(948, self, varargin{:});
     end
     function varargout = resize(self,varargin)
     %Usage: resize (alt)
     %
     %alt is of type Image. 
-      [varargout{1:nargout}] = yarpMEX(881, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(949, self, varargin{:});
     end
     function varargout = setExternal(self,varargin)
     %Usage: setExternal (data, imgWidth, imgHeight)
     %
     %data is of type void const *. imgWidth is of type size_t. imgHeight is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(882, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(950, self, varargin{:});
     end
     function varargout = getRawImage(self,varargin)
     %Usage: retval = getRawImage ()
     %
     %retval is of type unsigned char *. 
-      [varargout{1:nargout}] = yarpMEX(883, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(951, self, varargin{:});
     end
     function varargout = getRawImageSize(self,varargin)
     %Usage: retval = getRawImageSize ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(884, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(952, self, varargin{:});
     end
     function varargout = getIplImage(self,varargin)
     %Usage: retval = getIplImage ()
     %
     %retval is of type void *. 
-      [varargout{1:nargout}] = yarpMEX(885, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(953, self, varargin{:});
     end
     function varargout = wrapIplImage(self,varargin)
     %Usage: wrapIplImage (iplImage)
     %
     %iplImage is of type void *. 
-      [varargout{1:nargout}] = yarpMEX(886, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(954, self, varargin{:});
     end
     function varargout = read(self,varargin)
     %Usage: retval = read (connection)
     %
     %connection is of type ConnectionReader. connection is of type ConnectionReader. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(887, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(955, self, varargin{:});
     end
     function varargout = write(self,varargin)
     %Usage: retval = write (connection)
     %
     %connection is of type ConnectionWriter. connection is of type ConnectionWriter. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(888, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(956, self, varargin{:});
     end
     function varargout = setQuantum(self,varargin)
     %Usage: setQuantum (imgQuantum)
     %
     %imgQuantum is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(889, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(957, self, varargin{:});
     end
     function varargout = topIsLowIndex(self,varargin)
     %Usage: retval = topIsLowIndex ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(890, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(958, self, varargin{:});
     end
     function varargout = setTopIsLowIndex(self,varargin)
     %Usage: setTopIsLowIndex (flag)
     %
     %flag is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(891, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(959, self, varargin{:});
     end
     function varargout = getRowArray(self,varargin)
     %Usage: retval = getRowArray ()
     %
     %retval is of type char **. 
-      [varargout{1:nargout}] = yarpMEX(892, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(960, self, varargin{:});
     end
   end
   methods(Static)
