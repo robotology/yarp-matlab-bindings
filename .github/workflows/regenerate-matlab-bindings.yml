@@ -57,6 +57,7 @@ jobs:
             # Configure, build and install YARP
             cd yarp
             mkdir build
+            cd build
             cmake ..
             make
             make install
