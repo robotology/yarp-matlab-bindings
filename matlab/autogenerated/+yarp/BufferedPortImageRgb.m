@@ -6,10 +6,10 @@ classdef BufferedPortImageRgb < yarp.Contactable & yarp.TypedReaderImageRgb & ya
       this = yarpMEX(3, self);
     end
     function self = BufferedPortImageRgb(varargin)
-      self@yarp.Contactable(SwigRef.Null);
-      self@yarp.TypedReaderImageRgb(SwigRef.Null);
-      self@yarp.TypedReaderCallbackImageRgb(SwigRef.Null);
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      self@yarp.Contactable(yarpSwigRef.Null);
+      self@yarp.TypedReaderImageRgb(yarpSwigRef.Null);
+      self@yarp.TypedReaderCallbackImageRgb(yarpSwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

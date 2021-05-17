@@ -1,4 +1,4 @@
-classdef IFrameGrabberControlsDC1394 < SwigRef
+classdef IFrameGrabberControlsDC1394 < yarpSwigRef
     %Usage: IFrameGrabberControlsDC1394 ()
     %
   methods
@@ -162,7 +162,7 @@ classdef IFrameGrabberControlsDC1394 < SwigRef
       [varargout{1:nargout}] = yarpMEX(1288, self, varargin{:});
     end
     function self = IFrameGrabberControlsDC1394(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

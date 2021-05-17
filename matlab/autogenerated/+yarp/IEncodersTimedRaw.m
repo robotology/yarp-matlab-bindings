@@ -21,8 +21,8 @@ classdef IEncodersTimedRaw < yarp.IEncodersRaw
       [varargout{1:nargout}] = yarpMEX(1663, self, varargin{:});
     end
     function self = IEncodersTimedRaw(varargin)
-      self@yarp.IEncodersRaw(SwigRef.Null);
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      self@yarp.IEncodersRaw(yarpSwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

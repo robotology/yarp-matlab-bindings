@@ -27,8 +27,8 @@ classdef DeviceDriver < yarp.IConfig
       [varargout{1:nargout}] = yarpMEX(1052, self, varargin{:});
     end
     function self = DeviceDriver(varargin)
-      self@yarp.IConfig(SwigRef.Null);
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      self@yarp.IConfig(yarpSwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

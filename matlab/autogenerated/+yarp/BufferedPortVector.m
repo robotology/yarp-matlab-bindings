@@ -6,10 +6,10 @@ classdef BufferedPortVector < yarp.Contactable & yarp.TypedReaderVector & yarp.T
       this = yarpMEX(3, self);
     end
     function self = BufferedPortVector(varargin)
-      self@yarp.Contactable(SwigRef.Null);
-      self@yarp.TypedReaderVector(SwigRef.Null);
-      self@yarp.TypedReaderCallbackVector(SwigRef.Null);
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      self@yarp.Contactable(yarpSwigRef.Null);
+      self@yarp.TypedReaderVector(yarpSwigRef.Null);
+      self@yarp.TypedReaderCallbackVector(yarpSwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

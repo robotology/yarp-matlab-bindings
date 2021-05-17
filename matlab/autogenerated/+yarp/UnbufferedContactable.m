@@ -33,8 +33,8 @@ classdef UnbufferedContactable < yarp.Contactable
       end
     end
     function self = UnbufferedContactable(varargin)
-      self@yarp.Contactable(SwigRef.Null);
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      self@yarp.Contactable(yarpSwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
