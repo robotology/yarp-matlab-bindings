@@ -6,10 +6,10 @@ classdef BufferedPortSound < yarp.Contactable & yarp.TypedReaderSound & yarp.Typ
       this = yarpMEX(3, self);
     end
     function self = BufferedPortSound(varargin)
-      self@yarp.Contactable(SwigRef.Null);
-      self@yarp.TypedReaderSound(SwigRef.Null);
-      self@yarp.TypedReaderCallbackSound(SwigRef.Null);
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      self@yarp.Contactable(yarpSwigRef.Null);
+      self@yarp.TypedReaderSound(yarpSwigRef.Null);
+      self@yarp.TypedReaderCallbackSound(yarpSwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

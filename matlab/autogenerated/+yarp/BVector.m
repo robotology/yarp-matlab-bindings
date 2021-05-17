@@ -1,4 +1,4 @@
-classdef BVector < SwigRef
+classdef BVector < yarpSwigRef
     %Usage: BVector ()
     %
   methods
@@ -94,7 +94,7 @@ classdef BVector < SwigRef
       [varargout{1:nargout}] = yarpMEX(2045, self, varargin{:});
     end
     function self = BVector(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

@@ -1,4 +1,4 @@
-classdef ICurrentControl < SwigRef
+classdef ICurrentControl < yarpSwigRef
     %Usage: ICurrentControl ()
     %
   methods
@@ -66,7 +66,7 @@ classdef ICurrentControl < SwigRef
       [varargout{1:nargout}] = yarpMEX(1847, self, varargin{:});
     end
     function self = ICurrentControl(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

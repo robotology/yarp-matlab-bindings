@@ -168,8 +168,8 @@ classdef Vector < yarp.VectorBase
       [varargout{1:nargout}] = yarpMEX(2591, self, varargin{:});
     end
     function self = Vector(varargin)
-      self@yarp.VectorBase(SwigRef.Null);
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      self@yarp.VectorBase(yarpSwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

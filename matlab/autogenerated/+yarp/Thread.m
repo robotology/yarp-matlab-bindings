@@ -1,4 +1,4 @@
-classdef Thread < SwigRef
+classdef Thread < yarpSwigRef
     %Usage: Thread ()
     %
   methods
@@ -103,7 +103,7 @@ classdef Thread < SwigRef
       [varargout{1:nargout}] = yarpMEX(488, self, varargin{:});
     end
     function self = Thread(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

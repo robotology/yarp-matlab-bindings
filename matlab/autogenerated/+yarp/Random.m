@@ -1,4 +1,4 @@
-classdef Random < SwigRef
+classdef Random < yarpSwigRef
     %Usage: Random ()
     %
   methods
@@ -6,7 +6,7 @@ classdef Random < SwigRef
       this = yarpMEX(3, self);
     end
     function self = Random(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

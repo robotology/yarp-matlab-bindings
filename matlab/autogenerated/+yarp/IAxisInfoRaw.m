@@ -1,4 +1,4 @@
-classdef IAxisInfoRaw < SwigRef
+classdef IAxisInfoRaw < yarpSwigRef
     %Usage: IAxisInfoRaw ()
     %
   methods
@@ -24,7 +24,7 @@ classdef IAxisInfoRaw < SwigRef
       [varargout{1:nargout}] = yarpMEX(1294, self, varargin{:});
     end
     function self = IAxisInfoRaw(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

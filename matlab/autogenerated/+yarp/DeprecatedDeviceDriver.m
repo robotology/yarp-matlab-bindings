@@ -3,8 +3,8 @@ classdef DeprecatedDeviceDriver < yarp.DeviceDriver
     %
   methods
     function self = DeprecatedDeviceDriver(varargin)
-      self@yarp.DeviceDriver(SwigRef.Null);
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      self@yarp.DeviceDriver(yarpSwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
