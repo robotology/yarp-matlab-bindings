@@ -54,11 +54,11 @@ jobs:
                 YARP_BRANCH="${GITHUB_BASE_REF}"
             fi
             git clone https://github.com/robotology/yarp -b ${YARP_BRANCH}
-            # Configure, build and install YARP
+            # Configure, build and install YARP and regenerate yarp-matlab-bindings
             cd yarp
             mkdir build
             cd build
-            cmake ..
+            cmake -DYARP_COMPILE_EXECUTABLES:BOOL=OFF ..
             make
             sudo make install
             # Configure yarp-matlab-bindings
