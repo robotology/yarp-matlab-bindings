@@ -7,7 +7,7 @@ classdef PortReader < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(105, self);
+        yarpMEX(172, self);
         self.SwigClear();
       end
     end
@@ -15,13 +15,13 @@ classdef PortReader < yarpSwigRef
     %Usage: retval = read (reader)
     %
     %reader is of type ConnectionReader. reader is of type ConnectionReader. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(106, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(173, self, varargin{:});
     end
     function varargout = getReadType(self,varargin)
     %Usage: retval = getReadType ()
     %
     %retval is of type yarp::os::Type. 
-      [varargout{1:nargout}] = yarpMEX(107, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(174, self, varargin{:});
     end
     function self = PortReader(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

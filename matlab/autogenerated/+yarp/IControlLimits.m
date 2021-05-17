@@ -7,7 +7,7 @@ classdef IControlLimits < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1345, self);
+        yarpMEX(1354, self);
         self.SwigClear();
       end
     end
@@ -15,25 +15,25 @@ classdef IControlLimits < yarpSwigRef
     %Usage: retval = setLimits (axis, min, max)
     %
     %axis is of type int. min is of type double. max is of type double. axis is of type int. min is of type double. max is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1346, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1355, self, varargin{:});
     end
     function varargout = setVelLimits(self,varargin)
     %Usage: retval = setVelLimits (axis, min, max)
     %
     %axis is of type int. min is of type double. max is of type double. axis is of type int. min is of type double. max is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1347, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1356, self, varargin{:});
     end
     function varargout = getLimits(self,varargin)
     %Usage: retval = getLimits (axis, min, max)
     %
     %axis is of type int. min is of type DVector. max is of type DVector. axis is of type int. min is of type DVector. max is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1348, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1357, self, varargin{:});
     end
     function varargout = getVelLimits(self,varargin)
     %Usage: retval = getVelLimits (axis, min, max)
     %
     %axis is of type int. min is of type DVector. max is of type DVector. axis is of type int. min is of type DVector. max is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1349, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1358, self, varargin{:});
     end
     function self = IControlLimits(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

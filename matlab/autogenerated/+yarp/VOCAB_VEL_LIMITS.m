@@ -1,3 +1,3 @@
 function v = VOCAB_VEL_LIMITS()
-  v = yarpMEX(1356);
+  v = yarpMEX(1365);
 end
