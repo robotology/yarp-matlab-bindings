@@ -1,4 +1,4 @@
-classdef PidVector < SwigRef
+classdef PidVector < yarpSwigRef
     %Usage: PidVector ()
     %
   methods
@@ -94,7 +94,7 @@ classdef PidVector < SwigRef
       [varargout{1:nargout}] = yarpMEX(2126, self, varargin{:});
     end
     function self = PidVector(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

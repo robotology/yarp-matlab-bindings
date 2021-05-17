@@ -1,4 +1,4 @@
-classdef RFModule < SwigRef
+classdef RFModule < yarpSwigRef
     %Usage: RFModule ()
     %
   methods
@@ -125,7 +125,7 @@ classdef RFModule < SwigRef
       [varargout{1:nargout}] = yarpMEX(574, self, varargin{:});
     end
     function self = RFModule(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

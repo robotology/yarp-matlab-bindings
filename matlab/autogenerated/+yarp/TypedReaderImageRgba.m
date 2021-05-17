@@ -1,4 +1,4 @@
-classdef TypedReaderImageRgba < SwigRef
+classdef TypedReaderImageRgba < yarpSwigRef
     %Usage: TypedReaderImageRgba ()
     %
   methods
@@ -87,7 +87,7 @@ classdef TypedReaderImageRgba < SwigRef
       [varargout{1:nargout}] = yarpMEX(2229, self, varargin{:});
     end
     function self = TypedReaderImageRgba(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

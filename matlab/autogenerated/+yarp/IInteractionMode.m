@@ -1,4 +1,4 @@
-classdef IInteractionMode < SwigRef
+classdef IInteractionMode < yarpSwigRef
     %Usage: IInteractionMode ()
     %
   methods
@@ -36,7 +36,7 @@ classdef IInteractionMode < SwigRef
       [varargout{1:nargout}] = yarpMEX(1655, self, varargin{:});
     end
     function self = IInteractionMode(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

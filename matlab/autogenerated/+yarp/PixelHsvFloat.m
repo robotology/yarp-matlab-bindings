@@ -1,4 +1,4 @@
-classdef PixelHsvFloat < SwigRef
+classdef PixelHsvFloat < yarpSwigRef
     %Usage: PixelHsvFloat ()
     %
   methods
@@ -36,7 +36,7 @@ classdef PixelHsvFloat < SwigRef
       end
     end
     function self = PixelHsvFloat(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

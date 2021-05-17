@@ -1,4 +1,4 @@
-classdef LogStream < SwigRef
+classdef LogStream < yarpSwigRef
     %Usage: LogStream ()
     %
   methods
@@ -6,7 +6,7 @@ classdef LogStream < SwigRef
       this = yarpMEX(3, self);
     end
     function self = LogStream(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

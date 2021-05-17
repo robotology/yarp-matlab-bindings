@@ -1,4 +1,4 @@
-classdef CartesianEventVariables < SwigRef
+classdef CartesianEventVariables < yarpSwigRef
     %Usage: CartesianEventVariables ()
     %
   methods
@@ -36,7 +36,7 @@ classdef CartesianEventVariables < SwigRef
       end
     end
     function self = CartesianEventVariables(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

@@ -6,9 +6,9 @@ classdef DeviceResponder < yarp.PortReader & yarp.BottleCallback
       this = yarpMEX(3, self);
     end
     function self = DeviceResponder(varargin)
-      self@yarp.PortReader(SwigRef.Null);
-      self@yarp.BottleCallback(SwigRef.Null);
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      self@yarp.PortReader(yarpSwigRef.Null);
+      self@yarp.BottleCallback(yarpSwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

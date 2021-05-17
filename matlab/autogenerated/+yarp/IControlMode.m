@@ -1,4 +1,4 @@
-classdef IControlMode < SwigRef
+classdef IControlMode < yarpSwigRef
     %Usage: IControlMode ()
     %
   methods
@@ -36,7 +36,7 @@ classdef IControlMode < SwigRef
       [varargout{1:nargout}] = yarpMEX(1620, self, varargin{:});
     end
     function self = IControlMode(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

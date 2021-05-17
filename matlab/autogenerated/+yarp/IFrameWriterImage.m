@@ -1,4 +1,4 @@
-classdef IFrameWriterImage < SwigRef
+classdef IFrameWriterImage < yarpSwigRef
     %Usage: IFrameWriterImage ()
     %
   methods
@@ -18,7 +18,7 @@ classdef IFrameWriterImage < SwigRef
       [varargout{1:nargout}] = yarpMEX(1224, self, varargin{:});
     end
     function self = IFrameWriterImage(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

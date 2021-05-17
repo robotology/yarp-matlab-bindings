@@ -1,4 +1,4 @@
-classdef Things < SwigRef
+classdef Things < yarpSwigRef
     %Usage: Things ()
     %
   methods
@@ -6,7 +6,7 @@ classdef Things < SwigRef
       this = yarpMEX(3, self);
     end
     function self = Things(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

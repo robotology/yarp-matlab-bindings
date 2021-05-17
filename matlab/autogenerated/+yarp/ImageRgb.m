@@ -3,8 +3,8 @@ classdef ImageRgb < yarp.Image
     %
   methods
     function self = ImageRgb(varargin)
-      self@yarp.Image(SwigRef.Null);
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      self@yarp.Image(yarpSwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

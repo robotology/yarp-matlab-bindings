@@ -1,4 +1,4 @@
-classdef IPositionControl < SwigRef
+classdef IPositionControl < yarpSwigRef
     %Usage: IPositionControl ()
     %
   methods
@@ -108,7 +108,7 @@ classdef IPositionControl < SwigRef
       [varargout{1:nargout}] = yarpMEX(1577, self, varargin{:});
     end
     function self = IPositionControl(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

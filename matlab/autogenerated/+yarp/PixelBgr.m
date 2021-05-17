@@ -1,4 +1,4 @@
-classdef PixelBgr < SwigRef
+classdef PixelBgr < yarpSwigRef
     %Usage: PixelBgr ()
     %
   methods
@@ -36,7 +36,7 @@ classdef PixelBgr < SwigRef
       end
     end
     function self = PixelBgr(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

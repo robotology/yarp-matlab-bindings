@@ -3,8 +3,8 @@ classdef ResourceFinder < yarp.Searchable
     %
   methods
     function self = ResourceFinder(varargin)
-      self@yarp.Searchable(SwigRef.Null);
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      self@yarp.Searchable(yarpSwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
