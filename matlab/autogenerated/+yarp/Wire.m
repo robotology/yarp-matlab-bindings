@@ -15,8 +15,8 @@ classdef Wire < yarp.PortReader
       end
     end
     function self = Wire(varargin)
-      self@yarp.PortReader(SwigRef.Null);
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      self@yarp.PortReader(yarpSwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

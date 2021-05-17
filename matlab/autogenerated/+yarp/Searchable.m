@@ -1,4 +1,4 @@
-classdef Searchable < SwigRef
+classdef Searchable < yarpSwigRef
     %Usage: Searchable ()
     %
   methods
@@ -66,7 +66,7 @@ classdef Searchable < SwigRef
       [varargout{1:nargout}] = yarpMEX(143, self, varargin{:});
     end
     function self = Searchable(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

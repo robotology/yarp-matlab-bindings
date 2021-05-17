@@ -1,4 +1,4 @@
-classdef MatlabSwigIterator < SwigRef
+classdef MatlabSwigIterator < yarpSwigRef
     %Usage: MatlabSwigIterator ()
     %
   methods
@@ -102,7 +102,7 @@ classdef MatlabSwigIterator < SwigRef
       [varargout{1:nargout}] = yarpMEX(20, self, varargin{:});
     end
     function self = MatlabSwigIterator(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

@@ -6,10 +6,10 @@ classdef BufferedPortBottle < yarp.Contactable & yarp.TypedReaderBottle & yarp.B
       this = yarpMEX(3, self);
     end
     function self = BufferedPortBottle(varargin)
-      self@yarp.Contactable(SwigRef.Null);
-      self@yarp.TypedReaderBottle(SwigRef.Null);
-      self@yarp.BottleCallback(SwigRef.Null);
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      self@yarp.Contactable(yarpSwigRef.Null);
+      self@yarp.TypedReaderBottle(yarpSwigRef.Null);
+      self@yarp.BottleCallback(yarpSwigRef.Null);
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

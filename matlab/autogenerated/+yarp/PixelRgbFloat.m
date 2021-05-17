@@ -1,4 +1,4 @@
-classdef PixelRgbFloat < SwigRef
+classdef PixelRgbFloat < yarpSwigRef
     %Usage: PixelRgbFloat ()
     %
   methods
@@ -36,7 +36,7 @@ classdef PixelRgbFloat < SwigRef
       end
     end
     function self = PixelRgbFloat(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

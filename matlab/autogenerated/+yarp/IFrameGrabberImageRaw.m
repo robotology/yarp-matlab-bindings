@@ -1,4 +1,4 @@
-classdef IFrameGrabberImageRaw < SwigRef
+classdef IFrameGrabberImageRaw < yarpSwigRef
     %Usage: IFrameGrabberImageRaw ()
     %
   methods
@@ -36,7 +36,7 @@ classdef IFrameGrabberImageRaw < SwigRef
       [varargout{1:nargout}] = yarpMEX(1222, self, varargin{:});
     end
     function self = IFrameGrabberImageRaw(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

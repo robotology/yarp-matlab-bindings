@@ -1,4 +1,4 @@
-classdef IGazeControl < SwigRef
+classdef IGazeControl < yarpSwigRef
     %Usage: IGazeControl ()
     %
   methods
@@ -144,21 +144,21 @@ classdef IGazeControl < SwigRef
       [varargout{1:nargout}] = yarpMEX(1491, self, varargin{:});
     end
     function varargout = getLeftEyePose(self,varargin)
-    %Usage: retval = getLeftEyePose (x, od)
+    %Usage: retval = getLeftEyePose (x, o)
     %
-    %x is of type Vector. od is of type Vector. x is of type Vector. od is of type Vector. retval is of type bool. 
+    %x is of type Vector. o is of type Vector. x is of type Vector. o is of type Vector. retval is of type bool. 
       [varargout{1:nargout}] = yarpMEX(1492, self, varargin{:});
     end
     function varargout = getRightEyePose(self,varargin)
-    %Usage: retval = getRightEyePose (x, od)
+    %Usage: retval = getRightEyePose (x, o)
     %
-    %x is of type Vector. od is of type Vector. x is of type Vector. od is of type Vector. retval is of type bool. 
+    %x is of type Vector. o is of type Vector. x is of type Vector. o is of type Vector. retval is of type bool. 
       [varargout{1:nargout}] = yarpMEX(1493, self, varargin{:});
     end
     function varargout = getHeadPose(self,varargin)
-    %Usage: retval = getHeadPose (x, od)
+    %Usage: retval = getHeadPose (x, o)
     %
-    %x is of type Vector. od is of type Vector. x is of type Vector. od is of type Vector. retval is of type bool. 
+    %x is of type Vector. o is of type Vector. x is of type Vector. o is of type Vector. retval is of type bool. 
       [varargout{1:nargout}] = yarpMEX(1494, self, varargin{:});
     end
     function varargout = get2DPixel(self,varargin)
@@ -462,7 +462,7 @@ classdef IGazeControl < SwigRef
       [varargout{1:nargout}] = yarpMEX(1544, self, varargin{:});
     end
     function self = IGazeControl(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

@@ -1,4 +1,4 @@
-classdef Contactable < SwigRef
+classdef Contactable < yarpSwigRef
     %Usage: Contactable ()
     %
   methods
@@ -207,7 +207,7 @@ classdef Contactable < SwigRef
       [varargout{1:nargout}] = yarpMEX(247, self, varargin{:});
     end
     function self = Contactable(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

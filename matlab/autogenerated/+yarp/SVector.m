@@ -1,4 +1,4 @@
-classdef SVector < SwigRef
+classdef SVector < yarpSwigRef
     %Usage: SVector ()
     %
   methods
@@ -94,7 +94,7 @@ classdef SVector < SwigRef
       [varargout{1:nargout}] = yarpMEX(2073, self, varargin{:});
     end
     function self = SVector(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end

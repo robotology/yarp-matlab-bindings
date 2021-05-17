@@ -1,4 +1,4 @@
-classdef IAnalogSensor < SwigRef
+classdef IAnalogSensor < yarpSwigRef
     %Usage: IAnalogSensor ()
     %
   methods
@@ -42,7 +42,7 @@ classdef IAnalogSensor < SwigRef
       [varargout{1:nargout}] = yarpMEX(1870, self, varargin{:});
     end
     function self = IAnalogSensor(varargin)
-      if nargin==1 && strcmp(class(varargin{1}),'SwigRef')
+      if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
