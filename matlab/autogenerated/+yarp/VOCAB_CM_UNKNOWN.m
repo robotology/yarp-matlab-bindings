@@ -1,3 +1,3 @@
 function v = VOCAB_CM_UNKNOWN()
-  v = yarpMEX(1655);
+  v = yarpMEX(1614);
 end

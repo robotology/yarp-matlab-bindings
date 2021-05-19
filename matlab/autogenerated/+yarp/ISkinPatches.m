@@ -9,23 +9,23 @@ classdef ISkinPatches < yarpSwigRef
     %Usage: retval = getNrOfSkinPatches ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(2006, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1965, self, varargin{:});
     end
     function varargout = getSkinPatchStatus(self,varargin)
     %Usage: retval = getSkinPatchStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(2007, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1966, self, varargin{:});
     end
     function varargout = getSkinPatchSize(self,varargin)
     %Usage: retval = getSkinPatchSize (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(2008, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1967, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(2009, self);
+        yarpMEX(1968, self);
         self.SwigClear();
       end
     end
@@ -33,13 +33,13 @@ classdef ISkinPatches < yarpSwigRef
     %Usage: retval = getSkinPatchName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(2010, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1969, self, varargin{:});
     end
     function varargout = getSkinPatchMeasure(self,varargin)
     %Usage: retval = getSkinPatchMeasure (sens_index, out)
     %
     %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(2011, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1970, self, varargin{:});
     end
     function self = ISkinPatches(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

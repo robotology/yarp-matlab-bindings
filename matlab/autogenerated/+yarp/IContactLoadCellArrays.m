@@ -9,23 +9,23 @@ classdef IContactLoadCellArrays < yarpSwigRef
     %Usage: retval = getNrOfContactLoadCellArrays ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1994, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1953, self, varargin{:});
     end
     function varargout = getContactLoadCellArrayStatus(self,varargin)
     %Usage: retval = getContactLoadCellArrayStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1995, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1954, self, varargin{:});
     end
     function varargout = getContactLoadCellArraySize(self,varargin)
     %Usage: retval = getContactLoadCellArraySize (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1996, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1955, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1997, self);
+        yarpMEX(1956, self);
         self.SwigClear();
       end
     end
@@ -33,13 +33,13 @@ classdef IContactLoadCellArrays < yarpSwigRef
     %Usage: retval = getContactLoadCellArrayName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1998, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1957, self, varargin{:});
     end
     function varargout = getContactLoadCellArrayMeasure(self,varargin)
     %Usage: retval = getContactLoadCellArrayMeasure (sens_index, out)
     %
     %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1999, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1958, self, varargin{:});
     end
     function self = IContactLoadCellArrays(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

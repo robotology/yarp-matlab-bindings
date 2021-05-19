@@ -7,7 +7,7 @@ classdef PortReport < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(88, self);
+        yarpMEX(47, self);
         self.SwigClear();
       end
     end
@@ -15,7 +15,7 @@ classdef PortReport < yarpSwigRef
     %Usage: report (info)
     %
     %info is of type yarp::os::PortInfo const &. 
-      [varargout{1:nargout}] = yarpMEX(89, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(48, self, varargin{:});
     end
     function self = PortReport(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

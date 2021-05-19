@@ -1,3 +1,3 @@
 function v = VOCAB_CM_IMPEDANCE_POS()
-  v = yarpMEX(1646);
+  v = yarpMEX(1605);
 end
