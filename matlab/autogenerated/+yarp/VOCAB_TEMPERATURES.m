@@ -1,3 +1,3 @@
 function v = VOCAB_TEMPERATURES()
-  v = yarpMEX(1695);
+  v = yarpMEX(1654);
 end

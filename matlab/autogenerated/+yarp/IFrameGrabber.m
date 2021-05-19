@@ -7,7 +7,7 @@ classdef IFrameGrabber < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1214, self);
+        yarpMEX(1173, self);
         self.SwigClear();
       end
     end
@@ -15,25 +15,25 @@ classdef IFrameGrabber < yarpSwigRef
     %Usage: retval = getRawBuffer (buffer)
     %
     %buffer is of type unsigned char *. buffer is of type unsigned char *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1215, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1174, self, varargin{:});
     end
     function varargout = getRawBufferSize(self,varargin)
     %Usage: retval = getRawBufferSize ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1216, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1175, self, varargin{:});
     end
     function varargout = height(self,varargin)
     %Usage: retval = height ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1217, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1176, self, varargin{:});
     end
     function varargout = width(self,varargin)
     %Usage: retval = width ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1218, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1177, self, varargin{:});
     end
     function self = IFrameGrabber(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

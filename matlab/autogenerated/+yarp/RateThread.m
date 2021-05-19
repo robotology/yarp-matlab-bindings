@@ -7,7 +7,7 @@ classdef RateThread < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(576, self);
+        yarpMEX(535, self);
         self.SwigClear();
       end
     end
@@ -15,98 +15,98 @@ classdef RateThread < yarpSwigRef
     %Usage: retval = start ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(577, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(536, self, varargin{:});
     end
     function varargout = step(self,varargin)
     %Usage: retval = step ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(578, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(537, self, varargin{:});
     end
     function varargout = stop(self,varargin)
     %Usage: stop ()
     %
-      [varargout{1:nargout}] = yarpMEX(579, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(538, self, varargin{:});
     end
     function varargout = askToStop(self,varargin)
     %Usage: askToStop ()
     %
-      [varargout{1:nargout}] = yarpMEX(580, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(539, self, varargin{:});
     end
     function varargout = isRunning(self,varargin)
     %Usage: retval = isRunning ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(581, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(540, self, varargin{:});
     end
     function varargout = isSuspended(self,varargin)
     %Usage: retval = isSuspended ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(582, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(541, self, varargin{:});
     end
     function varargout = setRate(self,varargin)
     %Usage: retval = setRate (period)
     %
     %period is of type int. period is of type int. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(583, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(542, self, varargin{:});
     end
     function varargout = getRate(self,varargin)
     %Usage: retval = getRate ()
     %
     %retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(584, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(543, self, varargin{:});
     end
     function varargout = suspend(self,varargin)
     %Usage: suspend ()
     %
-      [varargout{1:nargout}] = yarpMEX(585, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(544, self, varargin{:});
     end
     function varargout = resume(self,varargin)
     %Usage: resume ()
     %
-      [varargout{1:nargout}] = yarpMEX(586, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(545, self, varargin{:});
     end
     function varargout = resetStat(self,varargin)
     %Usage: resetStat ()
     %
-      [varargout{1:nargout}] = yarpMEX(587, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(546, self, varargin{:});
     end
     function varargout = getEstPeriod(self,varargin)
     %Usage: getEstPeriod (av, std)
     %
     %av is of type double &. std is of type double &. 
-      [varargout{1:nargout}] = yarpMEX(588, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(547, self, varargin{:});
     end
     function varargout = getIterations(self,varargin)
     %Usage: retval = getIterations ()
     %
     %retval is of type unsigned int. 
-      [varargout{1:nargout}] = yarpMEX(589, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(548, self, varargin{:});
     end
     function varargout = getEstUsed(self,varargin)
     %Usage: getEstUsed (av, std)
     %
     %av is of type double &. std is of type double &. 
-      [varargout{1:nargout}] = yarpMEX(590, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(549, self, varargin{:});
     end
     function varargout = setPriority(self,varargin)
     %Usage: retval = setPriority (priority)
     %
     %priority is of type int. priority is of type int. retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(591, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(550, self, varargin{:});
     end
     function varargout = getPriority(self,varargin)
     %Usage: retval = getPriority ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(592, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(551, self, varargin{:});
     end
     function varargout = getPolicy(self,varargin)
     %Usage: retval = getPolicy ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(593, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(552, self, varargin{:});
     end
     function self = RateThread(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

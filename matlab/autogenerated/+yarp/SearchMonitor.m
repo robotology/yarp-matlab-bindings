@@ -7,7 +7,7 @@ classdef SearchMonitor < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(199, self);
+        yarpMEX(158, self);
         self.SwigClear();
       end
     end
@@ -15,7 +15,7 @@ classdef SearchMonitor < yarpSwigRef
     %Usage: report (report, context)
     %
     %report is of type SearchReport. context is of type char const *. 
-      [varargout{1:nargout}] = yarpMEX(200, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(159, self, varargin{:});
     end
     function self = SearchMonitor(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

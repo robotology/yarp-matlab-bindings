@@ -9,40 +9,40 @@ classdef PixelBgra < yarpSwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(984, self);
+        varargout{1} = yarpMEX(943, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(985, self, varargin{1});
+        yarpMEX(944, self, varargin{1});
       end
     end
     function varargout = g(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(986, self);
+        varargout{1} = yarpMEX(945, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(987, self, varargin{1});
+        yarpMEX(946, self, varargin{1});
       end
     end
     function varargout = r(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(988, self);
+        varargout{1} = yarpMEX(947, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(989, self, varargin{1});
+        yarpMEX(948, self, varargin{1});
       end
     end
     function varargout = a(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(990, self);
+        varargout{1} = yarpMEX(949, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(991, self, varargin{1});
+        yarpMEX(950, self, varargin{1});
       end
     end
     function self = PixelBgra(varargin)
@@ -51,14 +51,14 @@ classdef PixelBgra < yarpSwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(992, varargin{:});
+        tmp = yarpMEX(951, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(993, self);
+        yarpMEX(952, self);
         self.SwigClear();
       end
     end

@@ -7,7 +7,7 @@ classdef IConfig < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1124, self);
+        yarpMEX(1083, self);
         self.SwigClear();
       end
     end
@@ -15,19 +15,19 @@ classdef IConfig < yarpSwigRef
     %Usage: retval = open (config)
     %
     %config is of type Searchable. config is of type Searchable. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1125, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1084, self, varargin{:});
     end
     function varargout = close(self,varargin)
     %Usage: retval = close ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1126, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1085, self, varargin{:});
     end
     function varargout = configure(self,varargin)
     %Usage: retval = configure (config)
     %
     %config is of type Searchable. config is of type Searchable. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1127, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1086, self, varargin{:});
     end
     function self = IConfig(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
@@ -35,7 +35,7 @@ classdef IConfig < yarpSwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1128, varargin{:});
+        tmp = yarpMEX(1087, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end

@@ -1,3 +1,3 @@
 function v = VOCAB_CM_CALIB_DONE()
-  v = yarpMEX(1652);
+  v = yarpMEX(1611);
 end

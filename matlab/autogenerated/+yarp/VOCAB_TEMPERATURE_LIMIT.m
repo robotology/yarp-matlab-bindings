@@ -1,3 +1,3 @@
 function v = VOCAB_TEMPERATURE_LIMIT()
-  v = yarpMEX(1696);
+  v = yarpMEX(1655);
 end
