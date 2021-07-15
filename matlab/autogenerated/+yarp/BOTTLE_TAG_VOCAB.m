@@ -1,3 +1,3 @@
 function v = BOTTLE_TAG_VOCAB()
-  v = yarpMEX(443);
+  v = yarpMEX(447);
 end

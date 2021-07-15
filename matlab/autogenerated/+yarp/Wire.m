@@ -6,11 +6,11 @@ classdef Wire < yarp.PortReader
     %Usage: retval = yarp ()
     %
     %retval is of type WireLink. 
-      [varargout{1:nargout}] = yarpMEX(750, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(722, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(751, self);
+        yarpMEX(723, self);
         self.SwigClear();
       end
     end

@@ -13,7 +13,7 @@ classdef DeviceResponder < yarp.PortReader & yarp.BottleCallback
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1095, varargin{:});
+        tmp = yarpMEX(1102, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
@@ -22,40 +22,40 @@ classdef DeviceResponder < yarp.PortReader & yarp.BottleCallback
     %Usage: addUsage (bot)
     %
     %bot is of type Bottle. 
-      [varargout{1:nargout}] = yarpMEX(1096, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1103, self, varargin{:});
     end
     function varargout = respond(self,varargin)
     %Usage: retval = respond (command, reply)
     %
     %command is of type Bottle. reply is of type Bottle. command is of type Bottle. reply is of type Bottle. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1097, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1104, self, varargin{:});
     end
     function varargout = read(self,varargin)
     %Usage: retval = read (connection)
     %
     %connection is of type ConnectionReader. connection is of type ConnectionReader. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1098, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1105, self, varargin{:});
     end
     function varargout = onRead(self,varargin)
     %Usage: onRead (v)
     %
     %v is of type Bottle. 
-      [varargout{1:nargout}] = yarpMEX(1099, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1106, self, varargin{:});
     end
     function varargout = makeUsage(self,varargin)
     %Usage: makeUsage ()
     %
-      [varargout{1:nargout}] = yarpMEX(1100, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1107, self, varargin{:});
     end
     function varargout = attach(self,varargin)
     %Usage: attach (source)
     %
     %source is of type TypedReaderBottle. 
-      [varargout{1:nargout}] = yarpMEX(1101, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1108, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1102, self);
+        yarpMEX(1109, self);
         self.SwigClear();
       end
     end
