@@ -112,7 +112,7 @@ jobs:
         cd build
         cmake --build . --config ${{ matrix.build_type }}
 
-    - name: Inspect libraries linked by iDynTreeMEX.mexa64 [Conda/Linux]
+    - name: Inspect libraries linked by yarpMEX.mexa64 [Conda/Linux]
       if: contains(matrix.os, 'ubuntu')
       shell: bash -l {0}
       run: |
