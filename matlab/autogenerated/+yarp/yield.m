@@ -1,5 +1,5 @@
 function varargout = yield(varargin)
     %Usage: yield ()
     %
-  [varargout{1:nargout}] = yarpMEX(570, varargin{:});
+  [varargout{1:nargout}] = yarpMEX(542, varargin{:});
 end
