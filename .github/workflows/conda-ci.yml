@@ -117,7 +117,7 @@ jobs:
       shell: bash -l {0}
       run: |
         cd build
-        ldd ./lib/yarpMEX.mexa64
+        ldd ./matlab/yarpMEX.mexa64
 
     - name: Install [Conda]
       shell: bash -l {0}
