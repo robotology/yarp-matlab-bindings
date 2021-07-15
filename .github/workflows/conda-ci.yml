@@ -60,10 +60,8 @@ jobs:
         conda install -c conda-forge mamba
         # Compilation related dependencies 
         mamba install -c conda-forge cmake compilers make ninja pkg-config
-        # Actual dependencies
-        mamba install -c conda-forge eigen 
         # YARP dependencies 
-        mamba install -c conda-forge ace eigen
+        mamba install -c conda-forge ace eigen ycm-cmake-modules
         # Uncomment when we are compatible with releases in conda yarp
         # mamba install -c conda-forge -c robotology yarp 
 
