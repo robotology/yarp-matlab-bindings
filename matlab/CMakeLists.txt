@@ -107,7 +107,7 @@ if(YARP_USES_MATLAB)
 
   swig_compile_module(${mexname} matlab)
   target_link_libraries(${mexname} ${Matlab_LIBRARIES} ${YARP_LIBRARIES})
-  target_include_directories(${mexname} PUBLIC ${Matlab_INCLUDE_DIRS})
+  target_include_directories(${mexname} PRIVATE ${Matlab_INCLUDE_DIRS})
 
   set_target_properties(${mexname} PROPERTIES PREFIX "" SUFFIX .${Matlab_MEX_EXTENSION})
   # entry point in the mex file + taking care of visibility and symbol clashes.
