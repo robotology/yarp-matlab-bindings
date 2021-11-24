@@ -178,6 +178,11 @@ classdef ConnectionReader < yarpSwigRef
     %parentConnectionReader is of type ConnectionReader. 
       [varargout{1:nargout}] = yarpMEX(102, self, varargin{:});
     end
+    function varargout = flushWriter(self,varargin)
+    %Usage: flushWriter ()
+    %
+      [varargout{1:nargout}] = yarpMEX(103, self, varargin{:});
+    end
     function self = ConnectionReader(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
