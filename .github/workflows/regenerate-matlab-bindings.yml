@@ -16,9 +16,9 @@ jobs:
           run: |
             sudo apt-get remove swig swig4.0
             cd ..
-            git clone https://github.com/robotology-dependencies/swig/
+            git clone https://github.com/KrisThielemans/swig
             cd swig
-            git checkout matlab
+            git checkout matlab-update
             sh autogen.sh
             ./configure --with-matlab
             make 
