@@ -1,3 +1,3 @@
 function v = BOTTLE_TAG_INT()
-  v = yarpMEX(446);
+  v = yarpMEX(447);
 end

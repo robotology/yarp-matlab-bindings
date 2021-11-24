@@ -19,6 +19,9 @@ classdef yarpSwigRef < handle
     function b = isnull(self)
       b = isempty(self.swigPtr);
     end
+    function disp(self)
+      disp(sprintf('<Swig object, ptr=%d>',self.swigPtr))
+    end
     function varargout = subsref(self,s)
       if numel(s)==1
         switch s.type

@@ -1,7 +1,7 @@
-function v = YARP_FEATURE_SHARPNESS()
+function v = YARP_VERSION_HEX()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 114);
+    vInitialized = yarpMEX(0, 5);
   end
   v = vInitialized;
 end

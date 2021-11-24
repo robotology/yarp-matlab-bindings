@@ -9,30 +9,30 @@ classdef PixelRgbInt < yarpSwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(992, self);
+        varargout{1} = yarpMEX(993, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(993, self, varargin{1});
+        yarpMEX(994, self, varargin{1});
       end
     end
     function varargout = g(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(994, self);
+        varargout{1} = yarpMEX(995, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(995, self, varargin{1});
+        yarpMEX(996, self, varargin{1});
       end
     end
     function varargout = b(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(996, self);
+        varargout{1} = yarpMEX(997, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(997, self, varargin{1});
+        yarpMEX(998, self, varargin{1});
       end
     end
     function self = PixelRgbInt(varargin)
@@ -41,14 +41,14 @@ classdef PixelRgbInt < yarpSwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(998, varargin{:});
+        tmp = yarpMEX(999, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(999, self);
+        yarpMEX(1000, self);
         self.SwigClear();
       end
     end
