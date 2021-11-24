@@ -50,8 +50,7 @@ jobs:
             gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad \
             gstreamer1.0-libav liboctave-dev
             # Clone YARP
-            # git clone https://github.com/robotology/yarp -b ${GIT_BRANCH_NAME}
-            git clone https://github.com/robotology/yarp -b master
+            git clone https://github.com/robotology/yarp -b ${GIT_BRANCH_NAME}
             # Configure, build and install YARP and regenerate yarp-matlab-bindings
             cd yarp
             mkdir build
