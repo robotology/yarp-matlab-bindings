@@ -7,7 +7,7 @@ classdef TypedReaderCallbackVectorInt < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(2703, self);
+        yarpMEX(2706, self);
         self.SwigClear();
       end
     end
@@ -15,7 +15,7 @@ classdef TypedReaderCallbackVectorInt < yarpSwigRef
     %Usage: onRead (datum, reader)
     %
     %datum is of type VectorInt. reader is of type TypedReaderVectorInt. 
-      [varargout{1:nargout}] = yarpMEX(2704, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2707, self, varargin{:});
     end
     function self = TypedReaderCallbackVectorInt(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
@@ -23,7 +23,7 @@ classdef TypedReaderCallbackVectorInt < yarpSwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(2705, varargin{:});
+        tmp = yarpMEX(2708, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end

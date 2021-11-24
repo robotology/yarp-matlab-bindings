@@ -1,3 +1,3 @@
 function v = VOCAB_CM_POSITION()
-  v = yarpMEX(1596);
+  v = yarpMEX(1599);
 end

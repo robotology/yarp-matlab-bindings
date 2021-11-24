@@ -1,3 +1,3 @@
 function v = VOCAB_IANALOG()
-  v = yarpMEX(1828);
+  v = yarpMEX(1831);
 end
