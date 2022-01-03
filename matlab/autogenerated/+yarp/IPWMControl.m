@@ -7,7 +7,7 @@ classdef IPWMControl < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1784, self);
+        yarpMEX(1791, self);
         self.SwigClear();
       end
     end
@@ -15,43 +15,43 @@ classdef IPWMControl < yarpSwigRef
     %Usage: retval = setRefDutyCycle (m, ref)
     %
     %m is of type int. ref is of type double. m is of type int. ref is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1785, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1792, self, varargin{:});
     end
     function varargout = getNumberOfMotors(self,varargin)
     %Usage: retval = getNumberOfMotors ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1786, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1793, self, varargin{:});
     end
     function varargout = setRefDutyCycles(self,varargin)
     %Usage: retval = setRefDutyCycles (data)
     %
     %data is of type DVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1787, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1794, self, varargin{:});
     end
     function varargout = getRefDutyCycle(self,varargin)
     %Usage: retval = getRefDutyCycle (j, data)
     %
     %j is of type int. data is of type DVector. j is of type int. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1788, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1795, self, varargin{:});
     end
     function varargout = getRefDutyCycles(self,varargin)
     %Usage: retval = getRefDutyCycles (data)
     %
     %data is of type DVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1789, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1796, self, varargin{:});
     end
     function varargout = getDutyCycle(self,varargin)
     %Usage: retval = getDutyCycle (j, data)
     %
     %j is of type int. data is of type DVector. j is of type int. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1790, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1797, self, varargin{:});
     end
     function varargout = getDutyCycles(self,varargin)
     %Usage: retval = getDutyCycles (data)
     %
     %data is of type DVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1791, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1798, self, varargin{:});
     end
     function self = IPWMControl(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

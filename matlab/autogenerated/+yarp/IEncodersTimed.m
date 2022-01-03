@@ -4,7 +4,7 @@ classdef IEncodersTimed < yarp.IEncoders
   methods
     function delete(self)
       if self.swigPtr
-        yarpMEX(1631, self);
+        yarpMEX(1638, self);
         self.SwigClear();
       end
     end
@@ -12,13 +12,13 @@ classdef IEncodersTimed < yarp.IEncoders
     %Usage: retval = getEncodersTimed (data, time)
     %
     %data is of type DVector. time is of type DVector. data is of type DVector. time is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1632, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1639, self, varargin{:});
     end
     function varargout = getEncoderTimed(self,varargin)
     %Usage: retval = getEncoderTimed (j, data, time)
     %
     %j is of type int. data is of type DVector. time is of type DVector. j is of type int. data is of type DVector. time is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1633, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1640, self, varargin{:});
     end
     function self = IEncodersTimed(varargin)
       self@yarp.IEncoders(yarpSwigRef.Null);

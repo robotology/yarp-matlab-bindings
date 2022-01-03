@@ -1,3 +1,3 @@
 function v = VOCAB_STOP_GROUP()
-  v = yarpMEX(1550);
+  v = yarpMEX(1551);
 end
