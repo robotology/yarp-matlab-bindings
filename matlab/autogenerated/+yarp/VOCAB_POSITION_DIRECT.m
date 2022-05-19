@@ -1,3 +1,3 @@
 function v = VOCAB_POSITION_DIRECT()
-  v = yarpMEX(1914);
+  v = yarpMEX(1894);
 end

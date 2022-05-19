@@ -1,3 +1,3 @@
 function v = VOCAB_CM_HW_FAULT()
-  v = yarpMEX(1609);
+  v = yarpMEX(1581);
 end

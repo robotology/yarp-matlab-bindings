@@ -11,14 +11,14 @@ classdef Log < yarpSwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(698, varargin{:});
+        tmp = yarpMEX(672, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(699, self);
+        yarpMEX(673, self);
         self.SwigClear();
       end
     end
@@ -26,37 +26,37 @@ classdef Log < yarpSwigRef
     %Usage: retval = trace ()
     %
     %retval is of type LogStream. 
-      [varargout{1:nargout}] = yarpMEX(700, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(674, self, varargin{:});
     end
     function varargout = debug(self,varargin)
     %Usage: retval = debug ()
     %
     %retval is of type LogStream. 
-      [varargout{1:nargout}] = yarpMEX(701, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(675, self, varargin{:});
     end
     function varargout = info(self,varargin)
     %Usage: retval = info ()
     %
     %retval is of type LogStream. 
-      [varargout{1:nargout}] = yarpMEX(702, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(676, self, varargin{:});
     end
     function varargout = warning(self,varargin)
     %Usage: retval = warning ()
     %
     %retval is of type LogStream. 
-      [varargout{1:nargout}] = yarpMEX(703, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(677, self, varargin{:});
     end
     function varargout = error(self,varargin)
     %Usage: retval = error ()
     %
     %retval is of type LogStream. 
-      [varargout{1:nargout}] = yarpMEX(704, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(678, self, varargin{:});
     end
     function varargout = fatal(self,varargin)
     %Usage: retval = fatal ()
     %
     %retval is of type LogStream. 
-      [varargout{1:nargout}] = yarpMEX(705, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(679, self, varargin{:});
     end
   end
   methods(Static)
@@ -120,85 +120,85 @@ classdef Log < yarpSwigRef
     %Usage: setLogCallback (arg1)
     %
     %arg1 is of type yarp::os::Log::LogCallback. 
-     [varargout{1:nargout}] = yarpMEX(706, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(680, varargin{:});
     end
     function varargout = setMinimumPrintLevel(varargin)
     %Usage: setMinimumPrintLevel (level)
     %
     %level is of type yarp::os::Log::LogType. 
-     [varargout{1:nargout}] = yarpMEX(707, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(681, varargin{:});
     end
     function varargout = minimumPrintLevel(varargin)
     %Usage: retval = minimumPrintLevel ()
     %
     %retval is of type yarp::os::Log::LogType. 
-     [varargout{1:nargout}] = yarpMEX(708, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(682, varargin{:});
     end
     function varargout = defaultMinimumPrintLevel(varargin)
     %Usage: retval = defaultMinimumPrintLevel ()
     %
     %retval is of type yarp::os::Log::LogType. 
-     [varargout{1:nargout}] = yarpMEX(709, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(683, varargin{:});
     end
     function varargout = setMinimumForwardLevel(varargin)
     %Usage: setMinimumForwardLevel (level)
     %
     %level is of type yarp::os::Log::LogType. 
-     [varargout{1:nargout}] = yarpMEX(710, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(684, varargin{:});
     end
     function varargout = minimumForwardLevel(varargin)
     %Usage: retval = minimumForwardLevel ()
     %
     %retval is of type yarp::os::Log::LogType. 
-     [varargout{1:nargout}] = yarpMEX(711, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(685, varargin{:});
     end
     function varargout = defaultMinimumForwardLevel(varargin)
     %Usage: retval = defaultMinimumForwardLevel ()
     %
     %retval is of type yarp::os::Log::LogType. 
-     [varargout{1:nargout}] = yarpMEX(712, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(686, varargin{:});
     end
     function varargout = setPrintCallback(varargin)
     %Usage: setPrintCallback (arg1)
     %
     %arg1 is of type yarp::os::Log::LogCallback. 
-     [varargout{1:nargout}] = yarpMEX(713, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(687, varargin{:});
     end
     function varargout = printCallback(varargin)
     %Usage: retval = printCallback ()
     %
     %retval is of type yarp::os::Log::LogCallback. 
-     [varargout{1:nargout}] = yarpMEX(714, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(688, varargin{:});
     end
     function varargout = defaultPrintCallback(varargin)
     %Usage: retval = defaultPrintCallback ()
     %
     %retval is of type yarp::os::Log::LogCallback. 
-     [varargout{1:nargout}] = yarpMEX(715, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(689, varargin{:});
     end
     function varargout = setForwardCallback(varargin)
     %Usage: setForwardCallback (arg1)
     %
     %arg1 is of type yarp::os::Log::LogCallback. 
-     [varargout{1:nargout}] = yarpMEX(716, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(690, varargin{:});
     end
     function varargout = forwardCallback(varargin)
     %Usage: retval = forwardCallback ()
     %
     %retval is of type yarp::os::Log::LogCallback. 
-     [varargout{1:nargout}] = yarpMEX(717, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(691, varargin{:});
     end
     function varargout = defaultForwardCallback(varargin)
     %Usage: retval = defaultForwardCallback ()
     %
     %retval is of type yarp::os::Log::LogCallback. 
-     [varargout{1:nargout}] = yarpMEX(718, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(692, varargin{:});
     end
     function varargout = nolog(varargin)
     %Usage: retval = nolog ()
     %
     %retval is of type yarp::os::Log::NoLog. 
-     [varargout{1:nargout}] = yarpMEX(719, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(693, varargin{:});
     end
   end
 end
