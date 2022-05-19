@@ -1,3 +1,3 @@
 function v = VOCAB_MOTOR_ENCODER_ACCELERATION()
-  v = yarpMEX(1702);
+  v = yarpMEX(1674);
 end

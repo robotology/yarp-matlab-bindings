@@ -7,7 +7,7 @@ classdef IMotorEncoders < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1678, self);
+        yarpMEX(1650, self);
         self.SwigClear();
       end
     end
@@ -15,91 +15,91 @@ classdef IMotorEncoders < yarpSwigRef
     %Usage: retval = resetMotorEncoder (m)
     %
     %m is of type int. m is of type int. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1679, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1651, self, varargin{:});
     end
     function varargout = resetMotorEncoders(self,varargin)
     %Usage: retval = resetMotorEncoders ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1680, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1652, self, varargin{:});
     end
     function varargout = setMotorEncoderCountsPerRevolution(self,varargin)
     %Usage: retval = setMotorEncoderCountsPerRevolution (m, cpr)
     %
     %m is of type int. cpr is of type double const. m is of type int. cpr is of type double const. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1681, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1653, self, varargin{:});
     end
     function varargout = setMotorEncoder(self,varargin)
     %Usage: retval = setMotorEncoder (m, val)
     %
     %m is of type int. val is of type double const. m is of type int. val is of type double const. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1682, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1654, self, varargin{:});
     end
     function varargout = getNumberOfMotorEncoders(self,varargin)
     %Usage: retval = getNumberOfMotorEncoders ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1683, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1655, self, varargin{:});
     end
     function varargout = getMotorEncoderCountsPerRevolution(self,varargin)
     %Usage: retval = getMotorEncoderCountsPerRevolution (j, data)
     %
     %j is of type int. data is of type DVector. j is of type int. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1684, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1656, self, varargin{:});
     end
     function varargout = setMotorEncoders(self,varargin)
     %Usage: retval = setMotorEncoders (encs)
     %
     %encs is of type DVector. encs is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1685, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1657, self, varargin{:});
     end
     function varargout = getMotorEncoder(self,varargin)
     %Usage: retval = getMotorEncoder (j)
     %
     %j is of type int. j is of type int. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1686, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1658, self, varargin{:});
     end
     function varargout = getMotorEncoders(self,varargin)
     %Usage: retval = getMotorEncoders (encs)
     %
     %encs is of type DVector. encs is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1687, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1659, self, varargin{:});
     end
     function varargout = getMotorEncoderTimed(self,varargin)
     %Usage: retval = getMotorEncoderTimed (j, enc, time)
     %
     %j is of type int. enc is of type DVector. time is of type DVector. j is of type int. enc is of type DVector. time is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1688, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1660, self, varargin{:});
     end
     function varargout = getMotorEncodersTimed(self,varargin)
     %Usage: retval = getMotorEncodersTimed (encs, times)
     %
     %encs is of type DVector. times is of type DVector. encs is of type DVector. times is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1689, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1661, self, varargin{:});
     end
     function varargout = getMotorEncoderSpeed(self,varargin)
     %Usage: retval = getMotorEncoderSpeed (j)
     %
     %j is of type int. j is of type int. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1690, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1662, self, varargin{:});
     end
     function varargout = getMotorEncoderSpeeds(self,varargin)
     %Usage: retval = getMotorEncoderSpeeds (speeds)
     %
     %speeds is of type DVector. speeds is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1691, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1663, self, varargin{:});
     end
     function varargout = getMotorEncoderAcceleration(self,varargin)
     %Usage: retval = getMotorEncoderAcceleration (j, acc)
     %
     %j is of type int. acc is of type DVector. j is of type int. acc is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1692, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1664, self, varargin{:});
     end
     function varargout = getMotorEncoderAccelerations(self,varargin)
     %Usage: retval = getMotorEncoderAccelerations (accs)
     %
     %accs is of type DVector. accs is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1693, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1665, self, varargin{:});
     end
     function self = IMotorEncoders(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

@@ -8,51 +8,51 @@ classdef TypedReaderImageMono < yarpSwigRef
     function varargout = setStrict(self,varargin)
     %Usage: setStrict ()
     %
-      [varargout{1:nargout}] = yarpMEX(2296, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2276, self, varargin{:});
     end
     function varargout = read(self,varargin)
     %Usage: retval = read ()
     %
     %retval is of type ImageMono. 
-      [varargout{1:nargout}] = yarpMEX(2297, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2277, self, varargin{:});
     end
     function varargout = interrupt(self,varargin)
     %Usage: interrupt ()
     %
-      [varargout{1:nargout}] = yarpMEX(2298, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2278, self, varargin{:});
     end
     function varargout = lastRead(self,varargin)
     %Usage: retval = lastRead ()
     %
     %retval is of type ImageMono. 
-      [varargout{1:nargout}] = yarpMEX(2299, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2279, self, varargin{:});
     end
     function varargout = isClosed(self,varargin)
     %Usage: retval = isClosed ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2300, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2280, self, varargin{:});
     end
     function varargout = useCallback(self,varargin)
     %Usage: useCallback (callback)
     %
     %callback is of type TypedReaderCallbackImageMono. 
-      [varargout{1:nargout}] = yarpMEX(2301, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2281, self, varargin{:});
     end
     function varargout = disableCallback(self,varargin)
     %Usage: disableCallback ()
     %
-      [varargout{1:nargout}] = yarpMEX(2302, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2282, self, varargin{:});
     end
     function varargout = getPendingReads(self,varargin)
     %Usage: retval = getPendingReads ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(2303, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2283, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(2304, self);
+        yarpMEX(2284, self);
         self.SwigClear();
       end
     end
@@ -60,31 +60,31 @@ classdef TypedReaderImageMono < yarpSwigRef
     %Usage: retval = getName ()
     %
     %retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(2305, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2285, self, varargin{:});
     end
     function varargout = setReplier(self,varargin)
     %Usage: setReplier (reader)
     %
     %reader is of type PortReader. 
-      [varargout{1:nargout}] = yarpMEX(2306, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2286, self, varargin{:});
     end
     function varargout = acquire(self,varargin)
     %Usage: retval = acquire ()
     %
     %retval is of type void *. 
-      [varargout{1:nargout}] = yarpMEX(2307, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2287, self, varargin{:});
     end
     function varargout = release(self,varargin)
     %Usage: release (handle)
     %
     %handle is of type void *. 
-      [varargout{1:nargout}] = yarpMEX(2308, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2288, self, varargin{:});
     end
     function varargout = setTargetPeriod(self,varargin)
     %Usage: setTargetPeriod (period)
     %
     %period is of type double. 
-      [varargout{1:nargout}] = yarpMEX(2309, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2289, self, varargin{:});
     end
     function self = TypedReaderImageMono(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

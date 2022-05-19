@@ -9,80 +9,80 @@ classdef ContactStyle < yarpSwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(590, self);
+        varargout{1} = yarpMEX(564, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(591, self, varargin{1});
+        yarpMEX(565, self, varargin{1});
       end
     end
     function varargout = quiet(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(592, self);
+        varargout{1} = yarpMEX(566, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(593, self, varargin{1});
+        yarpMEX(567, self, varargin{1});
       end
     end
     function varargout = verboseOnSuccess(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(594, self);
+        varargout{1} = yarpMEX(568, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(595, self, varargin{1});
+        yarpMEX(569, self, varargin{1});
       end
     end
     function varargout = timeout(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(596, self);
+        varargout{1} = yarpMEX(570, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(597, self, varargin{1});
+        yarpMEX(571, self, varargin{1});
       end
     end
     function varargout = carrier(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(598, self);
+        varargout{1} = yarpMEX(572, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(599, self, varargin{1});
+        yarpMEX(573, self, varargin{1});
       end
     end
     function varargout = expectReply(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(600, self);
+        varargout{1} = yarpMEX(574, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(601, self, varargin{1});
+        yarpMEX(575, self, varargin{1});
       end
     end
     function varargout = persistent1(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(602, self);
+        varargout{1} = yarpMEX(576, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(603, self, varargin{1});
+        yarpMEX(577, self, varargin{1});
       end
     end
     function varargout = persistenceType(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(604, self);
+        varargout{1} = yarpMEX(578, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(605, self, varargin{1});
+        yarpMEX(579, self, varargin{1});
       end
     end
     function self = ContactStyle(varargin)
@@ -91,14 +91,14 @@ classdef ContactStyle < yarpSwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(606, varargin{:});
+        tmp = yarpMEX(580, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(607, self);
+        yarpMEX(581, self);
         self.SwigClear();
       end
     end

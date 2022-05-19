@@ -9,20 +9,20 @@ classdef GazeEventParameters < yarpSwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1417, self);
+        varargout{1} = yarpMEX(1389, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1418, self, varargin{1});
+        yarpMEX(1390, self, varargin{1});
       end
     end
     function varargout = motionOngoingCheckPoint(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1419, self);
+        varargout{1} = yarpMEX(1391, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1420, self, varargin{1});
+        yarpMEX(1392, self, varargin{1});
       end
     end
     function self = GazeEventParameters(varargin)
@@ -31,14 +31,14 @@ classdef GazeEventParameters < yarpSwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1421, varargin{:});
+        tmp = yarpMEX(1393, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1422, self);
+        yarpMEX(1394, self);
         self.SwigClear();
       end
     end
