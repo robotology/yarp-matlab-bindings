@@ -1,3 +1,3 @@
 function v = VOCAB_VELOCITY()
-  v = yarpMEX(1747);
+  v = yarpMEX(1714);
 end
