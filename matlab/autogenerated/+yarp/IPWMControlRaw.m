@@ -7,7 +7,7 @@ classdef IPWMControlRaw < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1779, self);
+        yarpMEX(1746, self);
         self.SwigClear();
       end
     end
@@ -15,43 +15,43 @@ classdef IPWMControlRaw < yarpSwigRef
     %Usage: retval = getNumberOfMotorsRaw (number)
     %
     %number is of type int *. number is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1780, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1747, self, varargin{:});
     end
     function varargout = setRefDutyCycleRaw(self,varargin)
     %Usage: retval = setRefDutyCycleRaw (m, ref)
     %
     %m is of type int. ref is of type double. m is of type int. ref is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1781, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1748, self, varargin{:});
     end
     function varargout = setRefDutyCyclesRaw(self,varargin)
     %Usage: retval = setRefDutyCyclesRaw (refs)
     %
     %refs is of type double const *. refs is of type double const *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1782, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1749, self, varargin{:});
     end
     function varargout = getRefDutyCycleRaw(self,varargin)
     %Usage: retval = getRefDutyCycleRaw (m, ref)
     %
     %m is of type int. ref is of type double *. m is of type int. ref is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1783, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1750, self, varargin{:});
     end
     function varargout = getRefDutyCyclesRaw(self,varargin)
     %Usage: retval = getRefDutyCyclesRaw (refs)
     %
     %refs is of type double *. refs is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1784, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1751, self, varargin{:});
     end
     function varargout = getDutyCycleRaw(self,varargin)
     %Usage: retval = getDutyCycleRaw (m, val)
     %
     %m is of type int. val is of type double *. m is of type int. val is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1785, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1752, self, varargin{:});
     end
     function varargout = getDutyCyclesRaw(self,varargin)
     %Usage: retval = getDutyCyclesRaw (vals)
     %
     %vals is of type double *. vals is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1786, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1753, self, varargin{:});
     end
     function self = IPWMControlRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

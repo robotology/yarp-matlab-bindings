@@ -9,7 +9,7 @@ classdef ImageRgbFloat < yarp.Image
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(2818, varargin{:});
+        tmp = yarpMEX(2785, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
@@ -18,35 +18,35 @@ classdef ImageRgbFloat < yarp.Image
     %Usage: retval = getPixelSize ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(2819, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2786, self, varargin{:});
     end
     function varargout = getPixelCode(self,varargin)
     %Usage: retval = getPixelCode ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(2820, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2787, self, varargin{:});
     end
     function varargout = pixel(self,varargin)
     %Usage: retval = pixel (x, y)
     %
     %x is of type size_t. y is of type size_t. x is of type size_t. y is of type size_t. retval is of type PixelRgbFloat. 
-      [varargout{1:nargout}] = yarpMEX(2821, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2788, self, varargin{:});
     end
     function varargout = access(self,varargin)
     %Usage: retval = access (x, y)
     %
     %x is of type size_t. y is of type size_t. x is of type size_t. y is of type size_t. retval is of type PixelRgbFloat. 
-      [varargout{1:nargout}] = yarpMEX(2822, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2789, self, varargin{:});
     end
     function varargout = safePixel(self,varargin)
     %Usage: retval = safePixel (x, y)
     %
     %x is of type size_t. y is of type size_t. x is of type size_t. y is of type size_t. retval is of type PixelRgbFloat. 
-      [varargout{1:nargout}] = yarpMEX(2823, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2790, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(2824, self);
+        yarpMEX(2791, self);
         self.SwigClear();
       end
     end

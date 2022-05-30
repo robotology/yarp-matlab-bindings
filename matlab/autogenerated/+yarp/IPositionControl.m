@@ -7,7 +7,7 @@ classdef IPositionControl < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1501, self);
+        yarpMEX(1468, self);
         self.SwigClear();
       end
     end
@@ -15,97 +15,97 @@ classdef IPositionControl < yarpSwigRef
     %Usage: retval = setRefSpeed (j, sp)
     %
     %j is of type int. sp is of type double. j is of type int. sp is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1502, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1469, self, varargin{:});
     end
     function varargout = setRefAcceleration(self,varargin)
     %Usage: retval = setRefAcceleration (j, acc)
     %
     %j is of type int. acc is of type double. j is of type int. acc is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1503, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1470, self, varargin{:});
     end
     function varargout = getAxes(self,varargin)
     %Usage: retval = getAxes ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1504, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1471, self, varargin{:});
     end
     function varargout = positionMove(self,varargin)
     %Usage: retval = positionMove (n_joint, joints, data)
     %
     %n_joint is of type int. joints is of type IVector. data is of type DVector. n_joint is of type int. joints is of type IVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1505, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1472, self, varargin{:});
     end
     function varargout = relativeMove(self,varargin)
     %Usage: retval = relativeMove (n_joint, joints, data)
     %
     %n_joint is of type int. joints is of type IVector. data is of type DVector. n_joint is of type int. joints is of type IVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1506, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1473, self, varargin{:});
     end
     function varargout = setRefSpeeds(self,varargin)
     %Usage: retval = setRefSpeeds (n_joint, joints, data)
     %
     %n_joint is of type int. joints is of type IVector. data is of type DVector. n_joint is of type int. joints is of type IVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1507, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1474, self, varargin{:});
     end
     function varargout = getRefSpeed(self,varargin)
     %Usage: retval = getRefSpeed (j, data)
     %
     %j is of type int. data is of type DVector. j is of type int. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1508, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1475, self, varargin{:});
     end
     function varargout = getRefSpeeds(self,varargin)
     %Usage: retval = getRefSpeeds (n_joint, joints, data)
     %
     %n_joint is of type int. joints is of type IVector. data is of type DVector. n_joint is of type int. joints is of type IVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1509, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1476, self, varargin{:});
     end
     function varargout = setRefAccelerations(self,varargin)
     %Usage: retval = setRefAccelerations (n_joint, joints, data)
     %
     %n_joint is of type int. joints is of type IVector. data is of type DVector. n_joint is of type int. joints is of type IVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1510, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1477, self, varargin{:});
     end
     function varargout = getRefAcceleration(self,varargin)
     %Usage: retval = getRefAcceleration (j, data)
     %
     %j is of type int. data is of type DVector. j is of type int. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1511, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1478, self, varargin{:});
     end
     function varargout = getRefAccelerations(self,varargin)
     %Usage: retval = getRefAccelerations (n_joint, joints, data)
     %
     %n_joint is of type int. joints is of type IVector. data is of type DVector. n_joint is of type int. joints is of type IVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1512, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1479, self, varargin{:});
     end
     function varargout = checkMotionDone(self,varargin)
     %Usage: retval = checkMotionDone (n_joint, joints, flag)
     %
     %n_joint is of type int. joints is of type IVector. flag is of type BVector. n_joint is of type int. joints is of type IVector. flag is of type BVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1513, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1480, self, varargin{:});
     end
     function varargout = isMotionDone(self,varargin)
     %Usage: retval = isMotionDone ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1514, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1481, self, varargin{:});
     end
     function varargout = stop(self,varargin)
     %Usage: retval = stop (n_joint, joints)
     %
     %n_joint is of type int. joints is of type IVector. n_joint is of type int. joints is of type IVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1515, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1482, self, varargin{:});
     end
     function varargout = getTargetPosition(self,varargin)
     %Usage: retval = getTargetPosition (j, data)
     %
     %j is of type int. data is of type DVector. j is of type int. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1516, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1483, self, varargin{:});
     end
     function varargout = getTargetPositions(self,varargin)
     %Usage: retval = getTargetPositions (n_joint, joints, data)
     %
     %n_joint is of type int. joints is of type IVector. data is of type DVector. n_joint is of type int. joints is of type IVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1517, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1484, self, varargin{:});
     end
     function self = IPositionControl(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
