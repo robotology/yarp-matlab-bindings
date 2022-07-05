@@ -106,7 +106,7 @@ if(YARP_USES_MATLAB)
                       COMPONENTS MX_LIBRARY)
 
   swig_compile_module(${mexname} matlab)
-  target_link_libraries(${mexname} ${Matlab_LIBRARIES} ${YARP_LIBRARIES})
+  target_link_libraries(${mexname} ${Matlab_MEX_LIBRARY} ${Matlab_MX_LIBRARY} ${YARP_LIBRARIES})
   target_include_directories(${mexname} PRIVATE ${Matlab_INCLUDE_DIRS})
 
   set_target_properties(${mexname} PROPERTIES PREFIX "" SUFFIX .${Matlab_MEX_EXTENSION})
