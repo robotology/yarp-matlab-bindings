@@ -20,7 +20,7 @@ classdef Portable < yarp.PortReader & yarp.PortWriter
     function varargout = getType(self,varargin)
     %Usage: retval = getType ()
     %
-    %retval is of type yarp::os::Type. 
+    %retval is of type Type. 
       [varargout{1:nargout}] = yarpMEX(137, self, varargin{:});
     end
     function delete(self)

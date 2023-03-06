@@ -30,7 +30,7 @@ classdef PortWriter < yarpSwigRef
     function varargout = getWriteType(self,varargin)
     %Usage: retval = getWriteType ()
     %
-    %retval is of type yarp::os::Type. 
+    %retval is of type Type. 
       [varargout{1:nargout}] = yarpMEX(134, self, varargin{:});
     end
     function self = PortWriter(varargin)

@@ -7,7 +7,7 @@ classdef IVelocityControl < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1725, self);
+        yarpMEX(1740, self);
         self.SwigClear();
       end
     end
@@ -15,55 +15,55 @@ classdef IVelocityControl < yarpSwigRef
     %Usage: retval = setRefAcceleration (j, acc)
     %
     %j is of type int. acc is of type double. j is of type int. acc is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1726, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1741, self, varargin{:});
     end
     function varargout = getAxes(self,varargin)
     %Usage: retval = getAxes ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1727, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1742, self, varargin{:});
     end
     function varargout = getRefAcceleration(self,varargin)
     %Usage: retval = getRefAcceleration (j, data)
     %
     %j is of type int. data is of type DVector. j is of type int. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1728, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1743, self, varargin{:});
     end
     function varargout = velocityMove(self,varargin)
     %Usage: retval = velocityMove (n_joint, joints, data)
     %
     %n_joint is of type int. joints is of type IVector. data is of type DVector. n_joint is of type int. joints is of type IVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1729, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1744, self, varargin{:});
     end
     function varargout = getRefVelocity(self,varargin)
     %Usage: retval = getRefVelocity (j, data)
     %
     %j is of type int. data is of type DVector. j is of type int. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1730, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1745, self, varargin{:});
     end
     function varargout = getRefVelocities(self,varargin)
     %Usage: retval = getRefVelocities (n_joint, joints, data)
     %
     %n_joint is of type int. joints is of type IVector. data is of type DVector. n_joint is of type int. joints is of type IVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1731, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1746, self, varargin{:});
     end
     function varargout = setRefAccelerations(self,varargin)
     %Usage: retval = setRefAccelerations (n_joint, joints, data)
     %
     %n_joint is of type int. joints is of type IVector. data is of type DVector. n_joint is of type int. joints is of type IVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1732, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1747, self, varargin{:});
     end
     function varargout = getRefAccelerations(self,varargin)
     %Usage: retval = getRefAccelerations (n_joint, joints, data)
     %
     %n_joint is of type int. joints is of type IVector. data is of type DVector. n_joint is of type int. joints is of type IVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1733, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1748, self, varargin{:});
     end
     function varargout = stop(self,varargin)
     %Usage: retval = stop (n_joint, joints)
     %
     %n_joint is of type int. joints is of type IVector. n_joint is of type int. joints is of type IVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1734, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1749, self, varargin{:});
     end
     function self = IVelocityControl(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

@@ -7,7 +7,7 @@ classdef IAmplifierControlRaw < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1220, self);
+        yarpMEX(1235, self);
         self.SwigClear();
       end
     end
@@ -15,91 +15,91 @@ classdef IAmplifierControlRaw < yarpSwigRef
     %Usage: retval = enableAmpRaw (j)
     %
     %j is of type int. j is of type int. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1221, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1236, self, varargin{:});
     end
     function varargout = disableAmpRaw(self,varargin)
     %Usage: retval = disableAmpRaw (j)
     %
     %j is of type int. j is of type int. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1222, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1237, self, varargin{:});
     end
     function varargout = getAmpStatusRaw(self,varargin)
     %Usage: retval = getAmpStatusRaw (j, st)
     %
     %j is of type int. st is of type int *. j is of type int. st is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1223, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1238, self, varargin{:});
     end
     function varargout = getCurrentsRaw(self,varargin)
     %Usage: retval = getCurrentsRaw (vals)
     %
     %vals is of type double *. vals is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1224, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1239, self, varargin{:});
     end
     function varargout = getCurrentRaw(self,varargin)
     %Usage: retval = getCurrentRaw (j, val)
     %
     %j is of type int. val is of type double *. j is of type int. val is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1225, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1240, self, varargin{:});
     end
     function varargout = setMaxCurrentRaw(self,varargin)
     %Usage: retval = setMaxCurrentRaw (j, v)
     %
     %j is of type int. v is of type double. j is of type int. v is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1226, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1241, self, varargin{:});
     end
     function varargout = getMaxCurrentRaw(self,varargin)
     %Usage: retval = getMaxCurrentRaw (j, v)
     %
     %j is of type int. v is of type double *. j is of type int. v is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1227, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1242, self, varargin{:});
     end
     function varargout = getNominalCurrentRaw(self,varargin)
     %Usage: retval = getNominalCurrentRaw (m, val)
     %
     %m is of type int. val is of type double *. m is of type int. val is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1228, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1243, self, varargin{:});
     end
     function varargout = setNominalCurrentRaw(self,varargin)
     %Usage: retval = setNominalCurrentRaw (m, val)
     %
     %m is of type int. val is of type double const. m is of type int. val is of type double const. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1229, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1244, self, varargin{:});
     end
     function varargout = getPeakCurrentRaw(self,varargin)
     %Usage: retval = getPeakCurrentRaw (m, val)
     %
     %m is of type int. val is of type double *. m is of type int. val is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1230, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1245, self, varargin{:});
     end
     function varargout = setPeakCurrentRaw(self,varargin)
     %Usage: retval = setPeakCurrentRaw (m, val)
     %
     %m is of type int. val is of type double const. m is of type int. val is of type double const. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1231, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1246, self, varargin{:});
     end
     function varargout = getPWMRaw(self,varargin)
     %Usage: retval = getPWMRaw (j, val)
     %
     %j is of type int. val is of type double *. j is of type int. val is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1232, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1247, self, varargin{:});
     end
     function varargout = getPWMLimitRaw(self,varargin)
     %Usage: retval = getPWMLimitRaw (j, val)
     %
     %j is of type int. val is of type double *. j is of type int. val is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1233, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1248, self, varargin{:});
     end
     function varargout = setPWMLimitRaw(self,varargin)
     %Usage: retval = setPWMLimitRaw (j, val)
     %
     %j is of type int. val is of type double const. j is of type int. val is of type double const. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1234, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1249, self, varargin{:});
     end
     function varargout = getPowerSupplyVoltageRaw(self,varargin)
     %Usage: retval = getPowerSupplyVoltageRaw (j, val)
     %
     %j is of type int. val is of type double *. j is of type int. val is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1235, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1250, self, varargin{:});
     end
     function self = IAmplifierControlRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

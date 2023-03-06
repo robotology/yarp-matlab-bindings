@@ -1,3 +1,3 @@
 function v = VOCAB_TORQUE()
-  v = yarpMEX(1685);
+  v = yarpMEX(1700);
 end
