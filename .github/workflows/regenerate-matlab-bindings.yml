@@ -39,8 +39,7 @@ jobs:
             sudo sh -c 'echo "deb http://www.icub.org/ubuntu focal contrib/science" > /etc/apt/sources.list.d/icub.list'
             sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 57A5ACB6110576A6
             sudo apt-get update
-            sudo apt-get install build-essential git cmake cmake-curses-gui \
-            ycm-cmake-modules libeigen3-dev libace-dev libedit-dev libsqlite3-dev \
+            sudo apt-get install build-essential git cmake cmake-curses-gui libeigen3-dev libace-dev libedit-dev libsqlite3-dev \
             libtinyxml-dev qtbase5-dev qtdeclarative5-dev qtmultimedia5-dev \
             qml-module-qtquick2 qml-module-qtquick-window2 \
             qml-module-qtmultimedia qml-module-qtquick-dialogs \
@@ -49,6 +48,15 @@ jobs:
             libjpeg-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
             gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad \
             gstreamer1.0-libav liboctave-dev
+            # Clone YCM
+            git clone https://github.com/robotology/ycm -b v0.15.1
+            cd ycm
+            mkdir build
+            cd build
+            cmake ..
+            make
+            sudo make install
+            cd ../..
             # Clone YARP
             git clone https://github.com/robotology/yarp -b ${GIT_BRANCH_NAME}
             # Configure, build and install YARP and regenerate yarp-matlab-bindings
