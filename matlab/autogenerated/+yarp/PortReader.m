@@ -20,7 +20,7 @@ classdef PortReader < yarpSwigRef
     function varargout = getReadType(self,varargin)
     %Usage: retval = getReadType ()
     %
-    %retval is of type yarp::os::Type. 
+    %retval is of type Type. 
       [varargout{1:nargout}] = yarpMEX(129, self, varargin{:});
     end
     function self = PortReader(varargin)

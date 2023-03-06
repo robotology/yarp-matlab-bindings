@@ -1,3 +1,3 @@
 function v = VOCAB_CM_FORCE_IDLE()
-  v = yarpMEX(1547);
+  v = yarpMEX(1562);
 end

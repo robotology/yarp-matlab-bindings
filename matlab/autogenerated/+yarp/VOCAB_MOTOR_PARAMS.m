@@ -1,3 +1,3 @@
 function v = VOCAB_MOTOR_PARAMS()
-  v = yarpMEX(1690);
+  v = yarpMEX(1705);
 end

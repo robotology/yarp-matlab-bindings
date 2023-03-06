@@ -186,13 +186,13 @@ classdef Port < yarp.UnbufferedContactable
     function varargout = getType(self,varargin)
     %Usage: retval = getType ()
     %
-    %retval is of type yarp::os::Type. 
+    %retval is of type Type. 
       [varargout{1:nargout}] = yarpMEX(294, self, varargin{:});
     end
     function varargout = promiseType(self,varargin)
     %Usage: promiseType (typ)
     %
-    %typ is of type yarp::os::Type const &. 
+    %typ is of type Type. 
       [varargout{1:nargout}] = yarpMEX(295, self, varargin{:});
     end
     function varargout = acquireProperties(self,varargin)
