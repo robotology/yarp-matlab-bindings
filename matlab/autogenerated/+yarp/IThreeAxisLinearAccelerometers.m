@@ -9,17 +9,17 @@ classdef IThreeAxisLinearAccelerometers < yarpSwigRef
     %Usage: retval = getNrOfThreeAxisLinearAccelerometers ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1870, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1885, self, varargin{:});
     end
     function varargout = getThreeAxisLinearAccelerometerStatus(self,varargin)
     %Usage: retval = getThreeAxisLinearAccelerometerStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1871, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1886, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1872, self);
+        yarpMEX(1887, self);
         self.SwigClear();
       end
     end
@@ -27,19 +27,19 @@ classdef IThreeAxisLinearAccelerometers < yarpSwigRef
     %Usage: retval = getThreeAxisLinearAccelerometerName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1873, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1888, self, varargin{:});
     end
     function varargout = getThreeAxisLinearAccelerometerFrameName(self,varargin)
     %Usage: retval = getThreeAxisLinearAccelerometerFrameName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1874, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1889, self, varargin{:});
     end
     function varargout = getThreeAxisLinearAccelerometerMeasure(self,varargin)
     %Usage: retval = getThreeAxisLinearAccelerometerMeasure (sens_index, out)
     %
     %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1875, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1890, self, varargin{:});
     end
     function self = IThreeAxisLinearAccelerometers(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
