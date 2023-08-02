@@ -1,3 +1,3 @@
 function v = VOCAB_AMP_PWM_LIMIT()
-  v = yarpMEX(1261);
+  v = yarpMEX(1224);
 end

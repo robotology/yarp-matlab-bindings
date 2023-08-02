@@ -1,3 +1,3 @@
 function v = VOCAB_CURRENTCONTROL_INTERFACE()
-  v = yarpMEX(1794);
+  v = yarpMEX(1757);
 end

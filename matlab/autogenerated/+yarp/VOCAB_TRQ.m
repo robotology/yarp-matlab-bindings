@@ -1,3 +1,3 @@
 function v = VOCAB_TRQ()
-  v = yarpMEX(1703);
+  v = yarpMEX(1666);
 end
