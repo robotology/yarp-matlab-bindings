@@ -7,7 +7,7 @@ classdef IInteractionMode < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1573, self);
+        yarpMEX(1536, self);
         self.SwigClear();
       end
     end
@@ -15,25 +15,25 @@ classdef IInteractionMode < yarpSwigRef
     %Usage: retval = setInteractionMode (axis, mode)
     %
     %axis is of type int. mode is of type yarp::dev::InteractionModeEnum. axis is of type int. mode is of type yarp::dev::InteractionModeEnum. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1574, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1537, self, varargin{:});
     end
     function varargout = getInteractionMode(self,varargin)
     %Usage: retval = getInteractionMode (axis)
     %
     %axis is of type int. axis is of type int. retval is of type yarp::dev::InteractionModeEnum. 
-      [varargout{1:nargout}] = yarpMEX(1575, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1538, self, varargin{:});
     end
     function varargout = getInteractionModes(self,varargin)
     %Usage: retval = getInteractionModes (data)
     %
     %data is of type IVector. data is of type IVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1576, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1539, self, varargin{:});
     end
     function varargout = setInteractionModes(self,varargin)
     %Usage: retval = setInteractionModes (data)
     %
     %data is of type IVector. data is of type IVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1577, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1540, self, varargin{:});
     end
     function self = IInteractionMode(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

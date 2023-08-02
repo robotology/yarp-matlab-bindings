@@ -9,17 +9,17 @@ classdef IOrientationSensors < yarpSwigRef
     %Usage: retval = getNrOfOrientationSensors ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1903, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1866, self, varargin{:});
     end
     function varargout = getOrientationSensorStatus(self,varargin)
     %Usage: retval = getOrientationSensorStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1904, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1867, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1905, self);
+        yarpMEX(1868, self);
         self.SwigClear();
       end
     end
@@ -27,19 +27,19 @@ classdef IOrientationSensors < yarpSwigRef
     %Usage: retval = getOrientationSensorName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1906, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1869, self, varargin{:});
     end
     function varargout = getOrientationSensorFrameName(self,varargin)
     %Usage: retval = getOrientationSensorFrameName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1907, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1870, self, varargin{:});
     end
     function varargout = getOrientationSensorMeasureAsRollPitchYaw(self,varargin)
     %Usage: retval = getOrientationSensorMeasureAsRollPitchYaw (sens_index, rpy)
     %
     %sens_index is of type int. rpy is of type Vector. sens_index is of type int. rpy is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1908, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1871, self, varargin{:});
     end
     function self = IOrientationSensors(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

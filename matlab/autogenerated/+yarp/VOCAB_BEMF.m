@@ -1,3 +1,3 @@
 function v = VOCAB_BEMF()
-  v = yarpMEX(1704);
+  v = yarpMEX(1667);
 end

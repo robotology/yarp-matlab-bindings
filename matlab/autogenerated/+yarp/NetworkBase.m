@@ -11,14 +11,14 @@ classdef NetworkBase < yarpSwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(395, varargin{:});
+        tmp = yarpMEX(389, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(396, self);
+        yarpMEX(390, self);
         self.SwigClear();
       end
     end
@@ -161,177 +161,141 @@ classdef NetworkBase < yarpSwigRef
     %retval is of type bool. 
      [varargout{1:nargout}] = yarpMEX(365, varargin{:});
     end
-    function varargout = readString(varargin)
-    %Usage: retval = readString ()
-    %
-    %retval is of type std::string. 
-     [varargout{1:nargout}] = yarpMEX(366, varargin{:});
-    end
     function varargout = writeToNameServer(varargin)
     %Usage: retval = writeToNameServer (cmd, reply, style)
     %
     %cmd is of type PortWriter. reply is of type PortReader. style is of type ContactStyle. cmd is of type PortWriter. reply is of type PortReader. style is of type ContactStyle. retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(367, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(366, varargin{:});
     end
     function varargout = write(varargin)
     %Usage: retval = write (port_name, cmd, reply)
     %
     %port_name is of type std::string const &. cmd is of type PortWriter. reply is of type PortReader. port_name is of type std::string const &. cmd is of type PortWriter. reply is of type PortReader. retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(368, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(367, varargin{:});
     end
     function varargout = checkNetwork(varargin)
     %Usage: retval = checkNetwork (timeout)
     %
     %timeout is of type double. timeout is of type double. retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(369, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(368, varargin{:});
     end
     function varargout = initialized(varargin)
     %Usage: retval = initialized ()
     %
     %retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(370, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(369, varargin{:});
     end
     function varargout = setVerbosity(varargin)
     %Usage: setVerbosity (verbosity)
     %
     %verbosity is of type int. 
-     [varargout{1:nargout}] = yarpMEX(371, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(370, varargin{:});
     end
     function varargout = queryBypass(varargin)
     %Usage: queryBypass (store)
     %
     %store is of type NameStore *. 
-     [varargout{1:nargout}] = yarpMEX(372, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(371, varargin{:});
     end
     function varargout = getQueryBypass(varargin)
     %Usage: retval = getQueryBypass ()
     %
     %retval is of type NameStore *. 
-     [varargout{1:nargout}] = yarpMEX(373, varargin{:});
-    end
-    function varargout = getEnvironment(varargin)
-    %Usage: retval = getEnvironment (key)
-    %
-    %key is of type char const *. key is of type char const *. retval is of type std::string. 
-     [varargout{1:nargout}] = yarpMEX(374, varargin{:});
-    end
-    function varargout = setEnvironment(varargin)
-    %Usage: setEnvironment (key, val)
-    %
-    %key is of type std::string const &. val is of type std::string const &. 
-     [varargout{1:nargout}] = yarpMEX(375, varargin{:});
-    end
-    function varargout = unsetEnvironment(varargin)
-    %Usage: unsetEnvironment (key)
-    %
-    %key is of type std::string const &. 
-     [varargout{1:nargout}] = yarpMEX(376, varargin{:});
-    end
-    function varargout = getDirectorySeparator(varargin)
-    %Usage: retval = getDirectorySeparator ()
-    %
-    %retval is of type std::string. 
-     [varargout{1:nargout}] = yarpMEX(377, varargin{:});
-    end
-    function varargout = getPathSeparator(varargin)
-    %Usage: retval = getPathSeparator ()
-    %
-    %retval is of type std::string. 
-     [varargout{1:nargout}] = yarpMEX(378, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(372, varargin{:});
     end
     function varargout = registerCarrier(varargin)
     %Usage: retval = registerCarrier (name, dll)
     %
     %name is of type char const *. dll is of type char const *. name is of type char const *. dll is of type char const *. retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(379, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(373, varargin{:});
     end
     function varargout = lock(varargin)
     %Usage: lock ()
     %
-     [varargout{1:nargout}] = yarpMEX(380, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(374, varargin{:});
     end
     function varargout = unlock(varargin)
     %Usage: unlock ()
     %
-     [varargout{1:nargout}] = yarpMEX(381, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(375, varargin{:});
     end
     function varargout = localNetworkAllocation(varargin)
     %Usage: retval = localNetworkAllocation ()
     %
     %retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(382, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(376, varargin{:});
     end
     function varargout = detectNameServer(varargin)
     %Usage: retval = detectNameServer (useDetectedServer, scanNeeded, serverUsed)
     %
     %useDetectedServer is of type bool. scanNeeded is of type bool &. serverUsed is of type bool &. useDetectedServer is of type bool. scanNeeded is of type bool &. serverUsed is of type bool &. retval is of type Contact. 
-     [varargout{1:nargout}] = yarpMEX(383, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(377, varargin{:});
     end
     function varargout = setNameServerContact(varargin)
     %Usage: retval = setNameServerContact (nameServerContact)
     %
     %nameServerContact is of type Contact. nameServerContact is of type Contact. retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(384, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(378, varargin{:});
     end
     function varargout = getConfigFile(varargin)
     %Usage: retval = getConfigFile (fname)
     %
     %fname is of type char const *. fname is of type char const *. retval is of type std::string. 
-     [varargout{1:nargout}] = yarpMEX(385, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(379, varargin{:});
     end
     function varargout = getDefaultPortRange(varargin)
     %Usage: retval = getDefaultPortRange ()
     %
     %retval is of type int. 
-     [varargout{1:nargout}] = yarpMEX(386, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(380, varargin{:});
     end
     function varargout = setConnectionQos(varargin)
     %Usage: retval = setConnectionQos (src, dest, style)
     %
     %src is of type std::string const &. dest is of type std::string const &. style is of type QosStyle. src is of type std::string const &. dest is of type std::string const &. style is of type QosStyle. retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(387, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(381, varargin{:});
     end
     function varargout = getConnectionQos(varargin)
     %Usage: retval = getConnectionQos (src, dest, srcStyle, destStyle)
     %
     %src is of type std::string const &. dest is of type std::string const &. srcStyle is of type QosStyle. destStyle is of type QosStyle. src is of type std::string const &. dest is of type std::string const &. srcStyle is of type QosStyle. destStyle is of type QosStyle. retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(388, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(382, varargin{:});
     end
     function varargout = isValidPortName(varargin)
     %Usage: retval = isValidPortName (portName)
     %
     %portName is of type std::string const &. portName is of type std::string const &. retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(389, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(383, varargin{:});
     end
     function varargout = waitConnection(varargin)
     %Usage: retval = waitConnection (source, destination)
     %
     %source is of type std::string const &. destination is of type std::string const &. source is of type std::string const &. destination is of type std::string const &. retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(390, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(384, varargin{:});
     end
     function varargout = waitPort(varargin)
     %Usage: retval = waitPort (target)
     %
     %target is of type std::string const &. target is of type std::string const &. retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(391, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(385, varargin{:});
     end
     function varargout = sendMessage(varargin)
     %Usage: retval = sendMessage (port, writable, output, quiet)
     %
     %port is of type std::string const &. writable is of type PortWriter. output is of type std::string &. quiet is of type bool. port is of type std::string const &. writable is of type PortWriter. output is of type std::string &. quiet is of type bool. retval is of type int. 
-     [varargout{1:nargout}] = yarpMEX(392, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(386, varargin{:});
     end
     function varargout = disconnectInput(varargin)
     %Usage: retval = disconnectInput (src, dest)
     %
     %src is of type std::string const &. dest is of type std::string const &. src is of type std::string const &. dest is of type std::string const &. retval is of type int. 
-     [varargout{1:nargout}] = yarpMEX(393, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(387, varargin{:});
     end
     function varargout = poll(varargin)
     %Usage: retval = poll (target)
     %
     %target is of type std::string const &. target is of type std::string const &. retval is of type int. 
-     [varargout{1:nargout}] = yarpMEX(394, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(388, varargin{:});
     end
   end
 end

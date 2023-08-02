@@ -2,5 +2,5 @@ function varargout = clockTypeToString(varargin)
     %Usage: retval = clockTypeToString (type)
     %
     %type is of type yarp::os::yarpClockType. type is of type yarp::os::yarpClockType. retval is of type std::string. 
-  [varargout{1:nargout}] = yarpMEX(526, varargin{:});
+  [varargout{1:nargout}] = yarpMEX(520, varargin{:});
 end
