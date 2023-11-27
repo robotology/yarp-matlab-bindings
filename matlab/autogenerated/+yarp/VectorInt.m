@@ -4,7 +4,7 @@ classdef VectorInt < yarp.VectorBase
   methods
     function delete(self)
       if self.swigPtr
-        yarpMEX(2594, self);
+        yarpMEX(2645, self);
         self.SwigClear();
       end
     end
@@ -12,154 +12,154 @@ classdef VectorInt < yarp.VectorBase
     %Usage: retval = getElementSize ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(2595, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2646, self, varargin{:});
     end
     function varargout = getBottleTag(self,varargin)
     %Usage: retval = getBottleTag ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(2596, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2647, self, varargin{:});
     end
     function varargout = getListSize(self,varargin)
     %Usage: retval = getListSize ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(2597, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2648, self, varargin{:});
     end
     function varargout = getMemoryBlock(self,varargin)
     %Usage: retval = getMemoryBlock ()
     %
     %retval is of type char *. 
-      [varargout{1:nargout}] = yarpMEX(2598, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2649, self, varargin{:});
     end
     function varargout = getFirst(self,varargin)
     %Usage: retval = getFirst ()
     %
     %retval is of type int *. 
-      [varargout{1:nargout}] = yarpMEX(2599, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2650, self, varargin{:});
     end
     function varargout = data(self,varargin)
     %Usage: retval = data ()
     %
     %retval is of type int const *. 
-      [varargout{1:nargout}] = yarpMEX(2600, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2651, self, varargin{:});
     end
     function varargout = resize(self,varargin)
     %Usage: resize (size, def)
     %
     %size is of type size_t. def is of type int const &. 
-      [varargout{1:nargout}] = yarpMEX(2601, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2652, self, varargin{:});
     end
     function varargout = reserve(self,varargin)
     %Usage: reserve (size)
     %
     %size is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(2602, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2653, self, varargin{:});
     end
     function varargout = push_back(self,varargin)
     %Usage: push_back (elem)
     %
     %elem is of type int &&. 
-      [varargout{1:nargout}] = yarpMEX(2603, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2654, self, varargin{:});
     end
     function varargout = pop_back(self,varargin)
     %Usage: pop_back ()
     %
-      [varargout{1:nargout}] = yarpMEX(2604, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2655, self, varargin{:});
     end
     function varargout = brace(self,varargin)
     %Usage: retval = brace (i)
     %
     %i is of type size_t. i is of type size_t. retval is of type int const &. 
-      [varargout{1:nargout}] = yarpMEX(2605, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2656, self, varargin{:});
     end
     function varargout = access(self,varargin)
     %Usage: retval = access (i)
     %
     %i is of type size_t. i is of type size_t. retval is of type int const &. 
-      [varargout{1:nargout}] = yarpMEX(2606, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2657, self, varargin{:});
     end
     function varargout = size(self,varargin)
     %Usage: retval = size ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(2607, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2658, self, varargin{:});
     end
     function varargout = length(self,varargin)
     %Usage: retval = length ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(2608, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2659, self, varargin{:});
     end
     function varargout = capacity(self,varargin)
     %Usage: retval = capacity ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(2609, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2660, self, varargin{:});
     end
     function varargout = zero(self,varargin)
     %Usage: zero ()
     %
-      [varargout{1:nargout}] = yarpMEX(2610, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2661, self, varargin{:});
     end
     function varargout = toString(self,varargin)
     %Usage: retval = toString (precision = -1)
     %
     %precision is of type int. precision is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(2611, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2662, self, varargin{:});
     end
     function varargout = toString_c(self,varargin)
     %Usage: retval = toString_c ()
     %
     %retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(2612, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2663, self, varargin{:});
     end
     function varargout = subVector(self,varargin)
     %Usage: retval = subVector (first, last)
     %
     %first is of type unsigned int. last is of type unsigned int. first is of type unsigned int. last is of type unsigned int. retval is of type VectorInt. 
-      [varargout{1:nargout}] = yarpMEX(2613, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2664, self, varargin{:});
     end
     function varargout = setSubvector(self,varargin)
     %Usage: retval = setSubvector (position, v)
     %
     %position is of type int. v is of type VectorInt. position is of type int. v is of type VectorInt. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2614, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2665, self, varargin{:});
     end
     function varargout = isEqual(self,varargin)
     %Usage: retval = isEqual (r)
     %
     %r is of type VectorInt. r is of type VectorInt. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(2615, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2666, self, varargin{:});
     end
     function varargout = begin(self,varargin)
     %Usage: retval = begin ()
     %
     %retval is of type yarp::sig::VectorOf< int >::const_iterator. 
-      [varargout{1:nargout}] = yarpMEX(2616, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2667, self, varargin{:});
     end
     function varargout = end(self,varargin)
     %Usage: retval = end ()
     %
     %retval is of type yarp::sig::VectorOf< int >::const_iterator. 
-      [varargout{1:nargout}] = yarpMEX(2617, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2668, self, varargin{:});
     end
     function varargout = cbegin(self,varargin)
     %Usage: retval = cbegin ()
     %
     %retval is of type yarp::sig::VectorOf< int >::const_iterator. 
-      [varargout{1:nargout}] = yarpMEX(2618, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2669, self, varargin{:});
     end
     function varargout = cend(self,varargin)
     %Usage: retval = cend ()
     %
     %retval is of type yarp::sig::VectorOf< int >::const_iterator. 
-      [varargout{1:nargout}] = yarpMEX(2619, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2670, self, varargin{:});
     end
     function varargout = clear(self,varargin)
     %Usage: clear ()
     %
-      [varargout{1:nargout}] = yarpMEX(2620, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2671, self, varargin{:});
     end
     function self = VectorInt(varargin)
       self@yarp.VectorBase(yarpSwigRef.Null);
@@ -168,7 +168,7 @@ classdef VectorInt < yarp.VectorBase
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(2621, varargin{:});
+        tmp = yarpMEX(2672, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
@@ -177,13 +177,13 @@ classdef VectorInt < yarp.VectorBase
     %Usage: retval = get (j)
     %
     %j is of type int. j is of type int. retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(2622, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2673, self, varargin{:});
     end
     function varargout = set(self,varargin)
     %Usage: set (j, v)
     %
     %j is of type int. v is of type int. 
-      [varargout{1:nargout}] = yarpMEX(2623, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2674, self, varargin{:});
     end
   end
   methods(Static)

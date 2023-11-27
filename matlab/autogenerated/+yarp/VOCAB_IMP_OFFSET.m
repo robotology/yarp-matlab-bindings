@@ -1,3 +1,3 @@
 function v = VOCAB_IMP_OFFSET()
-  v = yarpMEX(1672);
+  v = yarpMEX(1678);
 end

@@ -1,3 +1,3 @@
 function v = VOCAB_AMP_CURRENTS()
-  v = yarpMEX(1219);
+  v = yarpMEX(1223);
 end

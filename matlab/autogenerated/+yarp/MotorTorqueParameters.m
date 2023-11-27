@@ -9,33 +9,13 @@ classdef MotorTorqueParameters < yarpSwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1621, self);
-      else
-        nargoutchk(0, 0)
-        yarpMEX(1622, self, varargin{1});
-      end
-    end
-    function varargout = bemf_scale(self, varargin)
-      narginchk(1, 2)
-      if nargin==1
-        nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1623, self);
-      else
-        nargoutchk(0, 0)
-        yarpMEX(1624, self, varargin{1});
-      end
-    end
-    function varargout = ktau(self, varargin)
-      narginchk(1, 2)
-      if nargin==1
-        nargoutchk(0, 1)
         varargout{1} = yarpMEX(1625, self);
       else
         nargoutchk(0, 0)
         yarpMEX(1626, self, varargin{1});
       end
     end
-    function varargout = ktau_scale(self, varargin)
+    function varargout = bemf_scale(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
@@ -45,7 +25,7 @@ classdef MotorTorqueParameters < yarpSwigRef
         yarpMEX(1628, self, varargin{1});
       end
     end
-    function varargout = viscousPos(self, varargin)
+    function varargout = ktau(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
@@ -55,7 +35,7 @@ classdef MotorTorqueParameters < yarpSwigRef
         yarpMEX(1630, self, varargin{1});
       end
     end
-    function varargout = viscousNeg(self, varargin)
+    function varargout = ktau_scale(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
@@ -65,7 +45,7 @@ classdef MotorTorqueParameters < yarpSwigRef
         yarpMEX(1632, self, varargin{1});
       end
     end
-    function varargout = coulombPos(self, varargin)
+    function varargout = viscousPos(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
@@ -75,7 +55,7 @@ classdef MotorTorqueParameters < yarpSwigRef
         yarpMEX(1634, self, varargin{1});
       end
     end
-    function varargout = coulombNeg(self, varargin)
+    function varargout = viscousNeg(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
@@ -85,20 +65,50 @@ classdef MotorTorqueParameters < yarpSwigRef
         yarpMEX(1636, self, varargin{1});
       end
     end
+    function varargout = coulombPos(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMEX(1637, self);
+      else
+        nargoutchk(0, 0)
+        yarpMEX(1638, self, varargin{1});
+      end
+    end
+    function varargout = coulombNeg(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMEX(1639, self);
+      else
+        nargoutchk(0, 0)
+        yarpMEX(1640, self, varargin{1});
+      end
+    end
+    function varargout = velocityThres(self, varargin)
+      narginchk(1, 2)
+      if nargin==1
+        nargoutchk(0, 1)
+        varargout{1} = yarpMEX(1641, self);
+      else
+        nargoutchk(0, 0)
+        yarpMEX(1642, self, varargin{1});
+      end
+    end
     function self = MotorTorqueParameters(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
         if ~isnull(varargin{1})
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1637, varargin{:});
+        tmp = yarpMEX(1643, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1638, self);
+        yarpMEX(1644, self);
         self.SwigClear();
       end
     end

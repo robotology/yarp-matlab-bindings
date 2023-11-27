@@ -4,7 +4,7 @@ classdef IEncodersTimedRaw < yarp.IEncodersRaw
   methods
     function delete(self)
       if self.swigPtr
-        yarpMEX(1552, self);
+        yarpMEX(1556, self);
         self.SwigClear();
       end
     end
@@ -12,13 +12,13 @@ classdef IEncodersTimedRaw < yarp.IEncodersRaw
     %Usage: retval = getEncodersTimedRaw (encs, stamps)
     %
     %encs is of type double *. stamps is of type double *. encs is of type double *. stamps is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1553, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1557, self, varargin{:});
     end
     function varargout = getEncoderTimedRaw(self,varargin)
     %Usage: retval = getEncoderTimedRaw (j, encs, stamp)
     %
     %j is of type int. encs is of type double *. stamp is of type double *. j is of type int. encs is of type double *. stamp is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1554, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1558, self, varargin{:});
     end
     function self = IEncodersTimedRaw(varargin)
       self@yarp.IEncodersRaw(yarpSwigRef.Null);
