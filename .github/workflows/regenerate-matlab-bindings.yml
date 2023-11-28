@@ -36,8 +36,6 @@ jobs:
         - name: Configure and compile YARP
           run: |
             # Install YARP dependencies
-            sudo sh -c 'echo "deb http://www.icub.org/ubuntu focal contrib/science" > /etc/apt/sources.list.d/icub.list'
-            sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 57A5ACB6110576A6
             sudo apt-get update
             sudo apt-get install build-essential git cmake cmake-curses-gui libeigen3-dev libace-dev libedit-dev libsqlite3-dev \
             libtinyxml-dev qtbase5-dev qtdeclarative5-dev qtmultimedia5-dev \
@@ -49,7 +47,7 @@ jobs:
             gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad \
             gstreamer1.0-libav liboctave-dev
             # Clone YCM
-            git clone https://github.com/robotology/ycm -b v0.15.1
+            git clone https://github.com/robotology/ycm -b v0.16.1
             cd ycm
             mkdir build
             cd build
