@@ -1,3 +1,3 @@
 function v = VOCAB_GEARBOX_RATIO()
-  v = yarpMEX(1576);
+  v = yarpMEX(1580);
 end

@@ -1,3 +1,3 @@
 function v = VOCAB_MOTOR_CPR()
-  v = yarpMEX(1615);
+  v = yarpMEX(1619);
 end

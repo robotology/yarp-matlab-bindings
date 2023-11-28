@@ -1,3 +1,3 @@
 function v = VOCAB_AMP_DISABLE()
-  v = yarpMEX(1215);
+  v = yarpMEX(1219);
 end
