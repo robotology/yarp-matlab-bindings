@@ -4,7 +4,7 @@ classdef PortablePairBase < yarp.Portable
   methods
     function delete(self)
       if self.swigPtr
-        yarpMEX(397, self);
+        yarpMEX(377, self);
         self.SwigClear();
       end
     end
@@ -24,13 +24,13 @@ classdef PortablePairBase < yarp.Portable
     %Usage: retval = readPair (connection, head, body)
     %
     %connection is of type ConnectionReader. head is of type Portable. body is of type Portable. connection is of type ConnectionReader. head is of type Portable. body is of type Portable. retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(395, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(375, varargin{:});
     end
     function varargout = writePair(varargin)
     %Usage: retval = writePair (connection, head, body)
     %
     %connection is of type ConnectionWriter. head is of type Portable. body is of type Portable. connection is of type ConnectionWriter. head is of type Portable. body is of type Portable. retval is of type bool. 
-     [varargout{1:nargout}] = yarpMEX(396, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(376, varargin{:});
     end
   end
 end
