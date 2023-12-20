@@ -1,3 +1,3 @@
 function v = VOCAB_INTERACTION_MODES()
-  v = yarpMEX(1539);
+  v = yarpMEX(1510);
 end

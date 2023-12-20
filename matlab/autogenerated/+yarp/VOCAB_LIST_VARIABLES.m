@@ -1,3 +1,3 @@
 function v = VOCAB_LIST_VARIABLES()
-  v = yarpMEX(1786);
+  v = yarpMEX(1757);
 end

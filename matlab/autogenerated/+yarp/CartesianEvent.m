@@ -7,7 +7,7 @@ classdef CartesianEvent < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1287, self);
+        yarpMEX(1258, self);
         self.SwigClear();
       end
     end
@@ -15,26 +15,26 @@ classdef CartesianEvent < yarpSwigRef
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1288, self);
+        varargout{1} = yarpMEX(1259, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1289, self, varargin{1});
+        yarpMEX(1260, self, varargin{1});
       end
     end
     function varargout = cartesianEventVariables(self, varargin)
       narginchk(1, 2)
       if nargin==1
         nargoutchk(0, 1)
-        varargout{1} = yarpMEX(1290, self);
+        varargout{1} = yarpMEX(1261, self);
       else
         nargoutchk(0, 0)
-        yarpMEX(1291, self, varargin{1});
+        yarpMEX(1262, self, varargin{1});
       end
     end
     function varargout = cartesianEventCallback(self,varargin)
     %Usage: cartesianEventCallback ()
     %
-      [varargout{1:nargout}] = yarpMEX(1292, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1263, self, varargin{:});
     end
     function self = CartesianEvent(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

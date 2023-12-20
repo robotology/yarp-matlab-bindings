@@ -11,14 +11,14 @@ classdef WireLink < yarpSwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(684, varargin{:});
+        tmp = yarpMEX(664, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(685, self);
+        yarpMEX(665, self);
         self.SwigClear();
       end
     end
@@ -26,55 +26,55 @@ classdef WireLink < yarpSwigRef
     %Usage: retval = isValid ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(686, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(666, self, varargin{:});
     end
     function varargout = setOwner(self,varargin)
     %Usage: retval = setOwner (owner)
     %
     %owner is of type PortReader. owner is of type PortReader. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(687, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(667, self, varargin{:});
     end
     function varargout = attachAsClient(self,varargin)
     %Usage: retval = attachAsClient (reader)
     %
     %reader is of type PortReader. reader is of type PortReader. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(688, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(668, self, varargin{:});
     end
     function varargout = attachAsServer(self,varargin)
     %Usage: retval = attachAsServer (port)
     %
     %port is of type UnbufferedContactable. port is of type UnbufferedContactable. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(689, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(669, self, varargin{:});
     end
     function varargout = setStreamingMode(self,varargin)
     %Usage: retval = setStreamingMode (streaming)
     %
     %streaming is of type bool. streaming is of type bool. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(690, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(670, self, varargin{:});
     end
     function varargout = write(self,varargin)
     %Usage: retval = write (writer, reader)
     %
     %writer is of type PortWriter. reader is of type PortReader. writer is of type PortWriter. reader is of type PortReader. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(691, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(671, self, varargin{:});
     end
     function varargout = callback(self,varargin)
     %Usage: retval = callback (writer, reader)
     %
     %writer is of type PortWriter. reader is of type PortReader. writer is of type PortWriter. reader is of type PortReader. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(692, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(672, self, varargin{:});
     end
     function varargout = canWrite(self,varargin)
     %Usage: retval = canWrite ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(693, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(673, self, varargin{:});
     end
     function varargout = canRead(self,varargin)
     %Usage: retval = canRead ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(694, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(674, self, varargin{:});
     end
   end
   methods(Static)
