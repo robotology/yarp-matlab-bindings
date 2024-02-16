@@ -17,28 +17,28 @@ classdef ILLM < yarpSwigRef
     %prompt is of type std::string const &. prompt is of type std::string const &. retval is of type bool. 
       [varargout{1:nargout}] = yarpMEX(1834, self, varargin{:});
     end
+    function varargout = ask(self,varargin)
+    %Usage: retval = ask (question, answer)
+    %
+    %question is of type std::string const &. answer is of type yarp::dev::LLM_Message &. question is of type std::string const &. answer is of type yarp::dev::LLM_Message &. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1835, self, varargin{:});
+    end
     function varargout = getConversation(self,varargin)
     %Usage: retval = getConversation (conversation)
     %
-    %conversation is of type SPairVector. conversation is of type SPairVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1835, self, varargin{:});
+    %conversation is of type std::vector< yarp::dev::LLM_Message,std::allocator< yarp::dev::LLM_Message > > &. conversation is of type std::vector< yarp::dev::LLM_Message,std::allocator< yarp::dev::LLM_Message > > &. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1836, self, varargin{:});
     end
     function varargout = deleteConversation(self,varargin)
     %Usage: retval = deleteConversation ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1836, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1837, self, varargin{:});
     end
     function varargout = readPrompt(self,varargin)
     %Usage: retval = readPrompt (oPropmt)
     %
     %oPropmt is of type std::vector< std::string,std::allocator< std::string > > &. oPropmt is of type std::vector< std::string,std::allocator< std::string > > &. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1837, self, varargin{:});
-    end
-    function varargout = ask(self,varargin)
-    %Usage: retval = ask (question, answer)
-    %
-    %question is of type std::string const &. answer is of type std::vector< std::string,std::allocator< std::string > > &. question is of type std::string const &. answer is of type std::vector< std::string,std::allocator< std::string > > &. retval is of type bool. 
       [varargout{1:nargout}] = yarpMEX(1838, self, varargin{:});
     end
     function self = ILLM(varargin)
