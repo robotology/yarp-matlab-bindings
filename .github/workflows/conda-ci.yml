@@ -25,7 +25,7 @@ jobs:
       with:
         miniforge-variant: Mambaforge
         miniforge-version: latest
-        channels: conda-forge,robotology
+        channels: conda-forge
 
     - name: Install files to enable compilation of mex files [Conda/Linux]
       if: contains(matrix.os, 'ubuntu') 
