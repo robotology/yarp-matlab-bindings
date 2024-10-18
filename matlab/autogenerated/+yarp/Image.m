@@ -145,18 +145,6 @@ classdef Image < yarp.Portable
     %imgQuantum is of type size_t. 
       [varargout{1:nargout}] = yarpMEX(841, self, varargin{:});
     end
-    function varargout = topIsLowIndex(self,varargin)
-    %Usage: retval = topIsLowIndex ()
-    %
-    %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(842, self, varargin{:});
-    end
-    function varargout = setTopIsLowIndex(self,varargin)
-    %Usage: setTopIsLowIndex (flag)
-    %
-    %flag is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(843, self, varargin{:});
-    end
     function varargout = getRowArray(self,varargin)
     %Usage: retval = getRowArray ()
     %
