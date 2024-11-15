@@ -9,17 +9,17 @@ classdef Drivers < yarpSwigRef
     %Usage: retval = open (config)
     %
     %config is of type Searchable. config is of type Searchable. retval is of type DeviceDriver. 
-      [varargout{1:nargout}] = yarpMEX(1087, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1086, self, varargin{:});
     end
     function varargout = toString_c(self,varargin)
     %Usage: retval = toString_c ()
     %
     %retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1088, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1087, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1089, self);
+        yarpMEX(1088, self);
         self.SwigClear();
       end
     end
@@ -27,19 +27,19 @@ classdef Drivers < yarpSwigRef
     %Usage: add (creator)
     %
     %creator is of type DriverCreator. 
-      [varargout{1:nargout}] = yarpMEX(1090, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1089, self, varargin{:});
     end
     function varargout = find(self,varargin)
     %Usage: retval = find (name)
     %
     %name is of type char const *. name is of type char const *. retval is of type DriverCreator. 
-      [varargout{1:nargout}] = yarpMEX(1091, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1090, self, varargin{:});
     end
     function varargout = remove(self,varargin)
     %Usage: retval = remove (name)
     %
     %name is of type char const *. name is of type char const *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1092, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1091, self, varargin{:});
     end
     function self = Drivers(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
@@ -56,13 +56,13 @@ classdef Drivers < yarpSwigRef
     %Usage: retval = factory ()
     %
     %retval is of type Drivers. 
-     [varargout{1:nargout}] = yarpMEX(1086, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(1085, varargin{:});
     end
     function varargout = yarpdev(varargin)
     %Usage: retval = yarpdev (argc, argv)
     %
     %argc is of type int. argv is of type char *[]. argc is of type int. argv is of type char *[]. retval is of type int. 
-     [varargout{1:nargout}] = yarpMEX(1093, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(1092, varargin{:});
     end
   end
 end

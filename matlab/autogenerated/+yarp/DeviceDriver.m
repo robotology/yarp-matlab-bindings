@@ -11,14 +11,14 @@ classdef DeviceDriver < yarpSwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1009, varargin{:});
+        tmp = yarpMEX(1008, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1010, self);
+        yarpMEX(1009, self);
         self.SwigClear();
       end
     end
@@ -26,31 +26,31 @@ classdef DeviceDriver < yarpSwigRef
     %Usage: retval = open (config)
     %
     %config is of type Searchable. config is of type Searchable. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1011, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1010, self, varargin{:});
     end
     function varargout = close(self,varargin)
     %Usage: retval = close ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1012, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1011, self, varargin{:});
     end
     function varargout = id(self,varargin)
     %Usage: retval = id ()
     %
     %retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1013, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1012, self, varargin{:});
     end
     function varargout = setId(self,varargin)
     %Usage: setId (id)
     %
     %id is of type std::string const &. 
-      [varargout{1:nargout}] = yarpMEX(1014, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1013, self, varargin{:});
     end
     function varargout = getImplementation(self,varargin)
     %Usage: retval = getImplementation ()
     %
     %retval is of type DeviceDriver. 
-      [varargout{1:nargout}] = yarpMEX(1015, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1014, self, varargin{:});
     end
   end
   methods(Static)

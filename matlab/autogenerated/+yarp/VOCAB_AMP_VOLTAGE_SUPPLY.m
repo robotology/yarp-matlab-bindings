@@ -1,3 +1,3 @@
 function v = VOCAB_AMP_VOLTAGE_SUPPLY()
-  v = yarpMEX(1200);
+  v = yarpMEX(1199);
 end
