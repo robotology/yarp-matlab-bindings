@@ -15,6 +15,7 @@ jobs:
         - name: Install SWIG for that supports MATLAB
           run: |
             sudo apt-get remove swig swig4.0
+            sudo apt-get install build-essential libpcre2-dev
             cd ..
             git clone https://github.com/KrisThielemans/swig
             cd swig
