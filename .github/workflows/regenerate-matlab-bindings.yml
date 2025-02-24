@@ -46,7 +46,7 @@ jobs:
             qml-module-qt-labs-settings libqcustomplot-dev libgraphviz-dev \
             libjpeg-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
             gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad \
-            gstreamer1.0-libav liboctave-dev
+            gstreamer1.0-libav octave-dev
             # Clone YCM
             git clone https://github.com/robotology/ycm -b v0.16.1
             cd ycm
