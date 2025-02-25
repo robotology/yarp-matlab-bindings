@@ -1,3 +1,3 @@
 function v = VOCAB_IJOINTFAULT()
-  v = yarpMEX(1524);
+  v = yarpMEX(1525);
 end
