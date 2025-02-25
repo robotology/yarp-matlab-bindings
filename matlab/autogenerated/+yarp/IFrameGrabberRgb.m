@@ -7,7 +7,7 @@ classdef IFrameGrabberRgb < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1904, self);
+        yarpMEX(1917, self);
         self.SwigClear();
       end
     end
@@ -15,19 +15,19 @@ classdef IFrameGrabberRgb < yarpSwigRef
     %Usage: retval = getRgbBuffer (buffer)
     %
     %buffer is of type unsigned char *. buffer is of type unsigned char *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1905, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1918, self, varargin{:});
     end
     function varargout = height(self,varargin)
     %Usage: retval = height ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1906, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1919, self, varargin{:});
     end
     function varargout = width(self,varargin)
     %Usage: retval = width ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1907, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1920, self, varargin{:});
     end
     function self = IFrameGrabberRgb(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

@@ -1,3 +1,3 @@
 function v = VOCAB_MOTORS_NUMBER()
-  v = yarpMEX(1548);
+  v = yarpMEX(1549);
 end

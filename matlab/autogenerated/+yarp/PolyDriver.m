@@ -230,59 +230,65 @@ classdef PolyDriver < yarp.DeviceDriver
     %retval is of type ILLM. 
       [varargout{1:nargout}] = yarpMEX(1061, self, varargin{:});
     end
+    function varargout = viewIFrameTransform(self,varargin)
+    %Usage: retval = viewIFrameTransform ()
+    %
+    %retval is of type yarp::dev::IFrameTransform *. 
+      [varargout{1:nargout}] = yarpMEX(1062, self, varargin{:});
+    end
     function varargout = viewIThreeAxisGyroscopes(self,varargin)
     %Usage: retval = viewIThreeAxisGyroscopes ()
     %
     %retval is of type IThreeAxisGyroscopes. 
-      [varargout{1:nargout}] = yarpMEX(1062, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1063, self, varargin{:});
     end
     function varargout = viewIThreeAxisLinearAccelerometers(self,varargin)
     %Usage: retval = viewIThreeAxisLinearAccelerometers ()
     %
     %retval is of type IThreeAxisLinearAccelerometers. 
-      [varargout{1:nargout}] = yarpMEX(1063, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1064, self, varargin{:});
     end
     function varargout = viewIThreeAxisMagnetometers(self,varargin)
     %Usage: retval = viewIThreeAxisMagnetometers ()
     %
     %retval is of type IThreeAxisMagnetometers. 
-      [varargout{1:nargout}] = yarpMEX(1064, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1065, self, varargin{:});
     end
     function varargout = viewIOrientationSensors(self,varargin)
     %Usage: retval = viewIOrientationSensors ()
     %
     %retval is of type IOrientationSensors. 
-      [varargout{1:nargout}] = yarpMEX(1065, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1066, self, varargin{:});
     end
     function varargout = viewITemperatureSensors(self,varargin)
     %Usage: retval = viewITemperatureSensors ()
     %
     %retval is of type ITemperatureSensors. 
-      [varargout{1:nargout}] = yarpMEX(1066, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1067, self, varargin{:});
     end
     function varargout = viewISixAxisForceTorqueSensors(self,varargin)
     %Usage: retval = viewISixAxisForceTorqueSensors ()
     %
     %retval is of type ISixAxisForceTorqueSensors. 
-      [varargout{1:nargout}] = yarpMEX(1067, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1068, self, varargin{:});
     end
     function varargout = viewIContactLoadCellArrays(self,varargin)
     %Usage: retval = viewIContactLoadCellArrays ()
     %
     %retval is of type IContactLoadCellArrays. 
-      [varargout{1:nargout}] = yarpMEX(1068, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1069, self, varargin{:});
     end
     function varargout = viewIEncoderArrays(self,varargin)
     %Usage: retval = viewIEncoderArrays ()
     %
     %retval is of type IEncoderArrays. 
-      [varargout{1:nargout}] = yarpMEX(1069, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1070, self, varargin{:});
     end
     function varargout = viewISkinPatches(self,varargin)
     %Usage: retval = viewISkinPatches ()
     %
     %retval is of type ISkinPatches. 
-      [varargout{1:nargout}] = yarpMEX(1070, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1071, self, varargin{:});
     end
   end
   methods(Static)
