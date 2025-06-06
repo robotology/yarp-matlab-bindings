@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(yarp-matlab-bindings VERSION 3.12.0)
+project(yarp-matlab-bindings VERSION 3.100.100)
 
 # for FindMatlab.cmake and UseSwig
 # UseSwig version: https://gitlab.kitware.com/cmake/cmake/raw/v3.10.2/Modules/UseSWIG.cmake
