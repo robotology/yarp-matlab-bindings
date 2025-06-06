@@ -71,7 +71,7 @@ jobs:
       if: contains(matrix.os, 'macos') || contains(matrix.os, 'ubuntu')
       shell: bash -l {0}
       run: |
-        git clone https://github.com/robotology/yarp
+        git clone https://github.com/robotology/yarp -b v3.12.0
         cd yarp
         mkdir build
         cd build
@@ -83,7 +83,7 @@ jobs:
       if: contains(matrix.os, 'windows')
       shell: cmd /C CALL {0}
       run: |
-        git clone https://github.com/robotology/yarp
+        git clone https://github.com/robotology/yarp -b v3.12.0
         cd yarp
         mkdir build
         cd build
