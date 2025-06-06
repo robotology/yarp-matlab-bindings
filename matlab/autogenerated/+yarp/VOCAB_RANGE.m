@@ -1,3 +1,3 @@
 function v = VOCAB_RANGE()
-  v = yarpMEX(1647);
+  v = yarpMEX(1648);
 end
