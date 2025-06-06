@@ -81,13 +81,13 @@ jobs:
                 
     - name:  Install YARP [Conda/Windows]
       if: contains(matrix.os, 'windows')
-      shell: bash -l {0}
+      shell: cmd /C CALL {0}
       run: |
         git clone https://github.com/robotology/yarp
         cd yarp
         mkdir build
         cd build
-        cmake -G"Visual Studio 16 2019" -DCMAKE_INSTALL_PREFIX=${CONDA_PREFIX}/Library -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DYARP_COMPILE_EXECUTABLES:BOOL=OFF ..
+        cmake -G"Ninja" -DCMAKE_INSTALL_PREFIX=%CONDA_PREFIX%\Library -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DYARP_COMPILE_EXECUTABLES:BOOL=OFF ..
         cmake --build . --config ${{ matrix.build_type }}        
         cmake --install . --config ${{ matrix.build_type }}
 
@@ -105,7 +105,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake -G"Ninja"  -DCMAKE_INSTALL_PREFIX=%CONDA_PREFIX%\Library -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DMATLAB_FIND_DEBUG:BOOL=ON  -DYARP_USES_MATLAB:BOOL=ON -DMatlab_ROOT_DIR=${GHA_Matlab_ROOT_DIR} -DMatlab_MEX_EXTENSION:STRING=${GHA_Matlab_MEX_EXTENSION} ..
+        cmake -G"Ninja"  -DCMAKE_INSTALL_PREFIX=%CONDA_PREFIX%\Library -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DMATLAB_FIND_DEBUG:BOOL=ON  -DYARP_USES_MATLAB:BOOL=ON -DMatlab_ROOT_DIR=%GHA_Matlab_ROOT_DIR% -DMatlab_MEX_EXTENSION:STRING=%GHA_Matlab_MEX_EXTENSION% ..
 
     - name: Build [Conda/Linux&macOS]
       if: contains(matrix.os, 'macos') || contains(matrix.os, 'ubuntu')
