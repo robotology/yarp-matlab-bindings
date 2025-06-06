@@ -7,7 +7,7 @@ classdef TypedReaderCallbackImageMono16 < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(2333, self);
+        yarpMEX(2378, self);
         self.SwigClear();
       end
     end
@@ -15,7 +15,7 @@ classdef TypedReaderCallbackImageMono16 < yarpSwigRef
     %Usage: onRead (datum, reader)
     %
     %datum is of type ImageMono16. reader is of type TypedReaderImageMono16. 
-      [varargout{1:nargout}] = yarpMEX(2334, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(2379, self, varargin{:});
     end
     function self = TypedReaderCallbackImageMono16(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
@@ -23,7 +23,7 @@ classdef TypedReaderCallbackImageMono16 < yarpSwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(2335, varargin{:});
+        tmp = yarpMEX(2380, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end

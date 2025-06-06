@@ -9,35 +9,35 @@ classdef IPositionSensors < yarpSwigRef
     %Usage: retval = getNrOfPositionSensors ()
     %
     %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1864, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1865, self, varargin{:});
     end
     function varargout = getPositionSensorStatus(self,varargin)
     %Usage: retval = getPositionSensorStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1865, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1866, self, varargin{:});
     end
     function varargout = getPositionSensorName(self,varargin)
     %Usage: retval = getPositionSensorName (sens_index, name)
     %
     %sens_index is of type size_t. name is of type std::string &. sens_index is of type size_t. name is of type std::string &. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1866, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1867, self, varargin{:});
     end
     function varargout = getPositionSensorFrameName(self,varargin)
     %Usage: retval = getPositionSensorFrameName (sens_index, frameName)
     %
     %sens_index is of type size_t. frameName is of type std::string &. sens_index is of type size_t. frameName is of type std::string &. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1867, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1868, self, varargin{:});
     end
     function varargout = getPositionSensorMeasure(self,varargin)
     %Usage: retval = getPositionSensorMeasure (sens_index, xyz, timestamp)
     %
     %sens_index is of type size_t. xyz is of type Vector. timestamp is of type double &. sens_index is of type size_t. xyz is of type Vector. timestamp is of type double &. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1868, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1869, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1869, self);
+        yarpMEX(1870, self);
         self.SwigClear();
       end
     end
