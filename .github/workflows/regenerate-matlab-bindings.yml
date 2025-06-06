@@ -48,7 +48,7 @@ jobs:
             gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad \
             gstreamer1.0-libav octave-dev libopenmpi-dev
             # Clone YCM
-            git clone https://github.com/robotology/ycm -b v0.16.1
+            git clone https://github.com/robotology/ycm -b v0.18.3
             cd ycm
             mkdir build
             cd build
