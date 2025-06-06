@@ -1,3 +1,3 @@
 function v = VOCAB_RELATIVE_MOVE_GROUP()
-  v = yarpMEX(1439);
+  v = yarpMEX(1435);
 end

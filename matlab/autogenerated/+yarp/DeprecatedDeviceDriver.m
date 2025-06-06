@@ -9,14 +9,14 @@ classdef DeprecatedDeviceDriver < yarp.DeviceDriver
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(1015, varargin{:});
+        tmp = yarpMEX(1010, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1016, self);
+        yarpMEX(1011, self);
         self.SwigClear();
       end
     end

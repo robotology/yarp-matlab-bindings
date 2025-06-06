@@ -6,19 +6,19 @@ classdef FlexImage < yarp.Image
     %Usage: setPixelCode (imgPixelCode)
     %
     %imgPixelCode is of type int. 
-      [varargout{1:nargout}] = yarpMEX(844, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(839, self, varargin{:});
     end
     function varargout = setPixelSize(self,varargin)
     %Usage: setPixelSize (imgPixelSize)
     %
     %imgPixelSize is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(845, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(840, self, varargin{:});
     end
     function varargout = setQuantum(self,varargin)
     %Usage: setQuantum (imgQuantum)
     %
     %imgQuantum is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(846, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(841, self, varargin{:});
     end
     function self = FlexImage(varargin)
       self@yarp.Image(yarpSwigRef.Null);
@@ -27,14 +27,14 @@ classdef FlexImage < yarp.Image
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(847, varargin{:});
+        tmp = yarpMEX(842, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(848, self);
+        yarpMEX(843, self);
         self.SwigClear();
       end
     end

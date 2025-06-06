@@ -145,66 +145,60 @@ classdef Contactable < yarpSwigRef
     %prop is of type Property. 
       [varargout{1:nargout}] = yarpMEX(227, self, varargin{:});
     end
-    function varargout = includeNodeInName(self,varargin)
-    %Usage: includeNodeInName (flag)
-    %
-    %flag is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(228, self, varargin{:});
-    end
     function varargout = setReadOnly(self,varargin)
     %Usage: setReadOnly ()
     %
-      [varargout{1:nargout}] = yarpMEX(229, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(228, self, varargin{:});
     end
     function varargout = setWriteOnly(self,varargin)
     %Usage: setWriteOnly ()
     %
-      [varargout{1:nargout}] = yarpMEX(230, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(229, self, varargin{:});
     end
     function varargout = setRpcServer(self,varargin)
     %Usage: setRpcServer ()
     %
-      [varargout{1:nargout}] = yarpMEX(231, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(230, self, varargin{:});
     end
     function varargout = setRpcClient(self,varargin)
     %Usage: setRpcClient ()
     %
-      [varargout{1:nargout}] = yarpMEX(232, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(231, self, varargin{:});
     end
     function varargout = setCallbackLock(self,varargin)
     %Usage: retval = setCallbackLock ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(233, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(232, self, varargin{:});
     end
     function varargout = removeCallbackLock(self,varargin)
     %Usage: retval = removeCallbackLock ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(234, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(233, self, varargin{:});
     end
     function varargout = lockCallback(self,varargin)
     %Usage: retval = lockCallback ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(235, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(234, self, varargin{:});
     end
     function varargout = tryLockCallback(self,varargin)
     %Usage: retval = tryLockCallback ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(236, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(235, self, varargin{:});
     end
     function varargout = unlockCallback(self,varargin)
     %Usage: unlockCallback ()
     %
-      [varargout{1:nargout}] = yarpMEX(237, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(236, self, varargin{:});
     end
     function varargout = setEnvelope(self,varargin)
     %Usage: retval = setEnvelope (data)
     %
     %data is of type Portable. data is of type Portable. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(238, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(237, self, varargin{:});
     end
     function self = Contactable(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

@@ -11,7 +11,7 @@ classdef QosStyle < yarpSwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(622, varargin{:});
+        tmp = yarpMEX(619, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
@@ -20,71 +20,71 @@ classdef QosStyle < yarpSwigRef
     %Usage: setPacketPriorityByDscp (dscp)
     %
     %dscp is of type yarp::os::QosStyle::PacketPriorityDSCP. 
-      [varargout{1:nargout}] = yarpMEX(623, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(620, self, varargin{:});
     end
     function varargout = setPacketPriorityByLevel(self,varargin)
     %Usage: setPacketPriorityByLevel (level)
     %
     %level is of type yarp::os::QosStyle::PacketPriorityLevel. 
-      [varargout{1:nargout}] = yarpMEX(624, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(621, self, varargin{:});
     end
     function varargout = setPacketPrioritybyTOS(self,varargin)
     %Usage: setPacketPrioritybyTOS (tos)
     %
     %tos is of type int. 
-      [varargout{1:nargout}] = yarpMEX(625, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(622, self, varargin{:});
     end
     function varargout = setPacketPriority(self,varargin)
     %Usage: retval = setPacketPriority (priority)
     %
     %priority is of type std::string const &. priority is of type std::string const &. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(626, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(623, self, varargin{:});
     end
     function varargout = setThreadPriority(self,varargin)
     %Usage: setThreadPriority (priority)
     %
     %priority is of type int. 
-      [varargout{1:nargout}] = yarpMEX(627, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(624, self, varargin{:});
     end
     function varargout = setThreadPolicy(self,varargin)
     %Usage: setThreadPolicy (policy)
     %
     %policy is of type int. 
-      [varargout{1:nargout}] = yarpMEX(628, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(625, self, varargin{:});
     end
     function varargout = getPacketPriorityAsTOS(self,varargin)
     %Usage: retval = getPacketPriorityAsTOS ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(629, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(626, self, varargin{:});
     end
     function varargout = getPacketPriorityAsDSCP(self,varargin)
     %Usage: retval = getPacketPriorityAsDSCP ()
     %
     %retval is of type yarp::os::QosStyle::PacketPriorityDSCP. 
-      [varargout{1:nargout}] = yarpMEX(630, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(627, self, varargin{:});
     end
     function varargout = getPacketPriorityAsLevel(self,varargin)
     %Usage: retval = getPacketPriorityAsLevel ()
     %
     %retval is of type yarp::os::QosStyle::PacketPriorityLevel. 
-      [varargout{1:nargout}] = yarpMEX(631, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(628, self, varargin{:});
     end
     function varargout = getThreadPriority(self,varargin)
     %Usage: retval = getThreadPriority ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(632, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(629, self, varargin{:});
     end
     function varargout = getThreadPolicy(self,varargin)
     %Usage: retval = getThreadPolicy ()
     %
     %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(633, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(630, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(636, self);
+        yarpMEX(633, self);
         self.SwigClear();
       end
     end
@@ -304,13 +304,13 @@ classdef QosStyle < yarpSwigRef
     %Usage: retval = getDSCPByVocab (vocab)
     %
     %vocab is of type yarp::conf::vocab32_t. vocab is of type yarp::conf::vocab32_t. retval is of type yarp::os::QosStyle::PacketPriorityDSCP. 
-     [varargout{1:nargout}] = yarpMEX(634, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(631, varargin{:});
     end
     function varargout = getLevelByVocab(varargin)
     %Usage: retval = getLevelByVocab (vocab)
     %
     %vocab is of type yarp::conf::vocab32_t. vocab is of type yarp::conf::vocab32_t. retval is of type yarp::os::QosStyle::PacketPriorityLevel. 
-     [varargout{1:nargout}] = yarpMEX(635, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(632, varargin{:});
     end
   end
 end
