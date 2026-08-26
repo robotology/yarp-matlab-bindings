@@ -1,6 +1,6 @@
 function varargout = write(varargin)
-    %Usage: retval = write (src, dest)
+    %Usage: retval = write (data, filename)
     %
-    %src is of type Image. dest is of type std::string const &. src is of type Image. dest is of type std::string const &. retval is of type bool. 
-  [varargout{1:nargout}] = yarpMEX(921, varargin{:});
+    %data is of type Sound. filename is of type char const *. data is of type Sound. filename is of type char const *. retval is of type bool. 
+  [varargout{1:nargout}] = yarpMEX(850, varargin{:});
 end

@@ -7,7 +7,7 @@ classdef PortWriter < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(130, self);
+        yarpMEX(127, self);
         self.SwigClear();
       end
     end
@@ -15,23 +15,23 @@ classdef PortWriter < yarpSwigRef
     %Usage: retval = write (writer)
     %
     %writer is of type ConnectionWriter. writer is of type ConnectionWriter. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(131, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(128, self, varargin{:});
     end
     function varargout = onCompletion(self,varargin)
     %Usage: onCompletion ()
     %
-      [varargout{1:nargout}] = yarpMEX(132, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(129, self, varargin{:});
     end
     function varargout = onCommencement(self,varargin)
     %Usage: onCommencement ()
     %
-      [varargout{1:nargout}] = yarpMEX(133, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(130, self, varargin{:});
     end
     function varargout = getWriteType(self,varargin)
     %Usage: retval = getWriteType ()
     %
     %retval is of type Type. 
-      [varargout{1:nargout}] = yarpMEX(134, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(131, self, varargin{:});
     end
     function self = PortWriter(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

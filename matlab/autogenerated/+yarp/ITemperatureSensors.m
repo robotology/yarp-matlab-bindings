@@ -6,20 +6,20 @@ classdef ITemperatureSensors < yarpSwigRef
       this = yarpMEX(3, self);
     end
     function varargout = getNrOfTemperatureSensors(self,varargin)
-    %Usage: retval = getNrOfTemperatureSensors ()
+    %Usage: retval = getNrOfTemperatureSensors (num)
     %
-    %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1878, self, varargin{:});
+    %num is of type size_t &. num is of type size_t &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1824, self, varargin{:});
     end
     function varargout = getTemperatureSensorStatus(self,varargin)
     %Usage: retval = getTemperatureSensorStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1879, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1825, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1880, self);
+        yarpMEX(1826, self);
         self.SwigClear();
       end
     end
@@ -27,19 +27,19 @@ classdef ITemperatureSensors < yarpSwigRef
     %Usage: retval = getTemperatureSensorName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1881, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1827, self, varargin{:});
     end
     function varargout = getTemperatureSensorFrameName(self,varargin)
     %Usage: retval = getTemperatureSensorFrameName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1882, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1828, self, varargin{:});
     end
     function varargout = getTemperatureSensorMeasure(self,varargin)
     %Usage: retval = getTemperatureSensorMeasure (sens_index, out)
     %
     %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1883, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1829, self, varargin{:});
     end
     function self = ITemperatureSensors(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

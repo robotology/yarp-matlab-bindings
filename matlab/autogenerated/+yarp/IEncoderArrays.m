@@ -6,26 +6,26 @@ classdef IEncoderArrays < yarpSwigRef
       this = yarpMEX(3, self);
     end
     function varargout = getNrOfEncoderArrays(self,varargin)
-    %Usage: retval = getNrOfEncoderArrays ()
+    %Usage: retval = getNrOfEncoderArrays (num)
     %
-    %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1896, self, varargin{:});
+    %num is of type size_t &. num is of type size_t &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1842, self, varargin{:});
     end
     function varargout = getEncoderArrayStatus(self,varargin)
     %Usage: retval = getEncoderArrayStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1897, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1843, self, varargin{:});
     end
     function varargout = getEncoderArraySize(self,varargin)
     %Usage: retval = getEncoderArraySize (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1898, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1844, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1899, self);
+        yarpMEX(1845, self);
         self.SwigClear();
       end
     end
@@ -33,13 +33,13 @@ classdef IEncoderArrays < yarpSwigRef
     %Usage: retval = getEncoderArrayName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1900, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1846, self, varargin{:});
     end
     function varargout = getEncoderArrayMeasure(self,varargin)
     %Usage: retval = getEncoderArrayMeasure (sens_index, out)
     %
     %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1901, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1847, self, varargin{:});
     end
     function self = IEncoderArrays(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

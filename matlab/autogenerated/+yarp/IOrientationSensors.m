@@ -6,20 +6,20 @@ classdef IOrientationSensors < yarpSwigRef
       this = yarpMEX(3, self);
     end
     function varargout = getNrOfOrientationSensors(self,varargin)
-    %Usage: retval = getNrOfOrientationSensors ()
+    %Usage: retval = getNrOfOrientationSensors (num)
     %
-    %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1872, self, varargin{:});
+    %num is of type size_t &. num is of type size_t &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1818, self, varargin{:});
     end
     function varargout = getOrientationSensorStatus(self,varargin)
     %Usage: retval = getOrientationSensorStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1873, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1819, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1874, self);
+        yarpMEX(1820, self);
         self.SwigClear();
       end
     end
@@ -27,19 +27,19 @@ classdef IOrientationSensors < yarpSwigRef
     %Usage: retval = getOrientationSensorName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1875, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1821, self, varargin{:});
     end
     function varargout = getOrientationSensorFrameName(self,varargin)
     %Usage: retval = getOrientationSensorFrameName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1876, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1822, self, varargin{:});
     end
     function varargout = getOrientationSensorMeasureAsRollPitchYaw(self,varargin)
     %Usage: retval = getOrientationSensorMeasureAsRollPitchYaw (sens_index, rpy)
     %
     %sens_index is of type int. rpy is of type Vector. sens_index is of type int. rpy is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1877, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1823, self, varargin{:});
     end
     function self = IOrientationSensors(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

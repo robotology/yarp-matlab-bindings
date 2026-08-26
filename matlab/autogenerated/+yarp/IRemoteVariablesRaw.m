@@ -7,27 +7,27 @@ classdef IRemoteVariablesRaw < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1743, self);
+        yarpMEX(1674, self);
         self.SwigClear();
       end
     end
     function varargout = getRemoteVariableRaw(self,varargin)
     %Usage: retval = getRemoteVariableRaw (key, val)
     %
-    %key is of type std::string. val is of type Bottle. key is of type std::string. val is of type Bottle. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1744, self, varargin{:});
+    %key is of type std::string. val is of type Bottle. key is of type std::string. val is of type Bottle. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1675, self, varargin{:});
     end
     function varargout = setRemoteVariableRaw(self,varargin)
     %Usage: retval = setRemoteVariableRaw (key, val)
     %
-    %key is of type std::string. val is of type Bottle. key is of type std::string. val is of type Bottle. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1745, self, varargin{:});
+    %key is of type std::string. val is of type Bottle. key is of type std::string. val is of type Bottle. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1676, self, varargin{:});
     end
     function varargout = getRemoteVariablesListRaw(self,varargin)
     %Usage: retval = getRemoteVariablesListRaw (listOfKeys)
     %
-    %listOfKeys is of type Bottle. listOfKeys is of type Bottle. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1746, self, varargin{:});
+    %listOfKeys is of type Bottle. listOfKeys is of type Bottle. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1677, self, varargin{:});
     end
     function self = IRemoteVariablesRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

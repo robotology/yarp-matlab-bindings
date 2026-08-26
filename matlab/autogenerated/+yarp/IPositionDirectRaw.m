@@ -7,39 +7,39 @@ classdef IPositionDirectRaw < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1806, self);
+        yarpMEX(1749, self);
         self.SwigClear();
       end
     end
     function varargout = getAxes(self,varargin)
     %Usage: retval = getAxes (axes)
     %
-    %axes is of type int *. axes is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1807, self, varargin{:});
+    %axes is of type size_t &. axes is of type size_t &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1750, self, varargin{:});
     end
     function varargout = setPositionRaw(self,varargin)
     %Usage: retval = setPositionRaw (j, ref)
     %
-    %j is of type int. ref is of type double. j is of type int. ref is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1808, self, varargin{:});
+    %j is of type int. ref is of type double. j is of type int. ref is of type double. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1751, self, varargin{:});
     end
     function varargout = setPositionsRaw(self,varargin)
     %Usage: retval = setPositionsRaw (refs)
     %
-    %refs is of type double const *. refs is of type double const *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1809, self, varargin{:});
+    %refs is of type double const *. refs is of type double const *. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1752, self, varargin{:});
     end
     function varargout = getRefPositionRaw(self,varargin)
     %Usage: retval = getRefPositionRaw (joint, ref)
     %
-    %joint is of type int const. ref is of type double *. joint is of type int const. ref is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1810, self, varargin{:});
+    %joint is of type int const. ref is of type double *. joint is of type int const. ref is of type double *. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1753, self, varargin{:});
     end
     function varargout = getRefPositionsRaw(self,varargin)
     %Usage: retval = getRefPositionsRaw (n_joint, joints, refs)
     %
-    %n_joint is of type int const. joints is of type int const *. refs is of type double *. n_joint is of type int const. joints is of type int const *. refs is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1811, self, varargin{:});
+    %n_joint is of type int const. joints is of type int const *. refs is of type double *. n_joint is of type int const. joints is of type int const *. refs is of type double *. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1754, self, varargin{:});
     end
     function self = IPositionDirectRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

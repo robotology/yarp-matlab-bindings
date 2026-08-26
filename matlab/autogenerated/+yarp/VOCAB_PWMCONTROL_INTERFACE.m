@@ -1,3 +1,3 @@
 function v = VOCAB_PWMCONTROL_INTERFACE()
-  v = yarpMEX(1705);
+  v = yarpMEX(1636);
 end

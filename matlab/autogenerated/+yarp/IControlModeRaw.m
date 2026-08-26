@@ -7,33 +7,39 @@ classdef IControlModeRaw < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1477, self);
+        yarpMEX(1398, self);
         self.SwigClear();
       end
+    end
+    function varargout = getAvailableControlModesRaw(self,varargin)
+    %Usage: retval = getAvailableControlModesRaw (j, avail)
+    %
+    %j is of type int. avail is of type std::vector< yarp::dev::SelectableControlModeEnum,std::allocator< yarp::dev::SelectableControlModeEnum > > &. j is of type int. avail is of type std::vector< yarp::dev::SelectableControlModeEnum,std::allocator< yarp::dev::SelectableControlModeEnum > > &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1399, self, varargin{:});
     end
     function varargout = getControlModeRaw(self,varargin)
     %Usage: retval = getControlModeRaw (j, mode)
     %
-    %j is of type int. mode is of type int *. j is of type int. mode is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1478, self, varargin{:});
+    %j is of type int. mode is of type yarp::dev::ControlModeEnum &. j is of type int. mode is of type yarp::dev::ControlModeEnum &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1400, self, varargin{:});
     end
     function varargout = getControlModesRaw(self,varargin)
-    %Usage: retval = getControlModesRaw (n_joint, joints, modes)
+    %Usage: retval = getControlModesRaw (joints, mode)
     %
-    %n_joint is of type int const. joints is of type int const *. modes is of type int *. n_joint is of type int const. joints is of type int const *. modes is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1479, self, varargin{:});
+    %joints is of type IVector. mode is of type std::vector< yarp::dev::ControlModeEnum,std::allocator< yarp::dev::ControlModeEnum > > &. joints is of type IVector. mode is of type std::vector< yarp::dev::ControlModeEnum,std::allocator< yarp::dev::ControlModeEnum > > &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1401, self, varargin{:});
     end
     function varargout = setControlModeRaw(self,varargin)
     %Usage: retval = setControlModeRaw (j, mode)
     %
-    %j is of type int const. mode is of type int const. j is of type int const. mode is of type int const. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1480, self, varargin{:});
+    %j is of type int. mode is of type yarp::dev::SelectableControlModeEnum. j is of type int. mode is of type yarp::dev::SelectableControlModeEnum. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1402, self, varargin{:});
     end
     function varargout = setControlModesRaw(self,varargin)
-    %Usage: retval = setControlModesRaw (modes)
+    %Usage: retval = setControlModesRaw (mode)
     %
-    %modes is of type int *. modes is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1481, self, varargin{:});
+    %mode is of type std::vector< yarp::dev::SelectableControlModeEnum,std::allocator< yarp::dev::SelectableControlModeEnum > > const &. mode is of type std::vector< yarp::dev::SelectableControlModeEnum,std::allocator< yarp::dev::SelectableControlModeEnum > > const &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1403, self, varargin{:});
     end
     function self = IControlModeRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

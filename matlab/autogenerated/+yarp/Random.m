@@ -11,36 +11,42 @@ classdef Random < yarpSwigRef
           self.swigPtr = varargin{1}.swigPtr;
         end
       else
-        tmp = yarpMEX(439, varargin{:});
+        tmp = yarpMEX(438, varargin{:});
         self.swigPtr = tmp.swigPtr;
         tmp.SwigClear();
       end
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(440, self);
+        yarpMEX(439, self);
         self.SwigClear();
       end
     end
   end
   methods(Static)
+    function varargout = uniform(varargin)
+    %Usage: retval = uniform ()
+    %
+    %retval is of type double. 
+     [varargout{1:nargout}] = yarpMEX(434, varargin{:});
+    end
     function varargout = seed_c(varargin)
     %Usage: seed_c (seed)
     %
     %seed is of type int. 
-     [varargout{1:nargout}] = yarpMEX(436, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(435, varargin{:});
     end
     function varargout = normal(varargin)
     %Usage: retval = normal ()
     %
     %retval is of type double. 
-     [varargout{1:nargout}] = yarpMEX(437, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(436, varargin{:});
     end
-    function varargout = uniform(varargin)
-    %Usage: retval = uniform (min, max)
+    function varargout = uniformInt(varargin)
+    %Usage: retval = uniformInt (min, max)
     %
     %min is of type int. max is of type int. min is of type int. max is of type int. retval is of type int. 
-     [varargout{1:nargout}] = yarpMEX(438, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(437, varargin{:});
     end
   end
 end

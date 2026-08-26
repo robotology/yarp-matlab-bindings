@@ -1,7 +1,7 @@
 function v = mxCreateDoubleMatrixHasComplexFlagParam()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 171);
+    vInitialized = yarpMEX(0, 244);
   end
   v = vInitialized;
 end

@@ -1,6 +1,6 @@
 function varargout = read(varargin)
-    %Usage: retval = read (dest, src)
+    %Usage: retval = read (data, filename)
     %
-    %dest is of type ImageFloat. src is of type std::string const &. dest is of type ImageFloat. src is of type std::string const &. retval is of type bool. 
-  [varargout{1:nargout}] = yarpMEX(920, varargin{:});
+    %data is of type Sound. filename is of type char const *. data is of type Sound. filename is of type char const *. retval is of type bool. 
+  [varargout{1:nargout}] = yarpMEX(847, varargin{:});
 end

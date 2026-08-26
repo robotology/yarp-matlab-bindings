@@ -6,38 +6,38 @@ classdef ILinearVelocitySensors < yarpSwigRef
       this = yarpMEX(3, self);
     end
     function varargout = getNrOfLinearVelocitySensors(self,varargin)
-    %Usage: retval = getNrOfLinearVelocitySensors ()
+    %Usage: retval = getNrOfLinearVelocitySensors (num)
     %
-    %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1866, self, varargin{:});
+    %num is of type size_t &. num is of type size_t &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1812, self, varargin{:});
     end
     function varargout = getLinearVelocitySensorStatus(self,varargin)
     %Usage: retval = getLinearVelocitySensorStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1867, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1813, self, varargin{:});
     end
     function varargout = getLinearVelocitySensorName(self,varargin)
     %Usage: retval = getLinearVelocitySensorName (sens_index, name)
     %
-    %sens_index is of type size_t. name is of type std::string &. sens_index is of type size_t. name is of type std::string &. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1868, self, varargin{:});
+    %sens_index is of type size_t. name is of type std::string &. sens_index is of type size_t. name is of type std::string &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1814, self, varargin{:});
     end
     function varargout = getLinearVelocitySensorFrameName(self,varargin)
     %Usage: retval = getLinearVelocitySensorFrameName (sens_index, frameName)
     %
-    %sens_index is of type size_t. frameName is of type std::string &. sens_index is of type size_t. frameName is of type std::string &. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1869, self, varargin{:});
+    %sens_index is of type size_t. frameName is of type std::string &. sens_index is of type size_t. frameName is of type std::string &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1815, self, varargin{:});
     end
     function varargout = getLinearVelocitySensorMeasure(self,varargin)
     %Usage: retval = getLinearVelocitySensorMeasure (sens_index, xyz, timestamp)
     %
-    %sens_index is of type size_t. xyz is of type Vector. timestamp is of type double &. sens_index is of type size_t. xyz is of type Vector. timestamp is of type double &. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1870, self, varargin{:});
+    %sens_index is of type size_t. xyz is of type Vector. timestamp is of type double &. sens_index is of type size_t. xyz is of type Vector. timestamp is of type double &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1816, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1871, self);
+        yarpMEX(1817, self);
         self.SwigClear();
       end
     end
