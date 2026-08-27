@@ -1,3 +1,3 @@
 function v = VOCAB_E_RESETS()
-  v = yarpMEX(1465);
+  v = yarpMEX(1385);
 end

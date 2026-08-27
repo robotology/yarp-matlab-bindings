@@ -7,51 +7,51 @@ classdef IMotorRaw < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1529, self);
+        yarpMEX(1467, self);
         self.SwigClear();
       end
     end
     function varargout = getNumberOfMotorsRaw(self,varargin)
     %Usage: retval = getNumberOfMotorsRaw (num)
     %
-    %num is of type int *. num is of type int *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1530, self, varargin{:});
+    %num is of type int *. num is of type int *. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1468, self, varargin{:});
     end
     function varargout = getTemperatureRaw(self,varargin)
     %Usage: retval = getTemperatureRaw (m, val)
     %
-    %m is of type int. val is of type double *. m is of type int. val is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1531, self, varargin{:});
+    %m is of type int. val is of type double *. m is of type int. val is of type double *. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1469, self, varargin{:});
     end
     function varargout = getTemperaturesRaw(self,varargin)
     %Usage: retval = getTemperaturesRaw (vals)
     %
-    %vals is of type double *. vals is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1532, self, varargin{:});
+    %vals is of type double *. vals is of type double *. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1470, self, varargin{:});
     end
     function varargout = getTemperatureLimitRaw(self,varargin)
     %Usage: retval = getTemperatureLimitRaw (m, temp)
     %
-    %m is of type int. temp is of type double *. m is of type int. temp is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1533, self, varargin{:});
+    %m is of type int. temp is of type double *. m is of type int. temp is of type double *. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1471, self, varargin{:});
     end
     function varargout = setTemperatureLimitRaw(self,varargin)
     %Usage: retval = setTemperatureLimitRaw (m, temp)
     %
-    %m is of type int. temp is of type double const. m is of type int. temp is of type double const. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1534, self, varargin{:});
+    %m is of type int. temp is of type double const. m is of type int. temp is of type double const. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1472, self, varargin{:});
     end
     function varargout = getGearboxRatioRaw(self,varargin)
     %Usage: retval = getGearboxRatioRaw (m, val)
     %
-    %m is of type int. val is of type double *. m is of type int. val is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1535, self, varargin{:});
+    %m is of type int. val is of type double *. m is of type int. val is of type double *. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1473, self, varargin{:});
     end
     function varargout = setGearboxRatioRaw(self,varargin)
     %Usage: retval = setGearboxRatioRaw (m, val)
     %
-    %m is of type int. val is of type double const. m is of type int. val is of type double const. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1536, self, varargin{:});
+    %m is of type int. val is of type double const. m is of type int. val is of type double const. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1474, self, varargin{:});
     end
     function self = IMotorRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

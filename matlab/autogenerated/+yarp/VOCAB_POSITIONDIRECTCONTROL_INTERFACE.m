@@ -1,0 +1,3 @@
+function v = VOCAB_POSITIONDIRECTCONTROL_INTERFACE()
+  v = yarpMEX(1755);
+end

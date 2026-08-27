@@ -1,3 +1,3 @@
 function v = VOCAB_ENCODER()
-  v = yarpMEX(1466);
+  v = yarpMEX(1386);
 end

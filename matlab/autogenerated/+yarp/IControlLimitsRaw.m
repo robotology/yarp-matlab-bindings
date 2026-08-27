@@ -7,33 +7,33 @@ classdef IControlLimitsRaw < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1206, self);
+        yarpMEX(1142, self);
         self.SwigClear();
       end
     end
-    function varargout = setLimitsRaw(self,varargin)
-    %Usage: retval = setLimitsRaw (axis, min, max)
+    function varargout = setPosLimitsRaw(self,varargin)
+    %Usage: retval = setPosLimitsRaw (axis, min, max)
     %
-    %axis is of type int. min is of type double. max is of type double. axis is of type int. min is of type double. max is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1207, self, varargin{:});
+    %axis is of type int. min is of type double. max is of type double. axis is of type int. min is of type double. max is of type double. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1143, self, varargin{:});
     end
-    function varargout = getLimitsRaw(self,varargin)
-    %Usage: retval = getLimitsRaw (axis, min, max)
+    function varargout = getPosLimitsRaw(self,varargin)
+    %Usage: retval = getPosLimitsRaw (axis, min, max)
     %
-    %axis is of type int. min is of type double *. max is of type double *. axis is of type int. min is of type double *. max is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1208, self, varargin{:});
+    %axis is of type int. min is of type double *. max is of type double *. axis is of type int. min is of type double *. max is of type double *. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1144, self, varargin{:});
     end
     function varargout = setVelLimitsRaw(self,varargin)
     %Usage: retval = setVelLimitsRaw (axis, min, max)
     %
-    %axis is of type int. min is of type double. max is of type double. axis is of type int. min is of type double. max is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1209, self, varargin{:});
+    %axis is of type int. min is of type double. max is of type double. axis is of type int. min is of type double. max is of type double. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1145, self, varargin{:});
     end
     function varargout = getVelLimitsRaw(self,varargin)
     %Usage: retval = getVelLimitsRaw (axis, min, max)
     %
-    %axis is of type int. min is of type double *. max is of type double *. axis is of type int. min is of type double *. max is of type double *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1210, self, varargin{:});
+    %axis is of type int. min is of type double *. max is of type double *. axis is of type int. min is of type double *. max is of type double *. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1146, self, varargin{:});
     end
     function self = IControlLimitsRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

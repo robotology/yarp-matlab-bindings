@@ -7,39 +7,39 @@ classdef IPositionDirect < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1800, self);
+        yarpMEX(1743, self);
         self.SwigClear();
       end
     end
     function varargout = setPosition(self,varargin)
     %Usage: retval = setPosition (j, ref)
     %
-    %j is of type int. ref is of type double. j is of type int. ref is of type double. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1801, self, varargin{:});
+    %j is of type int. ref is of type double. j is of type int. ref is of type double. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1744, self, varargin{:});
     end
     function varargout = getAxes(self,varargin)
     %Usage: retval = getAxes ()
     %
-    %retval is of type int. 
-      [varargout{1:nargout}] = yarpMEX(1802, self, varargin{:});
+    %retval is of type size_t. 
+      [varargout{1:nargout}] = yarpMEX(1745, self, varargin{:});
     end
     function varargout = setPositions(self,varargin)
     %Usage: retval = setPositions (data)
     %
     %data is of type DVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1803, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1746, self, varargin{:});
     end
     function varargout = getRefPosition(self,varargin)
     %Usage: retval = getRefPosition (j, data)
     %
     %j is of type int. data is of type DVector. j is of type int. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1804, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1747, self, varargin{:});
     end
     function varargout = getRefPositions(self,varargin)
     %Usage: retval = getRefPositions (n_joint, joints, data)
     %
     %n_joint is of type int. joints is of type IVector. data is of type DVector. n_joint is of type int. joints is of type IVector. data is of type DVector. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1805, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1748, self, varargin{:});
     end
     function self = IPositionDirect(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

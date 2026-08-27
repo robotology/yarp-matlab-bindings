@@ -7,7 +7,7 @@ classdef Searchable < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(140, self);
+        yarpMEX(137, self);
         self.SwigClear();
       end
     end
@@ -15,31 +15,31 @@ classdef Searchable < yarpSwigRef
     %Usage: retval = find (key)
     %
     %key is of type std::string const &. key is of type std::string const &. retval is of type Value. 
-      [varargout{1:nargout}] = yarpMEX(141, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(138, self, varargin{:});
     end
     function varargout = findGroup(self,varargin)
     %Usage: retval = findGroup (key, comment)
     %
     %key is of type std::string const &. comment is of type std::string const &. key is of type std::string const &. comment is of type std::string const &. retval is of type Bottle. 
-      [varargout{1:nargout}] = yarpMEX(142, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(139, self, varargin{:});
     end
     function varargout = check(self,varargin)
     %Usage: retval = check (key, fallback)
     %
     %key is of type std::string const &. fallback is of type Value. key is of type std::string const &. fallback is of type Value. retval is of type Value. 
-      [varargout{1:nargout}] = yarpMEX(143, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(140, self, varargin{:});
     end
     function varargout = isNull(self,varargin)
     %Usage: retval = isNull ()
     %
     %retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(144, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(141, self, varargin{:});
     end
     function varargout = toString_c(self,varargin)
     %Usage: retval = toString_c ()
     %
     %retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(145, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(142, self, varargin{:});
     end
     function self = Searchable(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

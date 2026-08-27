@@ -9,17 +9,17 @@ classdef Drivers < yarpSwigRef
     %Usage: retval = open (config)
     %
     %config is of type Searchable. config is of type Searchable. retval is of type DeviceDriver. 
-      [varargout{1:nargout}] = yarpMEX(1083, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1003, self, varargin{:});
     end
     function varargout = toString_c(self,varargin)
     %Usage: retval = toString_c ()
     %
     %retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1084, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1004, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1085, self);
+        yarpMEX(1005, self);
         self.SwigClear();
       end
     end
@@ -27,19 +27,25 @@ classdef Drivers < yarpSwigRef
     %Usage: add (creator)
     %
     %creator is of type DriverCreator. 
-      [varargout{1:nargout}] = yarpMEX(1086, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1006, self, varargin{:});
     end
     function varargout = find(self,varargin)
     %Usage: retval = find (name)
     %
-    %name is of type char const *. name is of type char const *. retval is of type DriverCreator. 
-      [varargout{1:nargout}] = yarpMEX(1087, self, varargin{:});
+    %name is of type std::string const &. name is of type std::string const &. retval is of type DriverCreator. 
+      [varargout{1:nargout}] = yarpMEX(1007, self, varargin{:});
     end
     function varargout = remove(self,varargin)
     %Usage: retval = remove (name)
     %
-    %name is of type char const *. name is of type char const *. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1088, self, varargin{:});
+    %name is of type std::string const &. name is of type std::string const &. retval is of type bool. 
+      [varargout{1:nargout}] = yarpMEX(1008, self, varargin{:});
+    end
+    function varargout = addDeprecatedAlias(self,varargin)
+    %Usage: addDeprecatedAlias (alias, canonical)
+    %
+    %alias is of type std::string const &. canonical is of type std::string const &. 
+      [varargout{1:nargout}] = yarpMEX(1009, self, varargin{:});
     end
     function self = Drivers(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
@@ -56,13 +62,13 @@ classdef Drivers < yarpSwigRef
     %Usage: retval = factory ()
     %
     %retval is of type Drivers. 
-     [varargout{1:nargout}] = yarpMEX(1082, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(1002, varargin{:});
     end
     function varargout = yarpdev(varargin)
     %Usage: retval = yarpdev (argc, argv)
     %
     %argc is of type int. argv is of type char *[]. argc is of type int. argv is of type char *[]. retval is of type int. 
-     [varargout{1:nargout}] = yarpMEX(1089, varargin{:});
+     [varargout{1:nargout}] = yarpMEX(1010, varargin{:});
     end
   end
 end

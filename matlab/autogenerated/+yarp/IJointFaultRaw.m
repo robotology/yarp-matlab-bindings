@@ -7,15 +7,15 @@ classdef IJointFaultRaw < yarpSwigRef
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1519, self);
+        yarpMEX(1457, self);
         self.SwigClear();
       end
     end
     function varargout = getLastJointFaultRaw(self,varargin)
     %Usage: retval = getLastJointFaultRaw (j, mode, message)
     %
-    %j is of type int. mode is of type int &. message is of type std::string &. j is of type int. mode is of type int &. message is of type std::string &. retval is of type bool. 
-      [varargout{1:nargout}] = yarpMEX(1520, self, varargin{:});
+    %j is of type int. mode is of type int &. message is of type std::string &. j is of type int. mode is of type int &. message is of type std::string &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1458, self, varargin{:});
     end
     function self = IJointFaultRaw(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

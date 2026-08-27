@@ -1,7 +1,7 @@
 function v = MAS_ERROR()
   persistent vInitialized;
   if isempty(vInitialized)
-    vInitialized = yarpMEX(0, 147);
+    vInitialized = yarpMEX(0, 190);
   end
   v = vInitialized;
 end

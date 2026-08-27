@@ -6,20 +6,20 @@ classdef IThreeAxisGyroscopes < yarpSwigRef
       this = yarpMEX(3, self);
     end
     function varargout = getNrOfThreeAxisGyroscopes(self,varargin)
-    %Usage: retval = getNrOfThreeAxisGyroscopes ()
+    %Usage: retval = getNrOfThreeAxisGyroscopes (num)
     %
-    %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1836, self, varargin{:});
+    %num is of type size_t &. num is of type size_t &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1782, self, varargin{:});
     end
     function varargout = getThreeAxisGyroscopeStatus(self,varargin)
     %Usage: retval = getThreeAxisGyroscopeStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1837, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1783, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1838, self);
+        yarpMEX(1784, self);
         self.SwigClear();
       end
     end
@@ -27,19 +27,19 @@ classdef IThreeAxisGyroscopes < yarpSwigRef
     %Usage: retval = getThreeAxisGyroscopeName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1839, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1785, self, varargin{:});
     end
     function varargout = getThreeAxisGyroscopeFrameName(self,varargin)
     %Usage: retval = getThreeAxisGyroscopeFrameName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1840, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1786, self, varargin{:});
     end
     function varargout = getThreeAxisGyroscopeMeasure(self,varargin)
     %Usage: retval = getThreeAxisGyroscopeMeasure (sens_index, out)
     %
     %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1841, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1787, self, varargin{:});
     end
     function self = IThreeAxisGyroscopes(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')

@@ -5,47 +5,37 @@ on:
   pull_request:
   schedule:
   # * is a special character in YAML so you have to quote this string
-  # Execute a "nightly" build at 2 AM UTC 
+  # Execute a "nightly" build at 2 AM UTC
   - cron:  '0 2 * * *'
-  
+
 jobs:
-  build-with-conda-dependencies:    
+  build-with-conda-dependencies:
     name: '[conda:${{ matrix.os }}]'
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         build_type: [Release]
-        os: [ubuntu-24.04, macos-latest, windows-latest]
+        os: [ubuntu-24.04, windows-2022]
 
     steps:
     - uses: actions/checkout@v4
 
-    - uses: conda-incubator/setup-miniconda@v3
+    - uses: conda-incubator/setup-miniconda@v4
       with:
-        miniforge-version: latest
-        channels: conda-forge
+        miniforge-variant: Miniforge3
 
     - name: Install files to enable compilation of mex files [Conda/Linux]
-      if: contains(matrix.os, 'ubuntu') 
+      if: contains(matrix.os, 'ubuntu')
       run: |
         curl -L -O https://github.com/robotology/robotology-vcpkg-ports/releases/download/storage/msdk_R2020b_mexa64.zip
         unzip msdk_R2020b_mexa64.zip
         rm msdk_R2020b_mexa64.zip
         echo "GHA_Matlab_ROOT_DIR=${GITHUB_WORKSPACE}/msdk_R2020b_mexa64" >> $GITHUB_ENV
         echo "GHA_Matlab_MEX_EXTENSION=mexa64" >> $GITHUB_ENV
-                
-    - name: Install files to enable compilation of mex files [Conda/macOS]
-      if: contains(matrix.os, 'macos') 
-      run: |
-        curl -L -O https://github.com/robotology/robotology-vcpkg-ports/releases/download/storage/msdk_R2023b_mexmaca64.zip
-        unzip msdk_R2023b_mexmaca64.zip
-        rm msdk_R2023b_mexmaca64.zip
-        echo "GHA_Matlab_ROOT_DIR=${GITHUB_WORKSPACE}/msdk_R2023b_mexmaca64" >> $GITHUB_ENV
-        echo "GHA_Matlab_MEX_EXTENSION=mexmaca64" >> $GITHUB_ENV
 
     - name: Install files to enable compilation of mex files [Conda/Windows]
-      if: contains(matrix.os, 'windows') 
+      if: contains(matrix.os, 'windows')
       shell: bash
       run: |
         curl -L -O https://github.com/robotology/robotology-vcpkg-ports/releases/download/storage/msdk_R2020a_mexw64.zip
@@ -57,18 +47,14 @@ jobs:
     - name: Dependencies [Conda]
       shell: bash -l {0}
       run: |
-        # Workaround for https://github.com/conda-incubator/setup-miniconda/issues/186
-        conda config --remove channels defaults
-        # Compilation related dependencies 
-        conda  install cmake compilers make ninja pkg-config
-        # YARP dependencies 
-        conda install ace eigen ycm-cmake-modules
+        # Compilation related dependencies
+        conda  install cmake compilers make ninja pkg-config ace eigen ycm-cmake-modules python
         # Uncomment when we are compatible with releases in conda yarp
-        # mamba install yarp 
+        # mamba install yarp
 
 
-    - name: Install YARP [Conda/Linux&macOS]
-      if: contains(matrix.os, 'macos') || contains(matrix.os, 'ubuntu')
+    - name: Install YARP [Conda/Linux]
+      if: contains(matrix.os, 'ubuntu')
       shell: bash -l {0}
       run: |
         git clone https://github.com/robotology/yarp
@@ -76,9 +62,9 @@ jobs:
         mkdir build
         cd build
         cmake -GNinja -DCMAKE_INSTALL_PREFIX=${CONDA_PREFIX} -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DYARP_COMPILE_EXECUTABLES:BOOL=OFF ..
-        cmake --build . --config ${{ matrix.build_type }}        
+        cmake --build . --config ${{ matrix.build_type }}
         cmake --install . --config ${{ matrix.build_type }}
-                
+
     - name:  Install YARP [Conda/Windows]
       if: contains(matrix.os, 'windows')
       shell: cmd /C CALL {0}
@@ -88,11 +74,11 @@ jobs:
         mkdir build
         cd build
         cmake -G"Ninja" -DCMAKE_INSTALL_PREFIX=%CONDA_PREFIX%\Library -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DYARP_COMPILE_EXECUTABLES:BOOL=OFF ..
-        cmake --build . --config ${{ matrix.build_type }}        
+        cmake --build . --config ${{ matrix.build_type }}
         cmake --install . --config ${{ matrix.build_type }}
 
-    - name: Configure [Conda/Linux&macOS]
-      if: contains(matrix.os, 'macos') || contains(matrix.os, 'ubuntu')
+    - name: Configure [Conda/Linux]
+      if: contains(matrix.os, 'ubuntu')
       shell: bash -l {0}
       run: |
         mkdir build
@@ -107,8 +93,8 @@ jobs:
         cd build
         cmake -G"Ninja"  -DCMAKE_INSTALL_PREFIX=%CONDA_PREFIX%\Library -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DMATLAB_FIND_DEBUG:BOOL=ON  -DYARP_USES_MATLAB:BOOL=ON -DMatlab_ROOT_DIR=%GHA_Matlab_ROOT_DIR% -DMatlab_MEX_EXTENSION:STRING=%GHA_Matlab_MEX_EXTENSION% ..
 
-    - name: Build [Conda/Linux&macOS]
-      if: contains(matrix.os, 'macos') || contains(matrix.os, 'ubuntu')
+    - name: Build [Conda/Linux]
+      if: contains(matrix.os, 'ubuntu')
       shell: bash -l {0}
       run: |
         cd build
@@ -135,4 +121,4 @@ jobs:
         cd build
         cmake --install . --config ${{ matrix.build_type }}
 
- 
+

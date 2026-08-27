@@ -1,3 +1,3 @@
 function v = VOCAB_CURRENT_RANGES()
-  v = yarpMEX(1735);
+  v = yarpMEX(1666);
 end

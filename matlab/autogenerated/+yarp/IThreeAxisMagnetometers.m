@@ -6,20 +6,20 @@ classdef IThreeAxisMagnetometers < yarpSwigRef
       this = yarpMEX(3, self);
     end
     function varargout = getNrOfThreeAxisMagnetometers(self,varargin)
-    %Usage: retval = getNrOfThreeAxisMagnetometers ()
+    %Usage: retval = getNrOfThreeAxisMagnetometers (num)
     %
-    %retval is of type size_t. 
-      [varargout{1:nargout}] = yarpMEX(1854, self, varargin{:});
+    %num is of type size_t &. num is of type size_t &. retval is of type ReturnValue. 
+      [varargout{1:nargout}] = yarpMEX(1800, self, varargin{:});
     end
     function varargout = getThreeAxisMagnetometerStatus(self,varargin)
     %Usage: retval = getThreeAxisMagnetometerStatus (sens_index)
     %
     %sens_index is of type size_t. sens_index is of type size_t. retval is of type yarp::dev::MAS_status. 
-      [varargout{1:nargout}] = yarpMEX(1855, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1801, self, varargin{:});
     end
     function delete(self)
       if self.swigPtr
-        yarpMEX(1856, self);
+        yarpMEX(1802, self);
         self.SwigClear();
       end
     end
@@ -27,19 +27,19 @@ classdef IThreeAxisMagnetometers < yarpSwigRef
     %Usage: retval = getThreeAxisMagnetometerName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1857, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1803, self, varargin{:});
     end
     function varargout = getThreeAxisMagnetometerFrameName(self,varargin)
     %Usage: retval = getThreeAxisMagnetometerFrameName (sens_index)
     %
     %sens_index is of type int. sens_index is of type int. retval is of type std::string. 
-      [varargout{1:nargout}] = yarpMEX(1858, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1804, self, varargin{:});
     end
     function varargout = getThreeAxisMagnetometerMeasure(self,varargin)
     %Usage: retval = getThreeAxisMagnetometerMeasure (sens_index, out)
     %
     %sens_index is of type int. out is of type Vector. sens_index is of type int. out is of type Vector. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1859, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1805, self, varargin{:});
     end
     function self = IThreeAxisMagnetometers(varargin)
       if nargin==1 && strcmp(class(varargin{1}),'yarpSwigRef')
