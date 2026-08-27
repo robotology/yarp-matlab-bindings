@@ -6,9 +6,9 @@ classdef IEncoderArrays < yarpSwigRef
       this = yarpMEX(3, self);
     end
     function varargout = getNrOfEncoderArrays(self,varargin)
-    %Usage: retval = getNrOfEncoderArrays (num)
+    %Usage: retval = getNrOfEncoderArrays ()
     %
-    %num is of type size_t &. num is of type size_t &. retval is of type ReturnValue. 
+    %retval is of type size_t. 
       [varargout{1:nargout}] = yarpMEX(1842, self, varargin{:});
     end
     function varargout = getEncoderArrayStatus(self,varargin)

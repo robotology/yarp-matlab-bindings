@@ -105172,15 +105172,12 @@ int _wrap_ILLM_readPrompt(int resc, mxArray *resv[], int argc, mxArray *argv[]) 
 
 int _wrap_IThreeAxisGyroscopes_getNrOfThreeAxisGyroscopes(int resc, mxArray *resv[], int argc, mxArray *argv[]) {
   yarp::dev::IThreeAxisGyroscopes *arg1 = (yarp::dev::IThreeAxisGyroscopes *) 0 ;
-  size_t *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  size_t result;
   
-  if (!SWIG_check_num_args("IThreeAxisGyroscopes_getNrOfThreeAxisGyroscopes",argc,2,2,0)) {
+  if (!SWIG_check_num_args("IThreeAxisGyroscopes_getNrOfThreeAxisGyroscopes",argc,1,1,0)) {
     SWIG_fail;
   }
   res1 = SWIG_ConvertPtr(argv[0], &argp1,SWIGTYPE_p_yarp__dev__IThreeAxisGyroscopes, 0 |  0 );
@@ -105188,16 +105185,8 @@ int _wrap_IThreeAxisGyroscopes_getNrOfThreeAxisGyroscopes(int resc, mxArray *res
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IThreeAxisGyroscopes_getNrOfThreeAxisGyroscopes" "', argument " "1"" of type '" "yarp::dev::IThreeAxisGyroscopes const *""'"); 
   }
   arg1 = reinterpret_cast< yarp::dev::IThreeAxisGyroscopes * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_size_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "IThreeAxisGyroscopes_getNrOfThreeAxisGyroscopes" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisGyroscopes_getNrOfThreeAxisGyroscopes" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  arg2 = reinterpret_cast< size_t * >(argp2);
-  result = ((yarp::dev::IThreeAxisGyroscopes const *)arg1)->getNrOfThreeAxisGyroscopes(*arg2);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = ((yarp::dev::IThreeAxisGyroscopes const *)arg1)->getNrOfThreeAxisGyroscopes();
+  _out = SWIG_From_size_t(static_cast< size_t >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -105248,7 +105237,7 @@ int _wrap_IThreeAxisGyroscopes_getThreeAxisGyroscopeName__SWIG_0(int resc, mxArr
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IThreeAxisGyroscopes_getThreeAxisGyroscopeName",argc,3,3,0)) {
     SWIG_fail;
@@ -105271,8 +105260,8 @@ int _wrap_IThreeAxisGyroscopes_getThreeAxisGyroscopeName__SWIG_0(int resc, mxArr
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisGyroscopes_getThreeAxisGyroscopeName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::IThreeAxisGyroscopes const *)arg1)->getThreeAxisGyroscopeName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IThreeAxisGyroscopes const *)arg1)->getThreeAxisGyroscopeName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -105291,7 +105280,7 @@ int _wrap_IThreeAxisGyroscopes_getThreeAxisGyroscopeFrameName__SWIG_0(int resc, 
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IThreeAxisGyroscopes_getThreeAxisGyroscopeFrameName",argc,3,3,0)) {
     SWIG_fail;
@@ -105314,8 +105303,8 @@ int _wrap_IThreeAxisGyroscopes_getThreeAxisGyroscopeFrameName__SWIG_0(int resc, 
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisGyroscopes_getThreeAxisGyroscopeFrameName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::IThreeAxisGyroscopes const *)arg1)->getThreeAxisGyroscopeFrameName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IThreeAxisGyroscopes const *)arg1)->getThreeAxisGyroscopeFrameName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -105337,7 +105326,7 @@ int _wrap_IThreeAxisGyroscopes_getThreeAxisGyroscopeMeasure__SWIG_0(int resc, mx
   void *argp4 = 0 ;
   int res4 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IThreeAxisGyroscopes_getThreeAxisGyroscopeMeasure",argc,4,4,0)) {
     SWIG_fail;
@@ -105368,8 +105357,8 @@ int _wrap_IThreeAxisGyroscopes_getThreeAxisGyroscopeMeasure__SWIG_0(int resc, mx
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisGyroscopes_getThreeAxisGyroscopeMeasure" "', argument " "4"" of type '" "double &""'"); 
   }
   arg4 = reinterpret_cast< double * >(argp4);
-  result = ((yarp::dev::IThreeAxisGyroscopes const *)arg1)->getThreeAxisGyroscopeMeasure(arg2,*arg3,*arg4);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IThreeAxisGyroscopes const *)arg1)->getThreeAxisGyroscopeMeasure(arg2,*arg3,*arg4);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -105658,15 +105647,12 @@ int _wrap_IThreeAxisGyroscopes_getThreeAxisGyroscopeMeasure(int resc, mxArray *r
 
 int _wrap_IThreeAxisLinearAccelerometers_getNrOfThreeAxisLinearAccelerometers(int resc, mxArray *resv[], int argc, mxArray *argv[]) {
   yarp::dev::IThreeAxisLinearAccelerometers *arg1 = (yarp::dev::IThreeAxisLinearAccelerometers *) 0 ;
-  size_t *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  size_t result;
   
-  if (!SWIG_check_num_args("IThreeAxisLinearAccelerometers_getNrOfThreeAxisLinearAccelerometers",argc,2,2,0)) {
+  if (!SWIG_check_num_args("IThreeAxisLinearAccelerometers_getNrOfThreeAxisLinearAccelerometers",argc,1,1,0)) {
     SWIG_fail;
   }
   res1 = SWIG_ConvertPtr(argv[0], &argp1,SWIGTYPE_p_yarp__dev__IThreeAxisLinearAccelerometers, 0 |  0 );
@@ -105674,16 +105660,8 @@ int _wrap_IThreeAxisLinearAccelerometers_getNrOfThreeAxisLinearAccelerometers(in
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IThreeAxisLinearAccelerometers_getNrOfThreeAxisLinearAccelerometers" "', argument " "1"" of type '" "yarp::dev::IThreeAxisLinearAccelerometers const *""'"); 
   }
   arg1 = reinterpret_cast< yarp::dev::IThreeAxisLinearAccelerometers * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_size_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "IThreeAxisLinearAccelerometers_getNrOfThreeAxisLinearAccelerometers" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisLinearAccelerometers_getNrOfThreeAxisLinearAccelerometers" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  arg2 = reinterpret_cast< size_t * >(argp2);
-  result = ((yarp::dev::IThreeAxisLinearAccelerometers const *)arg1)->getNrOfThreeAxisLinearAccelerometers(*arg2);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = ((yarp::dev::IThreeAxisLinearAccelerometers const *)arg1)->getNrOfThreeAxisLinearAccelerometers();
+  _out = SWIG_From_size_t(static_cast< size_t >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -105734,7 +105712,7 @@ int _wrap_IThreeAxisLinearAccelerometers_getThreeAxisLinearAccelerometerName__SW
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IThreeAxisLinearAccelerometers_getThreeAxisLinearAccelerometerName",argc,3,3,0)) {
     SWIG_fail;
@@ -105757,8 +105735,8 @@ int _wrap_IThreeAxisLinearAccelerometers_getThreeAxisLinearAccelerometerName__SW
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisLinearAccelerometers_getThreeAxisLinearAccelerometerName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::IThreeAxisLinearAccelerometers const *)arg1)->getThreeAxisLinearAccelerometerName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IThreeAxisLinearAccelerometers const *)arg1)->getThreeAxisLinearAccelerometerName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -105777,7 +105755,7 @@ int _wrap_IThreeAxisLinearAccelerometers_getThreeAxisLinearAccelerometerFrameNam
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IThreeAxisLinearAccelerometers_getThreeAxisLinearAccelerometerFrameName",argc,3,3,0)) {
     SWIG_fail;
@@ -105800,8 +105778,8 @@ int _wrap_IThreeAxisLinearAccelerometers_getThreeAxisLinearAccelerometerFrameNam
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisLinearAccelerometers_getThreeAxisLinearAccelerometerFrameName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::IThreeAxisLinearAccelerometers const *)arg1)->getThreeAxisLinearAccelerometerFrameName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IThreeAxisLinearAccelerometers const *)arg1)->getThreeAxisLinearAccelerometerFrameName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -105823,7 +105801,7 @@ int _wrap_IThreeAxisLinearAccelerometers_getThreeAxisLinearAccelerometerMeasure_
   void *argp4 = 0 ;
   int res4 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IThreeAxisLinearAccelerometers_getThreeAxisLinearAccelerometerMeasure",argc,4,4,0)) {
     SWIG_fail;
@@ -105854,8 +105832,8 @@ int _wrap_IThreeAxisLinearAccelerometers_getThreeAxisLinearAccelerometerMeasure_
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisLinearAccelerometers_getThreeAxisLinearAccelerometerMeasure" "', argument " "4"" of type '" "double &""'"); 
   }
   arg4 = reinterpret_cast< double * >(argp4);
-  result = ((yarp::dev::IThreeAxisLinearAccelerometers const *)arg1)->getThreeAxisLinearAccelerometerMeasure(arg2,*arg3,*arg4);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IThreeAxisLinearAccelerometers const *)arg1)->getThreeAxisLinearAccelerometerMeasure(arg2,*arg3,*arg4);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -106144,15 +106122,12 @@ int _wrap_IThreeAxisLinearAccelerometers_getThreeAxisLinearAccelerometerMeasure(
 
 int _wrap_IThreeAxisAngularAccelerometers_getNrOfThreeAxisAngularAccelerometers(int resc, mxArray *resv[], int argc, mxArray *argv[]) {
   yarp::dev::IThreeAxisAngularAccelerometers *arg1 = (yarp::dev::IThreeAxisAngularAccelerometers *) 0 ;
-  size_t *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  size_t result;
   
-  if (!SWIG_check_num_args("IThreeAxisAngularAccelerometers_getNrOfThreeAxisAngularAccelerometers",argc,2,2,0)) {
+  if (!SWIG_check_num_args("IThreeAxisAngularAccelerometers_getNrOfThreeAxisAngularAccelerometers",argc,1,1,0)) {
     SWIG_fail;
   }
   res1 = SWIG_ConvertPtr(argv[0], &argp1,SWIGTYPE_p_yarp__dev__IThreeAxisAngularAccelerometers, 0 |  0 );
@@ -106160,16 +106135,8 @@ int _wrap_IThreeAxisAngularAccelerometers_getNrOfThreeAxisAngularAccelerometers(
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IThreeAxisAngularAccelerometers_getNrOfThreeAxisAngularAccelerometers" "', argument " "1"" of type '" "yarp::dev::IThreeAxisAngularAccelerometers const *""'"); 
   }
   arg1 = reinterpret_cast< yarp::dev::IThreeAxisAngularAccelerometers * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_size_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "IThreeAxisAngularAccelerometers_getNrOfThreeAxisAngularAccelerometers" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisAngularAccelerometers_getNrOfThreeAxisAngularAccelerometers" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  arg2 = reinterpret_cast< size_t * >(argp2);
-  result = ((yarp::dev::IThreeAxisAngularAccelerometers const *)arg1)->getNrOfThreeAxisAngularAccelerometers(*arg2);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = ((yarp::dev::IThreeAxisAngularAccelerometers const *)arg1)->getNrOfThreeAxisAngularAccelerometers();
+  _out = SWIG_From_size_t(static_cast< size_t >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -106220,7 +106187,7 @@ int _wrap_IThreeAxisAngularAccelerometers_getThreeAxisAngularAccelerometerName(i
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IThreeAxisAngularAccelerometers_getThreeAxisAngularAccelerometerName",argc,3,3,0)) {
     SWIG_fail;
@@ -106243,8 +106210,8 @@ int _wrap_IThreeAxisAngularAccelerometers_getThreeAxisAngularAccelerometerName(i
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisAngularAccelerometers_getThreeAxisAngularAccelerometerName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::IThreeAxisAngularAccelerometers const *)arg1)->getThreeAxisAngularAccelerometerName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IThreeAxisAngularAccelerometers const *)arg1)->getThreeAxisAngularAccelerometerName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -106263,7 +106230,7 @@ int _wrap_IThreeAxisAngularAccelerometers_getThreeAxisAngularAccelerometerFrameN
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IThreeAxisAngularAccelerometers_getThreeAxisAngularAccelerometerFrameName",argc,3,3,0)) {
     SWIG_fail;
@@ -106286,8 +106253,8 @@ int _wrap_IThreeAxisAngularAccelerometers_getThreeAxisAngularAccelerometerFrameN
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisAngularAccelerometers_getThreeAxisAngularAccelerometerFrameName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::IThreeAxisAngularAccelerometers const *)arg1)->getThreeAxisAngularAccelerometerFrameName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IThreeAxisAngularAccelerometers const *)arg1)->getThreeAxisAngularAccelerometerFrameName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -106309,7 +106276,7 @@ int _wrap_IThreeAxisAngularAccelerometers_getThreeAxisAngularAccelerometerMeasur
   void *argp4 = 0 ;
   int res4 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IThreeAxisAngularAccelerometers_getThreeAxisAngularAccelerometerMeasure",argc,4,4,0)) {
     SWIG_fail;
@@ -106340,8 +106307,8 @@ int _wrap_IThreeAxisAngularAccelerometers_getThreeAxisAngularAccelerometerMeasur
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisAngularAccelerometers_getThreeAxisAngularAccelerometerMeasure" "', argument " "4"" of type '" "double &""'"); 
   }
   arg4 = reinterpret_cast< double * >(argp4);
-  result = ((yarp::dev::IThreeAxisAngularAccelerometers const *)arg1)->getThreeAxisAngularAccelerometerMeasure(arg2,*arg3,*arg4);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IThreeAxisAngularAccelerometers const *)arg1)->getThreeAxisAngularAccelerometerMeasure(arg2,*arg3,*arg4);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -106378,15 +106345,12 @@ fail:
 
 int _wrap_IThreeAxisMagnetometers_getNrOfThreeAxisMagnetometers(int resc, mxArray *resv[], int argc, mxArray *argv[]) {
   yarp::dev::IThreeAxisMagnetometers *arg1 = (yarp::dev::IThreeAxisMagnetometers *) 0 ;
-  size_t *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  size_t result;
   
-  if (!SWIG_check_num_args("IThreeAxisMagnetometers_getNrOfThreeAxisMagnetometers",argc,2,2,0)) {
+  if (!SWIG_check_num_args("IThreeAxisMagnetometers_getNrOfThreeAxisMagnetometers",argc,1,1,0)) {
     SWIG_fail;
   }
   res1 = SWIG_ConvertPtr(argv[0], &argp1,SWIGTYPE_p_yarp__dev__IThreeAxisMagnetometers, 0 |  0 );
@@ -106394,16 +106358,8 @@ int _wrap_IThreeAxisMagnetometers_getNrOfThreeAxisMagnetometers(int resc, mxArra
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IThreeAxisMagnetometers_getNrOfThreeAxisMagnetometers" "', argument " "1"" of type '" "yarp::dev::IThreeAxisMagnetometers const *""'"); 
   }
   arg1 = reinterpret_cast< yarp::dev::IThreeAxisMagnetometers * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_size_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "IThreeAxisMagnetometers_getNrOfThreeAxisMagnetometers" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisMagnetometers_getNrOfThreeAxisMagnetometers" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  arg2 = reinterpret_cast< size_t * >(argp2);
-  result = ((yarp::dev::IThreeAxisMagnetometers const *)arg1)->getNrOfThreeAxisMagnetometers(*arg2);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = ((yarp::dev::IThreeAxisMagnetometers const *)arg1)->getNrOfThreeAxisMagnetometers();
+  _out = SWIG_From_size_t(static_cast< size_t >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -106454,7 +106410,7 @@ int _wrap_IThreeAxisMagnetometers_getThreeAxisMagnetometerName__SWIG_0(int resc,
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IThreeAxisMagnetometers_getThreeAxisMagnetometerName",argc,3,3,0)) {
     SWIG_fail;
@@ -106477,8 +106433,8 @@ int _wrap_IThreeAxisMagnetometers_getThreeAxisMagnetometerName__SWIG_0(int resc,
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisMagnetometers_getThreeAxisMagnetometerName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::IThreeAxisMagnetometers const *)arg1)->getThreeAxisMagnetometerName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IThreeAxisMagnetometers const *)arg1)->getThreeAxisMagnetometerName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -106497,7 +106453,7 @@ int _wrap_IThreeAxisMagnetometers_getThreeAxisMagnetometerFrameName__SWIG_0(int 
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IThreeAxisMagnetometers_getThreeAxisMagnetometerFrameName",argc,3,3,0)) {
     SWIG_fail;
@@ -106520,8 +106476,8 @@ int _wrap_IThreeAxisMagnetometers_getThreeAxisMagnetometerFrameName__SWIG_0(int 
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisMagnetometers_getThreeAxisMagnetometerFrameName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::IThreeAxisMagnetometers const *)arg1)->getThreeAxisMagnetometerFrameName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IThreeAxisMagnetometers const *)arg1)->getThreeAxisMagnetometerFrameName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -106543,7 +106499,7 @@ int _wrap_IThreeAxisMagnetometers_getThreeAxisMagnetometerMeasure__SWIG_0(int re
   void *argp4 = 0 ;
   int res4 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IThreeAxisMagnetometers_getThreeAxisMagnetometerMeasure",argc,4,4,0)) {
     SWIG_fail;
@@ -106574,8 +106530,8 @@ int _wrap_IThreeAxisMagnetometers_getThreeAxisMagnetometerMeasure__SWIG_0(int re
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IThreeAxisMagnetometers_getThreeAxisMagnetometerMeasure" "', argument " "4"" of type '" "double &""'"); 
   }
   arg4 = reinterpret_cast< double * >(argp4);
-  result = ((yarp::dev::IThreeAxisMagnetometers const *)arg1)->getThreeAxisMagnetometerMeasure(arg2,*arg3,*arg4);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IThreeAxisMagnetometers const *)arg1)->getThreeAxisMagnetometerMeasure(arg2,*arg3,*arg4);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -106864,15 +106820,12 @@ int _wrap_IThreeAxisMagnetometers_getThreeAxisMagnetometerMeasure(int resc, mxAr
 
 int _wrap_IPositionSensors_getNrOfPositionSensors(int resc, mxArray *resv[], int argc, mxArray *argv[]) {
   yarp::dev::IPositionSensors *arg1 = (yarp::dev::IPositionSensors *) 0 ;
-  size_t *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  size_t result;
   
-  if (!SWIG_check_num_args("IPositionSensors_getNrOfPositionSensors",argc,2,2,0)) {
+  if (!SWIG_check_num_args("IPositionSensors_getNrOfPositionSensors",argc,1,1,0)) {
     SWIG_fail;
   }
   res1 = SWIG_ConvertPtr(argv[0], &argp1,SWIGTYPE_p_yarp__dev__IPositionSensors, 0 |  0 );
@@ -106880,16 +106833,8 @@ int _wrap_IPositionSensors_getNrOfPositionSensors(int resc, mxArray *resv[], int
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IPositionSensors_getNrOfPositionSensors" "', argument " "1"" of type '" "yarp::dev::IPositionSensors const *""'"); 
   }
   arg1 = reinterpret_cast< yarp::dev::IPositionSensors * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_size_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "IPositionSensors_getNrOfPositionSensors" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IPositionSensors_getNrOfPositionSensors" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  arg2 = reinterpret_cast< size_t * >(argp2);
-  result = ((yarp::dev::IPositionSensors const *)arg1)->getNrOfPositionSensors(*arg2);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = ((yarp::dev::IPositionSensors const *)arg1)->getNrOfPositionSensors();
+  _out = SWIG_From_size_t(static_cast< size_t >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -106940,7 +106885,7 @@ int _wrap_IPositionSensors_getPositionSensorName(int resc, mxArray *resv[], int 
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IPositionSensors_getPositionSensorName",argc,3,3,0)) {
     SWIG_fail;
@@ -106963,8 +106908,8 @@ int _wrap_IPositionSensors_getPositionSensorName(int resc, mxArray *resv[], int 
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IPositionSensors_getPositionSensorName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::IPositionSensors const *)arg1)->getPositionSensorName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IPositionSensors const *)arg1)->getPositionSensorName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -106983,7 +106928,7 @@ int _wrap_IPositionSensors_getPositionSensorFrameName(int resc, mxArray *resv[],
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IPositionSensors_getPositionSensorFrameName",argc,3,3,0)) {
     SWIG_fail;
@@ -107006,8 +106951,8 @@ int _wrap_IPositionSensors_getPositionSensorFrameName(int resc, mxArray *resv[],
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IPositionSensors_getPositionSensorFrameName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::IPositionSensors const *)arg1)->getPositionSensorFrameName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IPositionSensors const *)arg1)->getPositionSensorFrameName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -107029,7 +106974,7 @@ int _wrap_IPositionSensors_getPositionSensorMeasure(int resc, mxArray *resv[], i
   void *argp4 = 0 ;
   int res4 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IPositionSensors_getPositionSensorMeasure",argc,4,4,0)) {
     SWIG_fail;
@@ -107060,8 +107005,8 @@ int _wrap_IPositionSensors_getPositionSensorMeasure(int resc, mxArray *resv[], i
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IPositionSensors_getPositionSensorMeasure" "', argument " "4"" of type '" "double &""'"); 
   }
   arg4 = reinterpret_cast< double * >(argp4);
-  result = ((yarp::dev::IPositionSensors const *)arg1)->getPositionSensorMeasure(arg2,*arg3,*arg4);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IPositionSensors const *)arg1)->getPositionSensorMeasure(arg2,*arg3,*arg4);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -107098,15 +107043,12 @@ fail:
 
 int _wrap_ILinearVelocitySensors_getNrOfLinearVelocitySensors(int resc, mxArray *resv[], int argc, mxArray *argv[]) {
   yarp::dev::ILinearVelocitySensors *arg1 = (yarp::dev::ILinearVelocitySensors *) 0 ;
-  size_t *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  size_t result;
   
-  if (!SWIG_check_num_args("ILinearVelocitySensors_getNrOfLinearVelocitySensors",argc,2,2,0)) {
+  if (!SWIG_check_num_args("ILinearVelocitySensors_getNrOfLinearVelocitySensors",argc,1,1,0)) {
     SWIG_fail;
   }
   res1 = SWIG_ConvertPtr(argv[0], &argp1,SWIGTYPE_p_yarp__dev__ILinearVelocitySensors, 0 |  0 );
@@ -107114,16 +107056,8 @@ int _wrap_ILinearVelocitySensors_getNrOfLinearVelocitySensors(int resc, mxArray 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ILinearVelocitySensors_getNrOfLinearVelocitySensors" "', argument " "1"" of type '" "yarp::dev::ILinearVelocitySensors const *""'"); 
   }
   arg1 = reinterpret_cast< yarp::dev::ILinearVelocitySensors * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_size_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ILinearVelocitySensors_getNrOfLinearVelocitySensors" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ILinearVelocitySensors_getNrOfLinearVelocitySensors" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  arg2 = reinterpret_cast< size_t * >(argp2);
-  result = ((yarp::dev::ILinearVelocitySensors const *)arg1)->getNrOfLinearVelocitySensors(*arg2);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = ((yarp::dev::ILinearVelocitySensors const *)arg1)->getNrOfLinearVelocitySensors();
+  _out = SWIG_From_size_t(static_cast< size_t >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -107174,7 +107108,7 @@ int _wrap_ILinearVelocitySensors_getLinearVelocitySensorName(int resc, mxArray *
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("ILinearVelocitySensors_getLinearVelocitySensorName",argc,3,3,0)) {
     SWIG_fail;
@@ -107197,8 +107131,8 @@ int _wrap_ILinearVelocitySensors_getLinearVelocitySensorName(int resc, mxArray *
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ILinearVelocitySensors_getLinearVelocitySensorName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::ILinearVelocitySensors const *)arg1)->getLinearVelocitySensorName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::ILinearVelocitySensors const *)arg1)->getLinearVelocitySensorName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -107217,7 +107151,7 @@ int _wrap_ILinearVelocitySensors_getLinearVelocitySensorFrameName(int resc, mxAr
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("ILinearVelocitySensors_getLinearVelocitySensorFrameName",argc,3,3,0)) {
     SWIG_fail;
@@ -107240,8 +107174,8 @@ int _wrap_ILinearVelocitySensors_getLinearVelocitySensorFrameName(int resc, mxAr
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ILinearVelocitySensors_getLinearVelocitySensorFrameName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::ILinearVelocitySensors const *)arg1)->getLinearVelocitySensorFrameName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::ILinearVelocitySensors const *)arg1)->getLinearVelocitySensorFrameName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -107263,7 +107197,7 @@ int _wrap_ILinearVelocitySensors_getLinearVelocitySensorMeasure(int resc, mxArra
   void *argp4 = 0 ;
   int res4 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("ILinearVelocitySensors_getLinearVelocitySensorMeasure",argc,4,4,0)) {
     SWIG_fail;
@@ -107294,8 +107228,8 @@ int _wrap_ILinearVelocitySensors_getLinearVelocitySensorMeasure(int resc, mxArra
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ILinearVelocitySensors_getLinearVelocitySensorMeasure" "', argument " "4"" of type '" "double &""'"); 
   }
   arg4 = reinterpret_cast< double * >(argp4);
-  result = ((yarp::dev::ILinearVelocitySensors const *)arg1)->getLinearVelocitySensorMeasure(arg2,*arg3,*arg4);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::ILinearVelocitySensors const *)arg1)->getLinearVelocitySensorMeasure(arg2,*arg3,*arg4);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -107332,15 +107266,12 @@ fail:
 
 int _wrap_IOrientationSensors_getNrOfOrientationSensors(int resc, mxArray *resv[], int argc, mxArray *argv[]) {
   yarp::dev::IOrientationSensors *arg1 = (yarp::dev::IOrientationSensors *) 0 ;
-  size_t *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  size_t result;
   
-  if (!SWIG_check_num_args("IOrientationSensors_getNrOfOrientationSensors",argc,2,2,0)) {
+  if (!SWIG_check_num_args("IOrientationSensors_getNrOfOrientationSensors",argc,1,1,0)) {
     SWIG_fail;
   }
   res1 = SWIG_ConvertPtr(argv[0], &argp1,SWIGTYPE_p_yarp__dev__IOrientationSensors, 0 |  0 );
@@ -107348,16 +107279,8 @@ int _wrap_IOrientationSensors_getNrOfOrientationSensors(int resc, mxArray *resv[
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IOrientationSensors_getNrOfOrientationSensors" "', argument " "1"" of type '" "yarp::dev::IOrientationSensors const *""'"); 
   }
   arg1 = reinterpret_cast< yarp::dev::IOrientationSensors * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_size_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "IOrientationSensors_getNrOfOrientationSensors" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IOrientationSensors_getNrOfOrientationSensors" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  arg2 = reinterpret_cast< size_t * >(argp2);
-  result = ((yarp::dev::IOrientationSensors const *)arg1)->getNrOfOrientationSensors(*arg2);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = ((yarp::dev::IOrientationSensors const *)arg1)->getNrOfOrientationSensors();
+  _out = SWIG_From_size_t(static_cast< size_t >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -107408,7 +107331,7 @@ int _wrap_IOrientationSensors_getOrientationSensorName__SWIG_0(int resc, mxArray
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IOrientationSensors_getOrientationSensorName",argc,3,3,0)) {
     SWIG_fail;
@@ -107431,8 +107354,8 @@ int _wrap_IOrientationSensors_getOrientationSensorName__SWIG_0(int resc, mxArray
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IOrientationSensors_getOrientationSensorName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::IOrientationSensors const *)arg1)->getOrientationSensorName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IOrientationSensors const *)arg1)->getOrientationSensorName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -107451,7 +107374,7 @@ int _wrap_IOrientationSensors_getOrientationSensorFrameName__SWIG_0(int resc, mx
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IOrientationSensors_getOrientationSensorFrameName",argc,3,3,0)) {
     SWIG_fail;
@@ -107474,8 +107397,8 @@ int _wrap_IOrientationSensors_getOrientationSensorFrameName__SWIG_0(int resc, mx
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IOrientationSensors_getOrientationSensorFrameName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::IOrientationSensors const *)arg1)->getOrientationSensorFrameName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IOrientationSensors const *)arg1)->getOrientationSensorFrameName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -107497,7 +107420,7 @@ int _wrap_IOrientationSensors_getOrientationSensorMeasureAsRollPitchYaw__SWIG_0(
   void *argp4 = 0 ;
   int res4 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IOrientationSensors_getOrientationSensorMeasureAsRollPitchYaw",argc,4,4,0)) {
     SWIG_fail;
@@ -107528,8 +107451,8 @@ int _wrap_IOrientationSensors_getOrientationSensorMeasureAsRollPitchYaw__SWIG_0(
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IOrientationSensors_getOrientationSensorMeasureAsRollPitchYaw" "', argument " "4"" of type '" "double &""'"); 
   }
   arg4 = reinterpret_cast< double * >(argp4);
-  result = ((yarp::dev::IOrientationSensors const *)arg1)->getOrientationSensorMeasureAsRollPitchYaw(arg2,*arg3,*arg4);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IOrientationSensors const *)arg1)->getOrientationSensorMeasureAsRollPitchYaw(arg2,*arg3,*arg4);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -107818,15 +107741,12 @@ int _wrap_IOrientationSensors_getOrientationSensorMeasureAsRollPitchYaw(int resc
 
 int _wrap_ITemperatureSensors_getNrOfTemperatureSensors(int resc, mxArray *resv[], int argc, mxArray *argv[]) {
   yarp::dev::ITemperatureSensors *arg1 = (yarp::dev::ITemperatureSensors *) 0 ;
-  size_t *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  size_t result;
   
-  if (!SWIG_check_num_args("ITemperatureSensors_getNrOfTemperatureSensors",argc,2,2,0)) {
+  if (!SWIG_check_num_args("ITemperatureSensors_getNrOfTemperatureSensors",argc,1,1,0)) {
     SWIG_fail;
   }
   res1 = SWIG_ConvertPtr(argv[0], &argp1,SWIGTYPE_p_yarp__dev__ITemperatureSensors, 0 |  0 );
@@ -107834,16 +107754,8 @@ int _wrap_ITemperatureSensors_getNrOfTemperatureSensors(int resc, mxArray *resv[
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ITemperatureSensors_getNrOfTemperatureSensors" "', argument " "1"" of type '" "yarp::dev::ITemperatureSensors const *""'"); 
   }
   arg1 = reinterpret_cast< yarp::dev::ITemperatureSensors * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_size_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ITemperatureSensors_getNrOfTemperatureSensors" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ITemperatureSensors_getNrOfTemperatureSensors" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  arg2 = reinterpret_cast< size_t * >(argp2);
-  result = ((yarp::dev::ITemperatureSensors const *)arg1)->getNrOfTemperatureSensors(*arg2);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = ((yarp::dev::ITemperatureSensors const *)arg1)->getNrOfTemperatureSensors();
+  _out = SWIG_From_size_t(static_cast< size_t >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -107894,7 +107806,7 @@ int _wrap_ITemperatureSensors_getTemperatureSensorName__SWIG_0(int resc, mxArray
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("ITemperatureSensors_getTemperatureSensorName",argc,3,3,0)) {
     SWIG_fail;
@@ -107917,8 +107829,8 @@ int _wrap_ITemperatureSensors_getTemperatureSensorName__SWIG_0(int resc, mxArray
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ITemperatureSensors_getTemperatureSensorName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::ITemperatureSensors const *)arg1)->getTemperatureSensorName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::ITemperatureSensors const *)arg1)->getTemperatureSensorName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -107937,7 +107849,7 @@ int _wrap_ITemperatureSensors_getTemperatureSensorFrameName__SWIG_0(int resc, mx
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("ITemperatureSensors_getTemperatureSensorFrameName",argc,3,3,0)) {
     SWIG_fail;
@@ -107960,8 +107872,8 @@ int _wrap_ITemperatureSensors_getTemperatureSensorFrameName__SWIG_0(int resc, mx
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ITemperatureSensors_getTemperatureSensorFrameName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::ITemperatureSensors const *)arg1)->getTemperatureSensorFrameName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::ITemperatureSensors const *)arg1)->getTemperatureSensorFrameName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -107983,7 +107895,7 @@ int _wrap_ITemperatureSensors_getTemperatureSensorMeasure__SWIG_0(int resc, mxAr
   void *argp4 = 0 ;
   int res4 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("ITemperatureSensors_getTemperatureSensorMeasure",argc,4,4,0)) {
     SWIG_fail;
@@ -108014,8 +107926,8 @@ int _wrap_ITemperatureSensors_getTemperatureSensorMeasure__SWIG_0(int resc, mxAr
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ITemperatureSensors_getTemperatureSensorMeasure" "', argument " "4"" of type '" "double &""'"); 
   }
   arg4 = reinterpret_cast< double * >(argp4);
-  result = ((yarp::dev::ITemperatureSensors const *)arg1)->getTemperatureSensorMeasure(arg2,*arg3,*arg4);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::ITemperatureSensors const *)arg1)->getTemperatureSensorMeasure(arg2,*arg3,*arg4);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -108037,7 +107949,7 @@ int _wrap_ITemperatureSensors_getTemperatureSensorMeasure__SWIG_1(int resc, mxAr
   void *argp4 = 0 ;
   int res4 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("ITemperatureSensors_getTemperatureSensorMeasure",argc,4,4,0)) {
     SWIG_fail;
@@ -108068,8 +107980,8 @@ int _wrap_ITemperatureSensors_getTemperatureSensorMeasure__SWIG_1(int resc, mxAr
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ITemperatureSensors_getTemperatureSensorMeasure" "', argument " "4"" of type '" "double &""'"); 
   }
   arg4 = reinterpret_cast< double * >(argp4);
-  result = ((yarp::dev::ITemperatureSensors const *)arg1)->getTemperatureSensorMeasure(arg2,*arg3,*arg4);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::ITemperatureSensors const *)arg1)->getTemperatureSensorMeasure(arg2,*arg3,*arg4);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -108384,15 +108296,12 @@ int _wrap_ITemperatureSensors_getTemperatureSensorMeasure(int resc, mxArray *res
 
 int _wrap_ISixAxisForceTorqueSensors_getNrOfSixAxisForceTorqueSensors(int resc, mxArray *resv[], int argc, mxArray *argv[]) {
   yarp::dev::ISixAxisForceTorqueSensors *arg1 = (yarp::dev::ISixAxisForceTorqueSensors *) 0 ;
-  size_t *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  size_t result;
   
-  if (!SWIG_check_num_args("ISixAxisForceTorqueSensors_getNrOfSixAxisForceTorqueSensors",argc,2,2,0)) {
+  if (!SWIG_check_num_args("ISixAxisForceTorqueSensors_getNrOfSixAxisForceTorqueSensors",argc,1,1,0)) {
     SWIG_fail;
   }
   res1 = SWIG_ConvertPtr(argv[0], &argp1,SWIGTYPE_p_yarp__dev__ISixAxisForceTorqueSensors, 0 |  0 );
@@ -108400,16 +108309,8 @@ int _wrap_ISixAxisForceTorqueSensors_getNrOfSixAxisForceTorqueSensors(int resc, 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ISixAxisForceTorqueSensors_getNrOfSixAxisForceTorqueSensors" "', argument " "1"" of type '" "yarp::dev::ISixAxisForceTorqueSensors const *""'"); 
   }
   arg1 = reinterpret_cast< yarp::dev::ISixAxisForceTorqueSensors * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_size_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ISixAxisForceTorqueSensors_getNrOfSixAxisForceTorqueSensors" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ISixAxisForceTorqueSensors_getNrOfSixAxisForceTorqueSensors" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  arg2 = reinterpret_cast< size_t * >(argp2);
-  result = ((yarp::dev::ISixAxisForceTorqueSensors const *)arg1)->getNrOfSixAxisForceTorqueSensors(*arg2);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = ((yarp::dev::ISixAxisForceTorqueSensors const *)arg1)->getNrOfSixAxisForceTorqueSensors();
+  _out = SWIG_From_size_t(static_cast< size_t >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -108460,7 +108361,7 @@ int _wrap_ISixAxisForceTorqueSensors_getSixAxisForceTorqueSensorName__SWIG_0(int
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("ISixAxisForceTorqueSensors_getSixAxisForceTorqueSensorName",argc,3,3,0)) {
     SWIG_fail;
@@ -108483,8 +108384,8 @@ int _wrap_ISixAxisForceTorqueSensors_getSixAxisForceTorqueSensorName__SWIG_0(int
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ISixAxisForceTorqueSensors_getSixAxisForceTorqueSensorName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::ISixAxisForceTorqueSensors const *)arg1)->getSixAxisForceTorqueSensorName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::ISixAxisForceTorqueSensors const *)arg1)->getSixAxisForceTorqueSensorName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -108503,7 +108404,7 @@ int _wrap_ISixAxisForceTorqueSensors_getSixAxisForceTorqueSensorFrameName__SWIG_
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("ISixAxisForceTorqueSensors_getSixAxisForceTorqueSensorFrameName",argc,3,3,0)) {
     SWIG_fail;
@@ -108526,8 +108427,8 @@ int _wrap_ISixAxisForceTorqueSensors_getSixAxisForceTorqueSensorFrameName__SWIG_
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ISixAxisForceTorqueSensors_getSixAxisForceTorqueSensorFrameName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::ISixAxisForceTorqueSensors const *)arg1)->getSixAxisForceTorqueSensorFrameName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::ISixAxisForceTorqueSensors const *)arg1)->getSixAxisForceTorqueSensorFrameName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -108549,7 +108450,7 @@ int _wrap_ISixAxisForceTorqueSensors_getSixAxisForceTorqueSensorMeasure__SWIG_0(
   void *argp4 = 0 ;
   int res4 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("ISixAxisForceTorqueSensors_getSixAxisForceTorqueSensorMeasure",argc,4,4,0)) {
     SWIG_fail;
@@ -108580,8 +108481,8 @@ int _wrap_ISixAxisForceTorqueSensors_getSixAxisForceTorqueSensorMeasure__SWIG_0(
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ISixAxisForceTorqueSensors_getSixAxisForceTorqueSensorMeasure" "', argument " "4"" of type '" "double &""'"); 
   }
   arg4 = reinterpret_cast< double * >(argp4);
-  result = ((yarp::dev::ISixAxisForceTorqueSensors const *)arg1)->getSixAxisForceTorqueSensorMeasure(arg2,*arg3,*arg4);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::ISixAxisForceTorqueSensors const *)arg1)->getSixAxisForceTorqueSensorMeasure(arg2,*arg3,*arg4);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -108870,15 +108771,12 @@ int _wrap_ISixAxisForceTorqueSensors_getSixAxisForceTorqueSensorMeasure(int resc
 
 int _wrap_IContactLoadCellArrays_getNrOfContactLoadCellArrays(int resc, mxArray *resv[], int argc, mxArray *argv[]) {
   yarp::dev::IContactLoadCellArrays *arg1 = (yarp::dev::IContactLoadCellArrays *) 0 ;
-  size_t *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  size_t result;
   
-  if (!SWIG_check_num_args("IContactLoadCellArrays_getNrOfContactLoadCellArrays",argc,2,2,0)) {
+  if (!SWIG_check_num_args("IContactLoadCellArrays_getNrOfContactLoadCellArrays",argc,1,1,0)) {
     SWIG_fail;
   }
   res1 = SWIG_ConvertPtr(argv[0], &argp1,SWIGTYPE_p_yarp__dev__IContactLoadCellArrays, 0 |  0 );
@@ -108886,16 +108784,8 @@ int _wrap_IContactLoadCellArrays_getNrOfContactLoadCellArrays(int resc, mxArray 
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IContactLoadCellArrays_getNrOfContactLoadCellArrays" "', argument " "1"" of type '" "yarp::dev::IContactLoadCellArrays const *""'"); 
   }
   arg1 = reinterpret_cast< yarp::dev::IContactLoadCellArrays * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_size_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "IContactLoadCellArrays_getNrOfContactLoadCellArrays" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IContactLoadCellArrays_getNrOfContactLoadCellArrays" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  arg2 = reinterpret_cast< size_t * >(argp2);
-  result = ((yarp::dev::IContactLoadCellArrays const *)arg1)->getNrOfContactLoadCellArrays(*arg2);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = ((yarp::dev::IContactLoadCellArrays const *)arg1)->getNrOfContactLoadCellArrays();
+  _out = SWIG_From_size_t(static_cast< size_t >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -108946,7 +108836,7 @@ int _wrap_IContactLoadCellArrays_getContactLoadCellArrayName__SWIG_0(int resc, m
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IContactLoadCellArrays_getContactLoadCellArrayName",argc,3,3,0)) {
     SWIG_fail;
@@ -108969,8 +108859,8 @@ int _wrap_IContactLoadCellArrays_getContactLoadCellArrayName__SWIG_0(int resc, m
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IContactLoadCellArrays_getContactLoadCellArrayName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::IContactLoadCellArrays const *)arg1)->getContactLoadCellArrayName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IContactLoadCellArrays const *)arg1)->getContactLoadCellArrayName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -108992,7 +108882,7 @@ int _wrap_IContactLoadCellArrays_getContactLoadCellArrayMeasure__SWIG_0(int resc
   void *argp4 = 0 ;
   int res4 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IContactLoadCellArrays_getContactLoadCellArrayMeasure",argc,4,4,0)) {
     SWIG_fail;
@@ -109023,8 +108913,8 @@ int _wrap_IContactLoadCellArrays_getContactLoadCellArrayMeasure__SWIG_0(int resc
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IContactLoadCellArrays_getContactLoadCellArrayMeasure" "', argument " "4"" of type '" "double &""'"); 
   }
   arg4 = reinterpret_cast< double * >(argp4);
-  result = ((yarp::dev::IContactLoadCellArrays const *)arg1)->getContactLoadCellArrayMeasure(arg2,*arg3,*arg4);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IContactLoadCellArrays const *)arg1)->getContactLoadCellArrayMeasure(arg2,*arg3,*arg4);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -109268,15 +109158,12 @@ int _wrap_IContactLoadCellArrays_getContactLoadCellArrayMeasure(int resc, mxArra
 
 int _wrap_IEncoderArrays_getNrOfEncoderArrays(int resc, mxArray *resv[], int argc, mxArray *argv[]) {
   yarp::dev::IEncoderArrays *arg1 = (yarp::dev::IEncoderArrays *) 0 ;
-  size_t *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  size_t result;
   
-  if (!SWIG_check_num_args("IEncoderArrays_getNrOfEncoderArrays",argc,2,2,0)) {
+  if (!SWIG_check_num_args("IEncoderArrays_getNrOfEncoderArrays",argc,1,1,0)) {
     SWIG_fail;
   }
   res1 = SWIG_ConvertPtr(argv[0], &argp1,SWIGTYPE_p_yarp__dev__IEncoderArrays, 0 |  0 );
@@ -109284,16 +109171,8 @@ int _wrap_IEncoderArrays_getNrOfEncoderArrays(int resc, mxArray *resv[], int arg
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "IEncoderArrays_getNrOfEncoderArrays" "', argument " "1"" of type '" "yarp::dev::IEncoderArrays const *""'"); 
   }
   arg1 = reinterpret_cast< yarp::dev::IEncoderArrays * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_size_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "IEncoderArrays_getNrOfEncoderArrays" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IEncoderArrays_getNrOfEncoderArrays" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  arg2 = reinterpret_cast< size_t * >(argp2);
-  result = ((yarp::dev::IEncoderArrays const *)arg1)->getNrOfEncoderArrays(*arg2);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = ((yarp::dev::IEncoderArrays const *)arg1)->getNrOfEncoderArrays();
+  _out = SWIG_From_size_t(static_cast< size_t >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -109344,7 +109223,7 @@ int _wrap_IEncoderArrays_getEncoderArrayName__SWIG_0(int resc, mxArray *resv[], 
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IEncoderArrays_getEncoderArrayName",argc,3,3,0)) {
     SWIG_fail;
@@ -109367,8 +109246,8 @@ int _wrap_IEncoderArrays_getEncoderArrayName__SWIG_0(int resc, mxArray *resv[], 
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IEncoderArrays_getEncoderArrayName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::IEncoderArrays const *)arg1)->getEncoderArrayName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IEncoderArrays const *)arg1)->getEncoderArrayName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -109390,7 +109269,7 @@ int _wrap_IEncoderArrays_getEncoderArrayMeasure__SWIG_0(int resc, mxArray *resv[
   void *argp4 = 0 ;
   int res4 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("IEncoderArrays_getEncoderArrayMeasure",argc,4,4,0)) {
     SWIG_fail;
@@ -109421,8 +109300,8 @@ int _wrap_IEncoderArrays_getEncoderArrayMeasure__SWIG_0(int resc, mxArray *resv[
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "IEncoderArrays_getEncoderArrayMeasure" "', argument " "4"" of type '" "double &""'"); 
   }
   arg4 = reinterpret_cast< double * >(argp4);
-  result = ((yarp::dev::IEncoderArrays const *)arg1)->getEncoderArrayMeasure(arg2,*arg3,*arg4);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::IEncoderArrays const *)arg1)->getEncoderArrayMeasure(arg2,*arg3,*arg4);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -109666,15 +109545,12 @@ int _wrap_IEncoderArrays_getEncoderArrayMeasure(int resc, mxArray *resv[], int a
 
 int _wrap_ISkinPatches_getNrOfSkinPatches(int resc, mxArray *resv[], int argc, mxArray *argv[]) {
   yarp::dev::ISkinPatches *arg1 = (yarp::dev::ISkinPatches *) 0 ;
-  size_t *arg2 = 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  size_t result;
   
-  if (!SWIG_check_num_args("ISkinPatches_getNrOfSkinPatches",argc,2,2,0)) {
+  if (!SWIG_check_num_args("ISkinPatches_getNrOfSkinPatches",argc,1,1,0)) {
     SWIG_fail;
   }
   res1 = SWIG_ConvertPtr(argv[0], &argp1,SWIGTYPE_p_yarp__dev__ISkinPatches, 0 |  0 );
@@ -109682,16 +109558,8 @@ int _wrap_ISkinPatches_getNrOfSkinPatches(int resc, mxArray *resv[], int argc, m
     SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ISkinPatches_getNrOfSkinPatches" "', argument " "1"" of type '" "yarp::dev::ISkinPatches const *""'"); 
   }
   arg1 = reinterpret_cast< yarp::dev::ISkinPatches * >(argp1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2, SWIGTYPE_p_size_t,  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ISkinPatches_getNrOfSkinPatches" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  if (!argp2) {
-    SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ISkinPatches_getNrOfSkinPatches" "', argument " "2"" of type '" "size_t &""'"); 
-  }
-  arg2 = reinterpret_cast< size_t * >(argp2);
-  result = ((yarp::dev::ISkinPatches const *)arg1)->getNrOfSkinPatches(*arg2);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = ((yarp::dev::ISkinPatches const *)arg1)->getNrOfSkinPatches();
+  _out = SWIG_From_size_t(static_cast< size_t >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -109742,7 +109610,7 @@ int _wrap_ISkinPatches_getSkinPatchName__SWIG_0(int resc, mxArray *resv[], int a
   void *argp3 = 0 ;
   int res3 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("ISkinPatches_getSkinPatchName",argc,3,3,0)) {
     SWIG_fail;
@@ -109765,8 +109633,8 @@ int _wrap_ISkinPatches_getSkinPatchName__SWIG_0(int resc, mxArray *resv[], int a
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ISkinPatches_getSkinPatchName" "', argument " "3"" of type '" "std::string &""'"); 
   }
   arg3 = reinterpret_cast< std::string * >(argp3);
-  result = ((yarp::dev::ISkinPatches const *)arg1)->getSkinPatchName(arg2,*arg3);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::ISkinPatches const *)arg1)->getSkinPatchName(arg2,*arg3);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -109788,7 +109656,7 @@ int _wrap_ISkinPatches_getSkinPatchMeasure__SWIG_0(int resc, mxArray *resv[], in
   void *argp4 = 0 ;
   int res4 = 0 ;
   mxArray * _out;
-  yarp::dev::ReturnValue result;
+  bool result;
   
   if (!SWIG_check_num_args("ISkinPatches_getSkinPatchMeasure",argc,4,4,0)) {
     SWIG_fail;
@@ -109819,8 +109687,8 @@ int _wrap_ISkinPatches_getSkinPatchMeasure__SWIG_0(int resc, mxArray *resv[], in
     SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ISkinPatches_getSkinPatchMeasure" "', argument " "4"" of type '" "double &""'"); 
   }
   arg4 = reinterpret_cast< double * >(argp4);
-  result = ((yarp::dev::ISkinPatches const *)arg1)->getSkinPatchMeasure(arg2,*arg3,*arg4);
-  _out = SWIG_NewPointerObj((new yarp::dev::ReturnValue(static_cast< const yarp::dev::ReturnValue& >(result))), SWIGTYPE_p_yarp__dev__ReturnValue, SWIG_POINTER_OWN |  0 );
+  result = (bool)((yarp::dev::ISkinPatches const *)arg1)->getSkinPatchMeasure(arg2,*arg3,*arg4);
+  _out = SWIG_From_bool(static_cast< bool >(result));
   if (_out) --resc, *resv++ = _out;
   return 0;
 fail:
@@ -190633,7 +190501,7 @@ SWIGINTERN int swigConstant(int SWIGUNUSEDPARM(resc), mxArray *resv[], int argc,
   case 0: *resv = SWIG_Matlab_SetConstant(module_ns,"YARP_VERSION_MAJOR",SWIG_From_int(static_cast< int >(4)));; break;
   case 1: *resv = SWIG_Matlab_SetConstant(module_ns,"YARP_VERSION_MINOR",SWIG_From_int(static_cast< int >(0)));; break;
   case 2: *resv = SWIG_Matlab_SetConstant(module_ns,"YARP_VERSION_PATCH",SWIG_From_int(static_cast< int >(0)));; break;
-  case 3: *resv = SWIG_Matlab_SetConstant(module_ns,"YARP_VERSION",SWIG_FromCharPtr("4.0.0+20260825.5+git309d29bb8"));; break;
+  case 3: *resv = SWIG_Matlab_SetConstant(module_ns,"YARP_VERSION",SWIG_FromCharPtr("4.0.0+20260825.2+gite2f3e3f7d"));; break;
   case 4: *resv = SWIG_Matlab_SetConstant(module_ns,"YARP_VERSION_SHORT",SWIG_FromCharPtr("4.0.0"));; break;
   case 5: *resv = SWIG_Matlab_SetConstant(module_ns,"YARP_VERSION_HEX",SWIG_From_int(static_cast< int >((((4) *0x10000) +((0) *0x100) +(0)))));; break;
   case 6: *resv = SWIG_Matlab_SetConstant(module_ns,"BOTTLE_TAG_INT8",SWIG_From_int(static_cast< int >(32)));; break;

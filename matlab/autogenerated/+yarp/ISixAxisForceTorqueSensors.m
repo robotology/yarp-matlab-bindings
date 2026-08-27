@@ -6,9 +6,9 @@ classdef ISixAxisForceTorqueSensors < yarpSwigRef
       this = yarpMEX(3, self);
     end
     function varargout = getNrOfSixAxisForceTorqueSensors(self,varargin)
-    %Usage: retval = getNrOfSixAxisForceTorqueSensors (num)
+    %Usage: retval = getNrOfSixAxisForceTorqueSensors ()
     %
-    %num is of type size_t &. num is of type size_t &. retval is of type ReturnValue. 
+    %retval is of type size_t. 
       [varargout{1:nargout}] = yarpMEX(1830, self, varargin{:});
     end
     function varargout = getSixAxisForceTorqueSensorStatus(self,varargin)

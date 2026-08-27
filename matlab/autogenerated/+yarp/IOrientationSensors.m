@@ -6,9 +6,9 @@ classdef IOrientationSensors < yarpSwigRef
       this = yarpMEX(3, self);
     end
     function varargout = getNrOfOrientationSensors(self,varargin)
-    %Usage: retval = getNrOfOrientationSensors (num)
+    %Usage: retval = getNrOfOrientationSensors ()
     %
-    %num is of type size_t &. num is of type size_t &. retval is of type ReturnValue. 
+    %retval is of type size_t. 
       [varargout{1:nargout}] = yarpMEX(1818, self, varargin{:});
     end
     function varargout = getOrientationSensorStatus(self,varargin)
