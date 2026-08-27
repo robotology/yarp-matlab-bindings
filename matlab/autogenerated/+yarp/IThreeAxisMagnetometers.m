@@ -6,9 +6,9 @@ classdef IThreeAxisMagnetometers < yarpSwigRef
       this = yarpMEX(3, self);
     end
     function varargout = getNrOfThreeAxisMagnetometers(self,varargin)
-    %Usage: retval = getNrOfThreeAxisMagnetometers (num)
+    %Usage: retval = getNrOfThreeAxisMagnetometers ()
     %
-    %num is of type size_t &. num is of type size_t &. retval is of type ReturnValue. 
+    %retval is of type size_t. 
       [varargout{1:nargout}] = yarpMEX(1800, self, varargin{:});
     end
     function varargout = getThreeAxisMagnetometerStatus(self,varargin)

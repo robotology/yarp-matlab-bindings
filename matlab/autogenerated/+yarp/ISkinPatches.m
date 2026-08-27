@@ -6,9 +6,9 @@ classdef ISkinPatches < yarpSwigRef
       this = yarpMEX(3, self);
     end
     function varargout = getNrOfSkinPatches(self,varargin)
-    %Usage: retval = getNrOfSkinPatches (num)
+    %Usage: retval = getNrOfSkinPatches ()
     %
-    %num is of type size_t &. num is of type size_t &. retval is of type ReturnValue. 
+    %retval is of type size_t. 
       [varargout{1:nargout}] = yarpMEX(1848, self, varargin{:});
     end
     function varargout = getSkinPatchStatus(self,varargin)

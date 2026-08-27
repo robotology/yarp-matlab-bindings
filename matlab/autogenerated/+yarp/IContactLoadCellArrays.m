@@ -6,9 +6,9 @@ classdef IContactLoadCellArrays < yarpSwigRef
       this = yarpMEX(3, self);
     end
     function varargout = getNrOfContactLoadCellArrays(self,varargin)
-    %Usage: retval = getNrOfContactLoadCellArrays (num)
+    %Usage: retval = getNrOfContactLoadCellArrays ()
     %
-    %num is of type size_t &. num is of type size_t &. retval is of type ReturnValue. 
+    %retval is of type size_t. 
       [varargout{1:nargout}] = yarpMEX(1836, self, varargin{:});
     end
     function varargout = getContactLoadCellArrayStatus(self,varargin)

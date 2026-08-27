@@ -6,9 +6,9 @@ classdef IThreeAxisGyroscopes < yarpSwigRef
       this = yarpMEX(3, self);
     end
     function varargout = getNrOfThreeAxisGyroscopes(self,varargin)
-    %Usage: retval = getNrOfThreeAxisGyroscopes (num)
+    %Usage: retval = getNrOfThreeAxisGyroscopes ()
     %
-    %num is of type size_t &. num is of type size_t &. retval is of type ReturnValue. 
+    %retval is of type size_t. 
       [varargout{1:nargout}] = yarpMEX(1782, self, varargin{:});
     end
     function varargout = getThreeAxisGyroscopeStatus(self,varargin)

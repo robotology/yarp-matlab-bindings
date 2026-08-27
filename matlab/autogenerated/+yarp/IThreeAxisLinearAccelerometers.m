@@ -6,9 +6,9 @@ classdef IThreeAxisLinearAccelerometers < yarpSwigRef
       this = yarpMEX(3, self);
     end
     function varargout = getNrOfThreeAxisLinearAccelerometers(self,varargin)
-    %Usage: retval = getNrOfThreeAxisLinearAccelerometers (num)
+    %Usage: retval = getNrOfThreeAxisLinearAccelerometers ()
     %
-    %num is of type size_t &. num is of type size_t &. retval is of type ReturnValue. 
+    %retval is of type size_t. 
       [varargout{1:nargout}] = yarpMEX(1788, self, varargin{:});
     end
     function varargout = getThreeAxisLinearAccelerometerStatus(self,varargin)
